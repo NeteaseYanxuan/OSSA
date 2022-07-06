@@ -1,0 +1,70 @@
+@import '../base.scss';
+
+$item-height: 43Px;
+
+.picker-group {
+  position: relative;
+  height: $item-height * 5;
+  overflow: hidden;
+  flex: 1;
+
+  &__item {
+    height: $item-height;
+    line-height: $item-height;
+    text-align: center;
+    padding: 0 30px;
+    font-size: 32px;
+    font-weight: $--font-weight-default;
+    transition: font-weight 0.2s ease;
+    box-sizing: border-box;
+    @include line(1);
+
+    &--highlight {
+      font-weight: $--font-weight-regular;
+    }
+  }
+
+  &__indicator {
+    left: 0;
+    top: $item-height * 2;
+    height: $item-height;
+    width: 100%;
+    position: absolute;
+
+    &::after {
+      content: ' ';
+      position: absolute;
+      transform-origin: center;
+      box-sizing: border-box;
+      pointer-events: none;
+      top: -50%;
+      left: -50%;
+      right: -50%;
+      bottom: -50%;
+      border: 0 solid $--border-color-indicator;
+      transform: scale(0.5);
+      border-top-width: 1Px;
+      border-bottom-width: 1Px;
+    }
+  }
+
+  &__mask--top {
+    background: linear-gradient(to bottom, $--fill-mask-top-start, $--fill-mask-top-end);
+    top: 0;
+  }
+
+  &__mask--bottom {
+    background: linear-gradient(to bottom, $--fill-mask-bottom-start, $--fill-mask-bottom-end);
+    bottom: 0;
+  }
+
+  &__mask {
+    position: absolute;
+    left: 0;
+    height: $item-height * 2;
+    width: 100%;
+    background-size: 100% $item-height * 2;
+    background-repeat: no-repeat;
+    background-position: top;
+  }
+}

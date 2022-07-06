@@ -1,0 +1,91 @@
+@import '../base.scss';
+
+.ossa-list {
+  position: relative;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  padding: 32px 0 32px 30px;
+  font-weight: $--font-weight-default;
+  font-size: 28px;
+  line-height: 40px;
+  color: $--color-list-title;
+  background: $--fill-list;
+  -webkit-tap-highlight-color: transparent;
+  box-sizing: border-box;
+
+  &.ossa-list--is-show-split-line {
+    @include hairline-bottom(30px);
+  }
+
+  &.ossa-list--is-active {
+    background: $--fill-list-active;
+  }
+
+  &.ossa-list--is-hasSlot {
+    padding: 24px 0 24px 30px;
+  }
+
+  &.ossa-list--is-hasSubTitle {
+    padding: 25px 0 25px 30px;
+  }
+
+  &.ossa-list--is-hasDesc {
+    padding-right: 30px;
+  }
+
+  &.ossa-list--is-hasIcon {
+    padding-right: 20px;
+  }
+
+  &.ossa-list--is-hasLeftIcon {
+    color: inherit;
+  }
+
+  &__box {
+    display: flex;
+    flex: 1;
+    margin-right: 30px;
+    flex-flow: column nowrap;
+    min-width: 142px;
+  }
+
+  &--custom {
+    padding: 24px 30px;
+
+    .ossa-list--box {
+      flex: auto;
+    }
+  }
+
+  &__title {
+    @include font-size6();
+  }
+
+  &__subTitle {
+    @include font-size4();
+
+    color: $--color-list-desc;
+    // font-size: p2r(24);
+    // line-height: p2r(36);
+    margin-top: 2px;
+  }
+
+  &__desc {
+    color: $--color-list-desc;
+    margin-right: 8px;
+  }
+
+  .ossa-list__leftIcon {
+    font-size: 36px;
+    height: 36px;
+    margin-right: 20px;
+    margin-left: 0;
+  }
+
+  .ossa-list__rightIcon {
+    margin-left: auto;
+    font-size: 28px;
+    height: 28px;
+  }
+}

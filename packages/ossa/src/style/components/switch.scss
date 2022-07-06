@@ -1,0 +1,54 @@
+@import '../base.scss';
+
+.ossa-switch {
+  display: inline-block;
+  width: 88px;
+  height: 54px;
+  position: relative;
+  border: 2px solid $--border-color;
+  border-radius: 54px;
+  background-color: $--fill-swicth;
+  transition: background-color 0.1s, border 0.1s;
+  box-sizing: border-box;
+
+  &__bg-off {
+    content: " ";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 84px;
+    height: 50px;
+    border-radius: 52px;
+    background: $--fill-switch-off;
+    transition: transform 0.35s cubic-bezier(0.45, 1, 0.4, 1);
+    box-sizing: border-box;
+  }
+
+  &__node {
+    content: " ";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    border: 1px solid rgba(#000, 0.2);
+    box-sizing: border-box;
+    box-shadow: 0 3px 1px 0 rgba(0, 0, 0, 0.05), 0 2px 2px 0 rgba(0, 0, 0, 0.1), 0 3px 3px 0 rgba(0, 0, 0, 0.05);
+    background-color: $--fill-switch-node;
+    transition: transform 0.35s cubic-bezier(0.45, 1, 0.4, 1);
+  }
+
+  &--checked {
+    background-color: $--fill-switch-on;
+    border-color: $--fill-switch-on;
+
+    .ossa-switch__node {
+      transform: translateX(35px);
+    }
+
+    .ossa-switch__bg-off {
+      transform: scale(0);
+    }
+  }
+}

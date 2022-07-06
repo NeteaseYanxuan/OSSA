@@ -1,0 +1,23 @@
+.demo-layout {
+  .row {
+    margin-bottom: 24px;
+  }
+
+  .col-content {
+    height: 70px;
+    line-height: 70px;
+    color: #fff;
+    text-align: center;
+    background: #d9d9d9;
+    font-size: 28px;
+    border-radius: 8px;
+
+    &--bottom20 {
+      margin-bottom: 20px;
+    }
+
+    &--light {
+      background: #999;
+    }
+  }
+}

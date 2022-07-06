@@ -1,0 +1,46 @@
+@import '../base.scss';
+
+.ossa-checkbox {
+  &__option {
+    color: $--text-color-base;
+    padding: 32px 0;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    @include hairline-bottom();
+
+    &--disabled {
+      color: $--text-color-disabled;
+
+      .ossa-checkbox__option-icon {
+        background: $--text-color-disabled;
+      }
+    }
+
+    &--custom-label {
+      padding: 24px 0;
+
+      .ossa-checkbox__option-label {
+        margin-left: 20px;
+      }
+    }
+  }
+
+  &__option-icon {
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    background: #aaa;
+
+    &--selected {
+      background: $--color-red;
+    }
+  }
+
+  &__option-label {
+    font-size: 28px;
+    margin-left: 16px;
+  }
+}

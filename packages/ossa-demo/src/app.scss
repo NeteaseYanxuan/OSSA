@@ -1,0 +1,25 @@
+@import './assets/style/reset.scss';
+
+#app {
+  background-color: #f4f4f4;
+}
+
+.page {
+  background: #fff;
+  padding-bottom: 80px;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+.page-home {
+  background-color: #f4f4f4;
+}
+
+.inline-item {
+  margin-right: 20px;
+  display: inline-block;
+}
+
+.block-section {
+  margin-bottom: 40px;
+}

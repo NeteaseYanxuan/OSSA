@@ -1,0 +1,22 @@
+@import '../base.scss';
+
+.ossa-actionsheet-item {
+  height: 104px;
+  text-align: left;
+  line-height: 104px;
+  padding-left: 30px;
+  font-size: 28px;
+  font-weight: $--font-weight-default;
+  @include hairline-bottom(30px);
+  @include line(1);
+
+  // &:last-child {
+  //   &::after {
+  //     transform: scale(0);
+  //   }
+  // }
+
+  &--disabled {
+    color: #d9d9d9;
+  }
+}

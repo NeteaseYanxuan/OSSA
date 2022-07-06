@@ -1,0 +1,18 @@
+.demo-list {
+  background: #FAFAFA;
+  padding-bottom: 40px;
+
+  .list--test__image {
+    display: block;
+    width: 160px;
+    height: 160px;
+    margin-right: 20px;
+    background: #f4f4f4;
+    border-radius: 4px;
+
+    img {
+      width: 160px;
+      height: 160px;
+    }
+  }
+}

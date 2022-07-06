@@ -1,0 +1,81 @@
+@import '../base.scss';
+
+.ossa-tabs-item {
+  &--horizontal {
+    position: relative;
+    flex: 1;
+    min-width: 20%;
+    -webkit-tap-highlight-color: transparent;
+
+    &--default {
+      height: 60px;
+      min-width: 18%;
+    }
+
+    &--large {
+      height: 80px;
+      min-width: 18%;
+    }
+
+    &.ossa-tabs-item--is-active {
+      .ossa-tabs-item__underline {
+        border-bottom-color: $--color-red;
+      }
+    }
+
+    .ossa-tabs-item__underline {
+      height: 100%;
+      padding: 0 16px;
+      border-bottom: 4px solid transparent;
+    }
+
+    .ossa-tabs-item__texts {
+      display: inline-block;
+      height: 100%;
+      color: inherit;
+      position: relative;
+    }
+
+    .ossa-tabs-item__text {
+      display: inline-block;
+      white-space: nowrap;
+    }
+  }
+
+  &--vertical {
+    -webkit-tap-highlight-color: transparent;
+    width: 160px;
+    padding: 25px 0;
+
+    &.ossa-tabs-item--is-active {
+      .ossa-tabs-item__underline {
+        border-left-color: $--color-red;
+      }
+    }
+
+    .ossa-tabs-item__underline {
+      width: 100%;
+      padding: 16px 0;
+      border-left: 4px solid transparent;
+    }
+
+    .ossa-tabs-item__texts {
+      color: inherit;
+      position: relative;
+    }
+
+    .ossa-tabs-item__text {
+      white-space: nowrap;
+      line-height: 40px;
+    }
+  }
+
+  &--is-active {
+    font-weight: 400;
+  }
+
+  &__underline {
+    box-sizing: border-box;
+    transition: all 0.15s;
+  }
+}

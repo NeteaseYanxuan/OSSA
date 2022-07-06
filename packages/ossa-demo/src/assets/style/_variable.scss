@@ -1,0 +1,308 @@
+
+/**
+ * 组件库皮肤文件
+ */
+
+$--font-color:#666;
+$--font-size:14px;
+
+/* Color */
+$--color-red:#DD1A21 !default;              // 品牌红
+// $--color-logo:#FF142F !default;             // 桌面图标亮红色
+$--color-yellow:#F48F18 !default;           // 营销色
+$--color-green:#2BAB52 !default;            // 成功状态色
+$--color-golden:#C3945B !default;           // 品牌金
+$--color-line:#d9d9d9 !default;
+
+
+/* Text Color */
+$--text-color-base:#333 !default;         // 主要文字颜色
+$--text-color-base-inverse:#fff !default; // 文字反色
+$--text-color-secondary:#7F7F7F !default;    // 次要文字颜色
+$--text-color-placeholder:#999 !default;  // 弱文字颜色
+$--text-color-disabled:#ccc !default;     // 不可用文字颜色
+
+
+/* background-color */
+$--fill-body:#F4F4F4 !default;               // 通用背景色
+$--fill-bar:#FAFAFA !default;                // bar背景
+$--fill-mask:rgba(0, 0, 0, 0.5) !default;    // 遮罩背景
+$--fill-gray:#7f7f7f !default;               // 许多小图标的背景，比如一些小圆点，加减号
+$--fill-disable:#ccc !default;               // 不可用背景色
+$--fill-default:#fff !default;               // 默认背景色
+$--fill-model-btns-active:#f9f9f9 !default;  // 模态框按钮按压背景色
+$--fill-toast:rgba(0, 0, 0, 0.8);
+$-fill-model-default: #000;               //弹框蒙版
+
+
+
+/* border */
+$--color-border-base:#D9D9D9 !default;
+$--color-border-base-1:#7F7F7F !default;
+
+
+/* Text size */
+$--font-size-1:18px !default;                  // 数量角标
+$--font-size-line-height-1:24px !default;
+
+
+$--font-size-2:20px !default;                  // 标签文字
+$--font-size-line-height-2:30px !default;
+
+
+$--font-size-3:22px !default;                  // 标签文字
+$--font-size-line-height-3:32px !default;
+
+
+$--font-size-4:24px !default;                  // 次要描述
+$--font-size-line-height-4:36px !default;
+
+$--font-size-5:28px !default;                  // 多文本阅读文字大小
+$--font-size-line-height-5:44px !default;
+
+$--font-size-6:28px !default;                  // 常规文字大小
+$--font-size-line-height-6:40px !default;
+
+$--font-size-7:30px !default;                  // navbar右上角文字按钮
+$--font-size-line-height-7:44px !default;
+
+$--font-size-8:32px !default;                  // 模块title名
+$--font-size-line-height-8:48px !default;
+
+$--font-size-9:36px !default;                  // navbar标题
+$--font-size-line-height-9:52px !default;
+
+$--font-size-10:54px !default;                 // 超大强调价格
+$--font-size-line-height-10:80px !default;
+
+$--font-size-11:40px !default;                  // 突出标题等
+$--font-size-line-height-11:60px !default;
+
+@mixin font-size11() {
+  font-size: $--font-size-11;
+  line-height: $--font-size-line-height-11;
+}
+
+@mixin font-size10() {
+  font-size: $--font-size-10;
+  line-height: $--font-size-line-height-10;
+}
+@mixin font-size9() {
+  font-size: $--font-size-9;
+  line-height: $--font-size-line-height-9;
+}
+@mixin font-size8() {
+  font-size: $--font-size-8;
+  line-height: $--font-size-line-height-8;
+}
+@mixin font-size7() {
+  font-size: $--font-size-7;
+  line-height: $--font-size-line-height-7;
+}
+@mixin font-size6() {
+  font-size: $--font-size-6;
+  line-height: $--font-size-line-height-6;
+}
+@mixin font-size5() {
+  font-size: $--font-size-5;
+  line-height: $--font-size-line-height-5;
+}
+@mixin font-size4() {
+  font-size: $--font-size-4;
+  line-height: $--font-size-line-height-4;
+}
+@mixin font-size3() {
+  font-size: $--font-size-3;
+  line-height: $--font-size-line-height-3;
+}
+@mixin font-size2() {
+  font-size: $--font-size-2;
+  line-height: $--font-size-line-height-2;
+}
+@mixin font-size1() {
+  font-size: $--font-size-1;
+  line-height: $--font-size-line-height-1;
+}
+
+$--font-weight-light: 300;
+$--font-weight-regular: 400;
+$--font-weight-bold: 600;
+$--font-weight-normal: normal;
+$--font-weight-default:$--font-weight-regular;
+
+/**
+ * 组件变量
+ */
+
+/* OsButton */
+$--fill-color-button-default: transparent !default;
+$--fill-color-button-default-active: $--fill-body !default;
+$--fill-color-button-default-disabled: $--text-color-disabled !default;
+
+$--fill-color-button-primary: $--color-red !default;
+$--fill-color-button-primary-active: #C6171D !default;
+$--fill-color-button-primary-disabled: $--color-red !default;
+
+$--fill-color-button-special1: transparent !default;
+
+$--fill-color-button-special2: transparent !default;
+
+$--fill-color-button-icon: transparent !default;
+$--fill-color-button-icon-active: $--fill-body !default;
+$--fill-color-button-icon-disabled: $--text-color-disabled !default;
+
+$--border-color-default: $--text-color-secondary !default;
+$--border-color-default-active: $--text-color-secondary !default;
+$--border-color-default-disabled: transparent !default;
+
+$--border-color-primary: $--color-red !default;
+$--border-color-primary-active: #A22929 !default;
+$--border-color-primary-disabled: $--color-red !default;
+
+$--border-color-special1: $--color-border-base-1 !default;
+$--border-color-special1-active: $--color-red !default;
+
+$--border-color-special2: $--text-color-disabled !default;
+$--border-color-special2-active: $--color-red !default;
+
+$--border-color-icon: #979797 !default;
+$--border-color-icon-active: #979797 !default;
+$--border-color-icon-disabled: $--text-color-disabled !default;
+
+$--border-style-special2: dashed !default;
+
+$--font-color-default: $--text-color-base !default;
+$--font-color-default-active: $--text-color-base !default;
+$--font-color-default-disabled: $--text-color-base-inverse !default;
+
+$--font-color-primary: $--text-color-base-inverse !default;
+$--font-color-primary-active: $--text-color-base-inverse !default;
+$--font-color-primary-disabled: rgba(255, 255, 255, 0.5) !default;
+
+$--font-color-special1: $--text-color-base !default;
+$--font-color-special1-active: $--color-red !default;
+
+$--font-color-special2: $--text-color-base !default;
+$--font-color-special2-active:$--color-red !default;
+
+$--font-color-icon: $--text-color-base !default;
+$--font-color-icon-active: $--text-color-base !default;
+$--font-color-icon-disabled: $--text-color-base-inverse !default;
+
+$--text-color-default: $--text-color-base !default;
+$--text-color-primary: $--text-color-base-inverse !default;
+$--text-color-special: $--text-color-base !default;
+$--text-color-icon: $--text-color-base !default;
+
+$--text-color-default-active: $--text-color-base !default;
+$--text-color-primary-active: $--text-color-base-inverse !default;
+$--text-color-special-active: $--color-red !default;
+$--text-color-icon-active: $--text-color-base !default;
+
+$--text-color-default-disabled: $--text-color-base-inverse !default;
+$--text-color-primary-disabled: #CB7A7A !default;
+$--text-color-special-disabled: $--text-color-secondary !default;
+$--text-color-icon-disabled: $--text-color-base-inverse !default;
+
+/* icon */
+$--fill-icon-color-logo: #050000 !default;
+$--fill-icon-disabled: #ccc !default;
+
+/* Navbar */
+$--fill-navbar-color:$--fill-bar !default;
+$--text-navbar-color:$--text-color-base !default;
+$--icon-navbar--color:$--fill-gray !default;
+
+/* Tabbar */
+$--fill-tabbar-color:$--fill-bar !default;
+$--text-tabbar-color:$--text-color-secondary !default;
+$--text-tabbar-active-color:$--color-red !default;
+$--space-tabbar:10px !default;
+
+/* Tag */
+$--fill-tag-default: $--fill-default !default;
+$--fill-tag-warning:$--color-yellow !default;
+$--fill-tag-normal:#333 !default;
+$--fill-tag-error:$--color-red !default;
+$--fill-tag-primary:#B4B4B4 !default;
+
+$--color-tag-default:$--text-color-base-inverse !default;
+$--color-tag-normal: #B4B4B4 !default;
+$--color-tag-warning:$--color-yellow !default;
+$--color-tag-error:$--color-red !default;
+
+$--border-color-tag-default: #B4B4B4 !default;
+$--border-color-tag-warning: $--color-yellow !default;
+$--border-color-tag-error: $--color-red !default;
+
+// $--color-tag-is-plain:$--color-red !default;
+// $--fill-tag-is-plain:rgba(255, 255, 255, 0.9) !default;
+// $--color-tag-white:$--text-color-base-inverse !default;
+// $--fill-tag-default:$--color-yellow !default;
+// $--color-tag-default:$--color-yellow !default;
+// $--fill-tag-warning:#333 !default;
+// $--color-tag-warning:$--text-color-secondary !default;
+// $--fill-tag-danger:$--color-red !default;
+// $--color-tag-danger:$--color-red !default;
+// $--fill-tag:$--fill-default !default;
+// $--fill-tag-normal: #fff !default;
+// $--border-color-tag-normal: #B4B4B4 !default;
+// $--color-tag-normal: #B4B4B4 !default;
+// $--fill-tag-warning: !default;
+// $--color-tag-warning: $--color-yellow !default;
+// $--border-color-tag-warning: #F48F18 !default;
+// // $--fill-tag-error: !default;
+// $--color-tag-error: $--color-red !default;
+
+
+/* List */
+$--color-list:$--text-color-base !default;
+$--fill-list:$--fill-default !default;
+
+
+/* Switch */
+$--border-color:#dfdfdf !default;
+$--fill-swicth:#dfdfdf !default;
+$--fill-switch-on:#44DB5E !default;
+$--fill-switch-off:#FFF !default;
+$--fill-switch-node:#FFF !default;
+// $--fill-switch-disiabled:#F4F4F4 !default;
+// $--color-switch-node:rgba(0, 0, 0, 0.10) !default;
+
+
+/* Search */
+$--fill-search:$--fill-bar !default;
+$--color-search:$--text-color-base !default;
+$--color-search-placeholder:$--text-color-secondary !default;
+$--fill-search-input:#EDEDED !default;
+
+/* List */
+$--fill-list:$--fill-default !default;
+$--fill-list-active: $--fill-model-btns-active !default;
+$--color-list-title: $--text-color-base !default;
+$--color-list-desc: $--text-color-secondary !default;
+
+/* NoticeBar */
+$--fill-notice-bar:#FFF8D8 !default;
+$--color-notice-bar: $--color-yellow !default;
+
+// Picker
+$picker-item-height: 43Px;
+$--fill-picker: $--fill-body !default;
+
+/* pickerGroup */
+$--border-color-indicator: #e5e5e5 !default;
+$--fill-mask-top-start: rgba(255, 255, 255, 0.95) !default;
+$--fill-mask-top-end: rgba(255, 255, 255, 0.6) !default;
+$--fill-mask-bottom-start: rgba(255, 255, 255, 0.6) !default;
+$--fill-mask-bottom-end: rgba(255, 255, 255, 0.95) !default;
+
+/* checkobx */
+
+/* imagePreview */
+$--fill-image-preview: $-fill-model-default !default;       //蒙层
+$--color-index-number: rgba(255, 255, 255, 0.8) !default; //指示器文字颜色
+$--fill-index-number:  rgba(255, 255, 255, 0.2) !default; //指示器背景色
+
+
+

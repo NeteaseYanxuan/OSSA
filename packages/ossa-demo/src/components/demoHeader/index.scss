@@ -1,0 +1,35 @@
+@charset "UTF-8";
+
+@import '../../assets/style/index.scss';
+
+.header {
+  display: flex;
+  align-items: center;
+  background: $--fill-body;
+  padding-top: 114px;
+  padding-bottom: 40px;
+  padding-left: 32px;
+
+  &.hide-split-line {
+    .header__title::before {
+      display: none;
+    }
+  }
+
+  &__title {
+    font-weight: $--font-weight-bold;
+    @include font-size9();
+
+    color: $--text-color-base;
+
+    &::before {
+      content: '';
+      display: inline-block;
+      vertical-align: text-top;
+      margin: 0 30px;
+      height: 48px;
+      width: 2px;
+      background: $--color-border-base;
+    }
+  }
+}

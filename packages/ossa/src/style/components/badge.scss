@@ -1,0 +1,103 @@
+@import '../base.scss';
+
+.ossa-badge {
+  position: relative;
+  display: inline-block;
+  font-size: 40px;
+
+  .ossa-icon {
+    vertical-align: top;
+  }
+
+  &.ossa-badge--info {
+    @include size(40px);
+  }
+
+  &.ossa-badge--dot {
+    @include size(40px);
+  }
+
+  &.ossa-badge--text {
+    font-size: $--font-size-6;
+    color: $--text-color-base;
+    height: 40px;
+    font-weight: $--font-weight-light;
+  }
+
+  &.ossa-badge--list {
+    position: static;
+    width: 16px;
+    height: 16px;
+    margin: 0 16px 0 auto;
+    background: $--fill-list;
+    font-size: $--font-size-6;
+    color: $--text-color-base;
+    box-sizing: border-box;
+  }
+
+  &__info--dot {
+    @include badge-variant(
+      absolute,
+      0,
+      6px,
+      auto,
+      12px,
+      12px,
+      $--color-red,
+      50%
+    );
+  }
+
+  &__info--info {
+    @include badge-variant(
+      absolute,
+      6px,
+      50%,
+      auto,
+      24px,
+      24px,
+      $--color-red,
+      20px
+    );
+
+    transform: translateY(-50%) translateX(100%);
+    @include font(18px,$--text-color-base-inverse);
+
+    line-height: 24px;
+    text-align: center;
+
+    &.ph-badge--is-widthAuto {
+      width: auto;
+      padding: 0 6px;
+      white-space: nowrap;
+    }
+  }
+
+  &__info--text {
+    @include badge-variant(
+      absolute,
+      0,
+      -12px,
+      auto,
+      12px,
+      12px,
+      $--color-red,
+      50%
+    );
+  }
+
+  &__info--list {
+    @include badge-variant(
+      absolute,
+      50%,
+      68px,
+      auto,
+      16px,
+      16px,
+      $--color-red,
+      50%
+    );
+
+    transform: translateY(-50%);
+  }
+}

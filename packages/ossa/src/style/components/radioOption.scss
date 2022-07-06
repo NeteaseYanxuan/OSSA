@@ -1,0 +1,64 @@
+@import '../base.scss';
+
+.ossa-radio {
+  &__option {
+    color: #333;
+    padding: 32px 0;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-weight: $--font-weight-default;
+
+    @include hairline-bottom();
+
+    &--disabled {
+      color: #ccc;
+
+      .ossa-radio__option-icon {
+        background: #ccc;
+      }
+    }
+
+    &--unexec {
+      color: #333;
+
+      .ossa-radio__option-icon {
+        background: #eee;
+      }
+    }
+
+    &--custom-label {
+      padding: 24px 0;
+
+      .ossa-radio__option-label {
+        margin-left: 20px;
+      }
+    }
+  }
+
+  &__option--dir-row::after {
+    border-bottom: 0;
+  }
+
+  &__option--dir-row {
+    margin-right: 90px;
+  }
+
+  &__option-icon {
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    background: #aaa;
+
+    &--selected {
+      background: #DD1A21;
+    }
+  }
+
+  &__option-label {
+    font-size: 28px;
+    margin-left: 16px;
+    line-height: 40px;
+  }
+}

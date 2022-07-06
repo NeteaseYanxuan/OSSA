@@ -1,0 +1,50 @@
+@import '../base.scss';
+
+.ossa-rate {
+  color: $--text-color-base;
+  display: flex;
+  align-items: center;
+
+  &__title {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: $--font-size-6;
+    margin-right: 16px;
+    font-weight: $--font-weight-default;
+  }
+
+  &__list {
+    display: inline-block;
+    // vertical-align: top;
+    margin-left: -14px;
+
+    .ossa-rate__icon {
+      display: inline-block;
+      margin-left: 14px;
+    }
+  }
+
+  &__txt {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 13px;
+    font-size: $--font-size-6;
+    color: $--text-color-secondary;
+    font-weight: $--font-weight-default;
+  }
+
+  &.ossa-rate--is-small {
+    .ossa-rate__list {
+      margin-left: -7px;
+    }
+
+    .ossa-rate__icon {
+      margin-left: 7px;
+      height: 24px;
+    }
+    // .rate__title,
+    // .rate__txt {
+    //   display: none;
+    // }
+  }
+}

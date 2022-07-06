@@ -1,0 +1,42 @@
+.demo-icon {
+  padding-bottom: 40px;
+
+  .inline-item {
+    display: inline-block;
+    vertical-align: top;
+    text-align: center;
+    width: 25%;
+    margin: 20px 0;
+
+    &--top {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 64px;
+    }
+
+    &--height152 {
+      height: 152px;
+    }
+
+    .inline-item-bg {
+      background: pink;
+    }
+  }
+
+  .inline-item--name {
+    display: block;
+    font-size: 20px;
+    color: #666;
+    word-wrap: break-word;
+  }
+
+  .inline-item--mt10 {
+    margin-top: 10px;
+  }
+
+  .block-section {
+    margin-bottom: 40px;
+    margin-top: -20px;
+  }
+}

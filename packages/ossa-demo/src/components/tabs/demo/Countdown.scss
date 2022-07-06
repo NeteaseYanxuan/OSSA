@@ -1,0 +1,25 @@
+.demo-countdown {
+  display: inline-block;
+  margin-left: 10px;
+
+  &--text {
+    position: relative;
+    padding: 2px 5px;
+    background-color: #000;
+    color: #fff;
+    border-radius: 5px;
+  }
+
+  &--text:not(:first-child) {
+    margin-left: 10px;
+
+    &::before {
+      content: ':';
+      position: absolute;
+      top: 50%;
+      left: -10px;
+      color: #000;
+      transform: translate(25%, -50%);
+    }
+  }
+}

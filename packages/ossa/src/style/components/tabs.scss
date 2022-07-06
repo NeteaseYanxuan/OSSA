@@ -1,0 +1,28 @@
+@import '../base.scss';
+
+.ossa-tabs {
+  display: flex;
+  font-weight: $--font-weight-default;
+  font-size: $--font-size-6;
+  color: $--text-color-base;
+  line-height: 1.1;
+  text-align: center;
+  overflow: hidden;
+  flex-flow: row nowrap;
+
+  &--horizontal {
+    flex-flow: column nowrap;
+  }
+
+  &--vertical {
+    &__body {
+      display: flex;
+      flex: 1;
+      align-items: center;
+    }
+  }
+
+  &__body {
+    position: relative;
+  }
+}

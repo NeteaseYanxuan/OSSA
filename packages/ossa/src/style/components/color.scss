@@ -1,0 +1,10 @@
+@import '../base.scss';
+
+.demo-component {
+  color: $--text-color-base;
+  display: inline-block;
+
+  &__title {
+    color: #333;
+  }
+}

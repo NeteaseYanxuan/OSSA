@@ -1,0 +1,14 @@
+@import '../base.scss';
+
+.ossa-date-picker {
+  .ossa-group-container {
+    display: flex;
+    flex-direction: row;
+
+    /* stylelint-disable */
+    os-picker-group {
+      flex: 1;
+    }
+    /* stylelint-enable */
+  }
+}

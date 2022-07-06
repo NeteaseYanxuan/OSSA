@@ -1,0 +1,116 @@
+@import '../base.scss';
+
+.ossa-tabs-header {
+  &--horizontal {
+    position: relative;
+    flex: 1;
+    display: flex;
+    font-weight: $--font-weight-default;
+    font-size: $--font-size-6;
+    color: $--text-color-base;
+    text-align: center;
+    flex-flow: row nowrap;
+
+    &--default {
+      .ossa-tabs-header__tab {
+        height: 60px;
+        line-height: 60px;
+      }
+
+      .ossa-tabs-header__overflow {
+        height: 60px;
+        overflow: hidden;
+      }
+    }
+
+    &--large {
+      .ossa-tabs-header__tab {
+        height: 80px;
+        line-height: 80px;
+      }
+
+      .ossa-tabs-header__overflow {
+        height: 80px;
+        overflow: hidden;
+      }
+    }
+
+    &.ossa-tabs-header--is-scroll {
+      .ossa-tabs-header__tab {
+        overflow: hidden;
+      }
+
+      .ossa-tabs-header__scroll {
+        justify-content: flex-start;
+        height: 100px;
+        overflow: hidden;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+      }
+    }
+
+    .ossa-tabs-header__tab {
+      position: relative;
+      display: flex;
+      flex: 1;
+      flex-flow: row nowrap;
+      overflow: auto hidden;
+    }
+
+    .ossa-tabs-header__scroll {
+      position: relative;
+      display: flex;
+      flex: 1;
+      flex-flow: row nowrap;
+      justify-content: space-around;
+    }
+
+    .ossa-tabs-header__overflow {
+      display: flex;
+      flex: 1;
+    }
+  }
+
+  &--vertical {
+    width: 160px;
+    overflow: hidden;
+
+    &.ossa-tabs-header--is-scroll {
+      padding: 15px 0;
+    }
+
+    &.ossa-tabs-header--show-split-line {
+      .ossa-tabs-header__scroll {
+        overflow: hidden;
+
+        &::after {
+          @include hairline-right();
+        }
+      }
+    }
+
+    .ossa-tabs-header__scroll {
+      position: relative;
+    }
+
+    .ossa-tabs-header__tab {
+      position: relative;
+      width: 180px;
+      max-height: 100vh;
+      overflow: hidden auto;
+    }
+  }
+
+  &--show-split-line {
+    .ossa-tabs-header__tab {
+      position: relative;
+
+      @include hairline-bottom-before();
+    }
+  }
+
+  &__tab {
+    background: $--fill-bar;
+    -webkit-overflow-scrolling: touch;
+  }
+}

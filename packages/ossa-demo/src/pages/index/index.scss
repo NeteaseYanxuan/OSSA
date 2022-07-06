@@ -1,0 +1,58 @@
+@import '../../assets/style/index.scss';
+
+.index {
+  &-head {
+    display: flex;
+    flex-direction: row;
+    height: 402px;
+    padding: 80px 30px 0;
+    box-sizing: border-box;
+
+    &__img {
+      width: 259px;
+      height: 290px;
+      flex-shrink: 0;
+    }
+
+    &__texts {
+      text-align: left;
+      padding-top: 49px;
+      margin-left: 30px;
+    }
+
+    &__title {
+      font-size: 36px;
+      color: #333;
+      line-height: 52px;
+      font-weight: $--font-weight-bold;
+    }
+
+    &__desc {
+      font-weight: $--font-weight-regular;
+      font-size: 24px;
+      color: #7F7F7F;
+      line-height: 32px;
+      margin-top: 11px;
+    }
+  }
+
+  &__body {
+    margin: 0 30px;
+  }
+
+  &__list {
+    border-radius: 8px;
+    margin-bottom: 20px;
+    overflow: hidden;
+  }
+
+  .list.list--is-hasSubTitle {
+    padding-top: 26px;
+    padding-bottom: 26px;
+  }
+}
+
+// style override
+.list-item-title {
+  font-weight: $--font-weight-regular;
+}
