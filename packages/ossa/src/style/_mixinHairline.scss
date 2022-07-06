@@ -1,0 +1,114 @@
+@import './_variable';
+
+@mixin hairline-common() {
+  position: relative;
+
+  &::after {
+    content: ' ';
+    position: absolute;
+    transform-origin: center;
+    box-sizing: border-box;
+    pointer-events: none;
+  }
+}
+
+@mixin hairline-common-before() {
+  position: relative;
+
+  &::before {
+    content: ' ';
+    position: absolute;
+    transform-origin: center;
+    box-sizing: border-box;
+    pointer-events: none;
+  }
+}
+
+@mixin hairline-top($left: 0, $color: $--color-border-base, $style: solid) {
+  @include hairline-common();
+
+  &::after {
+    top: 0;
+    left: $left;
+    right: 0;
+    bottom: auto;
+    transform: scaleY(0.5);
+    border-top: 1Px $style $color;
+  }
+}
+
+@mixin hairline-bottom($left: 0, $color: $--color-border-base, $style: solid) {
+  @include hairline-common();
+
+  &::after {
+    bottom: 0;
+    left: $left;
+    right: 0;
+    top: auto;
+    transform: scaleY(0.5);
+    border-bottom: 1Px $style $color;
+  }
+}
+
+@mixin hairline-bottom-before($left: 0, $color: $--color-border-base, $style: solid) {
+  @include hairline-common-before();
+
+  &::before {
+    bottom: 0;
+    left: $left;
+    right: 0;
+    top: auto;
+    transform: scaleY(0.5);
+    border-bottom: 1Px $style $color;
+  }
+}
+
+
+@mixin hairline-left($top: 0, $color: $--color-border-base, $style: solid) {
+  @include hairline-common();
+
+  &::after {
+    top: $top;
+    left: 0;
+    right: auto;
+    bottom: 0;
+    transform: scaleX(0.5);
+    border-left: 1Px $style $color;
+  }
+}
+
+@mixin hairline-right($top: 0, $color: $--color-border-base, $style: solid) {
+  @include hairline-common();
+
+  &::after {
+    top: $top;
+    left: auto;
+    right: 0;
+    bottom: 0;
+    transform: scaleX(0.5);
+    border-right: 1Px $style $color;
+  }
+}
+
+@mixin hairline-surround($color: $--color-border-base, $style: solid) {
+  @include hairline-common();
+
+  &::after {
+    top: -50%;
+    left: -50%;
+    right: -50%;
+    bottom: -50%;
+    border-color: $color;
+    border-style: $style;
+    transform: scale(0.5);
+    border-width: 1Px;
+  }
+}
+
+@mixin hairline-surround-color-inherit($style: solid) {
+  @include hairline-surround($--color-border-base, $style);
+
+  &::after {
+    border-color: inherit;
+  }
+}

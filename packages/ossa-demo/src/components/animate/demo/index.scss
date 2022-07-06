@@ -1,0 +1,12 @@
+@import '../../../assets/style/index.scss';
+
+.css-animate {
+  .inline-item--txt {
+    display: block;
+    @include font-size11();
+
+    color: $--color-red;
+    text-align: center;
+    margin-top: 60px;
+  }
+}

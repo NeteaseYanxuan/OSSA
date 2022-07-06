@@ -1,0 +1,95 @@
+@import '../base.scss';
+
+.ossa-carousel {
+  position: relative;
+  display: flex;
+  // width: 750px;
+  // height: 375px;
+  overflow: hidden;
+
+  .ossa-carousel-swiper {
+    width: 100%;
+    height: 100%;
+
+    .ossa-carousel-swiper-item {
+      position: relative;
+      display: flex;
+      // justify-content: center;
+      align-items: center;
+      box-sizing: border-box;
+    }
+
+    .ossa-carousel-swiper__item,
+    .ossa-carousel-swiper__item--vertical,
+    .ossa-carousel-swiper__item__image {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .ossa-carousel-indicatorWrap {
+    position: absolute;
+    z-index: 1;
+    height: 12px;
+    left: 50%;
+    right: auto;
+    bottom: 20px;
+    transform: translateX(-50%);
+
+    .ossa-carousel-indicator {
+      width: 12px;
+      height: 12px;
+      z-index: 1;
+      background: url(https://yanxuan.nosdn.127.net/15595595034812659.png) no-repeat;
+      background-size: 12px 12px;
+      background-position: top center;
+      float: left;
+      margin-left: 12px;
+      box-sizing: border-box;
+
+      &.active {
+        width: 12px;
+        height: 17px;
+        background: url(https://yanxuan.nosdn.127.net/15595594305122658.png) no-repeat;
+        background-size: 12px 17px;
+        background-position: top center;
+      }
+    }
+  }
+
+  &.ossa-carousel--space {
+    .ossa-carousel-swiper__item {
+      // padding: 0 10px;
+    }
+
+    .ossa-carousel-swiper__item--vertical {
+      // padding: 10px 0;
+    }
+
+    .ossa-carousel-swiper__item__image {
+      border-radius: 8px;
+    }
+  }
+
+  &.ossa-carousel-h5 {
+    &.ossa-carousel-h5--space {
+      height: 100%;
+
+      .ossa-carousel-swiper {
+        overflow: visible;
+
+        .ossa-carousel-swiper__item__image {
+          border-radius: 8px;
+        }
+      }
+
+      .ossa-carousel-swiper__item {
+        // padding: 0 10px;
+      }
+
+      .ossa-carousel-swiper__item--vertical {
+        // padding: 10px 0;
+      }
+    }
+  }
+}

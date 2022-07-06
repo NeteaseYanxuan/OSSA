@@ -1,0 +1,21 @@
+name: "\U0001F680 New feature proposal"
+description: Suggest an idea for this project
+labels: [":sparkles: feature request"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+       **Before You Start...**
+
+        这个模版仅适用于提交feature requeset，如果有使用问题，请在Discussion下进行提问。
+
+        在提交feature requeset之前，请确保您在当前issue列表中已经搜索过，确保没有其他人提过相似的诉求。
+  - type: textarea
+    id: problem-description
+    attributes:
+      label: 这个feature有什么功能?
+      description: |
+        请详细描述您现在所遇到的问题，以及想通过怎样的能力来解决您遇到的问题。
+      placeholder: 功能描述
+    validations:
+      required: true

@@ -1,0 +1,25 @@
+@import '../base.scss';
+
+.ossa-radio {
+  color: $--text-color-base;
+
+  &__options {
+    padding-left: 30px;
+
+    &--row {
+      position: relative;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+  }
+
+  &--dir-row {
+    .ossa-radio__options {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-start;
+    }
+  }
+}

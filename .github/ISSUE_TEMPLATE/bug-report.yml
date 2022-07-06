@@ -1,0 +1,50 @@
+name: "\U0001F41E Bug report"
+description: Create a report to help us improve
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Before You Start...**
+
+        这个模版仅适用于提交bug，如果有使用问题，请在Discussion下进行提问。
+
+        在提交bug之前，请确保您在当前issue列表中已经搜索过，没有找到已存在的相关问题。
+  - type: input
+    id: version
+    attributes:
+      label: OSSA version
+    validations:
+      required: true
+  - type: textarea
+    id: steps-to-reproduce
+    attributes:
+      label: 复现步骤
+      description: |
+        请详细描述bug复现的路径和步骤，方便我们定位问题。
+      placeholder: 复现步骤
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: 预期表现?
+    validations:
+      required: true
+  - type: textarea
+    id: actually-happening
+    attributes:
+      label: 实际表现?
+    validations:
+      required: true
+  - type: textarea
+    id: system-info
+    attributes:
+      label: 环境信息
+      description: Output of `npx envinfo --system --npmPackages --binaries --browsers`
+      render: shell
+      placeholder: System, Binaries, Browsers
+  - type: textarea
+    id: additional-comments
+    attributes:
+      label: 其他?
+      description: 其他信息

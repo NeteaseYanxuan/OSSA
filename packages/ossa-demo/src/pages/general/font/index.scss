@@ -1,0 +1,104 @@
+@import '../../../assets/style/index.scss';
+
+.demo-font {
+  color: #333;
+
+  .paragraph {
+    margin-bottom: 16px;
+    font-weight: $--font-weight-regular;
+  }
+
+  .col--font-size {
+    flex-shrink: 0;
+  }
+
+  .font-size {
+    text-align: left;
+    color: #7F7F7F;
+  }
+
+  .font-demo {
+    color: #333;
+    font-weight: $--font-weight-regular;
+  }
+
+  .font-desc {
+    color: #7F7F7F;
+    font-size: 28px;
+    font-weight: $--font-weight-light;
+  }
+
+  .font {
+    &--large-price {
+      @include font-size10();
+    }
+
+    &--title-protruding {
+      @include font-size11();
+    }
+
+    &--navbar-title {
+      @include font-size9();
+    }
+
+    &--module-title {
+      @include font-size8();
+    }
+
+    &--navbar-right-title {
+      @include font-size7();
+    }
+
+    &--desc {
+      @include font-size6();
+    }
+
+    &--multi-lines {
+      @include font-size5();
+    }
+
+    &--sub-desc {
+      @include font-size4();
+    }
+
+    &--tag {
+      @include font-size3();
+
+      line-height: 35px;
+
+      /*  #ifdef  h5 */
+      transform: scale(0.91);
+      transform-origin: 0 0;
+
+      /*  #endif  */
+    }
+
+    &--tag-1 {
+      @include font-size2();
+
+      line-height: 36px;
+
+      /*  #ifdef  h5 */
+      transform: scale(0.83);
+      transform-origin: 0 0;
+
+      /*  #endif  */
+    }
+
+    &--badge {
+      @include font-size2();
+
+      line-height: 32px;
+
+      /*  #ifdef  h5 */
+      transform: scale(0.75);
+      transform-origin: 0 0;
+
+      /*  #endif  */
+    }
+  }
+}
+
+.layout--flex {
+  align-items: center;
+}

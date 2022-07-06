@@ -1,0 +1,127 @@
+@import '../base.scss';
+
+.ossa-search {
+  display: flex;
+  height: 88px;
+  width: 100%;
+  line-height: 88px;
+  background: $--fill-search;
+  padding: 12px 30px;
+  box-sizing: border-box;
+  font-weight: $--font-weight-default;
+  font-size: $--font-size-6;
+  color: $--color-search;
+  -webkit-tap-highlight-color: transparent;
+
+  &.ossa-search--show-split-line {
+    position: relative;
+
+    @include hairline-bottom();
+  }
+
+  .ossa-icon--search-little {
+    //   margin: 0 8px 0 20px;
+  }
+
+  .ossa-icon--delete-input {
+    margin: 0 20px;
+  }
+
+  &__static {
+    text-align: center;
+    font-size: $--font-size-6;
+    color: $--color-search-placeholder;
+    justify-content: center;
+    // pointer-events: none;
+  }
+
+  &__static,
+  &__wrap {
+    // display: inline-block;
+    // vertical-align: top;
+    position: relative;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    flex: 1;
+    height: 64px;
+    line-height: 64px;
+    background: $--fill-search-input;
+    border-radius: 8px;
+  }
+
+  &__sot {
+    font-size: $--font-size-6;
+    color: $--color-search-placeholder;
+    line-height: 1.1;
+    margin-top: 2px;
+  }
+
+  &--cancel {
+    display: inline-block;
+    vertical-align: top;
+    line-height: 64px;
+    height: 64px;
+    width: 86px;
+    text-align: right;
+    color: $--color-search;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  &__form {
+    display: inline-flex;
+    justify-content: center;
+    font-size: inherit;
+    flex: 1;
+    border-radius: 8px;
+    padding-left: 56px;
+    box-sizing: border-box;
+  }
+
+  &__input {
+    display: inline-block;
+    width: 100%;
+    font-size: inherit;
+    vertical-align: middle;
+    text-align: left;
+    @include utils-formInit();
+
+    background: $--fill-search-input;
+    line-height: 40px;
+    height: 40px;
+    font-weight: $--font-weight-default;
+    color: $--color-search;
+    // &.center {
+    //   text-align: center;
+    // }
+    // &.left {
+    //   text-align: left;
+    // }
+  }
+
+  &__placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    color: $--color-search-placeholder;
+    font-size: $--font-size-5;
+  }
+
+  &__input::placeholder {
+    color: $--color-search-placeholder;
+    font-weight: 300;
+    font-size: $--font-size-5;
+  }
+
+  &__input--placehoder-style {
+    font-weight: normal;
+    font-size: $--font-size-5;
+    color: $--color-search-placeholder;
+  }
+  // @include utils-placeholder($--color-search-placeholder,28px);
+}

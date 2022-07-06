@@ -1,0 +1,162 @@
+@import '../base.scss';
+
+$modal-duration: 200ms;
+
+.ossa-modal {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  visibility: hidden;
+  transition: visibility $modal-duration ease-in;
+  z-index: 100;
+
+  &__mask,
+  &__container {
+    opacity: 0;
+    transition: opacity $modal-duration ease-in;
+  }
+
+  &__customWrapper {
+    @include absolute-center();
+  }
+
+  &__mask {
+    @include overlay;
+  }
+
+  &__container {
+    @include absolute-center();
+
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    width: 630px;
+    border-radius: 8px;
+    // overflow: hidden;
+    padding: 0;
+    background: $--fill-default;
+    margin-bottom: 8px;
+  }
+
+  &__title {
+    font-size: 32px;
+    line-height: 48px;
+    display: block;
+    text-align: center;
+  }
+
+  &__header {
+    padding-top: 48px;
+    padding-bottom: 8px;
+  }
+
+  &__content {
+    padding: 0 60px 48px;
+    color: $--text-color-secondary;
+    font-size: 28px;
+    font-weight: $--font-weight-default;
+  }
+
+  &__footer {
+    @include hairline-top();
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    & > .ossa-action-btn {
+      @include line(1);
+
+      color: $--text-color-base;
+      background-color: $--fill-default;
+      border: none;
+      font-size: 28px;
+      height: 104px;
+      line-height: 104px;
+      text-align: center;
+      box-sizing: border-box;
+      flex: 1;
+      margin-top: 0 !important;
+      border-radius: 0;
+      -webkit-appearance: none;
+      outline: none;
+
+      &::after {
+        border: 0;
+      }
+
+      &:active {
+        background-color: $--fill-model-btns-active;
+      }
+
+      &.ossa-action-btn--cancel {
+        color: $--text-color-base;
+      }
+
+      &.ossa-action-btn--confirm {
+        color: $--color-red;
+      }
+
+      &.ossa-action-btn--disabled {
+        color: $--text-color-disabled;
+        pointer-events: none;
+      }
+
+      &:not(:first-child) {
+        @include hairline-left();
+      }
+    }
+  }
+
+  &--show {
+    visibility: visible;
+
+    .ossa-modal__mask,
+    .ossa-modal__container {
+      opacity: 1;
+    }
+  }
+
+  &-closer {
+    width: 64px;
+    height: 64px;
+    position: absolute;
+    z-index: 50;
+
+    &--top,
+    &--bottom {
+      left: 50%;
+      transform: translate(-50%, 50%);
+    }
+
+    &--top {
+      top: -50px;
+    }
+
+    &--bottom {
+      bottom: -50px;
+    }
+
+    &--top-left,
+    &--top-right {
+      top: 20px;
+    }
+
+    &--top-right,
+    &--bottom-right {
+      right: 20px;
+    }
+
+    &--top-left,
+    &--bottom-left {
+      left: 20px;
+    }
+
+    &--bottom-left,
+    &--bottom-right {
+      bottom: 20px;
+    }
+  }
+}

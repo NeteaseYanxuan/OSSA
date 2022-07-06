@@ -1,0 +1,39 @@
+@import '../base.scss';
+
+.ossa-tabbar {
+  position: relative;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background: $--fill-tabbar-color;
+  height: 98px;
+
+  &.ossa-tabbar--is-fixedBt {
+    position: fixed;
+    z-index: 999;
+    bottom: 0;
+    left: 0;
+  }
+
+  &__item {
+    display: flex;
+    flex: 1;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    color: $--text-tabbar-color;
+
+    &.ossa-tabbar--is-active {
+      color: $--text-tabbar-active-color;
+    }
+  }
+
+  &__txt {
+    font-weight: $--font-weight-default;
+    font-size: $--font-size-4;
+    line-height: 1.1;
+    margin-top: $--space-tabbar;
+  }
+}

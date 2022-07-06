@@ -1,0 +1,30 @@
+.demo-image-preview {
+  .image-preview--img {
+    position: relative;
+    width: 154px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .img {
+      width: 152px;
+      height: 152px;
+      border-radius: 4px;
+    }
+
+    &::after {
+      content: ' ';
+      position: absolute;
+      box-sizing: border-box;
+      top: -50%;
+      left: -50%;
+      right: -50%;
+      bottom: -50%;
+      //border-radius: $--border-radius-base * 2;
+      transform: scale(0.5);
+      border: 1PX solid #d9d9d9;
+      border-radius: 8px;
+      pointer-events: none;
+    }
+  }
+}

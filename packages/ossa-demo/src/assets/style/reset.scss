@@ -1,0 +1,46 @@
+
+@import './_variable.scss';
+@mixin base-font() {
+  font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: $--font-weight-light;
+}
+
+body {
+  line-height: 1.5;
+  font-size: 28px;
+  color: #333;
+  max-width: 750px;
+  margin: 0 auto !important;
+  -webkit-user-select: none;
+  user-select: none;
+  @include base-font();
+}
+
+input,
+textarea {
+  @include base-font();
+
+  border: none;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+textarea:disabled {
+  background: none;
+}
+
+i { font-style: normal; }
+
+fieldset,
+img { border: 0; }
+a { text-decoration: none; color: #444; }
+
+ul,
+li { list-style: none; }
+
+header,
+footer,
+section { display: block; }
+

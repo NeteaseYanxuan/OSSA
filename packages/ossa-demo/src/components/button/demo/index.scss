@@ -1,0 +1,33 @@
+.demo-button {
+  padding-bottom: 40px;
+
+  .button-item {
+    display: inline-block;
+    vertical-align: top;
+    margin-bottom: 24px;
+    margin-right: 16px;
+
+    &--group {
+      width: 100%;
+
+      .button-custom {
+        width: 50%;
+        height: 80px;
+      }
+    }
+
+    &--block {
+      display: block;
+      margin-right: 0;
+    }
+  }
+
+  // .button-item--block {
+  //   composes: button-item;
+  // }
+}
+
+.button-item--block {
+  composes: button-item;
+}
+

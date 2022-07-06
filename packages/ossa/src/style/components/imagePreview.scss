@@ -1,0 +1,78 @@
+@import '../base.scss';
+
+.ossa-image-preview {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  color: $--text-color-base-inverse;
+  background-color: $--fill-image-preview;
+  overflow: hidden;
+
+  &__header {
+    position: fixed;
+    height: 56px;
+    width: 100%;
+    top: 32px;
+    z-index: 9;
+  }
+
+  &__back {
+    position: absolute;
+    left: 20px;
+    line-height: 56px;
+  }
+
+  &__index {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 28px;
+    padding: 11px 32px;
+    background-color: $--fill-index-number;
+    color: $--color-index-number;
+    font-size: $--font-size-4;
+  }
+
+  &__swipe {
+    overflow: hidden;
+    position: relative;
+    height: 100%;
+
+    &__track {
+      height: 100%;
+      //overflow-y: hidden;
+      // border: 1px solid red;
+      // position: absolute;
+      // top: 0;
+    }
+  }
+
+  &__swipe-item {
+    width: 7.5px;
+    height: 100%;
+    float: left;
+    overflow: hidden;
+    //border: 1px solid green;
+    &--image,
+    &--image img {
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+      width: 100%;
+      height: auto;
+      max-width: 100%;
+      max-height: 100%;
+      position: absolute;
+    }
+
+    &--image img {
+      width: 100%;
+    }
+  }
+}

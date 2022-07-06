@@ -1,0 +1,68 @@
+@import '../base.scss';
+
+$animation-duration: 200ms;
+
+.ossa-actionsheet {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+  z-index: 100;
+  transition: visibility $animation-duration ease-in;
+
+  &--show {
+    visibility: visible;
+
+    .ossa-actionsheet__mask {
+      opacity: 1;
+    }
+
+    .ossa-actionsheet__container {
+      transform: translate(-50%, 0%);
+    }
+  }
+
+  &__mask {
+    @include overlay;
+
+    opacity: 0;
+    transition: opacity $animation-duration ease-in;
+  }
+
+  &__container {
+    @include absolute-center-bottom();
+
+    width: 100%;
+    background: $--fill-default;
+    transform: translate(-50%, 100%);
+    transition: transform 200ms ease-in;
+  }
+
+  &__header {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 40px 24px;
+    @include hairline-bottom();
+  }
+
+  &__title {
+    flex: 1;
+    text-align: center;
+    margin-left: 64px;
+    padding: 0 16px;
+    font-size: $--font-size-5;
+  }
+
+  &__cancel-btn {
+    text-align: center;
+    height: 104px;
+    background-color: $--color-red;
+    color: $--text-color-base-inverse;
+    line-height: 104px;
+    font-size: $--font-size-5;
+  }
+}

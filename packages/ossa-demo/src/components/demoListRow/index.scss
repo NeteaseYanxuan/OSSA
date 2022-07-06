@@ -1,0 +1,86 @@
+@import '../../assets/style/index.scss';
+
+.list {
+  position: relative;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  padding: 32px 0 32px 30px;
+  font-weight: $--font-weight-default;
+  font-size: 28px;
+  line-height: 40px;
+  color: $--color-list-title;
+  background: $--fill-list;
+  -webkit-tap-highlight-color: transparent;
+  box-sizing: border-box;
+
+  &.list--is-show-split-line {
+    @include hairline-bottom(30px);
+  }
+
+  &.list--is-active {
+    background: $--fill-list-active;
+  }
+
+  &.list--is-hasSlot {
+    padding: 24px 0 24px 30px;
+  }
+
+  &.list--is-hasSubTitle {
+    padding: 25px 0 25px 30px;
+  }
+
+  &.list--is-hasDesc {
+    padding-right: 30px;
+  }
+
+  &.list--is-hasIcon {
+    padding-right: 24px;
+  }
+
+  &__box {
+    display: flex;
+    flex: 1;
+    margin-right: 16px;
+    flex-flow: column nowrap;
+  }
+
+  &--custom {
+    padding: 24px 30px;
+
+    .list--box {
+      flex: auto;
+    }
+  }
+
+  &__title {
+    @include font-size6();
+
+    font-weight: $--font-weight-regular;
+  }
+
+  &__subTitle {
+    @include font-size4();
+
+    color: $--color-list-desc;
+    margin-top: 2px;
+  }
+
+  &__desc {
+    color: $--color-list-desc;
+    margin-right: 8px;
+  }
+
+  .list__leftIcon {
+    font-size: 44px;
+    height: 44px;
+    margin-right: 20px;
+    margin-left: 0;
+  }
+
+  .list__rightIcon {
+    margin-left: auto;
+    font-size: 28px;
+    height: 28px;
+  }
+}

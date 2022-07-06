@@ -1,0 +1,71 @@
+@charset "UTF-8";
+@import '../../assets/style/index.scss';
+
+.block {
+  font-size: 24px;
+  // margin-bottom: 24px;
+  background: #fff;
+  padding-bottom: 1PX;
+  overflow: hidden;
+
+  &__header {
+    padding: 0 30px 16px;
+    overflow: hidden;
+  }
+
+  &__body {
+    padding: 0 30px;
+  }
+
+  &__body--fullscreen {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  &.block--hide-mb {
+    margin-bottom: 0;
+  }
+
+  &__title {
+    font-weight: $--font-weight-bold;
+    position: relative;
+    @include font-size6();
+
+    color: $--text-color-base;
+    width: 100%;
+    margin: 36px 0 0;
+    padding-left: 12px;
+    box-sizing: border-box;
+
+    &--hide-padding {
+      margin-left: 30px;
+    }
+
+    &::after {
+      content: " ";
+      position: absolute;
+      width: 4px;
+      left: 0;
+      right: auto;
+      bottom: 6px;
+      top: 6px;
+      background: #333;
+    }
+  }
+
+  &--hide-padding {
+    padding: 0;
+  }
+
+  &__subTitle {
+    font-weight: $--font-weight-regular;
+    @include font-size4();
+
+    color: $--text-color-secondary;
+    margin-top: 24px;
+
+    &::after {
+      content: "：";
+    }
+  }
+}

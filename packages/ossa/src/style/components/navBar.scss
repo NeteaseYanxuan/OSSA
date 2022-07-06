@@ -1,0 +1,140 @@
+@import '../base.scss';
+
+.ossa-navbar {
+  position: relative;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: center;
+  color: $--text-navbar-color;
+  font-size: 36px;
+  font-weight: $--font-weight-default;
+  background: $--fill-navbar-color;
+  padding: 0  30px 0 20px;
+  -webkit-tap-highlight-color: transparent;
+  height: 88px;
+  box-sizing: border-box;
+
+  &--3column {
+    .ossa-navbar--left {
+      flex: 1;
+    }
+
+    .ossa-navbar--middle {
+      height: 88px;
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .ossa-navbar--right {
+      flex: 1;
+    }
+  }
+
+  &--181column {
+    .ossa-navbar--left {
+      flex: 0.1;
+    }
+
+    .ossa-navbar--middle {
+      flex: 0.8;
+    }
+
+    .ossa-navbar--right {
+      flex: 0.1;
+    }
+  }
+
+  &.ossa-navbar--show-split-line {
+    @include hairline-bottom();
+  }
+
+  &--2column {
+    justify-content: flex-start;
+    padding: 18px  30px;
+
+    .ossa-navbar--left {
+      flex: 1;
+      overflow: hidden;
+    }
+
+    .ossa-navbar--right {
+      flex: 1;
+      overflow: hidden;
+    }
+  }
+
+  &--left {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: flex-start;
+    // @include TxtoverFlow();
+  }
+
+  &--middle {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
+    // margin-left: auto;
+    @include utils-ellipsis();
+  }
+
+  &--right {
+    flex: 0.1;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: flex-end;
+    margin-left: auto;
+  }
+
+  &__title {
+    text-align: center;
+    @include utils-ellipsis();
+  }
+
+  &__rightIcons {
+    height: 40px;
+
+    .ossa-icon {
+      vertical-align: top;
+      // margin-left: 30px;
+      color: $--icon-navbar--color;
+    }
+  }
+
+  &__leftIcons {
+    height: 40px;
+
+    .ossa-icon {
+      vertical-align: top;
+      color: $--icon-navbar--color;
+    }
+  }
+
+  &__rightTxts {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: flex-end;
+    @include font-size7();
+  }
+
+  &__leftTxts {
+    text-align: left;
+    @include font-size6();
+  }
+
+  &__rightTxt {
+    margin-left: 30px;
+  }
+
+  &__leftTxt {
+    margin-left: 16px;
+    margin-right: 10px;
+  }
+}

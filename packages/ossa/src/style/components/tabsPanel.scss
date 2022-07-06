@@ -1,0 +1,18 @@
+@import '../base.scss';
+
+.ossa-tabs-panel {
+  position: relative;
+  display: none;
+
+  &__content {
+    // position: absolute;
+    // left: 0;
+    // top: 0;
+    height: 100%;
+    width: 100%;
+  }
+
+  &--active {
+    display: block;
+  }
+}

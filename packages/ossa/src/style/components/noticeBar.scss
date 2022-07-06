@@ -1,0 +1,60 @@
+@import '../base.scss';
+
+@keyframes notice-bar-play-infinite {
+  100% {
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+
+.ossa-notice-bar {
+  color: $--color-notice-bar;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 80px;
+  line-height: 80px;
+  padding: 0 30px;
+  background-color: $--fill-notice-bar;
+  box-sizing: border-box;
+
+  &--play-infinite {
+    .ossa-notice-bar__content {
+      overflow: visible;
+      animation: notice-bar-play-infinite linear infinite;
+      animation-delay: 0s;
+      animation-duration: 16.35s;
+      padding-left: 100%;
+      display: inline-block;
+    }
+  }
+
+  &--with-icon {
+    .ossa-notice-bar__content-wrapper {
+      margin-left: 16px;
+    }
+  }
+
+  &__content-wrapper {
+    flex: 1;
+    overflow: hidden;
+  }
+
+  &__content {
+    font-size: 28px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: block;
+    font-weight: $--font-weight-default;
+  }
+
+  &__left-icon {
+    width: 30px;
+    margin-right: 16px;
+  }
+
+  &__close-btn {
+    width: 28px;
+    height: 28px;
+  }
+}

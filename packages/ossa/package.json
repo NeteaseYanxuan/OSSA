@@ -1,0 +1,74 @@
+{
+  "name": "ossaui",
+  "version": "0.0.2",
+  "description": "",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "types": "types/index.d.ts",
+  "source": "src/index.ts",
+  "files": [
+    "lib",
+    "dist",
+    "types",
+    "README.md"
+  ],
+  "scripts": {
+    "dev": "npm run dev:lib",
+    "dev:lib": "tsc --project ./tsconfig.build.json --watch --incremental",
+    "build": "npm run build:rollup && npm run build:lib",
+    "build:lib": "tsc --project ./tsconfig.build.json",
+    "build:rollup": "rollup --config ./rollup.config.js",
+    "prepublishOnly": "npm run clean && npm run build",
+    "lint": "eslint ./src --fix",
+    "lint:style": "stylelint \"src/**/*.scss\" --syntax scss",
+    "lint:style-fix": "stylelint \"src/**/*.scss\" --syntax scss --fix",
+    "test": "cross-env NODE_ENV=test && jest --coverage",
+    "test:ci": "npm run build:h5 && npm run test",
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0",
+    "clean": "rimraf .temp dist lib coverage"
+  },
+  "keywords": [
+    "taro"
+  ],
+  "dependencies": {
+    "classnames": "^2.2.6"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^13.0.0",
+    "@rollup/plugin-json": "^4.1.0",
+    "@rollup/plugin-node-resolve": "^8.0.1",
+    "@tarojs/components": "^3.0.8",
+    "@tarojs/react": "^3.0.8",
+    "@tarojs/taro": "^3.0.8",
+    "@types/node": "^14.0.13",
+    "@types/react": "^16.9.36",
+    "@types/react-dom": "^16.9.8",
+    "@typescript-eslint/eslint-plugin": "^5.x",
+    "@typescript-eslint/parser": "^5.x",
+    "cross-env": "^7.0.2",
+    "eslint": "^7.2.0",
+    "eslint-config-taro": "^3.0.8",
+    "eslint-plugin-import": "^2.21.2",
+    "eslint-plugin-react": "^7.20.0",
+    "eslint-plugin-react-hooks": "^4.0.4",
+    "jest": "26",
+    "rimraf": "3.0.2",
+    "rollup": "^2.16.1",
+    "rollup-plugin-copy": "^3.3.0",
+    "rollup-plugin-typescript2": "^0.27.1",
+    "rollup-plugin-visualizer": "^4.0.4",
+    "stylelint": "13.6.0",
+    "stylelint-config-standard": "20.0.0",
+    "stylelint-scss": "3.17.2",
+    "ts-jest": "26",
+    "typescript": "^3.9.5"
+  },
+  "peerDependencies": {
+    "@tarojs/components": "^3.4.12",
+    "@tarojs/react": "^3.4.12",
+    "react": ">=16.13.0",
+    "react-dom": ">=16.13.0"
+  },
+  "author": "",
+  "license": "MIT"
+}

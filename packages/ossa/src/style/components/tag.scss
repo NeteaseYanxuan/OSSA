@@ -1,0 +1,107 @@
+@import '../base.scss';
+
+.ossa-tag {
+  color: $--color-red;
+  background-color: $--fill-tag-default;
+  font-size: 24px;
+  line-height: 30px;
+  height: 30px;
+  text-align: center;
+  padding: 0 16px 0 16px;
+  display: inline-block;
+  box-sizing: border-box;
+  font-weight: $--font-weight-light;
+
+  &__title {
+    // transform: scale(0.8);
+    display: inline-block;
+    // transform-origin: 50% 50%;
+  }
+
+  &--color-normal {
+    color: $--color-tag-normal;
+  }
+
+  &--color-warning {
+    color: $--color-tag-warning;
+  }
+
+  &--color-error {
+    color: $--color-tag-error;
+  }
+
+  &--border-none {
+    .ossa-border {
+      display: none;
+    }
+  }
+
+  &--arrow {
+    width: 10px;
+    height: 18px;
+    margin-top: -1px;
+  }
+
+  &--type-radius {
+    position: relative;
+    padding: 0 12px 0 12px;
+    font-size: 20px;
+    border-radius: 16px;
+
+    .ossa-border {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 200%;
+      height: 200%;
+      transform: scale(0.5);
+      border: 1px solid $--border-color-tag-default;
+      border-radius: 30px;
+      transform-origin: 0 0;
+    }
+
+    &.ossa-tag--color-warning {
+      .border {
+        border-color: $--border-color-tag-warning;
+      }
+    }
+
+    &.ossa-tag--color-error {
+      .border {
+        border-color: $--border-color-tag-error;
+      }
+    }
+  }
+
+  &--type-primary {
+    background-color: $--fill-tag-primary;
+    color: $--text-color-base-inverse;
+    border-radius: 0 0 4px 4px;
+    font-size: 24px;
+    line-height: 36px;
+    height: 36px;
+
+    .ossa-tag__title {
+      transform: scale(1);
+      display: inline-block;
+    }
+
+    &.ossa-tag--color-normal {
+      background-color: $--fill-tag-normal;
+      color: $--text-color-base-inverse;
+      opacity: 0.5;
+    }
+
+    &.ossa-tag--color-warning {
+      background-color: $--fill-tag-warning;
+      color: $--text-color-base-inverse;
+      opacity: 0.8;
+    }
+
+    &.ossa-tag--color-error {
+      background-color: $--fill-tag-error;
+      color: $--text-color-base-inverse;
+      opacity: 0.8;
+    }
+  }
+}

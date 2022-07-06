@@ -1,0 +1,25 @@
+.demo-navbar {
+  padding-bottom: 40px;
+
+  .custom-nabbar {
+    flex: 1;
+    display: flex;
+    align-items: center;
+
+    .navbar--left {
+      flex: 0.1;
+      height: 40px;
+    }
+
+    .navbar--middle {
+      flex: 0.8;
+      text-align: center;
+    }
+
+    .navbar--right {
+      margin-left: auto;
+      vertical-align: middle;
+      height: 40px;
+    }
+  }
+}

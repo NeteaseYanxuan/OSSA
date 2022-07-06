@@ -1,0 +1,33 @@
+@import '../../../assets/style/index.scss';
+
+.custom-option {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  font-size: 28px;
+
+  &__img {
+    width: 172px;
+    height: 172px;
+    border-radius: 4px;
+    background-color: #f4f4f4;
+  }
+
+  &__content {
+    margin-left: 20px;
+  }
+
+  &__title {
+    color: #333;
+  }
+
+  &__sub-title {
+    color: #7f7f7f;
+    font-size: 24px;
+  }
+
+  &__price {
+    color: $--color-red;
+    font-weight: $--font-weight-bold;
+  }
+}

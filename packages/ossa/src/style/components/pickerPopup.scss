@@ -1,0 +1,66 @@
+@import '../base.scss';
+
+$animation-duration: 200ms;
+
+.picker-popup {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+  transition: visibility $animation-duration ease-in;
+  z-index: 1010;
+
+  &--show {
+    visibility: visible;
+
+    .picker-popup__mask {
+      opacity: 1;
+    }
+
+    .picker-popup__container {
+      transform: translate(-50%, 0%);
+    }
+  }
+
+  &__mask {
+    @include overlay;
+
+    opacity: 0;
+    transition: opacity $animation-duration ease-in;
+  }
+
+  &__container {
+    @include absolute-center-bottom();
+
+    width: 100%;
+    background: #fff;
+    transform: translate(-50%, 100%);
+    transition: transform 200ms ease-in;
+  }
+
+  &__header {
+    height: 90px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0 30px;
+    background: #F4F4F4;
+  }
+
+  &__btn {
+    color: $--text-color-base;
+    font-weight: $--font-weight-default;
+    font-size: 28px;
+    flex: 1;
+  }
+
+  &__btn-confirm {
+    text-align: right;
+  }
+
+  &__body {
+    height: $picker-item-height * 5;
+  }
+}

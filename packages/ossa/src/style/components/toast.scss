@@ -1,0 +1,33 @@
+@import '../base.scss';
+
+.ossa-toast {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  line-height: 40px;
+  box-sizing: border-box;
+  @include toast-variant(10px,32px,372px,$--font-size-6,$--text-color-base-inverse,$--fill-toast,4px);
+
+  transition: opacity 0.3s linear;
+  word-wrap: break-word;
+
+  &__text {
+    font-size: inherit;
+    font-weight: $--font-weight-light;
+  }
+
+  &--show {
+    // opacity: 1;
+    display: block;
+    //transform: translate3d(0, 0, 0);
+  }
+
+  &--hidden {
+    // opacity: 0;
+    display: none;
+    //transform: translate3d(0, -100%, 0);
+  }
+}

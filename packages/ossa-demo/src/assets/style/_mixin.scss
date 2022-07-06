@@ -1,0 +1,147 @@
+@import './_utils';
+@import './_mixinHairline';
+
+@mixin eject($attr, $value) {
+  /* postcss-pxtransform rn eject enable */
+  #{$attr}: $value;
+
+  /* postcss-pxtransform rn eject disable */
+}
+
+@mixin icon-size($--font-size) {
+  font-size: $--font-size;
+}
+
+@mixin size($size) {
+  width: $size;
+  height: $size;
+}
+
+@mixin font($fontSize,$color) {
+  font-size: $fontSize;
+  color: $color;
+}
+@mixin badge-variant(
+  $position,
+  $top,
+  $right,
+  $left,
+  $width,
+  $height,
+  $background,
+  $borderRadius) {
+  position: $position;
+  top: $top;
+  right: $right;
+  left: $left;
+  width: $width;
+  height: $height;
+  background: $background;
+  border-radius: $borderRadius;
+}
+
+@mixin button-size($padding, $height, $width) {
+  padding: $padding;
+  height: $height;
+  width: $width;
+}
+
+@mixin button-variant(
+  $color,
+  $background-color,
+  $border-color,
+  // $color-active,
+  // $background-color-active,
+  // $border-color-active,
+  // $color-disabled,
+  // $background-color-disabled,
+  // $border-color-disabled,
+  $border-style:solid
+) {
+  color: $color;
+  background-color: $background-color;
+  border-color: $border-color;
+  @include hairline-surround-color-inherit($border-style);
+
+  // &.button--is-active {
+  //   color: $color-active;
+  //   background-color: $background-color-active;
+  //   border-color: $border-color-active;
+  //   @include hairline-surround-color-inherit();
+
+  //   outline: none;
+  // }
+
+  // &.button--is-disabled {
+  //   &,
+  //   &:hover,
+  //   &:focus,
+  //   &:active {
+  //     color: $color-disabled;
+  //     background-color: $background-color-disabled;
+  //     border-color: $border-color-disabled;
+  //     @include hairline-surround-color-inherit();
+
+  //     cursor: not-allowed;
+  //     background-image: none;
+  //   }
+  // }
+}
+
+@mixin stepper-variant($width,$height,$fontSize,$borderW) {
+  position: relative;
+  vertical-align: top;
+  width: $width;
+  height: $height;
+  font-size: $fontSize;
+  color: $--text-color-base;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+@mixin toast-variant($paddingVer,$paddinghor,$maxWidth,$fontSize,$color,$background,$borderRadius) {
+  padding: $paddingVer $paddinghor;
+  max-width: $maxWidth;
+  font-size: $fontSize;
+  color: $color;
+  background: $background;
+  border-radius: $borderRadius;
+}
+
+@mixin overlay {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: rgba($color: #000, $alpha: 0.3);
+}
+
+@mixin absolute-center($pos: absolute) {
+  position: $pos;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin absolute-center-bottom($pos: absolute) {
+  position: $pos;
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%, 0);
+}
+
+@mixin line($num: 1) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  @if ($num == 1) {
+    white-space: nowrap;
+  } @else {
+    display: -webkit-box;
+    -webkit-line-clamp: $num;
+
+    /* autoprefixer: off */
+    -webkit-box-orient: vertical;
+  }
+}

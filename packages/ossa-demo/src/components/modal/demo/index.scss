@@ -1,0 +1,42 @@
+@import '../../../assets/style/index.scss';
+
+.demo-modal {
+  .custom-content {
+    padding: 28px 60px 32px;
+
+    .custom-demo {
+      :global(.ossa-action-btn--cancel) {
+        color: #f00 !important;
+      }
+    }
+
+    &__title {
+      margin-bottom: 40px;
+      display: block;
+      text-align: center;
+      font-size: 32px;
+      font-weight: $--font-weight-regular;
+    }
+
+    &__row {
+      margin-bottom: 16px;
+      display: flex;
+      justify-content: space-between;
+      font-size: 28px;
+      font-weight: $--font-weight-default;
+    }
+  }
+
+  .custom-content-1 {
+    font-size: 0;
+
+    &__img {
+      width: 100%;
+      height: 336px;
+
+      & > img {
+        font-size: 0;
+      }
+    }
+  }
+}

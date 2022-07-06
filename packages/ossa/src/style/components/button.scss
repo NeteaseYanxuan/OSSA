@@ -1,0 +1,225 @@
+@import '../base.scss';
+
+.ossa-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  -webkit-tap-highlight-color: transparent;
+  box-sizing: border-box;
+  max-width: 100%;
+  cursor: pointer;
+
+  .icon {
+    color: inherit;
+  }
+
+  .ossa-button__text {
+    display: inline-block;
+    font-weight: $--font-weight-default;
+    font-size: 28px;
+    max-width: 100%;
+    line-height: 1.1;
+    @include utils-ellipsis();
+  }
+
+  &::-moz-focus-inner {
+    border: 0;
+  }
+
+  border-radius: 4px;
+
+  &::after {
+    border-radius: 8px;
+  }
+
+  /* type */
+  &--default {
+    position: relative;
+    @include button-variant(
+      $--font-color-default, $--fill-color-button-default, $--border-color-default
+    );
+
+    &.ossa-button--is-active::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0.1;
+      background: #7F7F7F;
+      border-radius: inherit;
+      pointer-events: none;
+    }
+
+    &.ossa-button--is-disabled {
+      &,
+      &:hover,
+      &:focus,
+      &:active {
+        opacity: 0.5;
+      }
+    }
+  }
+
+  &--primary {
+    @include button-variant(
+      $--font-color-primary, $--fill-color-button-primary, $--border-color-primary
+    );
+
+    &.ossa-button--is-active::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0.1;
+      background: #000;
+      border-radius: inherit;
+      pointer-events: none;
+    }
+
+    &.ossa-button--is-disabled {
+      &,
+      &:hover,
+      &:focus,
+      &:active {
+        .ossa-button__text {
+          opacity: 0.5;
+        }
+      }
+    }
+  }
+
+  &--special1 {
+    @include button-variant(
+      $--font-color-special1, $--fill-color-button-special1, $--border-color-special1
+    );
+
+    @include button-size(0 28px,64px,auto);
+
+    &.ossa-button--is-active {
+      color: $--font-color-special1-active;
+      border-color: $--border-color-special1-active;
+      @include hairline-surround-color-inherit();
+
+      .ossa-button__text {
+        color: $--font-color-special1-active;
+      }
+    }
+  }
+
+  &--special2 {
+    @include button-variant(
+      $--font-color-special2, $--fill-color-button-special2, $--border-color-special2,
+      $--border-style-special2
+    );
+
+    @include button-size(0 28px,64px,auto);
+
+    &.ossa-button--is-active {
+      color: $--font-color-special2-active;
+      border-color: $--border-color-special2-active;
+      @include hairline-surround-color-inherit($--border-style-special2);
+
+      .ossa-button__text {
+        color: $--font-color-special2-active;
+      }
+    }
+  }
+
+  /* 尺寸 */
+  &--min {
+    @include button-size(0 12px,36px,auto);
+
+    min-width: 84px;
+    max-width: 208px;
+
+    &.ossa-button--circle {
+      border-radius: 20px;
+
+      &::after {
+        border-radius: 40px;
+      }
+    }
+
+    .ossa-button__text {
+      font-size: 20px;
+    }
+  }
+
+  &--small {
+    @include button-size(0 20px,48px,auto);
+
+    min-width: 112px;
+    max-width: 272px;
+
+    &.ossa-button--circle {
+      border-radius: 24px;
+
+      &::after {
+        border-radius: 48px;
+      }
+    }
+
+    .ossa-button__text {
+      font-size: 24px;
+    }
+  }
+
+  &--normal {
+    @include button-size(0 28px,64px,auto);
+
+    min-width: 148px;
+    max-width: 288px;
+
+    &.ossa-button--circle {
+      border-radius: 32px;
+
+      &::after {
+        border-radius: 64px;
+      }
+    }
+
+    .ossa-button__text {
+      font-size: 28px;
+    }
+  }
+
+  &--large {
+    @include button-size(0,80px,510px);
+
+    display: flex;
+    // width: 510px;
+
+    &.ossa-button--circle {
+      border-radius: 40px;
+
+      &::after {
+        border-radius: 80px;
+      }
+    }
+
+    .ossa-button__text {
+      font-size: 28px;
+    }
+  }
+
+  &--block {
+    @include button-size(0,96px,100%);
+
+    display: flex;
+    margin: 0;
+
+    &.ossa-button--circle {
+      border-radius: 48px;
+
+      &::after {
+        border-radius: 96px;
+      }
+    }
+  }
+}
+
+

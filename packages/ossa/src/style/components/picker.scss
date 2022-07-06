@@ -1,0 +1,67 @@
+@import '../base.scss';
+
+$animation-duration: 200ms;
+
+.ossa-picker-popup {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+  transition: visibility $animation-duration ease-in;
+  z-index: 1010;
+  font-weight: $--font-weight-default;
+
+  &--show {
+    visibility: visible;
+
+    .ossa-picker-popup__mask {
+      opacity: 1;
+    }
+
+    .ossa-picker-popup__container {
+      transform: translate(-50%, 0%);
+    }
+  }
+
+  &__mask {
+    @include overlay;
+
+    opacity: 0;
+    transition: opacity $animation-duration ease-in;
+  }
+
+  &__container {
+    @include absolute-center-bottom();
+
+    width: 100%;
+    background: $--fill-default;
+    transform: translate(-50%, 100%);
+    transition: transform 200ms ease-in;
+  }
+
+  &__header {
+    height: 90px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0 30px;
+    background: $--fill-picker;
+  }
+
+  &__btn {
+    color: $--text-color-base;
+    font-size: $--font-size-5;
+    font-weight: $--font-weight-default;
+    flex: 1;
+  }
+
+  &__btn-confirm {
+    text-align: right;
+  }
+
+  &__body {
+    height: 430px;
+  }
+}
