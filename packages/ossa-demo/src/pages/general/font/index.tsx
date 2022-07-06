@@ -51,44 +51,44 @@ export default function Index(props: Props) {
   return (
     <View className={classNames(classObject)}>
       <DemoHeader title={demoTitle}></DemoHeader>
-      <DemoBlock title="规范">
-        <View className="block-section">
-          <View className="paragraph">
+      <DemoBlock title='规范'>
+        <View className='block-section'>
+          <View className='paragraph'>
             1.为确保移动终端的通用性，iOS平台选用 PingFang SC 作为中文字体, San
             Francisco作为数字和英文字体; Android平台选用Android默认字体。
           </View>
-          <View className="paragraph">
+          <View className='paragraph'>
             2.标点符号使用半角符号 ( 切换成英文输入符号+一个空格 ) 。{" "}
           </View>
-          <View className="paragraph">
+          <View className='paragraph'>
             3.文字行高用文字字号乘以1.25或1.5或1.75倍来定义,
             默认1.5倍作为标准行高, 具体行高可视界面效果灵活处理,
             最好是取4的倍数。
           </View>
-          <View className="paragraph">
+          <View className='paragraph'>
             4.文字字重有Light、Regular、Semibold三种, 以Light为主,
             具体字重可视界面效果灵活处理。
           </View>
         </View>
       </DemoBlock>
-      <DemoBlock title="示例">
+      <DemoBlock title='示例'>
         {fontConfig.map((config, index) => {
           return (
-            <View className="block-section" key={config.id}>
+            <View className='block-section' key={config.id}>
               <View
                 className={classNames("layout", "layout--flex", "layout--flex")}
               >
                 <View className={classNames("col", "col--2", "col--font-size")}>
-                  <View className="font-size">{config.size}px</View>
+                  <View className='font-size'>{config.size}px</View>
                 </View>
                 <View className={classNames("col", "col--10")}>
-                  <View className="font-scene">
+                  <View className='font-scene'>
                     <View
                       className={classNames("font-demo", `font--${config.id}`)}
                     >
                       严选好物用心生活
                     </View>
-                    <View className="font-desc">{config.desc}</View>
+                    <View className='font-desc'>{config.desc}</View>
                   </View>
                 </View>
               </View>

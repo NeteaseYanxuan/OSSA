@@ -168,7 +168,7 @@ export default function Index(props: Props) {
       <DemoHeader title={demoTitle}></DemoHeader>
       {/* 小程序基础 */}
       {Taro.getEnv() !== Taro.ENV_TYPE.WEB && (
-        <DemoBlock title="基础" fullScreen>
+        <DemoBlock title='基础' fullScreen>
           <OsCarousel
             data={img1List}
             width={750}
@@ -219,7 +219,7 @@ export default function Index(props: Props) {
 
       {/*小程序分隔式 */}
       {Taro.getEnv() !== Taro.ENV_TYPE.WEB && (
-        <DemoBlock title="分隔式" fullScreen>
+        <DemoBlock title='分隔式' fullScreen>
           <OsCarousel
             data={initImg1}
             width={750}
@@ -237,7 +237,7 @@ export default function Index(props: Props) {
 
       {/* h5基础 */}
       {Taro.getEnv() === Taro.ENV_TYPE.WEB && (
-        <DemoBlock title="基础" fullScreen>
+        <DemoBlock title='基础' fullScreen>
           <OsCarousel
             data={img1List}
             width={750}
@@ -246,8 +246,8 @@ export default function Index(props: Props) {
             circular
             current={1}
             indicatorDots
-            indicatorActiveColor="#DD1A21"
-            indicatorColor="#FFF"
+            indicatorActiveColor='#DD1A21'
+            indicatorColor='#FFF'
             onChange={onChange}
           />
         </DemoBlock>
@@ -256,7 +256,7 @@ export default function Index(props: Props) {
       {/* h5分隔式 */}
       {Taro.getEnv() === Taro.ENV_TYPE.WEB && (
         <DemoBlock
-          title="分隔式"
+          title='分隔式'
           fullScreen
           customStyle={{ overflow: "hidden" }}
         >
@@ -272,17 +272,17 @@ export default function Index(props: Props) {
             prevMargin={100}
             nextMargin={50}
             indicatorDots
-            indicatorActiveColor="#DD1A21"
-            indicatorColor="#FFF"
+            indicatorActiveColor='#DD1A21'
+            indicatorColor='#FFF'
             current={0}
           />
         </DemoBlock>
       )}
 
-      <DemoBlock title="文案">
+      <DemoBlock title='文案'>
         <OsCarousel
-          className="my-carousel"
-          type="text"
+          className='my-carousel'
+          type='text'
           data={initTxt}
           width={750}
           height={100}

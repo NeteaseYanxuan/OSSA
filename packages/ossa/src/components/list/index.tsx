@@ -93,7 +93,7 @@ export default function List(props: OsListProps) {
       onTouchEnd={() => onTouchEnd(props, setActive, active)}
     >
       {leftIcon && (
-        <View className="ossa-list__leftIcon">
+        <View className='ossa-list__leftIcon'>
           <OsIcon
             type={leftIcon}
             size={leftIconSize}
@@ -103,7 +103,7 @@ export default function List(props: OsListProps) {
       )}
 
       {(title || subTitle) && (
-        <View className="ossa-list__box">
+        <View className='ossa-list__box'>
           {title && (
             <View
               className={classNames("ossa-list__title", "ossa-title-class")}
@@ -128,13 +128,13 @@ export default function List(props: OsListProps) {
       {props.children}
 
       {desc && (
-        <View className="ossa-list__desc" style={colorStyleObject}>
+        <View className='ossa-list__desc' style={colorStyleObject}>
           {desc}
         </View>
       )}
 
       {rightIcon && (
-        <View className="ossa-list__rightIcon">
+        <View className='ossa-list__rightIcon'>
           <OsIcon
             size={28}
             type={rightIcon}

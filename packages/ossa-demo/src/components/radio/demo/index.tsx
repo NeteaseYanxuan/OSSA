@@ -78,8 +78,8 @@ export default function Index(props: Props) {
   const classObject = getClassObject(); //组件修饰
   return (
     <View className={classNames(classObject)}>
-      <DemoHeader title="Radio 单选框"></DemoHeader>
-      <DemoBlock title="基础" subTitle="普通" fullScreen>
+      <DemoHeader title='Radio 单选框'></DemoHeader>
+      <DemoBlock title='基础' subTitle='普通' fullScreen>
         <OsRadio>
           <OsRadioOption value={v1} optionValue={0} onClick={setV1}>
             选项A
@@ -90,44 +90,44 @@ export default function Index(props: Props) {
         </OsRadio>
       </DemoBlock>
 
-      <DemoBlock subTitle="选项内容自定义" fullScreen>
+      <DemoBlock subTitle='选项内容自定义' fullScreen>
         <OsRadio>
           <OsRadioOption value={v2} optionValue={0} onClick={setV2} isCustom>
-            <View className="custom-option">
+            <View className='custom-option'>
               <Image
-                className="custom-option__img"
-                src="https://yanxuan-item.nosdn.127.net/8aafd2aa11a023d69ec1dfbc062b28c7.png?quality=95&thumbnail=245x245&imageView"
+                className='custom-option__img'
+                src='https://yanxuan-item.nosdn.127.net/8aafd2aa11a023d69ec1dfbc062b28c7.png?quality=95&thumbnail=245x245&imageView'
               />
-              <View className="custom-option__content">
-                <View className="custom-option__title">西装</View>
-                <View className="custom-option__sub-title">
+              <View className='custom-option__content'>
+                <View className='custom-option__title'>西装</View>
+                <View className='custom-option__sub-title'>
                   帅气的办公室吸睛装扮
                 </View>
-                <View className="custom-option__price">&yen;299</View>
+                <View className='custom-option__price'>&yen;299</View>
               </View>
             </View>
           </OsRadioOption>
           <OsRadioOption value={v2} optionValue={1} onClick={setV2} isCustom>
-            <View className="custom-option">
+            <View className='custom-option'>
               <Image
-                className="custom-option__img"
-                src="https://yanxuan.nosdn.127.net/b3dec0eb768d27301afab1b4a43f30cb.png?quality=95&thumbnail=172x172&imageView"
+                className='custom-option__img'
+                src='https://yanxuan.nosdn.127.net/b3dec0eb768d27301afab1b4a43f30cb.png?quality=95&thumbnail=172x172&imageView'
               />
-              <View className="custom-option__content">
-                <View className="custom-option__title">
+              <View className='custom-option__content'>
+                <View className='custom-option__title'>
                   网易智造四季全屋循环扇
                 </View>
-                <View className="custom-option__sub-title">
+                <View className='custom-option__sub-title'>
                   源自日本，全屋空气对流循环
                 </View>
-                <View className="custom-option__price">&yen;248.1</View>
+                <View className='custom-option__price'>&yen;248.1</View>
               </View>
             </View>
           </OsRadioOption>
         </OsRadio>
       </DemoBlock>
 
-      <DemoBlock title="禁用" subTitle="普通" fullScreen>
+      <DemoBlock title='禁用' subTitle='普通' fullScreen>
         <OsRadio>
           <OsRadioOption value={v3} optionValue={0} onClick={setV3} isDisabled>
             选项A
@@ -138,7 +138,7 @@ export default function Index(props: Props) {
         </OsRadio>
       </DemoBlock>
 
-      <DemoBlock subTitle="选项内容自定义" fullScreen>
+      <DemoBlock subTitle='选项内容自定义' fullScreen>
         <OsRadio>
           <OsRadioOption
             value={v4}
@@ -147,17 +147,17 @@ export default function Index(props: Props) {
             isDisabled
             isCustom
           >
-            <View className="custom-option">
+            <View className='custom-option'>
               <Image
-                className="custom-option__img"
-                src="https://yanxuan-item.nosdn.127.net/8aafd2aa11a023d69ec1dfbc062b28c7.png?quality=95&thumbnail=245x245&imageView"
+                className='custom-option__img'
+                src='https://yanxuan-item.nosdn.127.net/8aafd2aa11a023d69ec1dfbc062b28c7.png?quality=95&thumbnail=245x245&imageView'
               />
-              <View className="custom-option__content">
-                <View className="custom-option__title">西装</View>
-                <View className="custom-option__sub-title">
+              <View className='custom-option__content'>
+                <View className='custom-option__title'>西装</View>
+                <View className='custom-option__sub-title'>
                   帅气的办公室吸睛装扮
                 </View>
-                <View className="custom-option__price">&yen;299</View>
+                <View className='custom-option__price'>&yen;299</View>
               </View>
             </View>
           </OsRadioOption>
@@ -168,26 +168,26 @@ export default function Index(props: Props) {
             isDisabled
             isCustom
           >
-            <View className="custom-option">
+            <View className='custom-option'>
               <Image
-                className="custom-option__img"
-                src="https://yanxuan.nosdn.127.net/b3dec0eb768d27301afab1b4a43f30cb.png?quality=95&thumbnail=172x172&imageView"
+                className='custom-option__img'
+                src='https://yanxuan.nosdn.127.net/b3dec0eb768d27301afab1b4a43f30cb.png?quality=95&thumbnail=172x172&imageView'
               />
-              <View className="custom-option__content">
-                <View className="custom-option__title">
+              <View className='custom-option__content'>
+                <View className='custom-option__title'>
                   网易智造四季全屋循环扇
                 </View>
-                <View className="custom-option__sub-title">
+                <View className='custom-option__sub-title'>
                   源自日本，全屋空气对流循环
                 </View>
-                <View className="custom-option__price">&yen;248.1</View>
+                <View className='custom-option__price'>&yen;248.1</View>
               </View>
             </View>
           </OsRadioOption>
         </OsRadio>
       </DemoBlock>
 
-      <DemoBlock title="不可执行" subTitle="普通" fullScreen>
+      <DemoBlock title='不可执行' subTitle='普通' fullScreen>
         <OsRadio>
           <OsRadioOption value={v5} optionValue={0} onClick={setV5} isReadonly>
             选项A
@@ -198,7 +198,7 @@ export default function Index(props: Props) {
         </OsRadio>
       </DemoBlock>
 
-      <DemoBlock subTitle="选项内容自定义" fullScreen>
+      <DemoBlock subTitle='选项内容自定义' fullScreen>
         <OsRadio>
           <OsRadioOption
             value={v6}
@@ -207,17 +207,17 @@ export default function Index(props: Props) {
             isReadonly
             isCustom
           >
-            <View className="custom-option">
+            <View className='custom-option'>
               <Image
-                className="custom-option__img"
-                src="https://yanxuan-item.nosdn.127.net/8aafd2aa11a023d69ec1dfbc062b28c7.png?quality=95&thumbnail=245x245&imageView"
+                className='custom-option__img'
+                src='https://yanxuan-item.nosdn.127.net/8aafd2aa11a023d69ec1dfbc062b28c7.png?quality=95&thumbnail=245x245&imageView'
               />
-              <View className="custom-option__content">
-                <View className="custom-option__title">西装</View>
-                <View className="custom-option__sub-title">
+              <View className='custom-option__content'>
+                <View className='custom-option__title'>西装</View>
+                <View className='custom-option__sub-title'>
                   帅气的办公室吸睛装扮
                 </View>
-                <View className="custom-option__price">&yen;299</View>
+                <View className='custom-option__price'>&yen;299</View>
               </View>
             </View>
           </OsRadioOption>
@@ -228,31 +228,31 @@ export default function Index(props: Props) {
             isReadonly
             isCustom
           >
-            <View className="custom-option">
+            <View className='custom-option'>
               <Image
-                className="custom-option__img"
-                src="https://yanxuan.nosdn.127.net/b3dec0eb768d27301afab1b4a43f30cb.png?quality=95&thumbnail=172x172&imageView"
+                className='custom-option__img'
+                src='https://yanxuan.nosdn.127.net/b3dec0eb768d27301afab1b4a43f30cb.png?quality=95&thumbnail=172x172&imageView'
               />
-              <View className="custom-option__content">
-                <View className="custom-option__title">
+              <View className='custom-option__content'>
+                <View className='custom-option__title'>
                   网易智造四季全屋循环扇
                 </View>
-                <View className="custom-option__sub-title">
+                <View className='custom-option__sub-title'>
                   源自日本，全屋空气对流循环
                 </View>
-                <View className="custom-option__price">&yen;248.1</View>
+                <View className='custom-option__price'>&yen;248.1</View>
               </View>
             </View>
           </OsRadioOption>
         </OsRadio>
       </DemoBlock>
 
-      <DemoBlock title="横向布局" fullScreen>
-        <OsRadio type="row">
-          <OsRadioOption value={v7} optionValue={0} onClick={setV7} type="row">
+      <DemoBlock title='横向布局' fullScreen>
+        <OsRadio type='row'>
+          <OsRadioOption value={v7} optionValue={0} onClick={setV7} type='row'>
             选项A
           </OsRadioOption>
-          <OsRadioOption value={v7} optionValue={1} onClick={setV7} type="row">
+          <OsRadioOption value={v7} optionValue={1} onClick={setV7} type='row'>
             选项B
           </OsRadioOption>
         </OsRadio>

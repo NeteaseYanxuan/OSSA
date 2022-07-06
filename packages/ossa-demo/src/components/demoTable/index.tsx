@@ -60,9 +60,9 @@ export default class DemoTable extends Component<IProps> {
           {data && data.length ? (
             <View>
               {data.map((item: Array<string>, index) => (
-                <View className="table__tr" key={index}>
+                <View className='table__tr' key={index}>
                   {item["list"].map((item1: string) => (
-                    <View className="table__td" key={item1} style={tdStyleObj}>
+                    <View className='table__td' key={item1} style={tdStyleObj}>
                       {item1}
                     </View>
                   ))}

@@ -63,7 +63,7 @@ export default function TabBar(props: OsTabbarProps) {
     >
       {tabsArr.map((item: OsTabbarItemProps, index: number) => (
         <View
-          className="ossa-tabbar__item"
+          className='ossa-tabbar__item'
           key={index}
           style={getItemStyleObj(props, index, current)}
           onClick={() => onClick(props, setCurrent, item, index)}
@@ -82,10 +82,10 @@ export default function TabBar(props: OsTabbarProps) {
                   ? (item.selectedIcon as string)
                   : (item.icon as string)
               }
-              color="inherit"
+              color='inherit'
             ></OsIcon>
           )}
-          <Text className="ossa-tabbar__txt" style={textStyle}>
+          <Text className='ossa-tabbar__txt' style={textStyle}>
             {item.text}
           </Text>
         </View>

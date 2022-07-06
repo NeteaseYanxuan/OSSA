@@ -77,14 +77,14 @@ export default function Rate(props: OsRateProps) {
       className={classNames(rootClassName, classObject, className)}
       style={styleObject}
     >
-      {title && <Text className="ossa-rate__title">{title}</Text>}
+      {title && <Text className='ossa-rate__title'>{title}</Text>}
       <View
-        className="ossa-rate__list"
+        className='ossa-rate__list'
         style={{ height: Taro.pxTransform(_size) }}
       >
         {counts.map((item: any, index: number) => (
           <View
-            className="ossa-rate__icon"
+            className='ossa-rate__icon'
             key={item.value}
             onClick={() => {
               onClick(props, item, index, setCurrent);
@@ -100,7 +100,7 @@ export default function Rate(props: OsRateProps) {
           </View>
         ))}
       </View>
-      {isShowResult && <Text className="ossa-rate__txt">{result}</Text>}
+      {isShowResult && <Text className='ossa-rate__txt'>{result}</Text>}
     </View>
   );
 }

@@ -95,59 +95,59 @@ export default function Index(props: Props) {
   };
   return (
     <View className={classNames(classObject)}>
-      <DemoHeader title="DatePicker 时间选择器"></DemoHeader>
-      <DemoBlock title="选择时间">
-        <View className="block-section">
+      <DemoHeader title='DatePicker 时间选择器'></DemoHeader>
+      <DemoBlock title='选择时间'>
+        <View className='block-section'>
           <OsDatePicker
-            type="time"
+            type='time'
             value={time}
-            start="00:00"
-            end="23:59"
+            start='00:00'
+            end='23:59'
             onConfirm={onConfirm}
           >
-            <OsList title="选择时间" desc={time}></OsList>
+            <OsList title='选择时间' desc={time}></OsList>
           </OsDatePicker>
         </View>
       </DemoBlock>
-      <DemoBlock title="选择日期">
-        <View className="block-section">
+      <DemoBlock title='选择日期'>
+        <View className='block-section'>
           <OsDatePicker
-            type="date"
+            type='date'
             value={date}
-            start="1988-8-29"
-            end="2030-8-29"
+            start='1988-8-29'
+            end='2030-8-29'
             onConfirm={onDateConfirm}
           >
-            <OsList title="选择日期" desc={date}></OsList>
+            <OsList title='选择日期' desc={date}></OsList>
           </OsDatePicker>
         </View>
       </DemoBlock>
 
-      <DemoBlock title="选择年月">
-        <View className="block-section">
+      <DemoBlock title='选择年月'>
+        <View className='block-section'>
           <OsDatePicker
-            type="date"
-            fields="month"
+            type='date'
+            fields='month'
             value={dateMonth}
-            start="1988-8"
-            end="2030-8"
+            start='1988-8'
+            end='2030-8'
             onConfirm={onDateMonthConfirm}
           >
-            <OsList title="选择年月" desc={dateMonth}></OsList>
+            <OsList title='选择年月' desc={dateMonth}></OsList>
           </OsDatePicker>
         </View>
       </DemoBlock>
 
-      <DemoBlock title="选择日期和时间">
-        <View className="block-section">
+      <DemoBlock title='选择日期和时间'>
+        <View className='block-section'>
           <OsDatePicker
-            type="complete"
+            type='complete'
             value={dateComplete}
-            start="1988-8-1"
-            end="2030-8-1"
+            start='1988-8-1'
+            end='2030-8-1'
             onConfirm={onDateCompleteConfirm}
           >
-            <OsList title="选择日期和时间" desc={dateComplete}></OsList>
+            <OsList title='选择日期和时间' desc={dateComplete}></OsList>
           </OsDatePicker>
         </View>
       </DemoBlock>

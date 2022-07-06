@@ -78,24 +78,24 @@ export default function Index(props: Props) {
   return (
     <View className={classNames(classObject)}>
       <DemoHeader title={demoTitle}></DemoHeader>
-      <DemoBlock title="基础">
+      <DemoBlock title='基础'>
         <OsButton
-          type="primary"
+          type='primary'
           onClick={() => onClick({ text: "操作成功", duration: 500 })}
-          size="block"
+          size='block'
         >
           点击出toast,展示0.5s
         </OsButton>
       </DemoBlock>
-      <DemoBlock title="长文本">
+      <DemoBlock title='长文本'>
         <OsButton
-          type="primary"
+          type='primary'
           onClick={() =>
             onClick({
               text: "操作成功操作成功操作成功操作成功操作成功操作成功操作成功",
             })
           }
-          size="block"
+          size='block'
         >
           点击出长文本
         </OsButton>

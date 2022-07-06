@@ -13,14 +13,14 @@ export default function Countdown(props: { time?: number }) {
   }, [count]);
 
   return (
-    <View className="demo-countdown">
-      <Text className="demo-countdown--text">
+    <View className='demo-countdown'>
+      <Text className='demo-countdown--text'>
         {`${Math.floor(count / 6000)}`.padStart(2, "0")}
       </Text>
-      <Text className="demo-countdown--text">
+      <Text className='demo-countdown--text'>
         {`${Math.floor(count / 100) % 60}`.padStart(2, "0")}
       </Text>
-      <Text className="demo-countdown--text">
+      <Text className='demo-countdown--text'>
         {`${count % 100}`.padStart(2, "0")}
       </Text>
     </View>

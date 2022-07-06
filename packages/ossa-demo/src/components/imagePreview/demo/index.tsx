@@ -167,11 +167,11 @@ export default function Index(props: Props) {
   return (
     <View className={classNames(classObject)}>
       <DemoHeader title={demoTitle}></DemoHeader>
-      <DemoBlock title="基础">
-        <View className="image-preview--img" onClick={() => onClick(setShow)}>
+      <DemoBlock title='基础'>
+        <View className='image-preview--img' onClick={() => onClick(setShow)}>
           <Image
-            className="img"
-            src="https://yanxuan-item.nosdn.127.net/eece32d0e43fdc7a81bc5f71a2569607.png?imageView&quality=65&thumbnail=152x152"
+            className='img'
+            src='https://yanxuan-item.nosdn.127.net/eece32d0e43fdc7a81bc5f71a2569607.png?imageView&quality=65&thumbnail=152x152'
           ></Image>
         </View>
         <OsImagePreview

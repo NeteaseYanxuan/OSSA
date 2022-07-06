@@ -77,7 +77,7 @@ export default function Index(props: Props) {
   return (
     <View className={classNames(classObject)}>
       <DemoHeader title={demoTitle}></DemoHeader>
-      <DemoBlock title="普通" fullScreen>
+      <DemoBlock title='普通' fullScreen>
         <View style={{ paddingLeft: Taro.pxTransform(20) }}>
           <OsUpload
             onChange={(file, operationType, index) =>

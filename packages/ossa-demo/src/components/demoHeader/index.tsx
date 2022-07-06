@@ -28,7 +28,7 @@ export default class DemoHeader extends Component<IProps> {
     return (
       <View className={classNames(rootClassName[0], classObejct)}>
         {Taro.getEnv() === Taro.ENV_TYPE.WEB && (
-          <OsIcon type="detail-home" onClick={this.onClick.bind(this)}></OsIcon>
+          <OsIcon type='detail-home' onClick={this.onClick.bind(this)}></OsIcon>
         )}
         {Taro.getEnv() !== Taro.ENV_TYPE.WEB && icon && (
           <OsIcon

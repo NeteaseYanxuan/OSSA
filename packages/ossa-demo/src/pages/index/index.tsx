@@ -47,6 +47,13 @@ export default class Index extends Component<Props, State> {
     };
   }
 
+  onShareAppMessage() {
+    return {
+      title: "OSSA UI",
+      path: "/pages/index/index",
+    };
+  }
+
   onClick(e) {
     const { id } = e.currentTarget.dataset;
 
@@ -58,23 +65,23 @@ export default class Index extends Component<Props, State> {
   render() {
     const { list } = this.state;
     return (
-      <View className="index page page-home">
-        <View className="index-head">
-          <Image className="index-head__img" src={logo}></Image>
-          <View className="index-head__texts">
-            <View className="index-head__title">Ossa 组件系统</View>
-            <View className="index-head__desc">
+      <View className='index page page-home'>
+        <View className='index-head'>
+          <Image className='index-head__img' src={logo}></Image>
+          <View className='index-head__texts'>
+            <View className='index-head__title'>Ossa 组件系统</View>
+            <View className='index-head__desc'>
               快捷完成网易严选界面搭建与UI设计规范指南
             </View>
           </View>
         </View>
-        <View className="index__body">
+        <View className='index__body'>
           {list.map((item: NavItem) => (
             <View
               key={item.id}
               data-id={item.id}
               onClick={this.onClick}
-              className="index__list"
+              className='index__list'
             >
               <DemoListRow
                 title={item.title}
@@ -82,8 +89,8 @@ export default class Index extends Component<Props, State> {
                 leftIcon={item.icon ? item.icon : item.id}
                 showSplitLine={false}
                 leftIconSize={44}
-                rightIcon="arrows"
-                title-class="list-item-title"
+                rightIcon='arrows'
+                title-class='list-item-title'
               ></DemoListRow>
             </View>
           ))}

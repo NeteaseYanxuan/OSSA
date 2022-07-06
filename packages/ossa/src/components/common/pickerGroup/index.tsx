@@ -230,7 +230,7 @@ class PickerGroup extends Component<OsPickerGroupProps> {
         onTouchEnd={onTouchEnd}
         catchMove
       >
-        <View className="picker-group__items" style={this.getPosition()}>
+        <View className='picker-group__items' style={this.getPosition()}>
           {range.map((item, index) => {
             const groupOffset = this.props.height || 0;
             const offestRange = [

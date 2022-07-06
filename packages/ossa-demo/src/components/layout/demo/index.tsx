@@ -30,20 +30,20 @@ export default function Index(props: Props) {
   return (
     <View className={classNames(classObject)}>
       <DemoHeader title={demoTitle}></DemoHeader>
-      <DemoBlock title="基础布局">
-        <View className="layout">
+      <DemoBlock title='基础布局'>
+        <View className='layout'>
           <View className={classNames("col", "col--8")}>
             <View className={classNames("col-content", "col-content--light")}>
               span:8
             </View>
           </View>
           <View className={classNames("col", "col--8")}>
-            <View className="col-content">span:8</View>
+            <View className='col-content'>span:8</View>
           </View>
         </View>
       </DemoBlock>
 
-      <DemoBlock title="分栏间隔">
+      <DemoBlock title='分栏间隔'>
         <View className={classNames("layout", "layout--10")}>
           <View className={classNames("col", "col--2")}>
             <View className={classNames("col-content", "col-content--light")}>
@@ -51,7 +51,7 @@ export default function Index(props: Props) {
             </View>
           </View>
           <View className={classNames("col", "col--2")}>
-            <View className="col-content">span:2</View>
+            <View className='col-content'>span:2</View>
           </View>
           <View className={classNames("col", "col--2")}>
             <View className={classNames("col-content", "col-content--light")}>
@@ -59,12 +59,12 @@ export default function Index(props: Props) {
             </View>
           </View>
           <View className={classNames("col", "col--2")}>
-            <View className="col-content">span:2</View>
+            <View className='col-content'>span:2</View>
           </View>
         </View>
       </DemoBlock>
 
-      <DemoBlock title="对齐布局(flex)">
+      <DemoBlock title='对齐布局(flex)'>
         <View
           className={classNames("layout", "layout--flex", "layout--flex--left")}
         >
@@ -80,7 +80,7 @@ export default function Index(props: Props) {
             </View>
           </View>
           <View className={classNames("col", "col--2")}>
-            <View className="col-content">居左</View>
+            <View className='col-content'>居左</View>
           </View>
           <View className={classNames("col", "col--2")}>
             <View className={classNames("col-content", "col-content--light")}>
@@ -108,7 +108,7 @@ export default function Index(props: Props) {
             </View>
           </View>
           <View className={classNames("col", "col--2")}>
-            <View className="col-content">居中</View>
+            <View className='col-content'>居中</View>
           </View>
           <View className={classNames("col", "col--2")}>
             <View className={classNames("col-content", "col-content--light")}>
@@ -132,7 +132,7 @@ export default function Index(props: Props) {
             </View>
           </View>
           <View className={classNames("col", "col--2")}>
-            <View className="col-content">居右</View>
+            <View className='col-content'>居右</View>
           </View>
           <View className={classNames("col", "col--2")}>
             <View className={classNames("col-content", "col-content--light")}>
@@ -160,7 +160,7 @@ export default function Index(props: Props) {
             </View>
           </View>
           <View className={classNames("col", "col--2")}>
-            <View className="col-content">between</View>
+            <View className='col-content'>between</View>
           </View>
           <View className={classNames("col", "col--2")}>
             <View className={classNames("col-content", "col-content--light")}>
@@ -188,7 +188,7 @@ export default function Index(props: Props) {
             </View>
           </View>
           <View className={classNames("col", "col--2")}>
-            <View className="col-content">around</View>
+            <View className='col-content'>around</View>
           </View>
           <View className={classNames("col", "col--2")}>
             <View className={classNames("col-content", "col-content--light")}>
@@ -198,25 +198,25 @@ export default function Index(props: Props) {
         </View>
       </DemoBlock>
 
-      <DemoBlock title="响应式布局">
+      <DemoBlock title='响应式布局'>
         <View
           className={classNames("layout", "layout--responsive", "layout--10")}
         >
-          <View className="col">
+          <View className='col'>
             <View className={classNames("col-content", "col-content--light")}>
               responsive
             </View>
           </View>
-          <View className="col">
-            <View className="col-content"> 随着内容伸缩</View>
+          <View className='col'>
+            <View className='col-content'> 随着内容伸缩</View>
           </View>
-          <View className="col">
+          <View className='col'>
             <View className={classNames("col-content", "col-content--light")}>
               responsive 自动伸缩自动伸缩
             </View>
           </View>
-          <View className="col">
-            <View className="col-content">123</View>
+          <View className='col'>
+            <View className='col-content'>123</View>
           </View>
         </View>
       </DemoBlock>

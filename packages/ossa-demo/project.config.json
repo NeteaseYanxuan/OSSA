@@ -2,7 +2,7 @@
   "miniprogramRoot": "./dist",
   "projectname": "ossa-demo1",
   "description": "OSSA Demo",
-  "appid": "touristappid",
+  "appid": "wx02ff218e2465b991",
   "setting": {
     "urlCheck": true,
     "es6": false,

@@ -71,8 +71,8 @@ export default function Index(props: SwitchProps) {
       style={styleObject}
       onClick={onClick}
     >
-      <View className="ossa-switch__bg-off" style={styleBgOff}></View>
-      <View className="ossa-switch__node" style={styleNode}></View>
+      <View className='ossa-switch__bg-off' style={styleBgOff}></View>
+      <View className='ossa-switch__node' style={styleNode}></View>
     </View>
   );
 }

@@ -99,7 +99,7 @@ export default function OsInput(props: OsInputProps) {
           {props.label}
         </Text>
       )}
-      <View className="ossa-input__input-wrapper">
+      <View className='ossa-input__input-wrapper'>
         {props.type === "textarea" ? (
           <Textarea
             value={value}
@@ -142,10 +142,10 @@ export default function OsInput(props: OsInputProps) {
         )}
 
         {showDelIcon && (
-          <View className="ossa-input__del-ico">
+          <View className='ossa-input__del-ico'>
             <OsIcon
               size={28}
-              type="delete-input"
+              type='delete-input'
               onClick={() => {
                 onClickDeleteIcon(props);
               }}
@@ -154,13 +154,13 @@ export default function OsInput(props: OsInputProps) {
         )}
       </View>
       {props.type === "textarea" && props.countDown && (
-        <View className="ossa-input__count-down">
+        <View className='ossa-input__count-down'>
           {Number(props.maxLength) - value.length}
         </View>
       )}
       {props.type === "password" && (
         <OsIcon
-          className="ossa-input__visible-ico"
+          className='ossa-input__visible-ico'
           customStyle={{ marginLeft: Taro.pxTransform(16) }}
           size={40}
           type={showPassword ? "visible" : "invisible"}

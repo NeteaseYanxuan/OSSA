@@ -125,7 +125,7 @@ export default function Carousel(props: OsCarouselProps) {
         duration={500}
         onChange={(e) => onChangeCarousel(e, props, setActiveIndex)}
         onClick={(e) => onClickCarousel(e, props)}
-        className="ossa-carousel-swiper"
+        className='ossa-carousel-swiper'
       >
         {data.map((item: any, index: number) => (
           <SwiperItem
@@ -164,7 +164,7 @@ export default function Carousel(props: OsCarouselProps) {
       </Swiper>
       {/* 小程序端指示点 */}
       {!_isWeb && indicatorDots && (
-        <View className="ossa-carousel-indicatorWrap">
+        <View className='ossa-carousel-indicatorWrap'>
           {data.map((item: any, index: number) => (
             <View
               key={item}

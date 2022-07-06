@@ -60,16 +60,16 @@ export default function Index(props: Props) {
   return (
     <View className={classNames(classObject)}>
       <DemoHeader title={demoTitle}></DemoHeader>
-      <DemoBlock title="基础">
+      <DemoBlock title='基础'>
         <OsLoading></OsLoading>
       </DemoBlock>
 
-      <DemoBlock title="自定义尺寸">
+      <DemoBlock title='自定义尺寸'>
         <OsLoading size={60}></OsLoading>
       </DemoBlock>
 
-      <DemoBlock title="自定义颜色">
-        <OsLoading color="blue"></OsLoading>
+      <DemoBlock title='自定义颜色'>
+        <OsLoading color='blue'></OsLoading>
       </DemoBlock>
 
       <DemoBlock>

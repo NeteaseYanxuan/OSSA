@@ -344,38 +344,38 @@ export default function Index(props: Props) {
     <View className={classNames(classObject)}>
       <DemoHeader title={demoTitle}></DemoHeader>
 
-      <DemoBlock title="基础（均分）" fullScreen>
+      <DemoBlock title='基础（均分）' fullScreen>
         <OsTabs
           renderHeader={
             <OsTabsHeader value={current}>
               <OsTabsHeaderItem
                 index={0}
                 current={current}
-                text="标签1"
+                text='标签1'
                 onClick={(value) => onClick(value, setCurrent)}
               />
               <OsTabsHeaderItem
                 index={1}
                 current={current}
-                text="标签2"
+                text='标签2'
                 onClick={(value) => onClick(value, setCurrent)}
               />
               <OsTabsHeaderItem
                 index={2}
                 current={current}
-                text="标签3"
+                text='标签3'
                 onClick={(value) => onClick(value, setCurrent)}
               />
               <OsTabsHeaderItem
                 index={3}
                 current={current}
-                text="标签4"
+                text='标签4'
                 onClick={(value) => onClick(value, setCurrent)}
               />
               <OsTabsHeaderItem
                 index={4}
                 current={current}
-                text="标签5"
+                text='标签5'
                 onClick={(value) => onClick(value, setCurrent)}
               />
             </OsTabsHeader>
@@ -386,51 +386,51 @@ export default function Index(props: Props) {
             index={0}
             customStyle={{ height: Taro.pxTransform(400) }}
           >
-            <View className="tabs__content">标签1内容区域</View>
+            <View className='tabs__content'>标签1内容区域</View>
           </OsTabsPanel>
           <OsTabsPanel
             current={current}
             index={1}
             customStyle={{ height: Taro.pxTransform(400) }}
           >
-            <View className="tabs__content">标签2内容区域</View>
+            <View className='tabs__content'>标签2内容区域</View>
           </OsTabsPanel>
           <OsTabsPanel
             current={current}
             index={2}
             customStyle={{ height: Taro.pxTransform(400) }}
           >
-            <View className="tabs__content">标签3内容区域</View>
+            <View className='tabs__content'>标签3内容区域</View>
           </OsTabsPanel>
           <OsTabsPanel
             current={current}
             index={3}
             customStyle={{ height: Taro.pxTransform(400) }}
           >
-            <View className="tabs__content">标签4内容区域</View>
+            <View className='tabs__content'>标签4内容区域</View>
           </OsTabsPanel>
           <OsTabsPanel
             current={current}
             index={4}
             customStyle={{ height: Taro.pxTransform(400) }}
           >
-            <View className="tabs__content">标签5内容区域</View>
+            <View className='tabs__content'>标签5内容区域</View>
           </OsTabsPanel>
         </OsTabs>
       </DemoBlock>
 
-      <DemoBlock title="tab左右留间距后均分" fullScreen>
+      <DemoBlock title='tab左右留间距后均分' fullScreen>
         <OsTabs
-          size="large"
+          size='large'
           renderHeader={
             <OsTabsHeader
-              size="large"
-              bgColor="#fff"
+              size='large'
+              bgColor='#fff'
               space={60}
               value={current4}
             >
               <OsTabsHeaderItem
-                size="large"
+                size='large'
                 index={0}
                 current={current4}
                 custom
@@ -439,10 +439,10 @@ export default function Index(props: Props) {
                 onClick={(value) => onClick4(value, setCurrent4)}
               />
               <OsTabsHeaderItem
-                size="large"
+                size='large'
                 index={1}
                 current={current4}
-                text="标签2"
+                text='标签2'
                 onClick={(value) => onClick4(value, setCurrent4)}
               />
             </OsTabsHeader>
@@ -453,19 +453,19 @@ export default function Index(props: Props) {
             index={0}
             customStyle={{ height: Taro.pxTransform(400) }}
           >
-            <View className="tabs__content">标签1内容区域</View>
+            <View className='tabs__content'>标签1内容区域</View>
           </OsTabsPanel>
           <OsTabsPanel
             current={current4}
             index={1}
             customStyle={{ height: Taro.pxTransform(400) }}
           >
-            <View className="tabs__content">标签2内容区域</View>
+            <View className='tabs__content'>标签2内容区域</View>
           </OsTabsPanel>
         </OsTabs>
       </DemoBlock>
 
-      <DemoBlock title="横向超过5个（开启横向滚动）" fullScreen>
+      <DemoBlock title='横向超过5个（开启横向滚动）' fullScreen>
         <OsTabs
           renderHeader={
             <OsTabsHeader scroll>
@@ -488,20 +488,20 @@ export default function Index(props: Props) {
               index={index}
               customStyle={{ height: Taro.pxTransform(400) }}
             >
-              <View className="tabs__content">标签{index + 1}内容区域</View>
+              <View className='tabs__content'>标签{index + 1}内容区域</View>
             </OsTabsPanel>
           ))}
         </OsTabs>
       </DemoBlock>
 
-      <DemoBlock title="竖状(高度超过一屏，开启竖向滚动)" fullScreen>
+      <DemoBlock title='竖状(高度超过一屏，开启竖向滚动)' fullScreen>
         <OsTabs
-          type="vertical"
+          type='vertical'
           renderHeader={
-            <OsTabsHeader type="vertical" scroll>
+            <OsTabsHeader type='vertical' scroll>
               {tabsArr3.map((item, index) => (
                 <OsTabsHeaderItem
-                  type="vertical"
+                  type='vertical'
                   index={index}
                   current={current3}
                   key={item.text}
@@ -523,13 +523,13 @@ export default function Index(props: Props) {
                 padding: "100PX 50PX",
               }}
             >
-              <View className="tabs__content">标签{index + 1}内容区域</View>
+              <View className='tabs__content'>标签{index + 1}内容区域</View>
             </OsTabsPanel>
           ))}
         </OsTabs>
       </DemoBlock>
 
-      <DemoBlock title="带icon" fullScreen>
+      <DemoBlock title='带icon' fullScreen>
         <OsTabs
           renderHeader={
             <OsTabsHeader>
@@ -554,7 +554,7 @@ export default function Index(props: Props) {
               index={index}
               customStyle={{ height: Taro.pxTransform(400), width: "100%" }}
             >
-              <View className="tabs__content">标签{index + 1}内容区域</View>
+              <View className='tabs__content'>标签{index + 1}内容区域</View>
             </OsTabsPanel>
           ))}
         </OsTabs>

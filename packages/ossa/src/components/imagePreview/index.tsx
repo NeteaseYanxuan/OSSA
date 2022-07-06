@@ -242,19 +242,19 @@ export default function Index(props: OsImagePreviewProps) {
         onWrapperClick(e);
       }}
     >
-      <View className="ossa-image-preview__header">
+      <View className='ossa-image-preview__header'>
         {(showBack || !touchable) && (
-          <View className="ossa-image-preview__back" onClick={() => onGoback()}>
-            <OsIcon color="#fff" type="return"></OsIcon>
+          <View className='ossa-image-preview__back' onClick={() => onGoback()}>
+            <OsIcon color='#fff' type='return'></OsIcon>
           </View>
         )}
         {showPagination && (
-          <View className="ossa-image-preview__index">{_pageInfo}</View>
+          <View className='ossa-image-preview__index'>{_pageInfo}</View>
         )}
       </View>
-      <View className="ossa-image-preview__swipe">
+      <View className='ossa-image-preview__swipe'>
         <View
-          className="ossa-image-preview__swipe__track"
+          className='ossa-image-preview__swipe__track'
           style={swipeStyle}
           onTouchStart={(e) => {
             onImgTouchStart(e);
@@ -269,12 +269,12 @@ export default function Index(props: OsImagePreviewProps) {
           {imagesArr.map((item: OsImagesItemProps, i: number) => (
             <View
               key={item.img}
-              className="ossa-image-preview__swipe-item"
+              className='ossa-image-preview__swipe-item'
               style={getSwipeItemStyle(swipes, baseWidth)[i]}
             >
               <Image
                 style={getImgStyle(item, props)}
-                className="ossa-image-preview__swipe-item--image"
+                className='ossa-image-preview__swipe-item--image'
                 src={item.img}
               ></Image>
             </View>

@@ -46,9 +46,9 @@ export default function Index(props: OsPickerPopupProps) {
       className={classNames(rootClassName, classObject, props.className)}
       style={styleObject}
     >
-      <View className="picker-popup__mask" onClick={onCancel}></View>
-      <View className="picker-popup__container">
-        <View className="picker-popup__header">
+      <View className='picker-popup__mask' onClick={onCancel}></View>
+      <View className='picker-popup__container'>
+        <View className='picker-popup__header'>
           <View
             className={classNames(
               "picker-popup__btn",
@@ -68,7 +68,7 @@ export default function Index(props: OsPickerPopupProps) {
             确定
           </View>
         </View>
-        <View className="picker-popup__body">{props.children}</View>
+        <View className='picker-popup__body'>{props.children}</View>
       </View>
     </View>
   );

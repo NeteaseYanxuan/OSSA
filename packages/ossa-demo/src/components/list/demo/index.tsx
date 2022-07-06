@@ -93,61 +93,61 @@ export default function Index(props: Props) {
   return (
     <View className={classNames(classObject)}>
       <DemoHeader title={demoTitle}></DemoHeader>
-      <DemoBlock title="基础" fullScreen>
-        <OsList title="我是标题" onClick={(e) => onClick(e)}></OsList>
+      <DemoBlock title='基础' fullScreen>
+        <OsList title='我是标题' onClick={(e) => onClick(e)}></OsList>
         <OsList
-          title="我是标题我是标题我是标题我是标题我是标题我是标题我是标题我是标题我是标题我是标题我是标题我是标题"
+          title='我是标题我是标题我是标题我是标题我是标题我是标题我是标题我是标题我是标题我是标题我是标题我是标题'
           onClick={(e) => onClick(e)}
         ></OsList>
       </DemoBlock>
 
-      <DemoBlock title="带副标题" fullScreen>
-        <OsList title="我是标题" subTitle="我是副标题"></OsList>
+      <DemoBlock title='带副标题' fullScreen>
+        <OsList title='我是标题' subTitle='我是副标题'></OsList>
       </DemoBlock>
 
-      <DemoBlock title="带左侧icon" fullScreen>
-        <OsList title="我是标题" leftIcon="record"></OsList>
+      <DemoBlock title='带左侧icon' fullScreen>
+        <OsList title='我是标题' leftIcon='record'></OsList>
         <OsList
-          title="我是标题"
-          rightIcon="arrows"
-          subTitle="副标题"
-          leftIcon="record"
+          title='我是标题'
+          rightIcon='arrows'
+          subTitle='副标题'
+          leftIcon='record'
         ></OsList>
       </DemoBlock>
 
-      <DemoBlock title="右侧带icon" fullScreen>
-        <OsList title="我是标题" rightIcon="arrows"></OsList>
+      <DemoBlock title='右侧带icon' fullScreen>
+        <OsList title='我是标题' rightIcon='arrows'></OsList>
       </DemoBlock>
 
-      <DemoBlock title="带描述" fullScreen>
-        <OsList title="我是标题" desc="描述文字"></OsList>
+      <DemoBlock title='带描述' fullScreen>
+        <OsList title='我是标题' desc='描述文字'></OsList>
 
-        <OsList title="我是标题" desc="描述文字" rightIcon="arrows"></OsList>
+        <OsList title='我是标题' desc='描述文字' rightIcon='arrows'></OsList>
 
         <OsList
-          title="我是标题"
-          desc="描述文字"
-          rightIcon="arrows"
-          leftIcon="record"
+          title='我是标题'
+          desc='描述文字'
+          rightIcon='arrows'
+          leftIcon='record'
         ></OsList>
       </DemoBlock>
 
-      <DemoBlock title="内容自定义" fullScreen>
+      <DemoBlock title='内容自定义' fullScreen>
         <OsList
-          title="我是标题"
-          subTitle="我是副标题"
-          type="custom"
-          rightIcon="arrows"
+          title='我是标题'
+          subTitle='我是副标题'
+          type='custom'
+          rightIcon='arrows'
         >
-          <OsBadge type="list"></OsBadge>
+          <OsBadge type='list'></OsBadge>
         </OsList>
       </DemoBlock>
 
-      <DemoBlock title="内容自定义" fullScreen>
-        <OsList desc="这里是自定义例举例" type="custom">
+      <DemoBlock title='内容自定义' fullScreen>
+        <OsList desc='这里是自定义例举例' type='custom'>
           <Image
-            className="list--test__image"
-            src="http://yanxuan.nosdn.127.net/25223742d4031d15c48c93a0b7b760c0.jpg?imageView&thumbnail=160x0&quality=95"
+            className='list--test__image'
+            src='http://yanxuan.nosdn.127.net/25223742d4031d15c48c93a0b7b760c0.jpg?imageView&thumbnail=160x0&quality=95'
           ></Image>
         </OsList>
       </DemoBlock>

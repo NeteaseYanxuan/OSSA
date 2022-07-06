@@ -145,10 +145,10 @@ export default class NavBar extends Component<OsNavBarProps> {
       >
         {this.renderSideContent(props, "left")}
         {type !== "2column" && type !== "custom" && (
-          <View className="ossa-navbar--middle">
+          <View className='ossa-navbar--middle'>
             {middleSlot
               ? middleSlot
-              : title && <View className="ossa-navbar__title">{title}</View>}
+              : title && <View className='ossa-navbar__title'>{title}</View>}
           </View>
         )}
         {this.renderSideContent(props, "right")}

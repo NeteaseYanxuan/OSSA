@@ -111,13 +111,13 @@ export default function Index(props: any) {
 
   return (
     <View className={classNames(classObject)}>
-      <DemoHeader title="Input 输入框"></DemoHeader>
-      <DemoBlock title="普通" subTitle="有标题">
-        <View className="block-section">
+      <DemoHeader title='Input 输入框'></DemoHeader>
+      <DemoBlock title='普通' subTitle='有标题'>
+        <View className='block-section'>
           <OsInput
-            label="标题"
-            placeholder="默认文案"
-            placeholderStyle="color: #7f7f7f;"
+            label='标题'
+            placeholder='默认文案'
+            placeholderStyle='color: #7f7f7f;'
             value={v1}
             onChange={(v) => {
               setV1(v);
@@ -125,11 +125,11 @@ export default function Index(props: any) {
           ></OsInput>
         </View>
       </DemoBlock>
-      <DemoBlock subTitle="没有标题">
-        <View className="block-section">
+      <DemoBlock subTitle='没有标题'>
+        <View className='block-section'>
           <OsInput
-            placeholder="默认文案"
-            placeholderStyle="color: #7f7f7f;"
+            placeholder='默认文案'
+            placeholderStyle='color: #7f7f7f;'
             value={v2}
             onChange={(v) => {
               setV2(v);
@@ -137,11 +137,11 @@ export default function Index(props: any) {
           ></OsInput>
         </View>
       </DemoBlock>
-      <DemoBlock subTitle="银行卡">
-        <View className="block-section">
+      <DemoBlock subTitle='银行卡'>
+        <View className='block-section'>
           <OsInput
-            type="bankcard"
-            placeholder="银行行卡/礼品卡号"
+            type='bankcard'
+            placeholder='银行行卡/礼品卡号'
             value={v7}
             onChange={(v) => {
               setV7(v);
@@ -149,11 +149,11 @@ export default function Index(props: any) {
           ></OsInput>
         </View>
       </DemoBlock>
-      <DemoBlock subTitle="密码输入框">
-        <View className="block-section">
+      <DemoBlock subTitle='密码输入框'>
+        <View className='block-section'>
           <OsInput
-            type="password"
-            placeholder="请输入密码"
+            type='password'
+            placeholder='请输入密码'
             value={v8}
             onChange={(v) => {
               setV8(v);
@@ -161,11 +161,11 @@ export default function Index(props: any) {
           ></OsInput>
         </View>
       </DemoBlock>
-      <DemoBlock subTitle="数字输入框">
-        <View className="block-section">
+      <DemoBlock subTitle='数字输入框'>
+        <View className='block-section'>
           <OsInput
-            type="number"
-            placeholder="请输入数字"
+            type='number'
+            placeholder='请输入数字'
             value={v4}
             onChange={(v) => {
               setV4(v);
@@ -173,11 +173,11 @@ export default function Index(props: any) {
           ></OsInput>
         </View>
       </DemoBlock>
-      <DemoBlock subTitle="多行输入">
-        <View className="block-section">
+      <DemoBlock subTitle='多行输入'>
+        <View className='block-section'>
           <OsInput
-            type="textarea"
-            placeholder="请输入文本"
+            type='textarea'
+            placeholder='请输入文本'
             value={v3}
             onChange={(v) => {
               setV3(v);
@@ -187,11 +187,11 @@ export default function Index(props: any) {
           ></OsInput>
         </View>
       </DemoBlock>
-      <DemoBlock subTitle="不可编辑">
-        <View className="block-section">
+      <DemoBlock subTitle='不可编辑'>
+        <View className='block-section'>
           <OsInput
-            label="标题"
-            placeholder="请输入文本"
+            label='标题'
+            placeholder='请输入文本'
             value={v5}
             onChange={(v) => {
               setV5(v);
@@ -199,8 +199,8 @@ export default function Index(props: any) {
             isReadonly
           ></OsInput>
           <OsInput
-            label="标题"
-            placeholder="请输入文本"
+            label='标题'
+            placeholder='请输入文本'
             value={v5}
             onChange={(v) => {
               setV5(v);
@@ -208,9 +208,9 @@ export default function Index(props: any) {
             isDisabled
           ></OsInput>
           <OsInput
-            type="textarea"
-            label="标题"
-            placeholder="请输入文本"
+            type='textarea'
+            label='标题'
+            placeholder='请输入文本'
             value={v6}
             onChange={(v) => {
               setV6(v);

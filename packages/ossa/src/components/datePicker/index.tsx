@@ -202,9 +202,9 @@ export default class DatePicker extends Component<OsDatePickerProps, any> {
 
     if (fields === "year") {
       renderView = (
-        <View className="ossa-group-container">
+        <View className='ossa-group-container'>
           <OsPickerGroup
-            type="date"
+            type='date'
             customStyle={{
               width: Taro.pxTransform(750),
             }}
@@ -212,7 +212,7 @@ export default class DatePicker extends Component<OsDatePickerProps, any> {
             height={height[0]}
             onUpdateDay={(...arg) => this.onUpdateDay(...arg)}
             onUpdateHeight={(...arg) => this.onUpdateHeight(...arg)}
-            columnId="0"
+            columnId='0'
             onTouchStart={() => (this.touching = true)}
             onTouchEnd={() => (this.touching = false)}
           />
@@ -231,9 +231,9 @@ export default class DatePicker extends Component<OsDatePickerProps, any> {
         });
       }
       renderView = (
-        <View className="ossa-group-container">
+        <View className='ossa-group-container'>
           <OsPickerGroup
-            type="date"
+            type='date'
             customStyle={{
               width: Taro.pxTransform(750 / 2),
             }}
@@ -241,12 +241,12 @@ export default class DatePicker extends Component<OsDatePickerProps, any> {
             height={height[0]}
             onUpdateDay={(...arg) => this.onUpdateDay(...arg)}
             onUpdateHeight={(...arg) => this.onUpdateHeight(...arg)}
-            columnId="0"
+            columnId='0'
             onTouchStart={() => (this.touching = true)}
             onTouchEnd={() => (this.touching = false)}
           />
           <OsPickerGroup
-            type="date"
+            type='date'
             customStyle={{
               width: Taro.pxTransform(750 / 2),
             }}
@@ -254,7 +254,7 @@ export default class DatePicker extends Component<OsDatePickerProps, any> {
             height={height[1]}
             onUpdateDay={(...arg) => this.onUpdateDay(...arg)}
             onUpdateHeight={(...arg) => this.onUpdateHeight(...arg)}
-            columnId="1"
+            columnId='1'
             onTouchStart={() => (this.touching = true)}
             onTouchEnd={() => (this.touching = false)}
           />
@@ -287,9 +287,9 @@ export default class DatePicker extends Component<OsDatePickerProps, any> {
         }
       }
       renderView = (
-        <View className="ossa-group-container">
+        <View className='ossa-group-container'>
           <OsPickerGroup
-            type="date"
+            type='date'
             customStyle={{
               width: Taro.pxTransform(750 / 3),
             }}
@@ -297,12 +297,12 @@ export default class DatePicker extends Component<OsDatePickerProps, any> {
             height={height[0]}
             onUpdateDay={(...arg) => this.onUpdateDay(...arg)}
             onUpdateHeight={(...arg) => this.onUpdateHeight(...arg)}
-            columnId="0"
+            columnId='0'
             onTouchStart={() => (this.touching = true)}
             onTouchEnd={() => (this.touching = false)}
           />
           <OsPickerGroup
-            type="date"
+            type='date'
             customStyle={{
               width: Taro.pxTransform(750 / 3),
             }}
@@ -310,12 +310,12 @@ export default class DatePicker extends Component<OsDatePickerProps, any> {
             height={height[1]}
             onUpdateDay={(...arg) => this.onUpdateDay(...arg)}
             onUpdateHeight={(...arg) => this.onUpdateHeight(...arg)}
-            columnId="1"
+            columnId='1'
             onTouchStart={() => (this.touching = true)}
             onTouchEnd={() => (this.touching = false)}
           />
           <OsPickerGroup
-            type="date"
+            type='date'
             customStyle={{
               width: Taro.pxTransform(750 / 3),
             }}
@@ -323,7 +323,7 @@ export default class DatePicker extends Component<OsDatePickerProps, any> {
             height={height[2]}
             onUpdateDay={(...arg) => this.onUpdateDay(...arg)}
             onUpdateHeight={(...arg) => this.onUpdateHeight(...arg)}
-            columnId="2"
+            columnId='2'
             onTouchStart={() => (this.touching = true)}
             onTouchEnd={() => (this.touching = false)}
           />
@@ -340,14 +340,14 @@ export default class DatePicker extends Component<OsDatePickerProps, any> {
     const minRange = this.getMinuteRange("分");
     const { height } = this.state;
     return (
-      <View className="ossa-group-container">
+      <View className='ossa-group-container'>
         <CustomWrapper>
           <OsPickerGroup
-            type="time"
+            type='time'
             range={hourRange}
             height={height[0]}
             onUpdateHeight={(...arg) => this.onUpdateHeight(...arg)}
-            columnId="0"
+            columnId='0'
             customStyle={{
               width: Taro.pxTransform(750 / 2),
             }}
@@ -357,11 +357,11 @@ export default class DatePicker extends Component<OsDatePickerProps, any> {
         </CustomWrapper>
         <CustomWrapper>
           <OsPickerGroup
-            type="time"
+            type='time'
             range={minRange}
             height={height[1]}
             onUpdateHeight={(...arg) => this.onUpdateHeight(...arg)}
-            columnId="1"
+            columnId='1'
             customStyle={{
               width: Taro.pxTransform(750 / 2),
             }}
@@ -415,9 +415,9 @@ export default class DatePicker extends Component<OsDatePickerProps, any> {
       }
     }
     return (
-      <View className="ossa-group-container">
+      <View className='ossa-group-container'>
         <OsPickerGroup
-          type="complete"
+          type='complete'
           customStyle={{
             width: Taro.pxTransform((750 * 3) / 11),
           }}
@@ -425,12 +425,12 @@ export default class DatePicker extends Component<OsDatePickerProps, any> {
           height={height[0]}
           onUpdateDay={(...arg) => this.onUpdateDay(...arg)}
           onUpdateHeight={(...arg) => this.onUpdateHeight(...arg)}
-          columnId="0"
+          columnId='0'
           onTouchStart={() => (this.touching = true)}
           onTouchEnd={() => (this.touching = false)}
         />
         <OsPickerGroup
-          type="complete"
+          type='complete'
           customStyle={{
             width: Taro.pxTransform((750 * 2) / 11),
           }}
@@ -438,12 +438,12 @@ export default class DatePicker extends Component<OsDatePickerProps, any> {
           height={height[1]}
           onUpdateDay={(...arg) => this.onUpdateDay(...arg)}
           onUpdateHeight={(...arg) => this.onUpdateHeight(...arg)}
-          columnId="1"
+          columnId='1'
           onTouchStart={() => (this.touching = true)}
           onTouchEnd={() => (this.touching = false)}
         />
         <OsPickerGroup
-          type="complete"
+          type='complete'
           customStyle={{
             width: Taro.pxTransform((750 * 2) / 11),
           }}
@@ -451,12 +451,12 @@ export default class DatePicker extends Component<OsDatePickerProps, any> {
           height={height[2]}
           onUpdateDay={(...arg) => this.onUpdateDay(...arg)}
           onUpdateHeight={(...arg) => this.onUpdateHeight(...arg)}
-          columnId="2"
+          columnId='2'
           onTouchStart={() => (this.touching = true)}
           onTouchEnd={() => (this.touching = false)}
         />
         <OsPickerGroup
-          type="complete"
+          type='complete'
           customStyle={{
             width: Taro.pxTransform((750 * 2) / 11),
           }}
@@ -464,12 +464,12 @@ export default class DatePicker extends Component<OsDatePickerProps, any> {
           height={height[3]}
           onUpdateDay={(...arg) => this.onUpdateDay(...arg)}
           onUpdateHeight={(...arg) => this.onUpdateHeight(...arg)}
-          columnId="3"
+          columnId='3'
           onTouchStart={() => (this.touching = true)}
           onTouchEnd={() => (this.touching = false)}
         />
         <OsPickerGroup
-          type="complete"
+          type='complete'
           customStyle={{
             width: Taro.pxTransform((750 * 2) / 11),
           }}
@@ -477,7 +477,7 @@ export default class DatePicker extends Component<OsDatePickerProps, any> {
           height={height[4]}
           onUpdateDay={(...arg) => this.onUpdateDay(...arg)}
           onUpdateHeight={(...arg) => this.onUpdateHeight(...arg)}
-          columnId="4"
+          columnId='4'
           onTouchStart={() => (this.touching = true)}
           onTouchEnd={() => (this.touching = false)}
         />
@@ -789,7 +789,7 @@ export default class DatePicker extends Component<OsDatePickerProps, any> {
         style={styleObject}
       >
         <View
-          className="ossa-date-picker__trigger"
+          className='ossa-date-picker__trigger'
           onClick={() => this.showPicker()}
         >
           {this.props.children}

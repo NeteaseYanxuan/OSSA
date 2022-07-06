@@ -72,18 +72,18 @@ export default function Tag(props: OsTagProps) {
     >
       {props.type === "radius" ? (
         <View
-          className="ossa-border"
+          className='ossa-border'
           style={{
             borderColor: props.color ? props.color : "#B4B4B4",
           }}
         ></View>
       ) : null}
-      <View className="ossa-tag__title">{props.children}</View>
+      <View className='ossa-tag__title'>{props.children}</View>
       {props.showArrow && (
         <OsIcon
-          className="ossa-tag--arrow"
-          type="arrows"
-          color="inherit"
+          className='ossa-tag--arrow'
+          type='arrows'
+          color='inherit'
           size={18}
         ></OsIcon>
       )}
