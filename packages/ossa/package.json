@@ -61,6 +61,7 @@
     "stylelint-config-standard": "20.0.0",
     "stylelint-scss": "3.17.2",
     "ts-jest": "26",
+    "tslib": "^2.4.0",
     "typescript": "^3.9.5"
   },
   "peerDependencies": {

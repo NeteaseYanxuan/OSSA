@@ -31,13 +31,13 @@ export default function Index(props: OsNoticeBarProps) {
     >
       {props.leftIcon ? (
         <OsIcon
-          className="ossa-notice-bar__left-icon"
+          className='ossa-notice-bar__left-icon'
           type={props.leftIcon}
           size={28}
           color={props.color || "#F48F18"}
         ></OsIcon>
       ) : null}
-      <View className="ossa-notice-bar__content-wrapper">
+      <View className='ossa-notice-bar__content-wrapper'>
         <View
           className={classNames({
             ["ossa-notice-bar__content"]: true,
@@ -48,18 +48,18 @@ export default function Index(props: OsNoticeBarProps) {
       </View>
       {props.more ? (
         <OsIcon
-          className="ossa-notice-bar__accessory-view"
-          type="arrows"
+          className='ossa-notice-bar__accessory-view'
+          type='arrows'
           size={28}
-          color="#F48F18"
+          color='#F48F18'
         ></OsIcon>
       ) : null}
       {props.closeable ? (
         <OsIcon
-          className="ossa-notice-bar__close-btn"
-          type="close"
+          className='ossa-notice-bar__close-btn'
+          type='close'
           size={28}
-          color="#F48F18"
+          color='#F48F18'
           onClick={props.onClose}
         ></OsIcon>
       ) : null}

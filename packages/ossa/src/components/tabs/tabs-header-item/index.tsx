@@ -68,12 +68,12 @@ export default function Index(props: OsTabsHeaderItemProps) {
       onClick={() => onClick(props)}
     >
       <View
-        className="ossa-tabs-item__underline"
+        className='ossa-tabs-item__underline'
         style={{
           borderBottomColor: current === index ? selectedColor : "transparent",
         }}
       >
-        <View className="ossa-tabs-item__texts">
+        <View className='ossa-tabs-item__texts'>
           {custom ? (
             index === current ? (
               props.renderSelectedCustom
@@ -82,7 +82,7 @@ export default function Index(props: OsTabsHeaderItemProps) {
             )
           ) : (
             <Block>
-              <Text className="ossa-tabs-item__text">{getText(text)}</Text>
+              <Text className='ossa-tabs-item__text'>{getText(text)}</Text>
               {icon && (
                 <OsIcon
                   customStyle={{
@@ -90,7 +90,7 @@ export default function Index(props: OsTabsHeaderItemProps) {
                     verticalAlign: "initial",
                   }}
                   size={26}
-                  color="inherit"
+                  color='inherit'
                   type={index !== current ? icon : selectedIcon}
                 ></OsIcon>
               )}

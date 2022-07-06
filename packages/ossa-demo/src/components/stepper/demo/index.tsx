@@ -126,7 +126,7 @@ export default function Index(props: Props) {
   return (
     <View className={classNames(classObject)}>
       <DemoHeader title={demoTitle}></DemoHeader>
-      <DemoBlock title="基础">
+      <DemoBlock title='基础'>
         <OsStepper
           value={current}
           max={5}
@@ -143,7 +143,7 @@ export default function Index(props: Props) {
         ></OsStepper>
       </DemoBlock>
 
-      <DemoBlock title="数量不可编辑">
+      <DemoBlock title='数量不可编辑'>
         <OsStepper
           isReadonly
           value={current1}
@@ -153,7 +153,7 @@ export default function Index(props: Props) {
         ></OsStepper>
       </DemoBlock>
 
-      <DemoBlock title="不可点击">
+      <DemoBlock title='不可点击'>
         <OsStepper
           isDisabled
           value={current2}

@@ -30,7 +30,7 @@ export default class DemoBlock extends Component<IProps> {
         className={classNames(rootClassName[0], classObject[0], className)}
         style={customStyle}
       >
-        <View className="block__header">
+        <View className='block__header'>
           {this.props.title && (
             <View className={classNames(rootClassName[1], classObject[1])}>
               {this.props.title}

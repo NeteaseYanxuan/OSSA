@@ -67,221 +67,221 @@ export default function Icon(props: OsIconProps) {
       {/* 复杂icon */}
       {type === "avatar" && (
         <View>
-          <Text className="path1"></Text>
-          <Text className="path2"></Text>
-          <Text className="path3"></Text>
+          <Text className='path1'></Text>
+          <Text className='path2'></Text>
+          <Text className='path3'></Text>
         </View>
       )}
       {type === "delete-input" && (
         <View>
-          <Text className="path1"></Text>
-          <Text className="path2"></Text>
+          <Text className='path1'></Text>
+          <Text className='path2'></Text>
         </View>
       )}
       {type === "cart" && (
         <View>
-          <Text className="path1"></Text>
-          <Text className="path2"></Text>
-          <Text className="path3"></Text>
-          <Text className="path4"></Text>
-          <Text className="path5"></Text>
+          <Text className='path1'></Text>
+          <Text className='path2'></Text>
+          <Text className='path3'></Text>
+          <Text className='path4'></Text>
+          <Text className='path5'></Text>
         </View>
       )}
       {type === "cart-pressed" && (
         <View>
-          <Text className="path1"></Text>
-          <Text className="path2"></Text>
-          <Text className="path3"></Text>
-          <Text className="path4"></Text>
-          <Text className="path5"></Text>
+          <Text className='path1'></Text>
+          <Text className='path2'></Text>
+          <Text className='path3'></Text>
+          <Text className='path4'></Text>
+          <Text className='path5'></Text>
         </View>
       )}
       {type === "check-irrevocable" && (
         <View>
-          <Text className="path1"></Text>
-          <Text className="path2"></Text>
-          <Text className="path3"></Text>
-          <Text className="path4"></Text>
+          <Text className='path1'></Text>
+          <Text className='path2'></Text>
+          <Text className='path3'></Text>
+          <Text className='path4'></Text>
         </View>
       )}
       {type === "check-selected" && (
         <View>
-          <Text className="path1"></Text>
-          <Text className="path2"></Text>
-          <Text className="path3"></Text>
-          <Text className="path4"></Text>
+          <Text className='path1'></Text>
+          <Text className='path2'></Text>
+          <Text className='path3'></Text>
+          <Text className='path4'></Text>
         </View>
       )}
       {type === "close-h5" && (
         <View>
-          <Text className="path1"></Text>
-          <Text className="path2"></Text>
-          <Text className="path3"></Text>
+          <Text className='path1'></Text>
+          <Text className='path2'></Text>
+          <Text className='path3'></Text>
         </View>
       )}
       {type === "close-native-pressed" && (
         <View>
-          <Text className="path1"></Text>
-          <Text className="path2"></Text>
-          <Text className="path3"></Text>
-          <Text className="path4"></Text>
-          <Text className="path5"></Text>
+          <Text className='path1'></Text>
+          <Text className='path2'></Text>
+          <Text className='path3'></Text>
+          <Text className='path4'></Text>
+          <Text className='path5'></Text>
         </View>
       )}
       {type === "close-native" && (
         <View>
-          <Text className="path1"></Text>
-          <Text className="path2"></Text>
-          <Text className="path3"></Text>
-          <Text className="path4"></Text>
-          <Text className="path5"></Text>
+          <Text className='path1'></Text>
+          <Text className='path2'></Text>
+          <Text className='path3'></Text>
+          <Text className='path4'></Text>
+          <Text className='path5'></Text>
         </View>
       )}
 
       {type === "invisible" && (
         <View>
-          <Text className="path1"></Text>
-          <Text className="path2"></Text>
-          <Text className="path3"></Text>
-          <Text className="path4"></Text>
-          <Text className="path5"></Text>
+          <Text className='path1'></Text>
+          <Text className='path2'></Text>
+          <Text className='path3'></Text>
+          <Text className='path4'></Text>
+          <Text className='path5'></Text>
         </View>
       )}
       {type === "like-selected" && (
         <View>
-          <Text className="path1"></Text>
-          <Text className="path2"></Text>
+          <Text className='path1'></Text>
+          <Text className='path2'></Text>
         </View>
       )}
       {type === "sort-high" && (
         <View>
-          <Text className="path1"></Text>
-          <Text className="path2"></Text>
+          <Text className='path1'></Text>
+          <Text className='path2'></Text>
         </View>
       )}
       {type === "sort-low" && (
         <View>
-          <Text className="path1"></Text>
-          <Text className="path2"></Text>
+          <Text className='path1'></Text>
+          <Text className='path2'></Text>
         </View>
       )}
       {type === "subject-pressed" && (
         <View>
-          <Text className="path1"></Text>
-          <Text className="path2"></Text>
-          <Text className="path3"></Text>
-          <Text className="path4"></Text>
+          <Text className='path1'></Text>
+          <Text className='path2'></Text>
+          <Text className='path3'></Text>
+          <Text className='path4'></Text>
         </View>
       )}
       {type === "subject" && (
         <View>
-          <Text className="path1"></Text>
-          <Text className="path2"></Text>
-          <Text className="path3"></Text>
-          <Text className="path4"></Text>
+          <Text className='path1'></Text>
+          <Text className='path2'></Text>
+          <Text className='path3'></Text>
+          <Text className='path4'></Text>
         </View>
       )}
       {type === "voice" && (
         <View>
-          <Text className="path1"></Text>
-          <Text className="path2"></Text>
-          <Text className="path3"></Text>
-          <Text className="path4"></Text>
+          <Text className='path1'></Text>
+          <Text className='path2'></Text>
+          <Text className='path3'></Text>
+          <Text className='path4'></Text>
         </View>
       )}
       {type === "voice-close" && (
         <View>
-          <Text className="path1"></Text>
-          <Text className="path2"></Text>
-          <Text className="path3"></Text>
-          <Text className="path4"></Text>
+          <Text className='path1'></Text>
+          <Text className='path2'></Text>
+          <Text className='path3'></Text>
+          <Text className='path4'></Text>
         </View>
       )}
       {type === "upload-delete" && (
         <View>
-          <Text className="path1"></Text>
-          <Text className="path2"></Text>
-          <Text className="path3"></Text>
+          <Text className='path1'></Text>
+          <Text className='path2'></Text>
+          <Text className='path3'></Text>
         </View>
       )}
       {type === "classify" && (
         <View>
-          <Text className="path1"></Text>
-          <Text className="path2"></Text>
+          <Text className='path1'></Text>
+          <Text className='path2'></Text>
         </View>
       )}
       {type === "classify-pressed" && (
         <View>
-          <Text className="path1"></Text>
-          <Text className="path2"></Text>
+          <Text className='path1'></Text>
+          <Text className='path2'></Text>
         </View>
       )}
       {type === "share-circle" && (
         <View>
-          <Text className="path1"></Text>
-          <Text className="path2"></Text>
-          <Text className="path3"></Text>
-          <Text className="path4"></Text>
-          <Text className="path5"></Text>
-          <Text className="path6"></Text>
+          <Text className='path1'></Text>
+          <Text className='path2'></Text>
+          <Text className='path3'></Text>
+          <Text className='path4'></Text>
+          <Text className='path5'></Text>
+          <Text className='path6'></Text>
         </View>
       )}
       {type === "share-circle-pressed" && (
         <View>
-          <Text className="path1"></Text>
-          <Text className="path2"></Text>
-          <Text className="path3"></Text>
-          <Text className="path4"></Text>
-          <Text className="path5"></Text>
-          <Text className="path6"></Text>
+          <Text className='path1'></Text>
+          <Text className='path2'></Text>
+          <Text className='path3'></Text>
+          <Text className='path4'></Text>
+          <Text className='path5'></Text>
+          <Text className='path6'></Text>
         </View>
       )}
       {type === "detail-cart-pressed" && (
         <View>
-          <Text className="path1"></Text>
-          <Text className="path2"></Text>
-          <Text className="path3"></Text>
-          <Text className="path4"></Text>
-          <Text className="path5"></Text>
+          <Text className='path1'></Text>
+          <Text className='path2'></Text>
+          <Text className='path3'></Text>
+          <Text className='path4'></Text>
+          <Text className='path5'></Text>
         </View>
       )}
       {type === "detail-cart" && (
         <View>
-          <Text className="path1"></Text>
-          <Text className="path2"></Text>
-          <Text className="path3"></Text>
-          <Text className="path4"></Text>
-          <Text className="path5"></Text>
+          <Text className='path1'></Text>
+          <Text className='path2'></Text>
+          <Text className='path3'></Text>
+          <Text className='path4'></Text>
+          <Text className='path5'></Text>
         </View>
       )}
       {type === "my-group-buying-select" && (
         <View>
-          <Text className="path1"></Text>
-          <Text className="path2"></Text>
-          <Text className="path3"></Text>
-          <Text className="path4"></Text>
+          <Text className='path1'></Text>
+          <Text className='path2'></Text>
+          <Text className='path3'></Text>
+          <Text className='path4'></Text>
         </View>
       )}
       {type === "shopping-mall-select" && (
         <View>
-          <Text className="path1"></Text>
-          <Text className="path2"></Text>
-          <Text className="path3"></Text>
-          <Text className="path4"></Text>
-          <Text className="path5"></Text>
-          <Text className="path6"></Text>
-          <Text className="path7"></Text>
+          <Text className='path1'></Text>
+          <Text className='path2'></Text>
+          <Text className='path3'></Text>
+          <Text className='path4'></Text>
+          <Text className='path5'></Text>
+          <Text className='path6'></Text>
+          <Text className='path7'></Text>
         </View>
       )}
       {type === "shopping-mall" && (
         <View>
-          <Text className="path1"></Text>
-          <Text className="path2"></Text>
-          <Text className="path3"></Text>
-          <Text className="path4"></Text>
-          <Text className="path5"></Text>
-          <Text className="path6"></Text>
-          <Text className="path7"></Text>
+          <Text className='path1'></Text>
+          <Text className='path2'></Text>
+          <Text className='path3'></Text>
+          <Text className='path4'></Text>
+          <Text className='path5'></Text>
+          <Text className='path6'></Text>
+          <Text className='path7'></Text>
         </View>
       )}
     </View>

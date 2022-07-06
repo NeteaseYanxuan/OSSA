@@ -25,7 +25,7 @@ export default function Index(props: OsCheckboxProps) {
       className={classNames(rootClassName, classObject, className)}
       style={styleObject}
     >
-      <View className="ossa-checkbox__options">{props.children}</View>
+      <View className='ossa-checkbox__options'>{props.children}</View>
     </View>
   );
 }

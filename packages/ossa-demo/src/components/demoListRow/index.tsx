@@ -92,7 +92,7 @@ export default function List(props: Props) {
       onTouchEnd={() => onTouchEnd(props, setActive, active)}
     >
       {leftIcon && (
-        <View className="list__leftIcon">
+        <View className='list__leftIcon'>
           <OsIcon
             type={leftIcon}
             size={leftIconSize}
@@ -102,7 +102,7 @@ export default function List(props: Props) {
       )}
 
       {(title || subTitle) && (
-        <View className="list__box">
+        <View className='list__box'>
           {title && (
             <View className={classNames("list__title", "title-class")}>
               {title}
@@ -122,13 +122,13 @@ export default function List(props: Props) {
       {props.children}
 
       {desc && (
-        <View className="list__desc" style={colorStyleObject}>
+        <View className='list__desc' style={colorStyleObject}>
           {desc}
         </View>
       )}
 
       {rightIcon && (
-        <View className="list__rightIcon">
+        <View className='list__rightIcon'>
           <OsIcon
             size={28}
             type={rightIcon}

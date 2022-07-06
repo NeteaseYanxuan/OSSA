@@ -88,10 +88,10 @@ export default function Index(props: Props) {
 
   return (
     <View className={classNames(classObject)}>
-      <DemoHeader title="Actionsheet 动作面板"></DemoHeader>
-      <DemoBlock title="基础">
-        <View className="block-section">
-          <View className="inline-item">
+      <DemoHeader title='Actionsheet 动作面板'></DemoHeader>
+      <DemoBlock title='基础'>
+        <View className='block-section'>
+          <View className='inline-item'>
             <OsButton
               onClick={() => {
                 setShowBase(true);
@@ -103,9 +103,9 @@ export default function Index(props: Props) {
         </View>
       </DemoBlock>
 
-      <DemoBlock title="带取消按钮">
-        <View className="block-section">
-          <View className="inline-item">
+      <DemoBlock title='带取消按钮'>
+        <View className='block-section'>
+          <View className='inline-item'>
             <OsButton
               onClick={() => {
                 setShowWithCancelBtn(true);
@@ -117,9 +117,9 @@ export default function Index(props: Props) {
         </View>
       </DemoBlock>
 
-      <DemoBlock title="带标题">
-        <View className="block-section">
-          <View className="inline-item">
+      <DemoBlock title='带标题'>
+        <View className='block-section'>
+          <View className='inline-item'>
             <OsButton
               onClick={() => {
                 setShowWithTitle(true);
@@ -131,9 +131,9 @@ export default function Index(props: Props) {
         </View>
       </DemoBlock>
 
-      <DemoBlock title="自定义内容">
-        <View className="block-section">
-          <View className="inline-item">
+      <DemoBlock title='自定义内容'>
+        <View className='block-section'>
+          <View className='inline-item'>
             <OsButton
               onClick={() => {
                 setShowWithCustomContent(true);
@@ -168,27 +168,27 @@ export default function Index(props: Props) {
         }}
       >
         <OsActionsheetItem
-          title="满599元减去100"
+          title='满599元减去100'
           onClick={() => {
             setShowBase(false);
           }}
         ></OsActionsheetItem>
         <OsActionsheetItem
-          title="满249元减50"
+          title='满249元减50'
           disabled
           onClick={() => {
             setShowBase(false);
           }}
         ></OsActionsheetItem>
         <OsActionsheetItem
-          title="满88元打8折"
+          title='满88元打8折'
           disabled
           onClick={() => {
             setShowBase(false);
           }}
         ></OsActionsheetItem>
         <OsActionsheetItem
-          title="满69元减10"
+          title='满69元减10'
           disabled
           onClick={() => {
             setShowBase(false);
@@ -197,32 +197,32 @@ export default function Index(props: Props) {
       </OsActionsheet>
 
       <OsActionsheet
-        cancelText="取消"
+        cancelText='取消'
         isShow={showWithCancelBtn}
         onClose={() => {
           setShowWithCancelBtn(false);
         }}
       >
         <OsActionsheetItem
-          title="满599元减去100"
+          title='满599元减去100'
           onClick={() => {
             setShowWithCancelBtn(false);
           }}
         ></OsActionsheetItem>
         <OsActionsheetItem
-          title="满249元减50"
+          title='满249元减50'
           onClick={() => {
             setShowWithCancelBtn(false);
           }}
         ></OsActionsheetItem>
         <OsActionsheetItem
-          title="满88元打8折"
+          title='满88元打8折'
           onClick={() => {
             setShowWithCancelBtn(false);
           }}
         ></OsActionsheetItem>
         <OsActionsheetItem
-          title="满69元减10"
+          title='满69元减10'
           onClick={() => {
             setShowWithCancelBtn(false);
           }}
@@ -230,32 +230,32 @@ export default function Index(props: Props) {
       </OsActionsheet>
 
       <OsActionsheet
-        title="带标题的 Actionsheet"
+        title='带标题的 Actionsheet'
         isShow={showWithTitle}
         onClose={() => {
           setShowWithTitle(false);
         }}
       >
         <OsActionsheetItem
-          title="满599元减去100"
+          title='满599元减去100'
           onClick={() => {
             setShowWithTitle(false);
           }}
         ></OsActionsheetItem>
         <OsActionsheetItem
-          title="满249元减50"
+          title='满249元减50'
           onClick={() => {
             setShowWithTitle(false);
           }}
         ></OsActionsheetItem>
         <OsActionsheetItem
-          title="满88元打8折"
+          title='满88元打8折'
           onClick={() => {
             setShowWithTitle(false);
           }}
         ></OsActionsheetItem>
         <OsActionsheetItem
-          title="满69元减10"
+          title='满69元减10'
           onClick={() => {
             setShowWithTitle(false);
           }}
@@ -263,13 +263,13 @@ export default function Index(props: Props) {
       </OsActionsheet>
 
       <OsActionsheet
-        title="自定义内容的 Actionsheet"
+        title='自定义内容的 Actionsheet'
         isShow={showWithCustomContent}
         onClose={() => {
           setShowWithCustomContent(false);
         }}
       >
-        <View className="custom-content">
+        <View className='custom-content'>
           <Text>这是自定义内容</Text>
         </View>
       </OsActionsheet>

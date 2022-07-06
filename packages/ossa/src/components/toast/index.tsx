@@ -51,7 +51,7 @@ export default function Toast(props: OsToastProps) {
       className={classNames(rootClassName, classObject, props.className)}
       style={styleObject}
     >
-      <Text className="ossa-toast__text">{props.text}</Text>
+      <Text className='ossa-toast__text'>{props.text}</Text>
     </View>
   );
 }

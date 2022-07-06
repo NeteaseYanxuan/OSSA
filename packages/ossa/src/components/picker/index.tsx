@@ -53,7 +53,7 @@ export default function Index(props: OsPickerProps) {
       className={classNames(rootClassName, classObject, props.className)}
       style={styleObject}
     >
-      <View className="ossa-picker__trigger" onClick={showPopup}>
+      <View className='ossa-picker__trigger' onClick={showPopup}>
         {props.children}
       </View>
       <View
@@ -63,11 +63,11 @@ export default function Index(props: OsPickerProps) {
         })}
       >
         <View
-          className="ossa-picker-popup__mask"
+          className='ossa-picker-popup__mask'
           onClick={() => onCancel()}
         ></View>
-        <View className="ossa-picker-popup__container">
-          <View className="ossa-picker-popup__header">
+        <View className='ossa-picker-popup__container'>
+          <View className='ossa-picker-popup__header'>
             <View
               className={classNames(
                 "ossa-picker-popup__btn",
@@ -87,7 +87,7 @@ export default function Index(props: OsPickerProps) {
               确定
             </View>
           </View>
-          <View className="ossa-picker-popup__body">
+          <View className='ossa-picker-popup__body'>
             <OsPickerGroup
               range={props.range}
               height={groupOffsetY}

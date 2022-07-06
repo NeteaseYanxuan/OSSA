@@ -83,22 +83,22 @@ export default function Index(props: OsModalProps) {
         {_isAbsoluteCloseIcon && _closeIcon}
         <View
           onClick={(e) => onClickMask(props)}
-          className="ossa-modal__mask"
+          className='ossa-modal__mask'
         />
-        <View className="ossa-modal__container">
+        <View className='ossa-modal__container'>
           {!_isAbsoluteCloseIcon && _closeIcon}
           {title && (
-            <View className="ossa-modal__header">
-              <Text className="ossa-modal__title">{title}</Text>
+            <View className='ossa-modal__header'>
+              <Text className='ossa-modal__title'>{title}</Text>
             </View>
           )}
           {content && (
-            <View className="ossa-modal__content">
+            <View className='ossa-modal__content'>
               <Text>{content}</Text>
             </View>
           )}
           {isRenderAction && (
-            <View className="ossa-modal__footer">
+            <View className='ossa-modal__footer'>
               {cancelText && (
                 <View
                   className={classNames({
@@ -132,20 +132,20 @@ export default function Index(props: OsModalProps) {
 
   return (
     <View className={className} style={styleObject}>
-      <View className="ossa-modal__mask" onClick={(e) => onClickMask(props)} />
+      <View className='ossa-modal__mask' onClick={(e) => onClickMask(props)} />
       {_isAbsoluteCloseIcon && _closeIcon}
       {custom && (
-        <View className="ossa-modal__customWrapper">
+        <View className='ossa-modal__customWrapper'>
           {!_isAbsoluteCloseIcon && _closeIcon}
           {props.children}
         </View>
       )}
       {!custom && (
-        <View className="ossa-modal__container">
+        <View className='ossa-modal__container'>
           {!_isAbsoluteCloseIcon && _closeIcon}
           {props.children}
           {isRenderAction && (
-            <View className="ossa-modal__footer">
+            <View className='ossa-modal__footer'>
               {cancelText && (
                 <View
                   className={classNames({

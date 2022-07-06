@@ -52,11 +52,11 @@ export default class Index extends Component<null, IState> {
   render() {
     const { list } = this.state;
     return (
-      <View className="index page">
-        <DemoHeader title="基础组件" icon="general"></DemoHeader>
+      <View className='index page'>
+        <DemoHeader title='基础组件' icon='general'></DemoHeader>
         {list.map((item) => (
           <View key={item.id} data-id={item.id} onClick={this.onClick}>
-            <OsList rightIcon="arrows">{item.title}</OsList>
+            <OsList rightIcon='arrows'>{item.title}</OsList>
           </View>
         ))}
       </View>

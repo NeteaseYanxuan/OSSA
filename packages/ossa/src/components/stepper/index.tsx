@@ -191,7 +191,7 @@ export default function Stepper(props: OsStepperProps) {
           className={classNames(rootClassName[3])}
           value={inputValue}
           disabled={isDisabled || isReadonly}
-          type="number"
+          type='number'
           onInput={onInput}
           onBlur={onBlur}
         />

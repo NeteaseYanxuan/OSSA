@@ -67,12 +67,12 @@ export default function Index(props: Props) {
 
   return (
     <View className={classNames(classObject)}>
-      <DemoHeader title="Css 样式动画"></DemoHeader>
-      <DemoBlock title="种类">
-        <View className="block-section">
-          <View className="inline-item">
+      <DemoHeader title='Css 样式动画'></DemoHeader>
+      <DemoBlock title='种类'>
+        <View className='block-section'>
+          <View className='inline-item'>
             <OsButton
-              type="primary"
+              type='primary'
               onClick={() => {
                 handleClick1();
               }}
@@ -80,14 +80,14 @@ export default function Index(props: Props) {
               {btnTxt1}
             </OsButton>
             <OsAnimate type={type1}>
-              <Text className="inline-item--txt">OSSA</Text>
+              <Text className='inline-item--txt'>OSSA</Text>
             </OsAnimate>
           </View>
         </View>
-        <View className="block-section">
-          <View className="inline-item">
+        <View className='block-section'>
+          <View className='inline-item'>
             <OsButton
-              type="primary"
+              type='primary'
               onClick={() => {
                 handleClick2();
               }}
@@ -95,14 +95,14 @@ export default function Index(props: Props) {
               {btnTxt2}
             </OsButton>
             <OsAnimate type={type2}>
-              <Text className="inline-item--txt">OSSA</Text>
+              <Text className='inline-item--txt'>OSSA</Text>
             </OsAnimate>
           </View>
         </View>
-        <View className="block-section">
-          <View className="inline-item">
+        <View className='block-section'>
+          <View className='inline-item'>
             <OsButton
-              type="primary"
+              type='primary'
               onClick={() => {
                 handleClick3();
               }}
@@ -110,7 +110,7 @@ export default function Index(props: Props) {
               {btnTxt3}
             </OsButton>
             <OsAnimate type={type3}>
-              <Text className="inline-item--txt">OSSA</Text>
+              <Text className='inline-item--txt'>OSSA</Text>
             </OsAnimate>
           </View>
         </View>

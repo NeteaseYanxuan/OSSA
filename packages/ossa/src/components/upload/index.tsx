@@ -104,15 +104,15 @@ export default function Upload(props: OsUploadProps) {
       className={classNames(rootClassName, classObject, props.className)}
       style={styleObject}
     >
-      <View className="ossa-upload__list">
+      <View className='ossa-upload__list'>
         {files &&
           files.length > 0 &&
           files.map((item: any, index: number) => (
-            <View className="ossa-upload__item" key={item.url}>
-              <Image className="ossa-upload__item__img" src={item.url}></Image>
+            <View className='ossa-upload__item' key={item.url}>
+              <Image className='ossa-upload__item__img' src={item.url}></Image>
               <OsIcon
                 size={36}
-                type="upload-delete"
+                type='upload-delete'
                 customStyle={_deleteIconStyle}
                 onClick={() =>
                   onRemoveImg(props, index, files, setFiles, setUpload)
@@ -122,20 +122,20 @@ export default function Upload(props: OsUploadProps) {
           ))}
         {upload && (
           <View
-            className="ossa-upload__btn"
+            className='ossa-upload__btn'
             onClick={() => {
               onClick(props, files, setFiles, setUpload);
             }}
           >
             <OsIcon
-              type="photo"
+              type='photo'
               size={48}
-              color="#d8d8d8"
+              color='#d8d8d8'
               customStyle={{
                 margin: `${Taro.pxTransform(25)} auto ${Taro.pxTransform(8)}`,
               }}
             ></OsIcon>
-            <View className="ossa-upload__input"></View>
+            <View className='ossa-upload__input'></View>
           </View>
         )}
       </View>

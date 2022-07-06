@@ -25,7 +25,7 @@ export default function Index(props: OsColorProps) {
       className={classNames(rootClassName, classObject, props.className)}
       style={styleObject}
     >
-      <Text className="demo__title">{props.title}</Text>
+      <Text className='demo__title'>{props.title}</Text>
     </View>
   );
 }

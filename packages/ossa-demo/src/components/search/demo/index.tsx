@@ -91,7 +91,7 @@ export default function Index(props: Props) {
   return (
     <View className={classNames(classObject)}>
       <DemoHeader title={demoTitle}></DemoHeader>
-      <DemoBlock title="普通">
+      <DemoBlock title='普通'>
         <OsSearch onChange={(e, value) => onChange(e, value)}></OsSearch>
       </DemoBlock>
       <DemoBlock>

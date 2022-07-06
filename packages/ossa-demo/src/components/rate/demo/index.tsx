@@ -95,25 +95,25 @@ export default function Index(props: Props) {
   return (
     <View className={classNames(classObject)}>
       <DemoHeader title={demoTitle}></DemoHeader>
-      <DemoBlock title="基础">
+      <DemoBlock title='基础'>
         <OsRate
-          title="评分"
+          title='评分'
           onChange={(item) => {
             onChange(item);
           }}
         ></OsRate>
       </DemoBlock>
 
-      <DemoBlock title="最小尺寸">
-        <OsRate type="small" value={2} isShowResult={false}></OsRate>
+      <DemoBlock title='最小尺寸'>
+        <OsRate type='small' value={2} isShowResult={false}></OsRate>
       </DemoBlock>
 
-      <DemoBlock title="自定义图标">
+      <DemoBlock title='自定义图标'>
         <OsRate
-          title="评分"
+          title='评分'
           value={3}
-          selectedIcon="like-selected"
-          icon="like"
+          selectedIcon='like-selected'
+          icon='like'
           options={options3}
         ></OsRate>
       </DemoBlock>

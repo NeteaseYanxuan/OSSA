@@ -62,9 +62,9 @@ export default function Index(props: Props) {
 
   return (
     <View className={classNames(classObject)}>
-      <DemoHeader title="Picker 选择器"></DemoHeader>
-      <DemoBlock title="普通">
-        <View className="block-section">
+      <DemoHeader title='Picker 选择器'></DemoHeader>
+      <DemoBlock title='普通'>
+        <View className='block-section'>
           <OsPicker
             range={range}
             value={vNormal}
@@ -73,7 +73,7 @@ export default function Index(props: Props) {
             }}
             onConfirm={onConfirmNormal}
           >
-            <OsList title="国籍" desc={range[vNormal]}></OsList>
+            <OsList title='国籍' desc={range[vNormal]}></OsList>
           </OsPicker>
         </View>
       </DemoBlock>

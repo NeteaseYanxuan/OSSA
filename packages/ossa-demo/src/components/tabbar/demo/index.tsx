@@ -138,7 +138,7 @@ export default function Index() {
   return (
     <View className={classNames(classObject)}>
       <DemoHeader title={demoTitle}></DemoHeader>
-      <DemoBlock fullScreen title="基础">
+      <DemoBlock fullScreen title='基础'>
         <OsTabBar
           value={2}
           tabsArr={tabsArr}
@@ -146,7 +146,7 @@ export default function Index() {
         ></OsTabBar>
       </DemoBlock>
 
-      <DemoBlock fullScreen title="固定底部">
+      <DemoBlock fullScreen title='固定底部'>
         <OsTabBar
           tabsArr={tabsArr}
           isfixedBt

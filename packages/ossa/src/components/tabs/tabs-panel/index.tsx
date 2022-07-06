@@ -28,7 +28,7 @@ export default function Index(props: OsTabsPanelProps) {
       className={classNames(rootClassName, classObject, className)}
       style={styleObject}
     >
-      <View className="ossa-tabs-panel__content">{props.children}</View>
+      <View className='ossa-tabs-panel__content'>{props.children}</View>
     </View>
   );
 }

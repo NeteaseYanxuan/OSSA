@@ -37,10 +37,10 @@ export default function Index(props: Props) {
   const classObject = getClassObject(); //组件修饰
   return (
     <View className={classNames(classObject)}>
-      <DemoHeader title="Demo XXX"></DemoHeader>
-      <DemoBlock title="普通">
-        <View className="block-section">
-          <View className="inline-item">
+      <DemoHeader title='Demo XXX'></DemoHeader>
+      <DemoBlock title='普通'>
+        <View className='block-section'>
+          <View className='inline-item'>
             <Text>这里写demo</Text>
           </View>
         </View>

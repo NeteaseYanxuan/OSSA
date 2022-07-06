@@ -88,31 +88,31 @@ export default function Index() {
 
   return (
     <View className={classNames(classObject)}>
-      <DemoHeader title="Tag 标签"></DemoHeader>
-      <DemoBlock title="矩形类标签">
-        <View className="block-section">
-          <View className="inline-item">
+      <DemoHeader title='Tag 标签'></DemoHeader>
+      <DemoBlock title='矩形类标签'>
+        <View className='block-section'>
+          <View className='inline-item'>
             <OsTag
-              type="primary"
-              color="warning"
+              type='primary'
+              color='warning'
               customStyle={{ minWidth: Taro.pxTransform(160) }}
             >
               预售
             </OsTag>
           </View>
-          <View className="inline-item">
+          <View className='inline-item'>
             <OsTag
-              type="primary"
-              color="normal"
+              type='primary'
+              color='normal'
               customStyle={{ minWidth: Taro.pxTransform(160) }}
             >
               库存不足
             </OsTag>
           </View>
-          <View className="inline-item">
+          <View className='inline-item'>
             <OsTag
-              type="primary"
-              color="error"
+              type='primary'
+              color='error'
               customStyle={{ minWidth: Taro.pxTransform(160) }}
             >
               已售罄
@@ -120,42 +120,42 @@ export default function Index() {
           </View>
         </View>
       </DemoBlock>
-      <DemoBlock title="腰圆线框标签">
-        <View className="block-section">
-          <View className="inline-item">
-            <OsTag color="warning">腰圆线框</OsTag>
+      <DemoBlock title='腰圆线框标签'>
+        <View className='block-section'>
+          <View className='inline-item'>
+            <OsTag color='warning'>腰圆线框</OsTag>
           </View>
-          <View className="inline-item">
+          <View className='inline-item'>
             <OsTag>售罄</OsTag>
           </View>
-          <View className="inline-item">
-            <OsTag color="error" showArrow>
+          <View className='inline-item'>
+            <OsTag color='error' showArrow>
               周年庆大促
             </OsTag>
           </View>
         </View>
       </DemoBlock>
-      <DemoBlock title="腰圆实色标签">
-        <View className="block-section">
-          <View className="inline-item">
-            <OsTag bgColor="#DD1A21" color="#fff">
+      <DemoBlock title='腰圆实色标签'>
+        <View className='block-section'>
+          <View className='inline-item'>
+            <OsTag bgColor='#DD1A21' color='#fff'>
               默认
             </OsTag>
           </View>
-          <View className="inline-item">
-            <OsTag startBgColor="#FC865F" endBgColor="#FC625F" color="#fff">
+          <View className='inline-item'>
+            <OsTag startBgColor='#FC865F' endBgColor='#FC625F' color='#fff'>
               全场满减
             </OsTag>
           </View>
         </View>
       </DemoBlock>
-      <DemoBlock title="自定义色值">
-        <View className="block-section">
-          <View className="inline-item">
-            <OsTag color="#f00">圆角标签</OsTag>
+      <DemoBlock title='自定义色值'>
+        <View className='block-section'>
+          <View className='inline-item'>
+            <OsTag color='#f00'>圆角标签</OsTag>
           </View>
-          <View className="inline-item">
-            <OsTag type="primary" color="#f00">
+          <View className='inline-item'>
+            <OsTag type='primary' color='#f00'>
               方形标签
             </OsTag>
           </View>

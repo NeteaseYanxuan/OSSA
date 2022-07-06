@@ -181,9 +181,9 @@ export default function Index(props: Props) {
   return (
     <View className={classNames(classObject)}>
       <DemoHeader title={demoTitle}></DemoHeader>
-      <DemoBlock title="基础" fullScreen>
+      <DemoBlock title='基础' fullScreen>
         <OsNavBar
-          title="标题"
+          title='标题'
           leftIcons={leftIcons}
           rightTexts={rightTexts}
           onLeftIconClick={onLeftIconClick.bind(this)}
@@ -191,9 +191,9 @@ export default function Index(props: Props) {
         ></OsNavBar>
       </DemoBlock>
 
-      <DemoBlock fullScreen title="左侧定制">
+      <DemoBlock fullScreen title='左侧定制'>
         <OsNavBar
-          title="标题"
+          title='标题'
           leftIcons={leftIcons}
           rightTexts={rightTexts}
           leftTexts={leftTexts}
@@ -201,40 +201,40 @@ export default function Index(props: Props) {
         ></OsNavBar>
       </DemoBlock>
 
-      <DemoBlock fullScreen title="右侧定制">
+      <DemoBlock fullScreen title='右侧定制'>
         <OsNavBar
-          title="标题"
+          title='标题'
           leftIcons={leftIcons3}
           rightIcons={rightIcons3}
           onRightIconClick={onRightIconClick.bind(this)}
         ></OsNavBar>
       </DemoBlock>
 
-      <DemoBlock fullScreen title="2列均分导航">
+      <DemoBlock fullScreen title='2列均分导航'>
         <OsNavBar
-          type="2column"
-          title="标题"
+          type='2column'
+          title='标题'
           rightTexts={rightTxts1}
         ></OsNavBar>
       </DemoBlock>
 
-      <DemoBlock fullScreen title="自定义导航">
-        <OsNavBar type="custom" showSplitLine={false}>
-          <View className="custom-nabbar">
-            <View className="navbar--left">
+      <DemoBlock fullScreen title='自定义导航'>
+        <OsNavBar type='custom' showSplitLine={false}>
+          <View className='custom-nabbar'>
+            <View className='navbar--left'>
               <OsIcon
-                type="return"
+                type='return'
                 size={40}
                 customStyle={{ verticalAlign: "top" }}
               ></OsIcon>
             </View>
-            <View className="navbar--middle">
+            <View className='navbar--middle'>
               <OsSearch padding={0} showSplitLine={false}></OsSearch>
             </View>
-            <View className="navbar--right">
-              <OsBadge type="info" info={9}>
+            <View className='navbar--right'>
+              <OsBadge type='info' info={9}>
                 <OsIcon
-                  type="detail-cart"
+                  type='detail-cart'
                   customStyle={{ verticalAlign: "top" }}
                 ></OsIcon>
               </OsBadge>

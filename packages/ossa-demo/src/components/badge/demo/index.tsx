@@ -54,58 +54,58 @@ export default function Index() {
   }, []);
 
   return (
-    <View className="demo-badge">
+    <View className='demo-badge'>
       <DemoHeader title={demoTitle}></DemoHeader>
 
-      <DemoBlock title="dot">
-        <View className="badge-item">
+      <DemoBlock title='dot'>
+        <View className='badge-item'>
           <OsBadge>
             <OsIcon
-              className="icon"
-              type="inform"
+              className='icon'
+              type='inform'
               customStyle={{ verticalAlign: "top" }}
             ></OsIcon>
           </OsBadge>
         </View>
       </DemoBlock>
 
-      <DemoBlock title="info" subTitle="文字">
-        <View className="badge-item">
-          <OsBadge type="info" info="新品">
+      <DemoBlock title='info' subTitle='文字'>
+        <View className='badge-item'>
+          <OsBadge type='info' info='新品'>
             <OsIcon
-              type="detail-cart"
-              className="icon"
+              type='detail-cart'
+              className='icon'
               customStyle={{ verticalAlign: "top" }}
             ></OsIcon>
           </OsBadge>
         </View>
       </DemoBlock>
 
-      <DemoBlock subTitle="数字">
-        <View className="badge-item">
-          <OsBadge type="info" info="9">
+      <DemoBlock subTitle='数字'>
+        <View className='badge-item'>
+          <OsBadge type='info' info='9'>
             <OsIcon
-              type="detail-cart"
-              className="icon"
+              type='detail-cart'
+              className='icon'
               customStyle={{ verticalAlign: "top" }}
             ></OsIcon>
           </OsBadge>
         </View>
       </DemoBlock>
 
-      <DemoBlock title="text">
-        <View className="badge-item">
-          <OsBadge type="text">待评价待评价</OsBadge>
+      <DemoBlock title='text'>
+        <View className='badge-item'>
+          <OsBadge type='text'>待评价待评价</OsBadge>
         </View>
       </DemoBlock>
 
-      <DemoBlock title="列表红点" fullScreen>
+      <DemoBlock title='列表红点' fullScreen>
         <OsList
-          title="我是标题我是标题我是标题我是标题我是标题我是标题我是标题"
-          type="custom"
-          rightIcon="arrows"
+          title='我是标题我是标题我是标题我是标题我是标题我是标题我是标题'
+          type='custom'
+          rightIcon='arrows'
         >
-          <OsBadge type="list"></OsBadge>
+          <OsBadge type='list'></OsBadge>
         </OsList>
       </DemoBlock>
 

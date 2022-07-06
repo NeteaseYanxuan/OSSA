@@ -116,10 +116,10 @@ export default function Index(props: Props) {
 
   return (
     <View className={classNames(classObject)}>
-      <DemoHeader title="Modal 对话框"></DemoHeader>
-      <DemoBlock title="基础">
-        <View className="block-section">
-          <View className="inline-item">
+      <DemoHeader title='Modal 对话框'></DemoHeader>
+      <DemoBlock title='基础'>
+        <View className='block-section'>
+          <View className='inline-item'>
             <OsButton
               onClick={() => {
                 setShowBase(true);
@@ -130,9 +130,9 @@ export default function Index(props: Props) {
           </View>
         </View>
       </DemoBlock>
-      <DemoBlock title="单个按钮">
-        <View className="block-section">
-          <View className="inline-item">
+      <DemoBlock title='单个按钮'>
+        <View className='block-section'>
+          <View className='inline-item'>
             <OsButton
               onClick={() => {
                 setShowSingleBtn(true);
@@ -144,9 +144,9 @@ export default function Index(props: Props) {
         </View>
       </DemoBlock>
 
-      <DemoBlock title="高级用法" subTitle="内容插槽自定义">
-        <View className="block-section">
-          <View className="inline-item">
+      <DemoBlock title='高级用法' subTitle='内容插槽自定义'>
+        <View className='block-section'>
+          <View className='inline-item'>
             <OsButton
               onClick={() => {
                 setShowSlot(true);
@@ -158,9 +158,9 @@ export default function Index(props: Props) {
         </View>
       </DemoBlock>
 
-      <DemoBlock subTitle="内容实例自定义">
-        <View className="block-section">
-          <View className="inline-item">
+      <DemoBlock subTitle='内容实例自定义'>
+        <View className='block-section'>
+          <View className='inline-item'>
             <OsButton
               onClick={() => {
                 setShowSlot1(true);
@@ -172,9 +172,9 @@ export default function Index(props: Props) {
         </View>
       </DemoBlock>
 
-      <DemoBlock subTitle="按钮置灰">
-        <View className="block-section">
-          <View className="inline-item">
+      <DemoBlock subTitle='按钮置灰'>
+        <View className='block-section'>
+          <View className='inline-item'>
             <OsButton
               onClick={() => {
                 setShowDisabled(true);
@@ -196,8 +196,8 @@ export default function Index(props: Props) {
 
       <OsModal
         title={titleBase}
-        cancelText="取消"
-        confirmText="确定啊"
+        cancelText='取消'
+        confirmText='确定啊'
         content={contentBase}
         isShow={showBase}
         onCancel={() => setShowBase(false)}
@@ -207,7 +207,7 @@ export default function Index(props: Props) {
 
       <OsModal
         title={titleSingleBtn}
-        cancelText="取消"
+        cancelText='取消'
         content={contentSingleBtn}
         isShow={showSingleBtn}
         showCloseIcon={false}
@@ -217,24 +217,24 @@ export default function Index(props: Props) {
       ></OsModal>
 
       <OsModal
-        cancelText="取消"
+        cancelText='取消'
         isShow={showSlot}
-        closeIconPosition="bottom"
+        closeIconPosition='bottom'
         onCancel={() => setShowSlot(false)}
         onClose={() => setShowSlot(false)}
         onConfirm={() => setShowSlot(false)}
       >
-        <View className="custom-content">
-          <View className="custom-content__title">活动优惠</View>
-          <View className="custom-content__row">
+        <View className='custom-content'>
+          <View className='custom-content__title'>活动优惠</View>
+          <View className='custom-content__row'>
             <Text>套装</Text>
             <Text>-￥18.00</Text>
           </View>
-          <View className="custom-content__row">
+          <View className='custom-content__row'>
             <Text>满额减</Text>
             <Text>-￥18.00</Text>
           </View>
-          <View className="custom-content__row">
+          <View className='custom-content__row'>
             <Text>全场满额减</Text>
             <Text>-￥18.00</Text>
           </View>
@@ -242,25 +242,25 @@ export default function Index(props: Props) {
       </OsModal>
 
       <OsModal
-        cancelText="取消"
+        cancelText='取消'
         isShow={showSlot1}
         onCancel={() => setShowSlot1(false)}
         onClose={() => setShowSlot1(false)}
         onConfirm={() => setShowSlot1(false)}
-        className="custom-demo"
+        className='custom-demo'
       >
-        <View className="custom-content-1">
+        <View className='custom-content-1'>
           <Image
-            className="custom-content-1__img"
-            src="https://yanxuan.nosdn.127.net/15565188113590869.png?imageView&thumbnail=630x336&quality=95"
-            mode="aspectFill"
+            className='custom-content-1__img'
+            src='https://yanxuan.nosdn.127.net/15565188113590869.png?imageView&thumbnail=630x336&quality=95'
+            mode='aspectFill'
           ></Image>
         </View>
       </OsModal>
 
       <OsModal
-        cancelText="取消"
-        confirmText="确定"
+        cancelText='取消'
+        confirmText='确定'
         closeOnClickMask
         isShow={showDisabled}
         disableConfirmBtn
@@ -268,11 +268,11 @@ export default function Index(props: Props) {
         onConfirm={() => setShowDisabled(false)}
         onClose={() => setShowDisabled(false)}
       >
-        <View className="custom-content-1">
+        <View className='custom-content-1'>
           <Image
-            className="custom-content-1__img"
-            src="https://yanxuan.nosdn.127.net/15565188113590869.png?imageView&thumbnail=630x336&quality=95"
-            mode="aspectFill"
+            className='custom-content-1__img'
+            src='https://yanxuan.nosdn.127.net/15565188113590869.png?imageView&thumbnail=630x336&quality=95'
+            mode='aspectFill'
           ></Image>
         </View>
       </OsModal>

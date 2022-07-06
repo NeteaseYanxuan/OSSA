@@ -73,23 +73,23 @@ export default function Index(props: Props) {
 
   return (
     <View className={classNames(classObject)}>
-      <DemoHeader title="NoticeBar 通知栏"></DemoHeader>
-      <DemoBlock title="基础" subTitle="默认">
-        <View className="block-section">
-          <OsNoticeBar leftIcon="inform">
+      <DemoHeader title='NoticeBar 通知栏'></DemoHeader>
+      <DemoBlock title='基础' subTitle='默认'>
+        <View className='block-section'>
+          <OsNoticeBar leftIcon='inform'>
             你可能已经注意到了，我们使用let关键字来代替var
           </OsNoticeBar>
         </View>
       </DemoBlock>
-      <DemoBlock subTitle="滚动">
-        <View className="block-section">
-          <OsNoticeBar leftIcon="inform" scrollable>
+      <DemoBlock subTitle='滚动'>
+        <View className='block-section'>
+          <OsNoticeBar leftIcon='inform' scrollable>
             你可能已经注意到了，我们使用let关键字来代替var
           </OsNoticeBar>
         </View>
       </DemoBlock>
-      <DemoBlock title="通告栏模式" subTitle="关闭">
-        <View className="block-section">
+      <DemoBlock title='通告栏模式' subTitle='关闭'>
+        <View className='block-section'>
           {show ? (
             <OsNoticeBar
               closeable
@@ -103,8 +103,8 @@ export default function Index(props: Props) {
           ) : null}
         </View>
       </DemoBlock>
-      <DemoBlock subTitle="跳转">
-        <View className="block-section">
+      <DemoBlock subTitle='跳转'>
+        <View className='block-section'>
           <OsNoticeBar more onClick={() => console.log("跳转")}>
             你可能已经注意到了，我们使用let关键字来代替var
           </OsNoticeBar>

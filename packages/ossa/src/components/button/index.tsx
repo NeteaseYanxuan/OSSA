@@ -139,7 +139,7 @@ export default function Button(props: OsButtonProps) {
       onTouchEnd={() => onTouchEnd(props, setActive, active)}
     >
       {iconComponent}
-      <View className="ossa-button__text">{props.children}</View>
+      <View className='ossa-button__text'>{props.children}</View>
       {/* { active && (props.type === 'default') && <View className='button--is-active' style={{background: props.bdColor}}></View>}
       { active && (props.type === 'primary') && <View className='button--is-active'></View>} */}
     </View>

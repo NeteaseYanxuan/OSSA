@@ -67,47 +67,47 @@ export default function Index(props: Props) {
 
   return (
     <View className={classNames(classObject)}>
-      <DemoHeader title="Switch 开关"></DemoHeader>
-      <DemoBlock title="基础" subTitle="on">
-        <View className="block-section">
+      <DemoHeader title='Switch 开关'></DemoHeader>
+      <DemoBlock title='基础' subTitle='on'>
+        <View className='block-section'>
           <OsSwitch isChecked={v1} onChange={setV1}></OsSwitch>
         </View>
       </DemoBlock>
 
-      <DemoBlock subTitle="off">
-        <View className="block-section">
+      <DemoBlock subTitle='off'>
+        <View className='block-section'>
           <OsSwitch isChecked={v2} onChange={setV2}></OsSwitch>
         </View>
       </DemoBlock>
 
-      <DemoBlock title="自定义颜色" subTitle="自定义on背景色">
-        <View className="block-section">
+      <DemoBlock title='自定义颜色' subTitle='自定义on背景色'>
+        <View className='block-section'>
           <OsSwitch
             isChecked={v3}
             onChange={setV3}
-            onColor="rgb(221, 26, 33)"
+            onColor='rgb(221, 26, 33)'
           ></OsSwitch>
         </View>
       </DemoBlock>
 
-      <DemoBlock subTitle="自定义off背景色">
-        <View className="block-section">
+      <DemoBlock subTitle='自定义off背景色'>
+        <View className='block-section'>
           <OsSwitch
             isChecked={v4}
             onChange={setV4}
-            offColor="#dfdfdf"
+            offColor='#dfdfdf'
           ></OsSwitch>
         </View>
       </DemoBlock>
 
-      <DemoBlock title="禁用" subTitle="on">
-        <View className="block-section">
+      <DemoBlock title='禁用' subTitle='on'>
+        <View className='block-section'>
           <OsSwitch isChecked={v6} onChange={setV6} isDisabled></OsSwitch>
         </View>
       </DemoBlock>
 
-      <DemoBlock subTitle="off">
-        <View className="block-section">
+      <DemoBlock subTitle='off'>
+        <View className='block-section'>
           <OsSwitch isChecked={v7} onChange={setV7} isDisabled></OsSwitch>
         </View>
       </DemoBlock>

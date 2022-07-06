@@ -70,10 +70,10 @@ export default function Index(props: OsSearchProps) {
       className={classNames(rootClassName, classObject, className)}
       style={styleObject}
     >
-      <View className="ossa-search__wrap">
+      <View className='ossa-search__wrap'>
         {focus && (
           <OsIcon
-            type="search-little"
+            type='search-little'
             customStyle={{
               marginLeft: Taro.pxTransform(20),
               marginRight: Taro.pxTransform(8),
@@ -86,16 +86,16 @@ export default function Index(props: OsSearchProps) {
         )}
 
         <View
-          className="ossa-search__form"
+          className='ossa-search__form'
           onClick={() => {
             setFocus(true);
           }}
         >
           <Input
             className={classNames("ossa-search__input")}
-            type="text"
+            type='text'
             focus={focus}
-            confirmType="search"
+            confirmType='search'
             value={current}
             placeholder={focus ? placeholder : ""}
             // onKeyup={(e)=>onChange(e, props, setCurrent)}
@@ -104,17 +104,17 @@ export default function Index(props: OsSearchProps) {
             onBlur={(e) => onBlur(e, props)}
             onFocus={(e) => onFocus(e, props, setFocus)}
             style={{ color: color }}
-            placeholderClass="ossa-search__input--placehoder-style"
+            placeholderClass='ossa-search__input--placehoder-style'
           ></Input>
           {!current && (
             <View
-              className="ossa-search__placeholder"
+              className='ossa-search__placeholder'
               style={{ textAlign: focus ? "left" : "center" }}
               // onClick={()=>{setFocus(true)}}
             >
               {!focus && (
                 <OsIcon
-                  type="search-little"
+                  type='search-little'
                   customStyle={{
                     marginLeft: Taro.pxTransform(20),
                     marginRight: Taro.pxTransform(8),
@@ -128,20 +128,20 @@ export default function Index(props: OsSearchProps) {
         </View>
         {current.length > 0 && focus && (
           <OsIcon
-            type="delete-input"
+            type='delete-input'
             customStyle={{
               marginLeft: Taro.pxTransform(20),
               marginRight: Taro.pxTransform(20),
             }}
             size={28}
-            color="#cccccc"
+            color='#cccccc'
             onClick={() => onClear(setCurrent, setFocus)}
           ></OsIcon>
         )}
       </View>
       {focus && (
         <Text
-          className="ossa-search--cancel"
+          className='ossa-search--cancel'
           style={{ color: color }}
           onClick={() => onCancel(setCurrent, setFocus)}
         >

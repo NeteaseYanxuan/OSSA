@@ -136,7 +136,7 @@ export default function Index(props: Props) {
   return (
     <View className={classNames(classObject)}>
       <DemoHeader title={demoTitle}></DemoHeader>
-      <DemoBlock title="颜色分类">
+      <DemoBlock title='颜色分类'>
         <View
           className={classNames(
             "layout",
@@ -146,7 +146,7 @@ export default function Index(props: Props) {
         >
           {colorList.map((item: Item) => (
             <View className={classNames("col", "col--6")} key={item.color}>
-              <View className="color-item">
+              <View className='color-item'>
                 <View
                   className={
                     item.borderColor
@@ -155,16 +155,16 @@ export default function Index(props: Props) {
                   }
                   style={{ background: item.color }}
                 ></View>
-                <View className="color-item__title">{item.title}</View>
-                <View className="color-item__color">{item.color}</View>
-                <View className="color-item__desc">{item.desc}</View>
+                <View className='color-item__title'>{item.title}</View>
+                <View className='color-item__color'>{item.color}</View>
+                <View className='color-item__desc'>{item.desc}</View>
               </View>
             </View>
           ))}
         </View>
       </DemoBlock>
 
-      <DemoBlock title="文字链点击颜色">
+      <DemoBlock title='文字链点击颜色'>
         <View
           className={classNames(
             "layout",
@@ -175,56 +175,56 @@ export default function Index(props: Props) {
           <View className={classNames("col", "col--8")}>
             <View className={classNames("font-item", "font-item--first")}>
               <View
-                className="font-item__bar"
+                className='font-item__bar'
                 style={{ background: "#333333" }}
               ></View>
-              <View className="font-item__color">#333333</View>
-              <View className="font-item__desc">弱文字链颜色</View>
+              <View className='font-item__color'>#333333</View>
+              <View className='font-item__desc'>弱文字链颜色</View>
             </View>
           </View>
           <View className={classNames("col", "col--8")}>
             <View className={classNames("font-item", "font-item--last")}>
               <View
-                className="font-item__bar"
+                className='font-item__bar'
                 style={{ background: "#007AFF" }}
               ></View>
-              <View className="font-item__color">#007AFF</View>
-              <View className="font-item__desc">强文字链颜色</View>
+              <View className='font-item__color'>#007AFF</View>
+              <View className='font-item__desc'>强文字链颜色</View>
             </View>
           </View>
         </View>
       </DemoBlock>
 
-      <DemoBlock title="颜色基础扩展">
-        <View className="color--extend">
-          <View className="color--extend-part1">
+      <DemoBlock title='颜色基础扩展'>
+        <View className='color--extend'>
+          <View className='color--extend-part1'>
             {colorList1.map((item) => (
               <View
                 key={item}
-                className="color--part1--item"
+                className='color--part1--item'
                 style={{ background: item }}
               >
                 {item}
               </View>
             ))}
           </View>
-          <View className="color--extend-part2">
-            <View className="color--extend-part2--list1">
+          <View className='color--extend-part2'>
+            <View className='color--extend-part2--list1'>
               {colorList2.map((item) => (
                 <View
                   key={item}
-                  className="color--part1--item"
+                  className='color--part1--item'
                   style={{ background: item }}
                 >
                   {item}
                 </View>
               ))}
             </View>
-            <View className="color--extend-part2--list2">
+            <View className='color--extend-part2--list2'>
               {colorList3.map((item) => (
                 <View
                   key={item}
-                  className="color--part1--item"
+                  className='color--part1--item'
                   style={{ background: item }}
                 >
                   {item}
