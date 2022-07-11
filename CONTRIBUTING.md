@@ -23,6 +23,10 @@
 
 - 注意：需要在全局安装 @tarojs/cli 
 
+  ```bash
+  npm install @tarojs/cli -g
+  ```
+
 5. 在根目录下编译更改之后ossa-ui
 
    ```bash
