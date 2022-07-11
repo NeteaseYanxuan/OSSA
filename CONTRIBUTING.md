@@ -21,6 +21,8 @@
 
 4. 在packages/ossa目录下进行您的创作
 
+- 注意：需要在全局安装 @tarojs/cli 
+
 5. 在根目录下编译更改之后ossa-ui
 
    ```bash
