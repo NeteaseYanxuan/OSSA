@@ -10,7 +10,6 @@
 ## 快速上手
 OSSA目前支持Taro3，Taro1/Taro2版本敬请期待。
 
-
 #### 安装
 
 1. 首先需要有一个基于Taro的React项目，详细请参考[Taro快速开始](https://docs.taro.zone/docs/GETTING-STARTED)
@@ -37,8 +36,22 @@ import 'ossaui/dist/style/index.scss'
 // 或者在app.scss中引入
 @import '~ossaui/dist/style/index.scss'
 ```
+2. 配置编译时对组件库进行编译
 
-2. 在页面中引入`OSSA`组件
+> 如果不对组件库进行编译，组件库内的样式文件不会经过postcss处理
+
+```javascript
+module.exports = {
+  // ...
+  h5: {
+    // ...
+    esnextModules: ['ossaui']
+  }
+}
+```
+
+
+3. 在页面中引入`OSSA`组件
 
 ```javascript
 // page/index.tsx
@@ -58,7 +71,28 @@ const demo = () => {
 ```javascript
 // page/index.tsx
 import { OsButton } from 'ossaui'
-import 'ossaui/dist/style/components/button.scss'
+```
+
+> 注意，目前组件库的按需引入需要借助一个babel插件[babel-plugin-import](https://github.com/umijs/babel-plugin-import)来实现
+
+首先需要安装
+```bash
+npm i babel-plugin-import -D
+```
+
+然后在`babel.config.js`文件中添加如下配置：
+```javascript
+plugins: [
+  [
+    'import',
+    {
+      libraryName: 'ossaui',
+      customName: (name) => `ossaui/lib/components/${name.replace(/^os-/, '')}`,
+      customStyleName: (name) => `ossaui/dist/style/components/${name.replace(/^os-/, '')}.scss`
+    },
+    'ossaui'
+  ]
+]
 ```
 
 #### 预览
