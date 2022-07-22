@@ -76,8 +76,8 @@ npm run dev:h5
 
 ## 链接
 + [仓库地址](https://github.com/NeteaseYanxuan/OSSA)
-+ [bug反馈](./.github/ISSUE_TEMPLATE/bug-report.yml)
-+ [功能新增](./.github/ISSUE_TEMPLATE/feature-request.yml)
++ [bug反馈](https://github.com/NeteaseYanxuan/OSSA/issues/new?assignees=&labels=&template=bug-report.yml)
++ [功能新增](https://github.com/NeteaseYanxuan/OSSA/issues/new?assignees=&labels=%3Asparkles%3A+feature+request&template=feature-request.yml)
 + [代码贡献](./CONTRIBUTING.md)
 
 
