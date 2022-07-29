@@ -10,6 +10,7 @@
   "scripts": {
     "start": "pnpm install --shamefully-hoist",
     "dev:demo": "pnpm --filter=ossa-demo dev:h5",
+    "build:demo": "pnpm --filter=ossa-demo build:h5",
     "build": "pnpm --filter=ossaui build",
     "clear": "rimraf 'packages/*/{lib,node_modules}' && rimraf node_modules",
     "changeset": "changeset",
@@ -17,7 +18,7 @@
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0",
     "release": "pnpm build && pnpm release:only",
     "release:only": "changeset publish --registry=https://registry.npmjs.com/",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "pnpm --filter=ossa-demo test",
     "prepare": "husky install"
   },
   "lint-staged": {
