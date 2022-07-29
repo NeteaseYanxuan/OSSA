@@ -33,4 +33,5 @@ jobs:
         cache: 'pnpm'
     - run: pnpm start
 #     - run: pnpm test
+    - run: pnpm build
     - run: pnpm build:demo --if-present
