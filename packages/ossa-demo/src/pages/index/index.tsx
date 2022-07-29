@@ -40,7 +40,7 @@ export default class Index extends Component<Props, State> {
         },
         {
           title: "动画",
-          desc: "包含一些基础动画、专场动画、文字动画等",
+          desc: "包含一些基础动画、转场动画、文字动画等",
           id: "animate",
         },
       ],

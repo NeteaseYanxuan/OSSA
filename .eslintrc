@@ -11,5 +11,8 @@
     },
     "useJSXTextNode": true,
     "project": "./tsconfig.json"
-  }
+  },
+  "ignorePatterns": [
+    "**/__test__/**"
+  ]
 }
