@@ -31,7 +31,15 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'pnpm'
+        
     - run: pnpm start
 #     - run: pnpm test
+
+    - name: Build
     - run: pnpm build
     - run: pnpm build:demo --if-present
+    
+    - name: Deploy
+      uses: JamesIves/github-pages-deploy-action@4.1.1
+      with:
+        folder: packages/ossa-demo/dist
