@@ -50,6 +50,7 @@
 	},
 	"devDependencies": {
 		"@babel/core": "^7.8.0",
+		"@tarojs/cli": "3.4.12",
 		"@tarojs/mini-runner": "3.4.12",
 		"@tarojs/plugin-framework-react": "^3.4.12",
 		"@tarojs/webpack-runner": "3.4.12",
