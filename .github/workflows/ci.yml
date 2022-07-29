@@ -35,9 +35,11 @@ jobs:
     - run: pnpm start
 #     - run: pnpm test
 
-    - name: Build
-    - run: pnpm build
-    - run: pnpm build:demo --if-present
+    - name: Build OSSA
+      run: pnpm build
+      
+    - name: Build Demo
+      run: pnpm build:demo --if-present
     
     - name: Deploy
       uses: JamesIves/github-pages-deploy-action@4.1.1
