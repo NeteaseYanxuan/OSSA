@@ -8,6 +8,11 @@
     background-color: #000;
     color: #fff;
     border-radius: 5px;
+    display: inline-flex; 
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
   }
 
   &--text:not(:first-child) {

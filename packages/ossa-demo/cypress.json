@@ -1,0 +1,14 @@
+{
+  "baseUrl": "http://127.0.0.1:10086",
+  "pluginsFile": "test/e2e/plugins/index.js",
+  "reporter": "cypress-junit",
+  "reporterOptions": {
+    "mochaFile": "test/results/[hash].xml",
+    "toConsole": true,
+    "outputs": true,
+    "attachments": true
+  },
+  "viewportWidth": 375,
+  "viewportHeight": 667,
+  "defaultCommandTimeout": 7000
+}

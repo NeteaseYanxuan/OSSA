@@ -59,9 +59,9 @@ export default function Index(props: Props) {
   const classObject = getClassObject(); //组件修饰
 
   function onClick(item) {
+    setDuration(item.duration);
     setShow(true);
     setText(item.text);
-    setDuration(item.duration);
   }
 
   function onClose() {
