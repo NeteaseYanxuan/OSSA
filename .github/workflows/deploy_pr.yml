@@ -35,7 +35,7 @@ jobs:
       run: pnpm build
       
     - name: Build Demo
-      run: pnpm build:demo --if-present
+      run: pnpm build:demo --path=/OSSA/pr-preview/pr-${{github.event.number}}
     
     - name: Deploy
       uses: rossjrw/pr-preview-action@v1
