@@ -38,7 +38,7 @@ const config = {
     },
   },
   h5: {
-    publicPath: "/",
+    publicPath: "/OSSA",
     staticDirectory: "static",
     postcss: {
       autoprefixer: {
