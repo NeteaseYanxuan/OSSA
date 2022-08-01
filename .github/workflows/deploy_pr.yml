@@ -1,20 +1,18 @@
-# This workflow will do a clean installation of node dependencies, cache/restore them, build the source code and run tests across different versions of node
-# For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
-
-name: CI
+name: Preview PR
 
 on:
-  push:
+  pull_request:
     branches: [ "main" ]
+    types: [opened, reopened, synchronize]
 
 jobs:
-  build:
+  deploy-preview:
 
     runs-on: ubuntu-latest
 
     strategy:
       matrix:
-        node-version: [14.x, 16.x]
+        node-version: [14.x]
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
@@ -22,7 +20,7 @@ jobs:
     - name: Install pnpm
       uses: pnpm/action-setup@v2.2.2
       with:
-          version: 6.32.22
+          version: 6
 
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v3
@@ -40,8 +38,7 @@ jobs:
       run: pnpm build:demo --if-present
     
     - name: Deploy
-      uses: JamesIves/github-pages-deploy-action@4.1.1
+      uses: rossjrw/pr-preview-action@v1
       with:
-        branch: gh-page
-        folder: packages/ossa-demo/dist
-        clean-exclude: pr-preview/
+        preview-branch: gh-page
+        source-dir: packages/ossa-demo/dist
