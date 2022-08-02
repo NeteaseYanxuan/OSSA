@@ -1,14 +1,12 @@
-# This workflow will do a clean installation of node dependencies, cache/restore them, build the source code and run tests across different versions of node
-# For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
-
-name: CI
+name: Preview PR
 
 on:
-  push:
+  pull_request:
     branches: [ "main" ]
+    types: [opened, reopened, synchronize]
 
 jobs:
-  build:
+  deploy-preview:
 
     runs-on: ubuntu-latest
 
@@ -31,17 +29,22 @@ jobs:
         cache: 'pnpm'
         
     - run: pnpm start
-#     - run: pnpm test
 
     - name: Build OSSA
       run: pnpm build
       
     - name: Build Demo
-      run: pnpm build:demo --if-present
+      run: pnpm build:demo --path=/OSSA/pr-preview/pr-${{github.event.number}}
     
     - name: Deploy
-      uses: JamesIves/github-pages-deploy-action@4.1.1
+      uses: rossjrw/pr-preview-action@v1
       with:
-        branch: gh-page
-        folder: packages/ossa-demo/dist
-        clean-exclude: pr-preview/
+        preview-branch: gh-page
+        source-dir: packages/ossa-demo/dist
+      
+    - name: Sleep to make sure page gets updated
+      run: sleep 1m
+      shell: bash
+    
+    - name: e2e test
+      run: pnpm test -- -- --config baseUrl=https://neteaseyanxuan.github.io/OSSA/pr-preview/pr-${{github.event.number}}

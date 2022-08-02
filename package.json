@@ -10,7 +10,7 @@
   "scripts": {
     "start": "pnpm install --shamefully-hoist",
     "dev:demo": "pnpm --filter=ossa-demo dev:h5",
-    "build:demo": "pnpm --filter=ossa-demo build:h5",
+    "build:demo": "pnpm --filter=ossa-demo build:h5 -- --public_path=$npm_config_path",
     "build": "pnpm --filter=ossaui build",
     "clear": "rimraf 'packages/*/{lib,node_modules}' && rimraf node_modules",
     "changeset": "changeset",
