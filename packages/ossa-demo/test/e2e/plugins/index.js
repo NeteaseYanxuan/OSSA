@@ -16,8 +16,8 @@ module.exports = (on, config) => {
 
     if (browser.name === "electron" && browser.isHeadless) {
       // fullPage screenshot size is 1400x1200
-      launchOptions.width = 1400;
-      launchOptions.height = 1200;
+      launchOptions.preferences.width = 1400;
+      launchOptions.preferences.height = 1200;
     }
 
     if (browser.name === "firefox" && browser.isHeadless) {
