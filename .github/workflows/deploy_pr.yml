@@ -47,4 +47,4 @@ jobs:
       shell: bash
     
     - name: e2e test
-      run: pnpm test -- -- --config baseUrl=https://neteaseyanxuan.github.io/OSSA/pr-preview/pr-${{github.event.number}}
+      run: pnpm test -- -- --config viewportWidth=375,viewportHeight=667,baseUrl=https://neteaseyanxuan.github.io/OSSA/pr-preview/pr-${{github.event.number}}
