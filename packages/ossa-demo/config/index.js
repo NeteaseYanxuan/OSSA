@@ -1,3 +1,6 @@
+// eslint-disable-next-line
+const argv = require("yargs").argv;
+
 const config = {
   projectName: "ossa-demo1",
   date: "2022-6-24",
@@ -38,7 +41,7 @@ const config = {
     },
   },
   h5: {
-    publicPath: "/",
+    publicPath: argv.public_path || "/OSSA",
     staticDirectory: "static",
     postcss: {
       autoprefixer: {
