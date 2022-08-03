@@ -45,3 +45,10 @@ jobs:
         branch: gh-page
         folder: packages/ossa-demo/dist
         clean-exclude: pr-preview/
+
+    - name: Sleep to make sure page gets updated
+      run: sleep 1m
+      shell: bash
+
+    - name: e2e test
+      run: pnpm test -- -- --config baseUrl=https://neteaseyanxuan.github.io/OSSA
