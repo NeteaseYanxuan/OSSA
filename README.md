@@ -1,5 +1,12 @@
 # OSSA
 
+[![GitHub license](https://img.shields.io/github/license/NeteaseYanxuan/OSSA)](https://github.com/NeteaseYanxuan/OSSA/blob/main/LICENSE)
+![npm](https://img.shields.io/npm/v/ossaui)
+[![OSSA-DEMO](https://img.shields.io/endpoint?url=https://dashboard.cypress.io/badge/detailed/sfyxka/main&style=flat)](https://dashboard.cypress.io/projects/sfyxka/runs)
+[![GitHub issues](https://img.shields.io/github/issues/NeteaseYanxuan/OSSA)](https://github.com/NeteaseYanxuan/OSSA/issues)
+[![GitHub forks](https://img.shields.io/github/forks/NeteaseYanxuan/OSSA)](https://github.com/NeteaseYanxuan/OSSA/network)
+[![GitHub stars](https://img.shields.io/github/stars/NeteaseYanxuan/OSSA)](https://github.com/NeteaseYanxuan/OSSA/stargazers)
+
 ![OSSA LOGO](https://yanxuan.nosdn.127.net/static-union/16563138291bb87d.png)
 
 一套基于[Taro](https://taro.aotu.io/)框架开发的多端 **UI** 组件库。目前已支持React语法。
@@ -127,6 +134,6 @@ npm run dev:h5
 在此一并感谢。
 
 ## 开源协议
-[MIT](https://opensource.org/licenses/MIT)
+[MIT](https://github.com/NeteaseYanxuan/OSSA/blob/main/LICENSE)
 
 Copyright (c) 2022 Yanxuan

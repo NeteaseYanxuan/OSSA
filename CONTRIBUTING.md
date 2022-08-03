@@ -3,7 +3,7 @@
 非常高兴您有兴趣参与贡献OSSA项目，在开始之前，请阅读以下贡献指引。
 
 ## 开始
-本项目使用了[pnpm](https://pnpm.io/installation)，请确保在已全局安装
+本项目使用了[pnpm](https://pnpm.io/installation)，请确保已在全局安装
 
 1. Fork这个仓库，并将你账户下的仓库clone到本地。
 
@@ -34,12 +34,18 @@
    ```
 
 6. 在packages/ossa-demo中预览您的更改
+   > 如果涉及到API变动，请对ossa-demo中相关的说明文档进行更新
 
    ```bash
    pnpm dev:demo
    ```
 
-7. 描述您的更新
+7. 执行自动化测试，保证更改不会影响其他功能
+   ```bash
+   pnpm test
+   ```
+
+8. 描述您的更新
    ```bash
    pnpm changeset
    // 根据命令行提示，描述您这次更改
