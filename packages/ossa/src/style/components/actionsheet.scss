@@ -33,6 +33,7 @@ $animation-duration: 200ms;
 
   &__container {
     @include absolute-center-bottom();
+    @include safe-area-inset-bottom();
 
     width: 100%;
     background: $--fill-default;
