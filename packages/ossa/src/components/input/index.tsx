@@ -16,7 +16,7 @@ function getClassObject(props: OsInputProps) {
 }
 
 const onInput = (props, e) => {
-  let value = e.target.value;
+  let value = e.detail.value;
   if (props.type === "bankcard") {
     value = value.replace(/(\s)/g, "");
   }
