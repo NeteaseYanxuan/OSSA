@@ -1,0 +1,9 @@
+**/*.svg
+**/dist
+**/lib
+**/es
+**\__snapshots__\**
+.changeset
+.github
+.husky
+scripts
