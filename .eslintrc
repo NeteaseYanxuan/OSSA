@@ -2,7 +2,8 @@
   "extends": ["taro"],
   "rules": {
     "no-unused-vars": 0,
-    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx", ".tsx"] }]
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx", ".tsx"] }],
+    "import/no-commonjs": "off"
   },
     "parser": "@typescript-eslint/parser",
   "parserOptions": {
@@ -10,7 +11,8 @@
       "jsx": true
     },
     "useJSXTextNode": true,
-    "project": "./tsconfig.json"
+    "project": "./tsconfig.json",
+    "requireConfigFile": false
   },
   "ignorePatterns": [
     "**/__test__/**"

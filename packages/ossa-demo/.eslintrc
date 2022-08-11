@@ -3,9 +3,13 @@
   "rules": {
     "react/jsx-uses-react": "off",
     "react/react-in-jsx-scope": "off",
-    "import/first": "off"
+    "import/first": "off",
+    "import/no-commonjs": "off"
   },
   "ignorePatterns": [
     "**/__test__/**"
-  ]
+  ],
+  "parserOptions": {
+    "requireConfigFile": false
+  }
 }

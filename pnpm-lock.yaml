@@ -12,6 +12,7 @@ importers:
       conventional-changelog-cli: ^2.2.2
       eslint: ^8.18.0
       eslint-config-taro: ^3.4.12
+      eslint-formatter-pretty: ^4.1.0
       eslint-plugin-import: ^2.26.0
       eslint-plugin-react: ^7.30.1
       eslint-plugin-react-hooks: ^4.6.0
@@ -20,6 +21,7 @@ importers:
       prettier: ^2.7.1
       prettier-plugin-organize-imports: ^3.0.3
       prettier-plugin-packagejson: ^2.2.18
+      pretty-quick: ^3.1.3
       react: ^17.0.0
       react-dom: ^17.0.0
       typescript: ^4.7.4
@@ -32,6 +34,7 @@ importers:
       conventional-changelog-cli: 2.2.2
       eslint: 8.18.0
       eslint-config-taro: 3.4.12_b5e7v2qnwxfo6hmiq56u52mz3e
+      eslint-formatter-pretty: 4.1.0
       eslint-plugin-import: 2.26.0_zgg5sxdhnxsuz2d3vdnwdtmcnu
       eslint-plugin-react: 7.30.1_eslint@8.18.0
       eslint-plugin-react-hooks: 4.6.0_eslint@8.18.0
@@ -40,6 +43,7 @@ importers:
       prettier: 2.7.1
       prettier-plugin-organize-imports: 3.0.3_gd3y7r3s3evy6b2vthd7dmacga
       prettier-plugin-packagejson: 2.2.18_prettier@2.7.1
+      pretty-quick: 3.1.3_prettier@2.7.1
       react: 17.0.2
       react-dom: 17.0.2_react@17.0.2
       typescript: 4.7.4
@@ -505,7 +509,7 @@ packages:
     engines: {node: '>=6.9.0'}
     dependencies:
       '@babel/helper-validator-identifier': 7.16.7
-      chalk: registry.npmmirror.com/chalk/2.4.2
+      chalk: 2.4.2
       js-tokens: 4.0.0
     dev: true
 
@@ -2846,6 +2850,13 @@ packages:
       '@types/ms': 0.7.31
     dev: true
 
+  /@types/eslint/7.29.0:
+    resolution: {integrity: sha1-5W3cjlQoFScnILsLTMwq/5w+HHg=}
+    dependencies:
+      '@types/estree': 0.0.52
+      '@types/json-schema': 7.0.11
+    dev: true
+
   /@types/estree/0.0.39:
     resolution: {integrity: sha512-EYNwp3bU+98cpU4lAWYYL7Zz+2gryWH1qbdDTidVd6hkiR6weksdbMadyXKXNPEkQFhXM+hVO9ZygomHXp+AIw==}
     dev: true
@@ -3761,7 +3772,7 @@ packages:
     dev: true
 
   /ansi-escapes/4.3.2:
-    resolution: {integrity: sha512-gKXj5ALrKWQLsYG9jlTRmR/xKluxHV+Z9QEwNIgCfM1/uwPMCuzVVnh5mwTd+OuBZcwSIMbqssNWRm1lE51QaQ==}
+    resolution: {integrity: sha1-ayKR0dt9mLZSHV8e+kLQ86n+tl4=}
     engines: {node: '>=8'}
     dependencies:
       type-fest: 0.21.3
@@ -3872,6 +3883,11 @@ packages:
     engines: {node: '>=0.10.0'}
     dev: true
 
+  /array-differ/3.0.0:
+    resolution: {integrity: sha1-PLs9DzFoEOr8xHYkc0I31q7krms=}
+    engines: {node: '>=8'}
+    dev: true
+
   /array-find-index/1.0.2:
     resolution: {integrity: sha512-M1HQyIXcBGtVywBt8WVdim+lrNaK7VHp99Qt5pSNziXznKHViIBbXWtfRTpEFpF/c4FdfxNAsCCwPp5phBYJtw==}
     engines: {node: '>=0.10.0'}
@@ -3908,7 +3924,7 @@ packages:
     dev: true
 
   /array-union/2.1.0:
-    resolution: {integrity: sha512-HGyxoOTYUyCM6stUe6EJgnd4EoewAI7zMdfqO+kGjnlZmBDz/cR5pf8r/cR4Wq60sL/p0IkcjUEEPwS3GFrIyw==}
+    resolution: {integrity: sha1-t5hCCtvrHego2ErNii4j0+/oXo0=}
     engines: {node: '>=8'}
     dev: true
 
@@ -3950,6 +3966,11 @@ packages:
   /arrify/1.0.1:
     resolution: {integrity: sha512-3CYzex9M9FGQjCGMGyi6/31c8GJbgb0qGyrx5HWxPd0aCwh4cB2YjMb2Xf9UuoogrMrlO9cTqnB5rI5GHZTcUA==}
     engines: {node: '>=0.10.0'}
+    dev: true
+
+  /arrify/2.0.1:
+    resolution: {integrity: sha1-yWVekzHgq81YjSp8rX6ZVvZnAfo=}
+    engines: {node: '>=8'}
     dev: true
 
   /asn1.js/5.4.1:
@@ -4716,6 +4737,14 @@ packages:
       ansi-styles: 3.2.1
       escape-string-regexp: registry.npmmirror.com/escape-string-regexp/1.0.5
       supports-color: registry.npmmirror.com/supports-color/5.5.0
+    dev: true
+
+  /chalk/3.0.0:
+    resolution: {integrity: sha1-P3PCv1JlkfV0zEksUeJFY0n4ROQ=}
+    engines: {node: '>=8'}
+    dependencies:
+      ansi-styles: 4.3.0
+      supports-color: 7.2.0
     dev: true
 
   /chalk/4.1.2:
@@ -5990,7 +6019,7 @@ packages:
     dev: true
 
   /emoji-regex/8.0.0:
-    resolution: {integrity: sha512-MSjYzcWNOA0ewAHpz0MxpYFvwg6yjy1NG3xteoqz644VCo/RPgnr1/GGt+ic3iJTzQ8Eu3TdM14SawnVUmGE6A==}
+    resolution: {integrity: sha1-6Bj9ac5cz8tARZT4QpY79TFkzDc=}
     dev: true
 
   /emojis-list/2.1.0:
@@ -6191,6 +6220,20 @@ packages:
       - '@babel/core'
       - supports-color
       - typescript
+    dev: true
+
+  /eslint-formatter-pretty/4.1.0:
+    resolution: {integrity: sha1-emh3wU/+JnIGbIU1h9iWA+l8dwg=}
+    engines: {node: '>=10'}
+    dependencies:
+      '@types/eslint': 7.29.0
+      ansi-escapes: 4.3.2
+      chalk: 4.1.2
+      eslint-rule-docs: 1.1.235
+      log-symbols: 4.1.0
+      plur: 4.0.0
+      string-width: 4.2.3
+      supports-hyperlinks: 2.2.0
     dev: true
 
   /eslint-import-resolver-node/0.3.6:
@@ -6441,6 +6484,10 @@ packages:
       resolve: 2.0.0-next.4
       semver: 6.3.0
       string.prototype.matchall: 4.0.7
+    dev: true
+
+  /eslint-rule-docs/1.1.235:
+    resolution: {integrity: sha512-+TQ+x4JdTnDoFEXXb3fDvfGOwnyNV7duH8fXWTPD1ieaBmB8omj7Gw/pMBBu4uI2uJCCU8APDaQJzWuXnTsH4A==}
     dev: true
 
   /eslint-scope/4.0.3:
@@ -7173,7 +7220,7 @@ packages:
     dev: true
 
   /find-up/4.1.0:
-    resolution: {integrity: sha512-PpOwAdQ/YlXQ2vj8a3h8IipDuYRi3wceVQQGYWxNINccq40Anw7BlsEXCMbt1Zt+OLA6Fq9suIpIWD0OsnISlw==}
+    resolution: {integrity: sha1-l6/n1s3AvFkoWEt8jXsW6KmqXRk=}
     engines: {node: '>=8'}
     dependencies:
       locate-path: 5.0.0
@@ -8176,6 +8223,11 @@ packages:
     engines: {node: '>= 0.10'}
     dev: true
 
+  /irregular-plurals/3.3.0:
+    resolution: {integrity: sha1-Z9BxXUNhpg2f2e6ArziBxjGjHuI=}
+    engines: {node: '>=8'}
+    dev: true
+
   /is-absolute-url/3.0.3:
     resolution: {integrity: sha512-opmNIX7uFnS96NtPmhWQgQx6/NYFgsUXYMllcfzwWKUMwfo8kku1TvE6hkNcH+Q1ts5cMVrsY7j0bxXQDciu9Q==}
     engines: {node: '>=8'}
@@ -8375,7 +8427,7 @@ packages:
     dev: true
 
   /is-fullwidth-code-point/3.0.0:
-    resolution: {integrity: sha512-zymm5+u+sCsSWyD9qNaejV3DFvhCKclKdizYaJUuHA83RLjb7nSuGnddCHGv0hk+KY7BMAlsWeK4Ueg6EV6XQg==}
+    resolution: {integrity: sha1-8Rb4Bk/pCz94RKOJl8C3UFEmnx0=}
     engines: {node: '>=8'}
     dev: true
 
@@ -9569,7 +9621,7 @@ packages:
     dev: true
 
   /locate-path/5.0.0:
-    resolution: {integrity: sha512-t7hw9pI+WvuwNJXwk5zVHpyhIqzg2qTlklJOf0mVxGSbe3Fp2VieZcduNYjaLDoy6p9uGpQEGWG87WpMKlNq8g==}
+    resolution: {integrity: sha1-Gvujlq/WdqbUJQTQpno6frn2KqA=}
     engines: {node: '>=8'}
     dependencies:
       p-locate: 4.1.0
@@ -10260,6 +10312,11 @@ packages:
       run-queue: 1.0.3
     dev: true
 
+  /mri/1.2.0:
+    resolution: {integrity: sha1-ZyFID+wqEaSImGERWki2y+fMjws=}
+    engines: {node: '>=4'}
+    dev: true
+
   /ms/2.0.0:
     resolution: {integrity: sha512-Tpp60P6IUJDTuOq/5Z8cdskzJujfwqfOTkrwIwj7IRISpnkJnT6SyJ4PCPnGMoFjC9ddhal5KVIYtAt97ix05A==}
     dev: true
@@ -10278,6 +10335,17 @@ packages:
     dependencies:
       dns-packet: 1.3.4
       thunky: 1.1.0
+    dev: true
+
+  /multimatch/4.0.0:
+    resolution: {integrity: sha1-jDwPbj6ESa2grz3SnvtJGjdRkbM=}
+    engines: {node: '>=8'}
+    dependencies:
+      '@types/minimatch': 3.0.5
+      array-differ: 3.0.0
+      array-union: 2.1.0
+      arrify: 2.0.1
+      minimatch: 3.1.2
     dev: true
 
   /mute-stream/0.0.8:
@@ -10747,21 +10815,21 @@ packages:
     dev: true
 
   /p-limit/3.1.0:
-    resolution: {integrity: sha512-TYOanM3wGwNGsZN2cVTYPArw454xnXj5qmWF1bEoAc4+cU/ol7GVh7odevjp1FNHduHc3KZMcFduxU5Xc6uJRQ==}
+    resolution: {integrity: sha1-4drMvnjQ0TiMoYxk/qOOPlfjcGs=}
     engines: {node: '>=10'}
     dependencies:
       yocto-queue: 0.1.0
     dev: true
 
   /p-locate/2.0.0:
-    resolution: {integrity: sha512-nQja7m7gSKuewoVRen45CtVfODR3crN3goVQ0DDZ9N3yHxgpkuBhZqsaiotSQRrADUrne346peY7kT3TSACykg==}
+    resolution: {integrity: sha1-IKAQOyIqcMj9OcwuWAaA893l7EM=}
     engines: {node: '>=4'}
     dependencies:
       p-limit: 1.3.0
     dev: true
 
   /p-locate/4.1.0:
-    resolution: {integrity: sha512-R79ZZ/0wAxKGu3oYMlz8jy/kbhsNrS7SKZ7PxEHBgJ5+F2mtFW2fK2cOtBh1cHYkQsbzFV7I+EoRKe6Yt0oK7A==}
+    resolution: {integrity: sha1-o0KLtwiLOmApL2aRkni3wpetTwc=}
     engines: {node: '>=8'}
     dependencies:
       p-limit: 2.3.0
@@ -10911,7 +10979,7 @@ packages:
     dev: true
 
   /path-exists/3.0.0:
-    resolution: {integrity: sha512-bpC7GYwiDYQ4wYLe+FA8lhRjhQCMcQGuSgGGqDkg/QerRWw9CmGRT0iSOVRSZJ29NMLZgIzqaljJ63oaL4NIJQ==}
+    resolution: {integrity: sha1-zg6+ql94yxiSXqfYENe1mwEP1RU=}
     engines: {node: '>=4'}
     dev: true
 
@@ -11032,6 +11100,13 @@ packages:
     resolution: {integrity: sha512-gQR3WpIgNIKwBMVLkpMUeR3e1/E1y42bqDQZfql+kDeXd8COYfM8PQA4X6y7a8u9Ua9FHmsrrmirW2vHs45hWg==}
     dependencies:
       semver-compare: 1.0.0
+    dev: true
+
+  /plur/4.0.0:
+    resolution: {integrity: sha1-cprtsI9FJkX+jFjvEVvxawpz74Q=}
+    engines: {node: '>=10'}
+    dependencies:
+      irregular-plurals: 3.3.0
     dev: true
 
   /portfinder/1.0.28_supports-color@6.1.0:
@@ -11465,6 +11540,22 @@ packages:
       react-is: 17.0.2
     dev: true
 
+  /pretty-quick/3.1.3_prettier@2.7.1:
+    resolution: {integrity: sha512-kOCi2FJabvuh1as9enxYmrnBC6tVMoVOenMaBqRfsvBHB0cbpYHjdQEpSglpASDFEXVwplpcGR4CLEaisYAFcA==}
+    engines: {node: '>=10.13'}
+    hasBin: true
+    peerDependencies:
+      prettier: '>=2.0.0'
+    dependencies:
+      chalk: 3.0.0
+      execa: 4.1.0
+      find-up: 4.1.0
+      ignore: 5.2.0
+      mri: 1.2.0
+      multimatch: 4.0.0
+      prettier: 2.7.1
+    dev: true
+
   /process-nextick-args/2.0.1:
     resolution: {integrity: sha512-3ouUOpQhtgrbOa17J7+uxOTpITYWaGP7/AhoR3+A+/1e9skrzelGi/dXzEYyvbxubEF6Wn2ypscTKiKJFFn1ag==}
     dev: true
@@ -11712,7 +11803,7 @@ packages:
     resolution: {integrity: sha512-YFzFrVvpC6frF1sz8psoHDBGF7fLPc+llq/8NB43oagqWkx8ar5zYtsTORtOjw9W2RHLpWP+zTWwBvf1bCmcSw==}
     engines: {node: '>=4'}
     dependencies:
-      find-up: registry.npmmirror.com/find-up/2.1.0
+      find-up: 2.1.0
       read-pkg: 3.0.0
     dev: true
 
@@ -13017,7 +13108,7 @@ packages:
     dev: true
 
   /string-width/4.2.3:
-    resolution: {integrity: sha512-wKyQRQpjJ0sIp62ErSZdGsjMJWsap5oRNihHhu6G7JVO/9jIB6UyevL+tXuOqrng8j/cxKTWyWUwvSTriiZz/g==}
+    resolution: {integrity: sha1-JpxxF9J7Ba0uU2gwqOyJXvnG0BA=}
     engines: {node: '>=8'}
     dependencies:
       emoji-regex: 8.0.0
@@ -13340,7 +13431,7 @@ packages:
     dev: true
 
   /supports-hyperlinks/2.2.0:
-    resolution: {integrity: sha512-6sXEzV5+I5j8Bmq9/vUphGRM/RJNT9SCURJLjwfOg51heRtguGWDzcaBlgAzKhQa0EVNpPEKzQuBwZ8S8WaCeQ==}
+    resolution: {integrity: sha1-T3e0JIh2WJF3S3DHm6vYf5vVlLs=}
     engines: {node: '>=8'}
     dependencies:
       has-flag: 4.0.0
@@ -13772,7 +13863,7 @@ packages:
     dev: true
 
   /type-fest/0.21.3:
-    resolution: {integrity: sha512-t0rzBq87m3fVcduHDUFhKmyyX+9eo6WQjZvf51Ea/M0Q7+T374Jp1aUiyUl0GKxp8M/OETVHSDvmkyPgvX+X2w==}
+    resolution: {integrity: sha1-0mCiSwGYQ24TP6JqUkptZfo7Ljc=}
     engines: {node: '>=10'}
     dev: true
 
@@ -21696,15 +21787,6 @@ packages:
     engines: {node: '>=4'}
     dev: true
 
-  registry.npmmirror.com/find-up/2.1.0:
-    resolution: {integrity: sha512-NWzkk0jSJtTt08+FBFMvXoeZnOJD+jTtsRmBYbAIzJdX6l7dLgR7CTubCM5/eDdPUBvLCeVasP1brfVR/9/EZQ==, registry: http://npm.mail.netease.com/registry/, tarball: https://registry.npmmirror.com/find-up/-/find-up-2.1.0.tgz}
-    name: find-up
-    version: 2.1.0
-    engines: {node: '>=4'}
-    dependencies:
-      locate-path: registry.npmmirror.com/locate-path/2.0.0
-    dev: true
-
   registry.npmmirror.com/find-up/3.0.0:
     resolution: {integrity: sha512-1yD6RmLI1XBfxugvORwlck6f75tYL+iR0jqwsOrOxMZyGYqUuDhJ0l4AXdO1iX/FTs9cBAMEk1gWSEx1kSbylg==, registry: http://npm.mail.netease.com/registry/, tarball: https://registry.npmmirror.com/find-up/-/find-up-3.0.0.tgz}
     name: find-up
@@ -22415,16 +22497,6 @@ packages:
       strip-ansi: registry.npmmirror.com/strip-ansi/3.0.1
     dev: true
 
-  registry.npmmirror.com/locate-path/2.0.0:
-    resolution: {integrity: sha512-NCI2kiDkyR7VeEKm27Kda/iQHyKJe1Bu0FlTbYp3CqJu+9IFe9bLyAjMxf5ZDDbEg+iMPzB5zYyUTSm8wVTKmA==, registry: http://npm.mail.netease.com/registry/, tarball: https://registry.npmmirror.com/locate-path/-/locate-path-2.0.0.tgz}
-    name: locate-path
-    version: 2.0.0
-    engines: {node: '>=4'}
-    dependencies:
-      p-locate: registry.npmmirror.com/p-locate/2.0.0
-      path-exists: registry.npmmirror.com/path-exists/3.0.0
-    dev: true
-
   registry.npmmirror.com/locate-path/3.0.0:
     resolution: {integrity: sha512-7AO748wWnIhNqAuaty2ZWHkQHRSNfPVIsPIfwEOWO22AmaoVrWavlOcMR5nzTLNYvp36X220/maaRsrec1G65A==, registry: http://npm.mail.netease.com/registry/, tarball: https://registry.npmmirror.com/locate-path/-/locate-path-3.0.0.tgz}
     name: locate-path
@@ -22819,15 +22891,6 @@ packages:
     engines: {node: '>=4'}
     dev: true
 
-  registry.npmmirror.com/p-limit/1.3.0:
-    resolution: {integrity: sha512-vvcXsLAJ9Dr5rQOPk7toZQZJApBl2K4J6dANSsEuh6QI41JYcsS/qhTGa9ErIUUgK3WNQoJYvylxvjqmiqEA9Q==, registry: http://npm.mail.netease.com/registry/, tarball: https://registry.npmmirror.com/p-limit/-/p-limit-1.3.0.tgz}
-    name: p-limit
-    version: 1.3.0
-    engines: {node: '>=4'}
-    dependencies:
-      p-try: registry.npmmirror.com/p-try/1.0.0
-    dev: true
-
   registry.npmmirror.com/p-limit/2.3.0:
     resolution: {integrity: sha512-//88mFWSJx8lxCzwdAABTJL2MyWB12+eIY7MDL2SqLmAkeKU9qxRvWuSyTjm3FUmpBEMuFfckAIqEaVGUDxb6w==, registry: http://npm.mail.netease.com/registry/, tarball: https://registry.npmmirror.com/p-limit/-/p-limit-2.3.0.tgz}
     name: p-limit
@@ -22835,15 +22898,6 @@ packages:
     engines: {node: '>=6'}
     dependencies:
       p-try: registry.npmmirror.com/p-try/2.2.0
-    dev: true
-
-  registry.npmmirror.com/p-locate/2.0.0:
-    resolution: {integrity: sha512-nQja7m7gSKuewoVRen45CtVfODR3crN3goVQ0DDZ9N3yHxgpkuBhZqsaiotSQRrADUrne346peY7kT3TSACykg==, registry: http://npm.mail.netease.com/registry/, tarball: https://registry.npmmirror.com/p-locate/-/p-locate-2.0.0.tgz}
-    name: p-locate
-    version: 2.0.0
-    engines: {node: '>=4'}
-    dependencies:
-      p-limit: registry.npmmirror.com/p-limit/1.3.0
     dev: true
 
   registry.npmmirror.com/p-locate/3.0.0:
@@ -22876,13 +22930,6 @@ packages:
     engines: {node: '>=10'}
     dependencies:
       aggregate-error: 3.1.0
-    dev: true
-
-  registry.npmmirror.com/p-try/1.0.0:
-    resolution: {integrity: sha512-U1etNYuMJoIz3ZXSrrySFjsXQTWOx2/jdi86L+2pRvph/qMKL6sbcCYdH23fqsbm8TH2Gn0OybpT4eSFlCVHww==, registry: http://npm.mail.netease.com/registry/, tarball: https://registry.npmmirror.com/p-try/-/p-try-1.0.0.tgz}
-    name: p-try
-    version: 1.0.0
-    engines: {node: '>=4'}
     dev: true
 
   registry.npmmirror.com/p-try/2.2.0:
