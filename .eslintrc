@@ -3,9 +3,10 @@
   "rules": {
     "no-unused-vars": 0,
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx", ".tsx"] }],
-    "import/no-commonjs": "off"
+    "import/no-commonjs": "off",
+    "jsx-quotes": "warn"
   },
-    "parser": "@typescript-eslint/parser",
+  "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "ecmaFeatures": {
       "jsx": true
@@ -14,7 +15,5 @@
     "project": "./tsconfig.json",
     "requireConfigFile": false
   },
-  "ignorePatterns": [
-    "**/__test__/**"
-  ]
+  "ignorePatterns": ["**/__test__/**"]
 }
