@@ -4,7 +4,7 @@
     "no-unused-vars": 0,
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx", ".tsx"] }],
     "import/no-commonjs": "off",
-    "jsx-quotes": "warn"
+    "jsx-quotes": "off"
   },
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
