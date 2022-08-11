@@ -1,13 +1,13 @@
-import React from 'react';
-import { View, Text } from '@tarojs/components';
-import classNames from 'classnames';
+import React from "react";
+import { View, Text } from "@tarojs/components";
+import classNames from "classnames";
 // //引入组件对应的 类型文件 .d.ts
-import { OsActionsheetProps } from '../../../types/index';
-import OsIcon from '../icon';
+import { OsActionsheetProps } from "../../../types/index";
+import OsIcon from "../icon";
 
 function getClassObject(props: OsActionsheetProps) {
   const _classObject = {
-    ['ossa-actionsheet--show']: props.isShow,
+    ["ossa-actionsheet--show"]: props.isShow,
   };
   return _classObject;
 }
@@ -23,7 +23,7 @@ const onClickMask = (props: OsActionsheetProps) => {
 };
 
 export default function Index(props: OsActionsheetProps) {
-  const rootClassName = 'ossa-actionsheet'; //组件
+  const rootClassName = "ossa-actionsheet"; //组件
   const classObject = getClassObject(props); //组件修饰
 
   return (
