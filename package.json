@@ -23,11 +23,6 @@
     "prettier": "prettier --write \"**/**.{js,jsx,tsx,ts,less,md,json}\" --loglevel warn",
     "lint": "eslint --cache --ext .js,.jsx,.ts,.tsx  --fix --format=pretty ./packages && pretty-quick --staged"
   },
-  "lint-staged": {
-    "*.[j|t]sx?": [
-      "yarn lint"
-    ]
-  },
   "author": "",
   "private": true,
   "devDependencies": {
