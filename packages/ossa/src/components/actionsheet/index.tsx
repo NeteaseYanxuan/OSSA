@@ -31,29 +31,26 @@ export default function Index(props: OsActionsheetProps) {
       className={classNames(rootClassName, classObject, props.className)}
       style={props.customStyle}
     >
-      <View
-        className='ossa-actionsheet__mask'
-        onClick={() => onClickMask(props)}
-      ></View>
-      <View className='ossa-actionsheet__container'>
+      <View className="ossa-actionsheet__mask" onClick={() => onClickMask(props)} />
+      <View className="ossa-actionsheet__container">
         {props.title && (
-          <View className='ossa-actionsheet__header'>
-            <Text className='ossa-actionsheet__title'>{props.title}</Text>
+          <View className="ossa-actionsheet__header">
+            <Text className="ossa-actionsheet__title">{props.title}</Text>
             <OsIcon
-              className='ossa-actionsheet__close-btn'
+              className="ossa-actionsheet__close-btn"
               size={40}
-              type='close'
+              type="close"
               onClick={() => {
                 onClose(props);
               }}
             ></OsIcon>
           </View>
         )}
-        <View className='ossa-actionsheet__content'>{props.children}</View>
+        <View className="ossa-actionsheet__content">{props.children}</View>
         {props.cancelText && (
-          <View className='ossa-actionsheet__footer'>
+          <View className="ossa-actionsheet__footer">
             <View
-              className='ossa-actionsheet__cancel-btn'
+              className="ossa-actionsheet__cancel-btn"
               onClick={() => {
                 onClose(props);
               }}
