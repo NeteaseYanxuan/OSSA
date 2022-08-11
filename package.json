@@ -24,11 +24,8 @@
     "lint": "eslint --cache --ext .js,.jsx,.ts,.tsx  --fix --format=pretty ./packages && pretty-quick --staged"
   },
   "lint-staged": {
-    "*.js": [
-      "prettier --write"
-    ],
-    "*.ts?(x)": [
-      "eslint"
+    "*.[j|t]sx?": [
+      "yarn lint"
     ]
   },
   "author": "",
