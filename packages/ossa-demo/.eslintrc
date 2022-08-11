@@ -4,11 +4,10 @@
     "react/jsx-uses-react": "off",
     "react/react-in-jsx-scope": "off",
     "import/first": "off",
-    "import/no-commonjs": "off"
+    "import/no-commonjs": "off",
+    "jsx-quotes": "off"
   },
-  "ignorePatterns": [
-    "**/__test__/**"
-  ],
+  "ignorePatterns": ["**/__test__/**"],
   "parserOptions": {
     "requireConfigFile": false
   }
