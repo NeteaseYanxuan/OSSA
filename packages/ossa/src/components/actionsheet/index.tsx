@@ -1,7 +1,7 @@
 import React from "react";
 import { View, Text } from "@tarojs/components";
 import classNames from "classnames";
-// //引入组件对应的 类型文件 .d.ts
+// 引入组件对应的 类型文件 .d.ts
 import { OsActionsheetProps } from "../../../types/index";
 import OsIcon from "../icon";
 
@@ -23,8 +23,8 @@ const onClickMask = (props: OsActionsheetProps) => {
 };
 
 export default function Index(props: OsActionsheetProps) {
-  const rootClassName = "ossa-actionsheet"; //组件
-  const classObject = getClassObject(props); //组件修饰
+  const rootClassName = "ossa-actionsheet"; // 组件
+  const classObject = getClassObject(props); // 组件修饰
 
   return (
     <View
