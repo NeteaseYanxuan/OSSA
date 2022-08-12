@@ -174,7 +174,7 @@ export default function Index(props: Props) {
           }}
         ></OsActionsheetItem>
         <OsActionsheetItem
-          title='满249元减50'
+          title='满249元减50111'
           disabled
           onClick={() => {
             setShowBase(false);
