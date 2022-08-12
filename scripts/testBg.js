@@ -29,7 +29,7 @@ const serverId = `__testServer__`;
   // 自行测试任务
   // 提交时运行自动化测试不需要生成视频，可以提升测试效率
   console.log(`🔍 执行测试任务`);
-  exec(
+  const ret = exec(
     `npx cypress run --record --key cdc63db7-73cb-463b-9b7c-4360235ece96 --config baseUrl=${baseUrl},video=false --project ${demoPath}`,
     {
       encoding: "utf-8",
@@ -41,4 +41,11 @@ const serverId = `__testServer__`;
       "simpleDevServer.js"
     )} --id "${serverId}"`
   );
+  if (ret.code !== 0) {
+    // 测试用例没有完全通过
+    console.log(`🙅 测试用例没有完全通过，不允许提交`);
+    process.exit(1);
+  } else {
+    console.log(`🎉 测试用例全部通过，允许提交`);
+  }
 })();
