@@ -16,7 +16,7 @@
     "changeset": "changeset",
     "version-packages": "changeset version",
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0",
-    "release": "pnpm start && pnpm build && pnpm release:only",
+    "release": "pnpm build && pnpm release:only",
     "release:only": "changeset publish --registry=https://registry.npmjs.com/",
     "test": "pnpm --filter=ossa-demo test",
     "prepare": "husky install"
