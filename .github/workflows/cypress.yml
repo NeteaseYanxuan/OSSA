@@ -1,0 +1,36 @@
+name: 'Run Cypress tests'
+on: [deployment_status]
+jobs:
+  e2e:
+    if: github.event.deployment_status.state == 'success'
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [14.x]
+        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Install pnpm
+        uses: pnpm/action-setup@v2.2.2
+        with:
+            version: 6
+
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'pnpm'
+          
+      - run: pnpm start
+
+      - name: e2e test
+        run: pnpm test -- -- --config baseUrl=${{ github.event.deployment_status.target_url }}
+
+      - uses: actions/upload-artifact@v2
+        if: failure()
+        with:
+          retention-days: 1
+          path: |
+            pacakges/ossa-demo/test/e2e/screenshots
