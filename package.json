@@ -19,7 +19,7 @@
     "release": "pnpm build && pnpm release:only",
     "release:only": "changeset publish --registry=https://registry.npmjs.com/",
     "test": "pnpm --filter=ossa-demo test",
-    "checkUIChange": ". ./scripts/checkModifyListAndTest.js",
+    "checkUIChange": "node ./scripts/checkModifyListAndTest.js",
     "prepare": "husky install"
   },
   "lint-staged": {
