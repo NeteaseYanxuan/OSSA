@@ -138,6 +138,9 @@ npm run dev:h5
 
 在此一并感谢。
 
+## 开发交流
+<img src='https://yanxuan.nosdn.127.net/static-union/16584732150d099a.png' width='200' height='200' alt='OSSA Wechat group' />
+
 ## 开源协议
 [MIT](https://github.com/NeteaseYanxuan/OSSA/blob/main/LICENSE)
 
