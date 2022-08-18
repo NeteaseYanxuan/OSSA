@@ -26,9 +26,10 @@ const curBranch = exec(`git rev-parse --abbrev-ref HEAD`, {
   silent: true,
 }).stdout.replace("\n", "");
 const modifyFiles = exec(
-  `git fetch origin main && git diff --stat ${curBranch} origin/main --name-only`,
+  `git fetch origin main && git diff --stat main...${curBranch} --name-only`,
   { encoding: "utf-8", silent: true }
 ).stdout;
+
 if (modifyFiles.length === 0) process.exit(0);
 const modifyFileList = modifyFiles
   .split("\n")
