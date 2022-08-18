@@ -30,7 +30,7 @@ const serverId = `__testServer__`;
   // 提交时运行自动化测试不需要生成视频，可以提升测试效率
   console.log(`🔍 执行测试任务`);
   const ret = exec(
-    `npx cypress run --record --key cdc63db7-73cb-463b-9b7c-4360235ece96 --config baseUrl=${baseUrl},video=false --project ${demoPath}`,
+    `npx cypress run --config baseUrl=${baseUrl},video=false --project ${demoPath}`,
     {
       encoding: "utf-8",
     }

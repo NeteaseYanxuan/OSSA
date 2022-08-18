@@ -28,7 +28,7 @@
 		"dev:qq": "npm run build:qq -- --watch",
 		"dev:jd": "npm run build:jd -- --watch",
 		"dev:quickapp": "npm run build:quickapp -- --watch",
-		"test": "cypress run --record --key cdc63db7-73cb-463b-9b7c-4360235ece96",
+		"test": "cypress run",
 		"test:background": "node ../../scripts/testBg.js",
 		"test:open": "cypress open",
 		"test:report": "allure generate ./test/results --clean && allure open allure-report"
