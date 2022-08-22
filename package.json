@@ -19,6 +19,7 @@
     "release": "pnpm build && pnpm release:only",
     "release:only": "changeset publish --registry=https://registry.npmjs.com/",
     "test": "pnpm --filter=ossa-demo test",
+    "checkUIChange": "node ./scripts/checkModifyListAndTest.js",
     "prepare": "husky install"
   },
   "lint-staged": {
@@ -34,20 +35,26 @@
   "devDependencies": {
     "@changesets/changelog-github": "^0.4.5",
     "@changesets/cli": "^2.23.0",
+    "@pmmmwh/react-refresh-webpack-plugin": "^0.5.7",
     "@typescript-eslint/eslint-plugin": "^5.29.0",
     "@typescript-eslint/parser": "^5.29.0",
     "chalk": "^4.0.1",
+    "connect": "^3.7.0",
     "conventional-changelog-cli": "^2.2.2",
     "eslint": "^8.18.0",
     "eslint-config-taro": "^3.4.12",
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-react": "^7.30.1",
     "eslint-plugin-react-hooks": "^4.6.0",
+    "forever": "^4.0.3",
+    "glob": "^8.0.3",
     "husky": "^8.0.0",
     "lint-staged": "^10.1.2",
     "prettier": "^2.7.1",
     "react": "^17.0.0",
     "react-dom": "^17.0.0",
+    "serve-static": "^1.15.0",
+    "shelljs": "^0.8.5",
     "typescript": "^4.7.4"
   }
 }

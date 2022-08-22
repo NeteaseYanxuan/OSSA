@@ -1,0 +1,5 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+# 检测是否修改核心UI组件决定是否需要运行测试命令
+npx pnpm run checkUIChange
