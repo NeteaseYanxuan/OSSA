@@ -51,4 +51,4 @@ jobs:
       shell: bash
 
     - name: e2e test
-      run: pnpm test -- -- --config baseUrl=https://neteaseyanxuan.github.io/OSSA --record --key ${{secrets.TEST_KEY}}
+      run: pnpm test -- -- --config baseUrl=https://neteaseyanxuan.github.io/OSSA --record --key cdc63db7-73cb-463b-9b7c-4360235ece96
