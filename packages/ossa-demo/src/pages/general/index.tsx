@@ -4,8 +4,6 @@ import { View } from "@tarojs/components";
 import { OsList } from "ossaui";
 import DemoHeader from "../../components/demoHeader";
 
-import "ossaui/dist/style/components/list.scss";
-
 export default class Index extends Component<null, IState> {
   constructor(props) {
     super(props);

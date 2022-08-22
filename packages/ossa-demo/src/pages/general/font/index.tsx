@@ -4,9 +4,8 @@ import { View } from "@tarojs/components";
 import classNames from "classnames";
 import DemoBlock from "../../../components/demoBlock";
 import DemoHeader from "../../../components/demoHeader";
-// import './index.scss'
+
 import "./index.scss";
-import "../../../assets/style/layout.scss";
 
 function getClassObject() {
   const classObject = {
@@ -76,7 +75,7 @@ export default function Index(props: Props) {
           return (
             <View className='block-section' key={config.id}>
               <View
-                className={classNames("layout", "layout--flex", "layout--flex")}
+                className={classNames("layout", "layout--flex", "layout--flex--align-center")}
               >
                 <View className={classNames("col", "col--2", "col--font-size")}>
                   <View className='font-size'>{config.size}px</View>

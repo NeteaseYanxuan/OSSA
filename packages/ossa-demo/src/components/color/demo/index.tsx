@@ -6,8 +6,6 @@ import DemoBlock from "../../demoBlock";
 import DemoHeader from "../../demoHeader";
 // import './index.scss'
 import "./index.scss";
-//引入 layout样式，纯css组件
-import "../../../assets/style/layout.scss";
 
 function getClassObject() {
   const classObject = {

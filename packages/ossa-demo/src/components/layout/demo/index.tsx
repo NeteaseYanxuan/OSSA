@@ -7,7 +7,6 @@ import DemoBlock from "../../demoBlock";
 import DemoHeader from "../../demoHeader";
 // import './index.scss'
 import "./index.scss";
-import "../../../assets/style/layout.scss";
 
 function getClassObject() {
   const classObject = {
