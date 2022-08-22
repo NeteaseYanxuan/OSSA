@@ -46,6 +46,10 @@
       float: none;
     }
 
+    &--start {
+      justify-content: flex-start;
+    }
+
     &--center {
       justify-content: center;
     }
@@ -70,6 +74,18 @@
       &::after {
         display: none;
       }
+    }
+
+    &--align-start {
+      align-items: flex-start;
+    }
+
+    &--align-center {
+      align-items: center;
+    }
+
+    &--align-end {
+      align-items: flex-end;
     }
   }
 
