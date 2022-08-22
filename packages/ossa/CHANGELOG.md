@@ -1,5 +1,11 @@
 # ossaui
 
+## 0.1.1
+
+### Patch Changes
+
+- [#17](https://github.com/NeteaseYanxuan/OSSA/pull/17) [`cd49160`](https://github.com/NeteaseYanxuan/OSSA/commit/cd49160f72618670e80141b3548acfbf82b09afb) Thanks [@hzxulin](https://github.com/hzxulin)! - Fix flex style issues in ossa-demo
+
 ## 0.1.0
 
 ### Minor Changes

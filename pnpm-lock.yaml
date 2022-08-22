@@ -145,7 +145,7 @@ importers:
       eslint-plugin-react-hooks: ^4.6.0
       mocha: ^6.1.4
       mocha-allure-reporter: ^1.4.0
-      ossaui: workspace:^0.1.0
+      ossaui: workspace:^0.1.1
       react: ^17.0.0
       react-dom: ^17.0.0
       stylelint: 9.3.0
@@ -13353,7 +13353,7 @@ packages:
     dev: true
 
   /source-map/0.6.1:
-    resolution: {integrity: sha1-dHIq8y6WFOnCh6jQu95IteLxomM=}
+    resolution: {integrity: sha512-UjgapumWlbMhkBgzT7Ykc5YXUT46F0iKu8SGXq0bcwP5dz/h0Plj6enJqjz1Zbq2l5WaqYnrVbwWOWMyF3F47g==}
     engines: {node: '>=0.10.0'}
     dev: true
 

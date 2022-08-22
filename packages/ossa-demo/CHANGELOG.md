@@ -1,5 +1,18 @@
 # ossa-demo
 
+## 1.2.0
+
+### Minor Changes
+
+- [#12](https://github.com/NeteaseYanxuan/OSSA/pull/12) [`e1dd89b`](https://github.com/NeteaseYanxuan/OSSA/commit/e1dd89b5319b483d2437fd5c322ef3fdc4845f01) Thanks [@kiner-tang](https://github.com/kiner-tang)! - run test in git pre-push hook
+
+### Patch Changes
+
+- [#17](https://github.com/NeteaseYanxuan/OSSA/pull/17) [`cd49160`](https://github.com/NeteaseYanxuan/OSSA/commit/cd49160f72618670e80141b3548acfbf82b09afb) Thanks [@hzxulin](https://github.com/hzxulin)! - Fix flex style issues in ossa-demo
+
+- Updated dependencies [[`cd49160`](https://github.com/NeteaseYanxuan/OSSA/commit/cd49160f72618670e80141b3548acfbf82b09afb)]:
+  - ossaui@0.1.1
+
 ## 1.1.0
 
 ### Minor Changes
