@@ -1,4 +1,5 @@
 ---
+"ossaui": patch
 "ossa-demo": patch
 ---
 
