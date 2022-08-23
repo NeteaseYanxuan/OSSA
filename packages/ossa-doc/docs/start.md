@@ -4,8 +4,6 @@ sidebar_position: 2
 
 # 快速开始
 
-OSSA目前支持Taro3，Taro1/Taro2版本敬请期待。
-
 #### 安装
 
 1. 首先需要有一个基于Taro的React项目，详细请参考[Taro快速开始](https://docs.taro.zone/docs/GETTING-STARTED)

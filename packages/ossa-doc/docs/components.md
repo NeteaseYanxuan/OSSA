@@ -12,5 +12,5 @@ sidebar_position: 3
 #### H5
 <img src='https://yanxuan.nosdn.127.net/static-union/16594970359a4f1b.png' width='200' height='200' alt='OSSA DEMO' />
 
-
-## 详情版敬请期待。。。
+---
+详情版敬请期待。。。
