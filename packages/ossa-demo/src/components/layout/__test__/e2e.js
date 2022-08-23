@@ -12,161 +12,140 @@ describe("Layout Testing", function () {
       cy.visit("#/components/layout/demo/index");
     });
 
-    it("solution #1: 布局-宽度100%", function () {
-      cy.get(".layout").should(($layout) => {
-        const bodywidth = $layout.parents(".block").width();
-        expect($layout.width()).to.be.eq(bodywidth - 30); //减去demo边距
-      });
-    });
-
-    it("solution #2: 布局-高度不换行", function () {
-      cy.get(".layout").should(($layout) => {
-        const layoutHeight = parseFloat($layout.css("height"));
-        expect(layoutHeight).to.be.closeTo(70 / 2, 1);
-      });
-    });
-
-    it("solution #3: 基础布局-样式", function () {
-      cy.get(".layout")
+    it("solution #1: 基础布局-样式", function () {
+      cy.get(".block__body")
         .eq(0)
-        .find("taro-view-core")
-        .should(($col) => {
-          //col属性float
-          expect($col.css("float")).to.be.eq("left");
-          //col数量验证
-          const colNum = $col.length;
-          expect(colNum / 2).to.be.eq(2);
-          //col宽度验证 ps.为什么这里要closeTo才能通过？？
-          const bodywidth = $col.parents(".block__body").width();
-          const colWidth = parseFloat($col.css("width"));
-          expect(colWidth).to.be.closeTo(bodywidth / 2, 1);
+        .find(".ossa-row")
+        .each(($row, rowIndex, $rowList) => {
+          cy.get($row)
+            .find(".ossa-col")
+            .should(($cols) => {
+              const colNum = $cols.length;
+              const rowWidth = $cols.parents(".ossa-row").width();
+              const colWidth = parseFloat($cols.css("width"));
+              expect(colWidth).to.be.eq(rowWidth / colNum);
+            });
         });
     });
 
-    it("solution #4: 分栏间隔-样式", function () {
-      cy.get(".layout")
+    it("solution #2: 分栏间隔", function () {
+      cy.get(".block__body")
         .eq(1)
-        .find("taro-view-core")
-        .should(($col) => {
-          //col属性float
-          expect($col.css("float")).to.be.eq("left");
-          //col数量验证
-          const colNum = $col.length;
-          expect(colNum / 2).to.be.eq(4);
-          //col左右间距一致
-          const paddingLeft = parseFloat($col.css("padding-left"));
-          const paddingRight = parseFloat($col.css("padding-right"));
-          expect(paddingLeft).to.be.eq(paddingRight);
-          //col宽度验证
-          const bodywidth = $col.parents(".block__body").width();
-          const colWidth = parseFloat($col.css("width"));
-          expect(colWidth).to.be.closeTo(bodywidth / 4, 1);
+        .find(".ossa-row")
+        .eq(0)
+        .find(".ossa-col")
+        .each(($col, colIndex, $colList) => {
+          cy.get($col).should(($col) => {
+            const colNum = $colList.length;
+            const rowWidth = $col.parents(".ossa-row").width();
+            const colWidth = parseFloat($col.find("div").css("width"));
+            const colPaddingLeft = parseFloat($col.css("padding-left"));
+            const colPaddingRight = parseFloat($col.css("padding-right"));
+            let colGap = 0;
+            if (colIndex === 0) {
+              colGap = colPaddingRight;
+            } else if (colIndex === colNum - 1) {
+              colGap = colPaddingLeft;
+            } else {
+              colGap = colPaddingLeft + colPaddingRight;
+            }
+            expect(colWidth).to.be.eq(rowWidth / colNum - colGap);
+          });
         });
     });
 
-    it("solution #5: 对齐布局居左-样式", function () {
-      cy.get(".layout--flex.layout--flex--left")
-        .find("taro-view-core")
-        .should(($col) => {
-          //col数量验证
-          const colNum = $col.length;
-          expect(colNum / 2).to.be.eq(3);
-          //col宽度验证
-          const bodywidth = $col.parents(".block__body").width();
-          const colWidth = parseFloat($col.css("width"));
-          expect(colWidth).to.be.closeTo(bodywidth / 4, 1);
-        });
-    });
-
-    it("solution #6: 对齐布局居中-样式", function () {
-      cy.get(".layout--flex.layout--flex--center")
-        .should(($layout) => {
-          //col样式
-          expect($layout.css("justify-content")).to.be.eq("center");
+    it("solution #3: Flex布局居左-样式", function () {
+      cy.get(".block__body")
+        .eq(2)
+        .find(".ossa-row.ossa-row-justify-start")
+        .should(($row) => {
+          expect($row.css("justify-content")).to.be.eq("flex-start");
         })
         .find("taro-view-core")
         .should(($col) => {
           //col数量验证
           const colNum = $col.length;
-          expect(colNum / 2).to.be.eq(3);
+          expect(colNum).to.be.eq(3);
           //col宽度验证
-          const bodywidth = $col.parents(".block__body").width();
+          const bodywidth = $col.parents(".ossa-row").width();
           const colWidth = parseFloat($col.css("width"));
-          expect(colWidth).to.be.closeTo(bodywidth / 4, 1);
+          expect(colWidth).to.be.eq(bodywidth / (colNum + 1));
         });
     });
 
-    it("solution #7: 对齐布局居右-样式", function () {
-      cy.get(".layout--flex.layout--flex--end")
-        .should(($layout) => {
-          //col样式
-          expect($layout.css("justify-content")).to.be.eq("flex-end");
+    it("solution #4: Flex布局居中-样式", function () {
+      cy.get(".block__body")
+        .eq(2)
+        .find(".ossa-row.ossa-row-justify-center")
+        .should(($row) => {
+          expect($row.css("justify-content")).to.be.eq("center");
         })
         .find("taro-view-core")
         .should(($col) => {
           //col数量验证
           const colNum = $col.length;
-          expect(colNum / 2).to.be.eq(3);
+          expect(colNum).to.be.eq(3);
           //col宽度验证
-          const bodywidth = $col.parents(".block__body").width();
+          const bodywidth = $col.parents(".ossa-row").width();
           const colWidth = parseFloat($col.css("width"));
-          expect(colWidth).to.be.closeTo(bodywidth / 4, 1);
-          //   //col样式
-          //   expect($col.css('justify-content')).to.be.eq('flex-end')
+          expect(colWidth).to.be.eq(bodywidth / (colNum + 1));
         });
     });
 
-    it("solution #8: 对齐布局between-样式", function () {
-      cy.get(".layout--flex.layout--flex--space-between")
-        .should(($layout) => {
-          //col样式
-          expect($layout.css("justify-content")).to.be.eq("space-between");
+    it("solution #5: Flex布局居右-样式", function () {
+      cy.get(".block__body")
+        .eq(2)
+        .find(".ossa-row.ossa-row-justify-end")
+        .should(($row) => {
+          expect($row.css("justify-content")).to.be.eq("flex-end");
         })
         .find("taro-view-core")
         .should(($col) => {
           //col数量验证
           const colNum = $col.length;
-          expect(colNum / 2).to.be.eq(3);
+          expect(colNum).to.be.eq(3);
           //col宽度验证
-          const bodywidth = $col.parents(".block__body").width();
+          const bodywidth = $col.parents(".ossa-row").width();
           const colWidth = parseFloat($col.css("width"));
-          expect(colWidth).to.be.closeTo(bodywidth / 4, 1);
-          //col样式
-          //expect($col.css('justify-content')).to.be.eq('space-between')
+          expect(colWidth).to.be.eq(bodywidth / (colNum + 1));
         });
     });
 
-    it("solution #9: 对齐布局around-样式", function () {
-      cy.get(".layout--flex.layout--flex--space-around")
-        .should(($layout) => {
-          //col样式
-          expect($layout.css("justify-content")).to.be.eq("space-around");
+    it("solution #6: Flex布局between-样式", function () {
+      cy.get(".block__body")
+        .eq(2)
+        .find(".ossa-row-justify-space-between")
+        .should(($row) => {
+          expect($row.css("justify-content")).to.be.eq("space-between");
         })
         .find("taro-view-core")
         .should(($col) => {
           //col数量验证
           const colNum = $col.length;
-          expect(colNum / 2).to.be.eq(3);
+          expect(colNum).to.be.eq(3);
           //col宽度验证
-          const bodywidth = $col.parents(".block__body").width();
+          const bodywidth = $col.parents(".ossa-row").width();
           const colWidth = parseFloat($col.css("width"));
-          expect(colWidth).to.be.closeTo(bodywidth / 4, 1);
-          //col样式
-          //expect($col.css('justify-content')).to.be.eq('space-around')
+          expect(colWidth).to.be.eq(bodywidth / (colNum + 1));
         });
     });
 
-    it("solution #4: 响应式布局-样式", function () {
-      cy.get(".layout--responsive")
-        .should(($layout) => {
-          expect($layout.css("display")).to.be.eq("flex");
+    it("solution #7: Flex布局around-样式", function () {
+      cy.get(".block__body")
+        .eq(2)
+        .find(".ossa-row-justify-space-around")
+        .should(($row) => {
+          expect($row.css("justify-content")).to.be.eq("space-around");
         })
         .find("taro-view-core")
         .should(($col) => {
-          //col左右间距一致
-          const paddingLeft = parseFloat($col.css("padding-left"));
-          const paddingRight = parseFloat($col.css("padding-right"));
-          expect(paddingLeft).to.be.eq(paddingRight);
+          //col数量验证
+          const colNum = $col.length;
+          expect(colNum).to.be.eq(3);
+          //col宽度验证
+          const bodywidth = $col.parents(".ossa-row").width();
+          const colWidth = parseFloat($col.css("width"));
+          expect(colWidth).to.be.eq(bodywidth / (colNum + 1));
         });
     });
   });
