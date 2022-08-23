@@ -2,7 +2,7 @@ name: 'Run Cypress tests'
 on: [deployment_status]
 jobs:
   e2e:
-    if: github.event.deployment_status.state == 'success'
+    if: github.event.deployment_status.state == 'success' && contains(github.event.deployment_status.target_url, 'ossa-demo')
     runs-on: ubuntu-latest
 
     strategy:
