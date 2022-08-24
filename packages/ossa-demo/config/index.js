@@ -1,8 +1,5 @@
-// eslint-disable-next-line
-const argv = require("yargs").argv;
-
 const config = {
-  projectName: "ossa-demo1",
+  projectName: "ossa-demo",
   date: "2022-6-24",
   designWidth: 750,
   deviceRatio: {
@@ -19,6 +16,18 @@ const config = {
     options: {},
   },
   framework: "react",
+  compiler: "webpack5",
+  cache: {
+    enable: false, // Webpack 持久化缓存配置，建议开启。默认配置请参考：https://docs.taro.zone/docs/config-detail#cache
+    prebundle: {
+      enable: true,
+      exclude: [
+        "@vh-mobile/pro-components",
+        "@vh-mobile/pro-services",
+        "@vh-mobile/pro-utils",
+      ],
+    },
+  },
   mini: {
     postcss: {
       pxtransform: {
@@ -41,7 +50,7 @@ const config = {
     },
   },
   h5: {
-    publicPath: argv.public_path || "/OSSA",
+    publicPath: "/",
     staticDirectory: "static",
     postcss: {
       autoprefixer: {
@@ -53,6 +62,18 @@ const config = {
         config: {
           namingPattern: "module", // 转换模式，取值为 global/module
           generateScopedName: "[name]__[local]___[hash:base64:5]",
+        },
+      },
+      pxtransform: {
+        enable: true,
+        config: {
+          platform: "h5",
+          designWidth: 750,
+          deviceRatio: {
+            640: 2.34 / 2,
+            750: 640 / 750,
+            828: 1.81 / 2,
+          },
         },
       },
     },
