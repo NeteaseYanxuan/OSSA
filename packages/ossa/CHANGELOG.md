@@ -1,5 +1,13 @@
 # ossaui
 
+## 0.2.0
+
+### Minor Changes
+
+- [#20](https://github.com/NeteaseYanxuan/OSSA/pull/20) [`47db1e7`](https://github.com/NeteaseYanxuan/OSSA/commit/47db1e7d867e04e9a98d11f11656d58c6f77a25c) Thanks [@hzxulin](https://github.com/hzxulin)! - feat: add Row Component & Col Component
+
+* [#21](https://github.com/NeteaseYanxuan/OSSA/pull/21) [`df09d9b`](https://github.com/NeteaseYanxuan/OSSA/commit/df09d9b1d8ea26ac43658b4c5c21ebcf2ba89ffb) Thanks [@hzxulin](https://github.com/hzxulin)! - fix: Fixed a bug with word wrapping on the Badge component
+
 ## 0.1.1
 
 ### Patch Changes
