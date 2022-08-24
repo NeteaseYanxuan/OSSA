@@ -34,110 +34,110 @@ export default function Index(props: Props) {
       <DemoBlock title='基础布局'>
         <OsRow>
           <OsCol span='24'>
-            <div className='col-content col-content-light'>span:24</div>
+            <View className='col-content col-content-light'>span:24</View>
           </OsCol>
         </OsRow>
         <OsRow>
           <OsCol span='12'>
-            <div className='col-content col-content-light'>span:12</div>
+            <View className='col-content col-content-light'>span:12</View>
           </OsCol>
           <OsCol span='12'>
-            <div className='col-content'>span:12</div>
+            <View className='col-content'>span:12</View>
           </OsCol>
         </OsRow>
         <OsRow>
           <OsCol span='8'>
-            <div className='col-content col-content-light'>span:8</div>
+            <View className='col-content col-content-light'>span:8</View>
           </OsCol>
           <OsCol span='8'>
-            <div className='col-content'>span:8</div>
+            <View className='col-content'>span:8</View>
           </OsCol>
           <OsCol span='8'>
-            <div className='col-content col-content-light'>span:8</div>
+            <View className='col-content col-content-light'>span:8</View>
           </OsCol>
         </OsRow>
         <OsRow>
           <OsCol span='6'>
-            <div className='col-content col-content-light'>span:6</div>
+            <View className='col-content col-content-light'>span:6</View>
           </OsCol>
           <OsCol span='6'>
-            <div className='col-content'>span:6</div>
+            <View className='col-content'>span:6</View>
           </OsCol>
           <OsCol span='6'>
-            <div className='col-content col-content-light'>span:6</div>
+            <View className='col-content col-content-light'>span:6</View>
           </OsCol>
           <OsCol span='6'>
-            <div className='col-content'>span:6</div>
+            <View className='col-content'>span:6</View>
           </OsCol>
         </OsRow>
       </DemoBlock>
       <DemoBlock title='分栏间隔'>
         <OsRow gutter='10'>
           <OsCol span='8'>
-            <div className='col-content col-content-light'>span:8</div>
+            <View className='col-content col-content-light'>span:8</View>
           </OsCol>
           <OsCol span='8'>
-            <div className='col-content'>span:8</div>
+            <View className='col-content'>span:8</View>
           </OsCol>
           <OsCol span='8'>
-            <div className='col-content col-content-light'>span:8</div>
+            <View className='col-content col-content-light'>span:8</View>
           </OsCol>
         </OsRow>
       </DemoBlock>
       <DemoBlock title='Flex布局'>
         <OsRow type='flex' wrap='nowrap'>
           <OsCol span='6'>
-            <div className='col-content col-content-light'>span:6</div>
+            <View className='col-content col-content-light'>span:6</View>
           </OsCol>
           <OsCol span='6'>
-            <div className='col-content'>span:6</div>
+            <View className='col-content'>span:6</View>
           </OsCol>
           <OsCol span='6'>
-            <div className='col-content col-content-light'>span:6</div>
+            <View className='col-content col-content-light'>span:6</View>
           </OsCol>
         </OsRow>
         <OsRow type='flex' justify='center'>
           <OsCol span='6'>
-            <div className='col-content col-content-light'>span:6</div>
+            <View className='col-content col-content-light'>span:6</View>
           </OsCol>
           <OsCol span='6'>
-            <div className='col-content'>span:6</div>
+            <View className='col-content'>span:6</View>
           </OsCol>
           <OsCol span='6'>
-            <div className='col-content col-content-light'>span:6</div>
+            <View className='col-content col-content-light'>span:6</View>
           </OsCol>
         </OsRow>
         <OsRow type='flex' justify='end'>
           <OsCol span='6'>
-            <div className='col-content col-content-light'>span:6</div>
+            <View className='col-content col-content-light'>span:6</View>
           </OsCol>
           <OsCol span='6'>
-            <div className='col-content'>span:6</div>
+            <View className='col-content'>span:6</View>
           </OsCol>
           <OsCol span='6'>
-            <div className='col-content col-content-light'>span:6</div>
+            <View className='col-content col-content-light'>span:6</View>
           </OsCol>
         </OsRow>
         <OsRow type='flex' justify='space-between'>
           <OsCol span='6'>
-            <div className='col-content col-content-light'>span:6</div>
+            <View className='col-content col-content-light'>span:6</View>
           </OsCol>
           <OsCol span='6'>
-            <div className='col-content'>span:6</div>
+            <View className='col-content'>span:6</View>
           </OsCol>
           <OsCol span='6'>
-            <div className='col-content col-content-light'>span:6</div>
+            <View className='col-content col-content-light'>span:6</View>
           </OsCol>
         </OsRow>
         <OsRow type='flex' justify='space-around'>
           <OsCol span='6'>
-            <div className='col-content col-content-light'>span:6</div>
+            <View className='col-content col-content-light'>span:6</View>
           </OsCol>
           <OsCol span='6'>
-            <div className='col-content'>span:6</div>
+            <View className='col-content'>span:6</View>
           </OsCol>
           <OsCol span='6'>
-            <div className='col-content col-content-light'>span:6</div>
+            <View className='col-content col-content-light'>span:6</View>
           </OsCol>
         </OsRow>
       </DemoBlock>
