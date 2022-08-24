@@ -54,17 +54,34 @@
       6px,
       50%,
       auto,
-      24px,
+      auto,
       24px,
       $--color-red,
       20px
     );
 
+    // min-width: 16px;
+    padding: 0 6px;
     transform: translateY(-50%) translateX(100%);
+    white-space: nowrap;
     @include font(18px,$--text-color-base-inverse);
 
     line-height: 24px;
     text-align: center;
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 24px;
+      height: 24px;
+      margin-left: -12px;
+      margin-top: -12px;
+      background: $--color-red;
+      border-radius: 50%;
+      z-index: -1;
+    }
 
     &.ph-badge--is-widthAuto {
       width: auto;
