@@ -30,3 +30,5 @@ export { default as OsImagePreview } from "./components/imagePreview/index";
 export { default as OsPicker } from "./components/picker/index";
 export { default as OsDatePicker } from "./components/datePicker/index";
 export { default as OsNoticeBar } from "./components/noticeBar/index";
+export { default as OsRow } from "./components/row/index";
+export { default as OsCol } from "./components/col/index";

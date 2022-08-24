@@ -90,3 +90,6 @@ export {
   Animate as OsAnimate,
 } from "./animate";
 export { SwitchProps as OsSwitchProps, Switch as OsSwitch } from "./switch";
+export { RowProps as OsRowProps, Row as OsRow } from "./row";
+export { ColProps as OsColProps, Col as OsCol } from "./col";
+
