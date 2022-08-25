@@ -38,7 +38,7 @@ describe("Layout Testing", function () {
           cy.get($col).should(($col) => {
             const colNum = $colList.length;
             const rowWidth = $col.parents(".ossa-row").width();
-            const colWidth = parseFloat($col.find("div").css("width"));
+            const colWidth = parseFloat($col.find(".col-content").css("width"));
             const colPaddingLeft = parseFloat($col.css("padding-left"));
             const colPaddingRight = parseFloat($col.css("padding-right"));
             let colGap = 0;
@@ -61,7 +61,7 @@ describe("Layout Testing", function () {
         .should(($row) => {
           expect($row.css("justify-content")).to.be.eq("flex-start");
         })
-        .find("taro-view-core")
+        .find(".ossa-col")
         .should(($col) => {
           //col数量验证
           const colNum = $col.length;
@@ -80,7 +80,7 @@ describe("Layout Testing", function () {
         .should(($row) => {
           expect($row.css("justify-content")).to.be.eq("center");
         })
-        .find("taro-view-core")
+        .find(".ossa-col")
         .should(($col) => {
           //col数量验证
           const colNum = $col.length;
@@ -99,7 +99,7 @@ describe("Layout Testing", function () {
         .should(($row) => {
           expect($row.css("justify-content")).to.be.eq("flex-end");
         })
-        .find("taro-view-core")
+        .find(".ossa-col")
         .should(($col) => {
           //col数量验证
           const colNum = $col.length;
@@ -118,7 +118,7 @@ describe("Layout Testing", function () {
         .should(($row) => {
           expect($row.css("justify-content")).to.be.eq("space-between");
         })
-        .find("taro-view-core")
+        .find(".ossa-col")
         .should(($col) => {
           //col数量验证
           const colNum = $col.length;
@@ -137,7 +137,7 @@ describe("Layout Testing", function () {
         .should(($row) => {
           expect($row.css("justify-content")).to.be.eq("space-around");
         })
-        .find("taro-view-core")
+        .find(".ossa-col")
         .should(($col) => {
           //col数量验证
           const colNum = $col.length;
