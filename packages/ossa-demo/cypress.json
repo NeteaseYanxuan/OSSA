@@ -11,5 +11,6 @@
   "viewportWidth": 375,
   "viewportHeight": 667,
   "defaultCommandTimeout": 7000,
+  "video": false,
   "projectId": "sfyxka"
 }

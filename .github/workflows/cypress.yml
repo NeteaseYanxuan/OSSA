@@ -1,6 +1,13 @@
 name: 'Run Cypress tests'
 on: [deployment_status]
 jobs:
+  env:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - run: echo ${{github.event.deployment_status.target_url}}
+      - run: echo ${{github}}
+
   e2e:
     if: github.event.deployment_status.state == 'success' && contains(github.event.deployment_status.target_url, 'ossa-demo')
     runs-on: ubuntu-latest
@@ -33,4 +40,4 @@ jobs:
         with:
           retention-days: 1
           path: |
-            test/e2e/screenshots
+            packages/ossa-demo/test/e2e/screenshots
