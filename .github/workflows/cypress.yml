@@ -33,4 +33,4 @@ jobs:
         with:
           retention-days: 1
           path: |
-            pacakges/ossa-demo/test/e2e/screenshots
+            test/e2e/screenshots
