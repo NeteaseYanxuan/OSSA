@@ -1,5 +1,15 @@
 # ossa-demo
 
+## 1.4.0
+
+### Minor Changes
+
+- [#24](https://github.com/NeteaseYanxuan/OSSA/pull/24) [`404bcaa`](https://github.com/NeteaseYanxuan/OSSA/commit/404bcaa15af9f1d94ca1b113632fa27b07b6e061) Thanks [@CaedmonW](https://github.com/CaedmonW)! - update taro to 3.5
+
+### Patch Changes
+
+- [#23](https://github.com/NeteaseYanxuan/OSSA/pull/23) [`ce40dce`](https://github.com/NeteaseYanxuan/OSSA/commit/ce40dce0bf6c2560ba581bb7f6560c33ac33c85c) Thanks [@hzxulin](https://github.com/hzxulin)! - fix: Update the test cases for Layout
+
 ## 1.3.0
 
 ### Minor Changes

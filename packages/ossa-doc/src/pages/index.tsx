@@ -14,13 +14,6 @@ export default function Home(): JSX.Element {
       description='OSSA 官网'
     >
       <main className={styles.container}>
-        <div className={styles.bg}>
-          <div className={styles.icon}>
-            <img src='/img/logo2.png' />
-          </div>
-          <img className={styles.namePic} src='/img/name.svg' />
-        </div>
-
         <div className={styles.left}>
           <p className={styles.title}>OSSA</p>
           <p className={styles.slogon}>Taro多端UI组件库</p>
@@ -33,7 +26,12 @@ export default function Home(): JSX.Element {
             <Link href='/docs/start' className={clsx(styles.start, styles.btn)}>快速开始</Link>
           </div>
         </div>
-        
+        <div className={styles.bg}>
+          <div className={styles.icon}>
+            <img src='/img/logo2.png' />
+          </div>
+          <img className={styles.namePic} src='/img/name.svg' />
+        </div>
       </main>
     </Layout>
   );
