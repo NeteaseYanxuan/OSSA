@@ -1,5 +1,11 @@
 # ossa-doc
 
+## 0.0.2
+
+### Patch Changes
+
+- doc support mdx2
+
 ## 0.0.1
 
 ### Patch Changes
