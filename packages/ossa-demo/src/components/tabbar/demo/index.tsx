@@ -54,7 +54,7 @@ const initialTabsApi = {
     {
       list: [
         "icon",
-        "icon名称，取值参考OsIcon Tabbar分类，必选",
+        "icon名称，取值参考OsIcon TabBar分类，必选",
         "string",
         "-",
       ],
@@ -62,7 +62,7 @@ const initialTabsApi = {
     {
       list: [
         "selectedIcon",
-        "选中icon名称，取值参考OsIcon Tabbar分类，必选",
+        "选中icon名称，取值参考OsIcon TabBar分类，必选",
         "string",
         "-",
       ],

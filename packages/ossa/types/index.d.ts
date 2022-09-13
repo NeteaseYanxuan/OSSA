@@ -10,9 +10,9 @@ export {
   NavBar as OsNavBar,
 } from "./navbar";
 export {
-  TabbarProps as OsTabbarProps,
-  TabbarItemProps as OsTabbarItemProps,
-  Tabbar as OsTabbar,
+  TabBarProps as OsTabBarProps,
+  TabBarItemProps as OsTabBarItemProps,
+  TabBar as OsTabBar,
 } from "./tabbar";
 export {
   StepperProps as OsStepperProps,
