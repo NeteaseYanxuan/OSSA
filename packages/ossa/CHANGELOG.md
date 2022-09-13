@@ -1,5 +1,11 @@
 # ossaui
 
+## 0.3.0
+
+### Minor Changes
+
+- [#32](https://github.com/NeteaseYanxuan/OSSA/pull/32) [`ec5124e`](https://github.com/NeteaseYanxuan/OSSA/commit/ec5124e6c75cc950d28745076c4dadd43f342c90) Thanks [@CaedmonW](https://github.com/CaedmonW)! - OsTabBar 类型定义更改
+
 ## 0.2.0
 
 ### Minor Changes
