@@ -3,9 +3,9 @@ import Taro from "@tarojs/taro";
 import { View, Text } from "@tarojs/components";
 import classNames from "classnames";
 import OsIcon from "../icon";
-import { OsTabbarProps, OsTabbarItemProps } from "../../../types/index";
+import { OsTabBarProps, OsTabBarItemProps } from "../../../types/index";
 
-function getItemStyleObj(props: OsTabbarProps, index: number, current: number) {
+function getItemStyleObj(props: OsTabBarProps, index: number, current: number) {
   const _styleObj = {};
   const { activeColor, defaultColor } = props;
 
@@ -18,7 +18,7 @@ function getItemStyleObj(props: OsTabbarProps, index: number, current: number) {
   return _styleObj;
 }
 
-function getClassObject(props: OsTabbarProps) {
+function getClassObject(props: OsTabBarProps) {
   const { isfixedBt } = props;
   const _classObject = {
     ["ossa-tabbar--is-fixedBt"]: isfixedBt,
@@ -27,7 +27,7 @@ function getClassObject(props: OsTabbarProps) {
   return _classObject;
 }
 
-function getTextStyleObj(props: OsTabbarProps) {
+function getTextStyleObj(props: OsTabBarProps) {
   const { space } = props;
   const _styleObj = {};
 
@@ -39,16 +39,16 @@ function getTextStyleObj(props: OsTabbarProps) {
 }
 
 function onClick(
-  props: OsTabbarProps,
+  props: OsTabBarProps,
   setCurrent: Function,
-  item: OsTabbarItemProps,
+  item: OsTabBarItemProps,
   index: number
 ) {
   setCurrent(index);
   props.onClick && props.onClick(item);
 }
 
-export default function TabBar(props: OsTabbarProps) {
+export default function TabBar(props: OsTabBarProps) {
   const rootClassName = "ossa-tabbar"; //组件
   const classObject = getClassObject(props); //组件修饰
   const styleObject = props.customStyle;
@@ -61,7 +61,7 @@ export default function TabBar(props: OsTabbarProps) {
       className={classNames(rootClassName, classObject, props.className)}
       style={styleObject}
     >
-      {tabsArr.map((item: OsTabbarItemProps, index: number) => (
+      {tabsArr.map((item: OsTabBarItemProps, index: number) => (
         <View
           className='ossa-tabbar__item'
           key={index}

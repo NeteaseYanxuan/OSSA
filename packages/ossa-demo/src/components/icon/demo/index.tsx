@@ -241,7 +241,7 @@ export default function Index(props: Props) {
         </View>
       </DemoBlock>
 
-      <DemoBlock title='Tabbar' fullScreen>
+      <DemoBlock title='TabBar' fullScreen>
         <View className='block-section'>
           <View className='inline-item'>
             <View className='inline-item--top'>
