@@ -40,21 +40,17 @@ function getTextStyleObj(props: OsTabBarProps) {
 
 function onClick(
   props: OsTabBarProps,
-  setCurrent: Function,
   item: OsTabBarItemProps,
   index: number
 ) {
-  setCurrent(index);
-  props.onClick && props.onClick(item);
+  props.onClick && props.onClick(item, index);
 }
 
 export default function TabBar(props: OsTabBarProps) {
   const rootClassName = "ossa-tabbar"; //组件
   const classObject = getClassObject(props); //组件修饰
-  const styleObject = props.customStyle;
   const textStyle = getTextStyleObj(props);
-  const { tabsArr } = props;
-  const [current = 0, setCurrent] = useState(props.value);
+  const { customStyle: styleObject, tabsArr, value: current } = props;
 
   return (
     <View
@@ -66,7 +62,7 @@ export default function TabBar(props: OsTabBarProps) {
           className='ossa-tabbar__item'
           key={index}
           style={getItemStyleObj(props, index, current)}
-          onClick={() => onClick(props, setCurrent, item, index)}
+          onClick={() => onClick(props, item, index)}
         >
           {item.useCustomIcon ? (
             index === current ? (
