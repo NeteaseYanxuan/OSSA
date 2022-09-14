@@ -1,5 +1,13 @@
 # ossaui
 
+## 0.3.1
+
+### Patch Changes
+
+- [#35](https://github.com/NeteaseYanxuan/OSSA/pull/35) [`9fb66b9`](https://github.com/NeteaseYanxuan/OSSA/commit/9fb66b9da1898d150628941a9481a58ceff5e6bf) Thanks [@CaedmonW](https://github.com/CaedmonW)! - fix not vertical center
+
+* [#34](https://github.com/NeteaseYanxuan/OSSA/pull/34) [`15287c8`](https://github.com/NeteaseYanxuan/OSSA/commit/15287c84eb332af15093a67db9fa83ff2b18a8ec) Thanks [@CaedmonW](https://github.com/CaedmonW)! - when used in miniapp custom tabbar, click not work as expected
+
 ## 0.3.0
 
 ### Minor Changes

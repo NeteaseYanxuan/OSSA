@@ -1,5 +1,14 @@
 # ossa-demo
 
+## 1.4.1
+
+### Patch Changes
+
+- [#34](https://github.com/NeteaseYanxuan/OSSA/pull/34) [`15287c8`](https://github.com/NeteaseYanxuan/OSSA/commit/15287c84eb332af15093a67db9fa83ff2b18a8ec) Thanks [@CaedmonW](https://github.com/CaedmonW)! - when used in miniapp custom tabbar, click not work as expected
+
+- Updated dependencies [[`9fb66b9`](https://github.com/NeteaseYanxuan/OSSA/commit/9fb66b9da1898d150628941a9481a58ceff5e6bf), [`15287c8`](https://github.com/NeteaseYanxuan/OSSA/commit/15287c84eb332af15093a67db9fa83ff2b18a8ec)]:
+  - ossaui@0.3.1
+
 ## 1.4.0
 
 ### Minor Changes

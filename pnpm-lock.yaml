@@ -160,7 +160,7 @@ importers:
       eslint-plugin-react-hooks: ^4.2.0
       mocha: ^6.1.4
       mocha-allure-reporter: ^1.4.0
-      ossaui: workspace:^0.3.0
+      ossaui: workspace:^0.3.1
       react: ^17.0.0
       react-dom: ^17.0.0
       react-refresh: ^0.11.0
@@ -7419,8 +7419,6 @@ packages:
       babel-register: 6.26.0
       babylon: 6.18.0
       require-from-string: 2.0.2
-    transitivePeerDependencies:
-      - supports-color
     dev: true
 
   /babel-plugin-syntax-class-properties/6.13.0:
