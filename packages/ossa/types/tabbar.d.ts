@@ -13,8 +13,8 @@ export interface TabBarProps extends OsComponent {
   activeColor?: string;
   defaultColor?: string;
   space?: number;
-  value?: number;
-  onClick?: (v: object) => void;
+  value: number;
+  onClick?: (v: object, index: number) => void;
 }
 
 declare const TabBar: ComponentClass<TabBarProps>;
