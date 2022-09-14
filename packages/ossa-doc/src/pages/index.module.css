@@ -3,7 +3,7 @@
  * and scoped locally.
  */
 
- @keyframes sacleName {
+@keyframes sacleName {
   0% {
     transform: scale(5);
     transform-origin: left;
@@ -12,9 +12,9 @@
     transform: scale(1);
     transform-origin: right;
   }
- }
+}
 
- @keyframes sacleIcon {
+@keyframes sacleIcon {
   0% {
     transform: scale(2);
     transform-origin: right;
@@ -23,23 +23,26 @@
     transform: scale(1);
     transform-origin: left;
   }
- }
+}
 
  .container {
   display: flex;
   justify-content: space-between;
- }
+  max-width: 1800px;
+  position: relative;
+  margin: auto;
+}
 
 .left {
-  float: left;
+  align-self: flex-start;
   z-index: 1;
   margin-left: 140px;
   margin-top: 200px;
 }
 
 .bg {
-  float: right;
   position: absolute;
+  right: 0;
   width: 100vw;
   overflow: hidden;
   top: var(--ifm-navbar-height);
@@ -105,6 +108,7 @@
 .btn:hover {
   cursor: pointer;
   text-decoration: none;
+  color: #FFFFFF;
 }
 
 .github {
@@ -113,10 +117,6 @@
 
 .start {
   background-color: var(--ifm-color-primary);
-}
-
-.start:hover {
-  color: #333333;
 }
 
 .btnGrounp {
