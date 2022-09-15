@@ -6,7 +6,7 @@ demo_url: 'https://neteaseyanxuan.github.io/OSSA/#/components/picker/demo/index'
 # Picker 选择器
 
 ## 介绍
-// TODO
+选择器
 
 ## 用法
 ### 普通
@@ -14,14 +14,11 @@ demo_url: 'https://neteaseyanxuan.github.io/OSSA/#/components/picker/demo/index'
 <OsPicker
   range={range}
   value={vNormal}
-  onCancel={() => {
-    console.log("cancel");
-  }}
+  onCancel={() => console.log("cancel")}
   onConfirm={onConfirmNormal}
 >
   <OsList title='国籍' desc={range[vNormal]}></OsList>
 </OsPicker>
-<OsList title='国籍' desc={range[vNormal]}></OsList>
 ```
 
 
@@ -30,7 +27,7 @@ demo_url: 'https://neteaseyanxuan.github.io/OSSA/#/components/picker/demo/index'
 ### 属性
 |参数|说明|类型|默认值|
 |------|------|------|------|
-|range|取值范围，必选|Array\<number\|string\>|-|
+|range|取值范围，必选|(number\|string)[]|-|
 |value|取值索引，必选|number|0|
 
 

@@ -6,16 +6,14 @@ demo_url: 'https://neteaseyanxuan.github.io/OSSA/#/components/rate/demo/index'
 # Rate 评分
 
 ## 介绍
-// TODO
+评分
 
 ## 用法
 ### 基础
 ```jsx
 <OsRate
   title='评分'
-  onChange={(item) => {
-    onChange(item);
-  }}
+  onChange={(item) => onChange(item)}
 ></OsRate>
 ```
 ### 最小尺寸
@@ -44,7 +42,7 @@ demo_url: 'https://neteaseyanxuan.github.io/OSSA/#/components/rate/demo/index'
 |icon|未选中时icon，取值参考OsIcon，可选|string|grade|
 |selectedIconColor|选中icon颜色，可选|string|#FAB646|
 |color|未选中icon颜色，可选|string|#CCCCCC|
-|options|分数对应的结果，可选|Array\<string\>|\['非常差', '差', '一般', '满意', '非常满意'\]|
+|options|分数对应的结果，可选|string[]|\['非常差', '差', '一般', '满意', '非常满意'\]|
 |isShowResult|展示分值对应的结果，可选|boolean|true|
 |value|当前分值索引\(从0开始\)，可选|number|0|
 |className|自定义类名，可选|string|-|

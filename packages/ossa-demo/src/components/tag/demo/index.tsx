@@ -33,14 +33,14 @@ const initialListApi = {
       ],
     },
     {
-      list: ["bgColor", "填充色，可选", "string", "-（2.3.0版本开始支持）"],
+      list: ["bgColor", "填充色，可选", "string", "-"],
     },
     {
       list: [
         "startBgColor",
         "填充渐变开始色，可选",
         "string",
-        "-（2.3.0版本开始支持，只支持radius腰圆标签，且与endBgColor配合使用）",
+        "-（只支持radius腰圆标签，且与endBgColor配合使用）",
       ],
     },
     {
@@ -48,7 +48,7 @@ const initialListApi = {
         "endBgColor",
         "填充渐变结束色，可选",
         "string",
-        "-（2.3.0版本开始支持，只支持radius腰圆标签，且与startBgColor配合使用）",
+        "-（只支持radius腰圆标签，且与startBgColor配合使用）",
       ],
     },
     {
@@ -56,7 +56,7 @@ const initialListApi = {
         "showArrow",
         "显示向右箭头，可选",
         "boolean",
-        "-（2.3.0版本开始支持，只支持radius腰圆标签）",
+        "-（只支持radius腰圆标签）",
       ],
     },
     {

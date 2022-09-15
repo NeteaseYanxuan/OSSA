@@ -6,7 +6,7 @@ demo_url: 'https://neteaseyanxuan.github.io/OSSA/#/components/radio/demo/index'
 # Radio 单选框
 
 ## 介绍
-// TODO
+单选框
 
 ## 用法
 ### 基础
@@ -19,15 +19,8 @@ demo_url: 'https://neteaseyanxuan.github.io/OSSA/#/components/radio/demo/index'
     选项B
   </OsRadioOption>
 </OsRadio>
-<OsRadioOption value={v1} optionValue={0} onClick={setV1}>
-  选项A
-</OsRadioOption>
-<OsRadioOption value={v1} optionValue={1} onClick={setV1}>
-  选项B
-</OsRadioOption>
-```
-### 
-```jsx
+
+// 选项内容自定义
 <OsRadio>
   <OsRadioOption value={v2} optionValue={0} onClick={setV2} isCustom>
     <View className='custom-option'>
@@ -62,38 +55,6 @@ demo_url: 'https://neteaseyanxuan.github.io/OSSA/#/components/radio/demo/index'
     </View>
   </OsRadioOption>
 </OsRadio>
-<OsRadioOption value={v2} optionValue={0} onClick={setV2} isCustom>
-  <View className='custom-option'>
-    <Image
-      className='custom-option__img'
-      src='https://yanxuan-item.nosdn.127.net/8aafd2aa11a023d69ec1dfbc062b28c7.png?quality=95&thumbnail=245x245&imageView'
-    />
-    <View className='custom-option__content'>
-      <View className='custom-option__title'>西装</View>
-      <View className='custom-option__sub-title'>
-        帅气的办公室吸睛装扮
-      </View>
-      <View className='custom-option__price'>&yen;299</View>
-    </View>
-  </View>
-</OsRadioOption>
-<OsRadioOption value={v2} optionValue={1} onClick={setV2} isCustom>
-  <View className='custom-option'>
-    <Image
-      className='custom-option__img'
-      src='https://yanxuan.nosdn.127.net/b3dec0eb768d27301afab1b4a43f30cb.png?quality=95&thumbnail=172x172&imageView'
-    />
-    <View className='custom-option__content'>
-      <View className='custom-option__title'>
-        网易智造四季全屋循环扇
-      </View>
-      <View className='custom-option__sub-title'>
-        源自日本，全屋空气对流循环
-      </View>
-      <View className='custom-option__price'>&yen;248.1</View>
-    </View>
-  </View>
-</OsRadioOption>
 ```
 ### 禁用
 ```jsx
@@ -105,105 +66,6 @@ demo_url: 'https://neteaseyanxuan.github.io/OSSA/#/components/radio/demo/index'
     选项B
   </OsRadioOption>
 </OsRadio>
-<OsRadioOption value={v3} optionValue={0} onClick={setV3} isDisabled>
-  选项A
-</OsRadioOption>
-<OsRadioOption value={v3} optionValue={1} onClick={setV3} isDisabled>
-  选项B
-</OsRadioOption>
-```
-### 
-```jsx
-<OsRadio>
-  <OsRadioOption
-    value={v4}
-    optionValue={0}
-    onClick={setV4}
-    isDisabled
-    isCustom
-  >
-    <View className='custom-option'>
-      <Image
-        className='custom-option__img'
-        src='https://yanxuan-item.nosdn.127.net/8aafd2aa11a023d69ec1dfbc062b28c7.png?quality=95&thumbnail=245x245&imageView'
-      />
-      <View className='custom-option__content'>
-        <View className='custom-option__title'>西装</View>
-        <View className='custom-option__sub-title'>
-          帅气的办公室吸睛装扮
-        </View>
-        <View className='custom-option__price'>&yen;299</View>
-      </View>
-    </View>
-  </OsRadioOption>
-  <OsRadioOption
-    value={v4}
-    optionValue={1}
-    onClick={setV4}
-    isDisabled
-    isCustom
-  >
-    <View className='custom-option'>
-      <Image
-        className='custom-option__img'
-        src='https://yanxuan.nosdn.127.net/b3dec0eb768d27301afab1b4a43f30cb.png?quality=95&thumbnail=172x172&imageView'
-      />
-      <View className='custom-option__content'>
-        <View className='custom-option__title'>
-          网易智造四季全屋循环扇
-        </View>
-        <View className='custom-option__sub-title'>
-          源自日本，全屋空气对流循环
-        </View>
-        <View className='custom-option__price'>&yen;248.1</View>
-      </View>
-    </View>
-  </OsRadioOption>
-</OsRadio>
-<OsRadioOption
-  value={v4}
-  optionValue={0}
-  onClick={setV4}
-  isDisabled
-  isCustom
->
-  <View className='custom-option'>
-    <Image
-      className='custom-option__img'
-      src='https://yanxuan-item.nosdn.127.net/8aafd2aa11a023d69ec1dfbc062b28c7.png?quality=95&thumbnail=245x245&imageView'
-    />
-    <View className='custom-option__content'>
-      <View className='custom-option__title'>西装</View>
-      <View className='custom-option__sub-title'>
-        帅气的办公室吸睛装扮
-      </View>
-      <View className='custom-option__price'>&yen;299</View>
-    </View>
-  </View>
-</OsRadioOption>
-<OsRadioOption
-  value={v4}
-  optionValue={1}
-  onClick={setV4}
-  isDisabled
-  isCustom
->
-  <View className='custom-option'>
-    <Image
-      className='custom-option__img'
-      src='https://yanxuan.nosdn.127.net/b3dec0eb768d27301afab1b4a43f30cb.png?quality=95&thumbnail=172x172&imageView'
-    />
-    <View className='custom-option__content'>
-      <View className='custom-option__title'>
-        网易智造四季全屋循环扇
-      </View>
-      <View className='custom-option__sub-title'>
-        源自日本，全屋空气对流循环
-      </View>
-      <View className='custom-option__price'>&yen;248.1</View>
-    </View>
-  </View>
-</OsRadioOption>
 ```
 ### 不可执行
 ```jsx
@@ -215,105 +77,6 @@ demo_url: 'https://neteaseyanxuan.github.io/OSSA/#/components/radio/demo/index'
     选项B
   </OsRadioOption>
 </OsRadio>
-<OsRadioOption value={v5} optionValue={0} onClick={setV5} isReadonly>
-  选项A
-</OsRadioOption>
-<OsRadioOption value={v5} optionValue={1} onClick={setV5} isReadonly>
-  选项B
-</OsRadioOption>
-```
-### 
-```jsx
-<OsRadio>
-  <OsRadioOption
-    value={v6}
-    optionValue={0}
-    onClick={setV6}
-    isReadonly
-    isCustom
-  >
-    <View className='custom-option'>
-      <Image
-        className='custom-option__img'
-        src='https://yanxuan-item.nosdn.127.net/8aafd2aa11a023d69ec1dfbc062b28c7.png?quality=95&thumbnail=245x245&imageView'
-      />
-      <View className='custom-option__content'>
-        <View className='custom-option__title'>西装</View>
-        <View className='custom-option__sub-title'>
-          帅气的办公室吸睛装扮
-        </View>
-        <View className='custom-option__price'>&yen;299</View>
-      </View>
-    </View>
-  </OsRadioOption>
-  <OsRadioOption
-    value={v6}
-    optionValue={1}
-    onClick={setV6}
-    isReadonly
-    isCustom
-  >
-    <View className='custom-option'>
-      <Image
-        className='custom-option__img'
-        src='https://yanxuan.nosdn.127.net/b3dec0eb768d27301afab1b4a43f30cb.png?quality=95&thumbnail=172x172&imageView'
-      />
-      <View className='custom-option__content'>
-        <View className='custom-option__title'>
-          网易智造四季全屋循环扇
-        </View>
-        <View className='custom-option__sub-title'>
-          源自日本，全屋空气对流循环
-        </View>
-        <View className='custom-option__price'>&yen;248.1</View>
-      </View>
-    </View>
-  </OsRadioOption>
-</OsRadio>
-<OsRadioOption
-  value={v6}
-  optionValue={0}
-  onClick={setV6}
-  isReadonly
-  isCustom
->
-  <View className='custom-option'>
-    <Image
-      className='custom-option__img'
-      src='https://yanxuan-item.nosdn.127.net/8aafd2aa11a023d69ec1dfbc062b28c7.png?quality=95&thumbnail=245x245&imageView'
-    />
-    <View className='custom-option__content'>
-      <View className='custom-option__title'>西装</View>
-      <View className='custom-option__sub-title'>
-        帅气的办公室吸睛装扮
-      </View>
-      <View className='custom-option__price'>&yen;299</View>
-    </View>
-  </View>
-</OsRadioOption>
-<OsRadioOption
-  value={v6}
-  optionValue={1}
-  onClick={setV6}
-  isReadonly
-  isCustom
->
-  <View className='custom-option'>
-    <Image
-      className='custom-option__img'
-      src='https://yanxuan.nosdn.127.net/b3dec0eb768d27301afab1b4a43f30cb.png?quality=95&thumbnail=172x172&imageView'
-    />
-    <View className='custom-option__content'>
-      <View className='custom-option__title'>
-        网易智造四季全屋循环扇
-      </View>
-      <View className='custom-option__sub-title'>
-        源自日本，全屋空气对流循环
-      </View>
-      <View className='custom-option__price'>&yen;248.1</View>
-    </View>
-  </View>
-</OsRadioOption>
 ```
 ### 横向布局
 ```jsx
@@ -336,7 +99,13 @@ demo_url: 'https://neteaseyanxuan.github.io/OSSA/#/components/radio/demo/index'
 
 
 ## API
-### 属性
+### radio属性
+
+|参数|说明|类型|默认值|
+|------|------|------|------|
+|type|布局类型|column \| row|column|
+
+### radioOption属性
 |参数|说明|类型|默认值|
 |------|------|------|------|
 |value|选中值，必选|number \| string|-|
@@ -345,8 +114,7 @@ demo_url: 'https://neteaseyanxuan.github.io/OSSA/#/components/radio/demo/index'
 |isCustom|是否自定义，可选|boolean|false|
 |isReadonly|不可执行，可选|boolean|false|
 
-
-### 方法
+### radioOption方法
 |函数名|说明|参数|
 |------|------|------|
 |onClick|点击时触发，必选|value|

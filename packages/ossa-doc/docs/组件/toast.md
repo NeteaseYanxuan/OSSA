@@ -6,35 +6,18 @@ demo_url: 'https://neteaseyanxuan.github.io/OSSA/#/components/toast/demo/index'
 # Toast 轻提示
 
 ## 介绍
-// TODO
+轻提示
 
 ## 用法
 ### 基础
 ```jsx
-<OsButton
-  type='primary'
-  onClick={() => onClick({ text: "操作成功", duration: 500 })}
-  size='block'
->
-  点击出toast,展示0.5s
-</OsButton>
+<OsToast
+  isShow={show}
+  text={text}
+  duration={duration}
+  onClose={onClose()}
+></OsToast>
 ```
-### 长文本
-```jsx
-<OsButton
-  type='primary'
-  onClick={() =>
-    onClick({
-      text: "操作成功操作成功操作成功操作成功操作成功操作成功操作成功",
-    })
-  }
-  size='block'
->
-  点击出长文本
-</OsButton>
-```
-
-
 
 ## API
 ### 属性
@@ -49,3 +32,4 @@ demo_url: 'https://neteaseyanxuan.github.io/OSSA/#/components/toast/demo/index'
 
 ### 方法
 
+无

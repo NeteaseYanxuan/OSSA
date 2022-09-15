@@ -6,7 +6,7 @@ demo_url: 'https://neteaseyanxuan.github.io/OSSA/#/components/stepper/demo/index
 # Stepper 步进器
 
 ## 介绍
-// TODO
+步进器
 
 ## 用法
 ### 基础
@@ -16,12 +16,8 @@ demo_url: 'https://neteaseyanxuan.github.io/OSSA/#/components/stepper/demo/index
   max={5}
   onAdd={(value) => onAdd(value)}
   onSubtract={(value) => onSubtract(value)}
-  onChange={(value) => {
-    onChange(value, setCurrent);
-  }}
-  onBlur={(event) => {
-    onBlur(event);
-  }}
+  onChange={(value) => onChange(value, setCurrent)}
+  onBlur={(event) => onBlur(event)}
   onDisabledAdd={(value) => console.log(value)}
   onDisabledSubtract={(value) => console.log(value)}
 ></OsStepper>
@@ -31,9 +27,7 @@ demo_url: 'https://neteaseyanxuan.github.io/OSSA/#/components/stepper/demo/index
 <OsStepper
   isReadonly
   value={current1}
-  onChange={(value) => {
-    onChange1(value, setCurrent1);
-  }}
+  onChange={(value) => onChange1(value, setCurrent1)}
 ></OsStepper>
 ```
 ### 不可点击
@@ -41,9 +35,7 @@ demo_url: 'https://neteaseyanxuan.github.io/OSSA/#/components/stepper/demo/index
 <OsStepper
   isDisabled
   value={current2}
-  onChange={(value) => {
-    onChange2(value, setCurrent2);
-  }}
+  onChange={(value) => onChange2(value, setCurrent2)}
 ></OsStepper>
 ```
 

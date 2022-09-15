@@ -6,15 +6,13 @@ demo_url: 'https://neteaseyanxuan.github.io/OSSA/#/components/switch/demo/index'
 # Switch 开关
 
 ## 介绍
-// TODO
+开关
 
 ## 用法
 ### 基础
 ```jsx
 <OsSwitch isChecked={v1} onChange={setV1}></OsSwitch>
-```
-### 
-```jsx
+
 <OsSwitch isChecked={v2} onChange={setV2}></OsSwitch>
 ```
 ### 自定义颜色
@@ -24,9 +22,7 @@ demo_url: 'https://neteaseyanxuan.github.io/OSSA/#/components/switch/demo/index'
   onChange={setV3}
   onColor='rgb(221, 26, 33)'
 ></OsSwitch>
-```
-### 
-```jsx
+
 <OsSwitch
   isChecked={v4}
   onChange={setV4}
@@ -36,9 +32,7 @@ demo_url: 'https://neteaseyanxuan.github.io/OSSA/#/components/switch/demo/index'
 ### 禁用
 ```jsx
 <OsSwitch isChecked={v6} onChange={setV6} isDisabled></OsSwitch>
-```
-### 
-```jsx
+
 <OsSwitch isChecked={v7} onChange={setV7} isDisabled></OsSwitch>
 ```
 

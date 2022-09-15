@@ -6,7 +6,7 @@ demo_url: 'https://neteaseyanxuan.github.io/OSSA/#/components/noticeBar/demo/ind
 # NoticeBar 通知栏
 
 ## 介绍
-// TODO
+通知栏
 
 ## 用法
 ### 基础
@@ -23,18 +23,15 @@ demo_url: 'https://neteaseyanxuan.github.io/OSSA/#/components/noticeBar/demo/ind
 ```
 ### 通告栏模式
 ```jsx
+// 关闭
 <OsNoticeBar
   closeable
-  onClick={() => {
-    console.log("关闭");
-    setShow(false);
-  }}
+  onClick={() => setShow(false)}
 >
   你可能已经注意到了，我们使用let关键字来代替var
 </OsNoticeBar>
-```
-### 
-```jsx
+
+// 跳转
 <OsNoticeBar more onClick={() => console.log("跳转")}>
   你可能已经注意到了，我们使用let关键字来代替var
 </OsNoticeBar>
