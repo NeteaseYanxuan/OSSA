@@ -44,7 +44,8 @@ if (modifyNeedTestFileList.length) {
   console.log(
     `👓 修改了${modifyNeedTestFileList.length}个核心 ui 组件文件，运行测试任务`
   );
-  exec(`npx pnpm --filter=ossa-demo test:background`);
+  const { code } = exec(`npx pnpm --filter=ossa-demo test:background`);
+  process.exit(code);
 } else {
   console.log(`👓 未修改核心 ui 组件，无需运行测试任务`);
 }
