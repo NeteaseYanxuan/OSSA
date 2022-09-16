@@ -46,14 +46,14 @@ export default function Index(props: Props) {
           </OsCol>
         </OsRow>
         <OsRow>
-          <OsCol span='8'>
-            <View className='col-content col-content-light'>span:8</View>
+          <OsCol span='8' offset='8'>
+            <View className='col-content col-content-light'>offset:8 span:8</View>
           </OsCol>
           <OsCol span='8'>
             <View className='col-content'>span:8</View>
           </OsCol>
           <OsCol span='8'>
-            <View className='col-content col-content-light'>span:8</View>
+            <View className='col-content'>span:8</View>
           </OsCol>
         </OsRow>
         <OsRow>
@@ -138,6 +138,13 @@ export default function Index(props: Props) {
           </OsCol>
           <OsCol span='6'>
             <View className='col-content col-content-light'>span:6</View>
+          </OsCol>
+        </OsRow>
+      </DemoBlock>
+      <DemoBlock title='offset'>
+        <OsRow>
+          <OsCol span='12' offset='12' >
+            <View className='col-content col-content-light'>span:12 offset:12</View>
           </OsCol>
         </OsRow>
       </DemoBlock>

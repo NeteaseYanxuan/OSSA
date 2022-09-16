@@ -19,7 +19,7 @@ function getClassObject(props: OsColProps, context: any) {
   const _classObject = {
     [`ossa-col-${span}`]: true,
     [`ossa-col-gutter`]: !!gutter,
-    [`ossa-col-${offset}`]: true,
+    [`ossa-col-offset-${offset}`]: true,
   };
 
   return _classObject;

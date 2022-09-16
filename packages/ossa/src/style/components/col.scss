@@ -1,25 +1,25 @@
 .ossa-col {
-    float: left;
-    box-sizing: border-box;
-    word-break: break-all;
-    margin-bottom: 15px;
-    &-gutter {
-      &:last-child {
-        padding-right: 0 !important;
-      }
-      &:first-child {
-        padding-left: 0 !important;
-      }
+  float: left;
+  box-sizing: border-box;
+  word-break: break-all;
+  margin-bottom: 15px;
+  &-gutter {
+    &:last-child {
+      padding-right: 0 !important;
+    }
+    &:first-child {
+      padding-left: 0 !important;
     }
   }
+}
   
-  @for $i from 1 through 24 {
-    .ossa-col-offset-#{$i} {
-      margin-left: calc(100 / 24) * $i * 1%;
-    }
-  
-    .ossa-col-#{$i} {
-      width: calc(100 / 24) * $i * 1%;
-    }
+@for $i from 1 through 24 {
+  .ossa-col-offset-#{$i} {
+    margin-left: 100% / 24 * $i;
   }
+
+  .ossa-col-#{$i} {
+    width: 100% / 24 * $i;
+  }
+}
   
