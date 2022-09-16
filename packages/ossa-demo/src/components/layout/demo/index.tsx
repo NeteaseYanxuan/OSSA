@@ -46,14 +46,11 @@ export default function Index(props: Props) {
           </OsCol>
         </OsRow>
         <OsRow>
-          <OsCol span='8'>
-            <View className='col-content col-content-light'>span:8</View>
+          <OsCol span='8' offset='8'>
+            <View className='col-content col-content-light'>offset:8 span:8</View>
           </OsCol>
           <OsCol span='8'>
             <View className='col-content'>span:8</View>
-          </OsCol>
-          <OsCol span='8'>
-            <View className='col-content col-content-light'>span:8</View>
           </OsCol>
         </OsRow>
         <OsRow>
