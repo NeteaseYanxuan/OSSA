@@ -1,5 +1,14 @@
 # ossa-demo
 
+## 1.4.2
+
+### Patch Changes
+
+- [#40](https://github.com/NeteaseYanxuan/OSSA/pull/40) [`4fe5d08`](https://github.com/NeteaseYanxuan/OSSA/commit/4fe5d082271600f8f48b6ce6c3b482d5165adfe1) Thanks [@CaedmonW](https://github.com/CaedmonW)! - 修复低版本 taro scss 报错以及 offset
+
+- Updated dependencies [[`4fe5d08`](https://github.com/NeteaseYanxuan/OSSA/commit/4fe5d082271600f8f48b6ce6c3b482d5165adfe1)]:
+  - ossaui@0.3.2
+
 ## 1.4.1
 
 ### Patch Changes
