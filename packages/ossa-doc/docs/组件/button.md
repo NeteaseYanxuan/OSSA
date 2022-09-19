@@ -13,11 +13,8 @@ demo_url: 'https://neteaseyanxuan.github.io/OSSA/#/components/button/demo/index'
 #### 按钮类型
 ```jsx
 <OsButton type='default'>线框按钮</OsButton>
-
 <OsButton type='primary'>色块按钮</OsButton>
-
 <OsButton type='special1'>特殊按钮1</OsButton>
-
 <OsButton type='special2'>特殊按钮2</OsButton>
 ```
 
@@ -73,9 +70,22 @@ demo_url: 'https://neteaseyanxuan.github.io/OSSA/#/components/button/demo/index'
 
 ## API
 ### 属性
-
+| 参数  | 说明                                             | 类型   | 默认值                  |
+| ----- | ------------------------------------------------ | ------ | ----------------------- |
+| type  | default \| primary \| special1 \| special2，可选 | string | default,特殊按钮用于sku |
+| shape | round \| square，可选                            | string | square(默认有4px圆角)   |
+| icon  | icon名称，参考OsIcon，可选                       | string | -                       |
+| size  | min \| small \| normal \| large \| block，可选   | string | normal,特殊按钮不生效   |
+| color  | 文字颜色，可选   | string | -   |
+| bgColor  | 背景色，可选   | string | -   |
+| bdColor  | 描边色，可选   | string | -   |
+| startBgColor  | 填充渐变开始色，可选   | string | - （仅对primary按钮生效且与endBgColor配合使用）  |
+| endBgColor  | 填充渐变结束色，可选   | string | - （仅对primary按钮生效且与startBgColor配合使用）  |
+| isDisabled  | 是否禁用，可选   | boolean | false  |
+| customStyle  | 自定义样式，可选   | object | -  |
+| className  | 自定义类名，可选   | string | -  |
 
 ### 方法
-|函数名|说明|参数|
-|------|------|------|
-|onClick|点击时触发|event对象|
+| 函数名  | 说明       | 参数      |
+| ------- | ---------- | --------- |
+| onClick | 点击时触发 | event对象 |

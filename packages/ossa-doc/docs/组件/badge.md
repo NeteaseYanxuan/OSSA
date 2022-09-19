@@ -11,20 +11,17 @@ demo_url: 'https://neteaseyanxuan.github.io/OSSA/#/components/badge/demo/index'
 ## 用法
 ### dot
 ```jsx
-<OsBadge>
+<OsBadge> 
   <OsIcon
     className='icon'
     type='inform'
     customStyle={{ verticalAlign: "top" }}
   ></OsIcon>
 </OsBadge>
-<OsIcon
-  className='icon'
-  type='inform'
-  customStyle={{ verticalAlign: "top" }}
-></OsIcon>
 ```
 ### info
+
+#### 文字
 ```jsx
 <OsBadge type='info' info='新品'>
   <OsIcon
@@ -33,13 +30,8 @@ demo_url: 'https://neteaseyanxuan.github.io/OSSA/#/components/badge/demo/index'
     customStyle={{ verticalAlign: "top" }}
   ></OsIcon>
 </OsBadge>
-<OsIcon
-  type='detail-cart'
-  className='icon'
-  customStyle={{ verticalAlign: "top" }}
-></OsIcon>
 ```
-### 
+#### 数字
 ```jsx
 <OsBadge type='info' info='9'>
   <OsIcon
@@ -48,11 +40,6 @@ demo_url: 'https://neteaseyanxuan.github.io/OSSA/#/components/badge/demo/index'
     customStyle={{ verticalAlign: "top" }}
   ></OsIcon>
 </OsBadge>
-<OsIcon
-  type='detail-cart'
-  className='icon'
-  customStyle={{ verticalAlign: "top" }}
-></OsIcon>
 ```
 ### text
 ```jsx
@@ -67,7 +54,6 @@ demo_url: 'https://neteaseyanxuan.github.io/OSSA/#/components/badge/demo/index'
 >
   <OsBadge type='list'></OsBadge>
 </OsList>
-<OsBadge type='list'></OsBadge>
 ```
 
 

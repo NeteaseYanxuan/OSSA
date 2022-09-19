@@ -9,32 +9,50 @@ demo_url: 'https://neteaseyanxuan.github.io/OSSA/#/components/carousel/demo/inde
 // TODO
 
 ## 用法
-### 基础
-```jsx
-<OsCarousel
-  data={img1List}
-  width={750}
-  height={375}
-  interval={4000}
-  indicatorDots
-  circular
-  current={0}
-/>
-```
-### 分隔式
-```jsx
-<OsCarousel
-  data={initImg1}
-  width={750}
-  height={500}
-  circular
-  current={0}
-  vertical
-  prevMargin={15}
-  nextMargin={15}
-  interval={4000}
-  gap
-/>
+
+#### 展示数据
+```js
+const initImg1 = [
+  {
+    content:
+      "https://yanxuan.nosdn.127.net/fe726ef94ce6a26a666e84361dbd6f4d.jpg?imageView&quality=75&thumbnail=670x371",
+  },
+  {
+    content:
+      "http://yanxuan.nosdn.127.net/07760022c7752f9d5ac51e8564fc8fd7.jpg?imageView&quality=75&thumbnail=670x371",
+  },
+  {
+    content:
+      "https://yanxuan.nosdn.127.net/27394a4590fb4af710655a15bc617895.jpg?imageView&quality=75&thumbnail=670x371",
+  },
+];
+const initImg1 = [
+  {
+    content:
+      "https://yanxuan.nosdn.127.net/fe726ef94ce6a26a666e84361dbd6f4d.jpg?imageView&quality=75&thumbnail=670x371",
+  },
+  {
+    content:
+      "http://yanxuan.nosdn.127.net/07760022c7752f9d5ac51e8564fc8fd7.jpg?imageView&quality=75&thumbnail=670x371",
+  },
+  {
+    content:
+      "https://yanxuan.nosdn.127.net/27394a4590fb4af710655a15bc617895.jpg?imageView&quality=75&thumbnail=670x371",
+  },
+];
+const initTxt = [
+  {
+    content: "This is Text 1",
+    className: "my-carousel-item",
+  },
+  {
+    content: "This is Text 2",
+    style: { fontWeight: 600 },
+  },
+  {
+    content: "This is Text 3",
+  },
+];
 ```
 ### 基础
 ```jsx

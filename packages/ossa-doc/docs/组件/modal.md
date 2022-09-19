@@ -11,15 +11,32 @@ demo_url: 'https://neteaseyanxuan.github.io/OSSA/#/components/modal/demo/index'
 ## 用法
 ### 基础
 ```jsx
-<OsButton
+const [showBase, setShowBase] = useState(false);
+```
+```jsx
+<OsButton 
   onClick={() => {
     setShowBase(true);
   }}
 >
   基础
 </OsButton>
+
+<OsModal
+  title='基础弹窗'
+  cancelText='取消'
+  confirmText='确定啊'
+  content='这里是正文这里是正文这里是正文'
+  isShow={showBase}
+  onCancel={() => setShowBase(false)}
+  onClose={() => setShowBase(false)}
+  onConfirm={() => setShowBase(false)}
+></OsModal>
 ```
 ### 单个按钮
+```jsx
+const [showSingleBtn, setShowSingleBtn] = useState(false);
+```
 ```jsx
 <OsButton
   onClick={() => {
@@ -28,8 +45,21 @@ demo_url: 'https://neteaseyanxuan.github.io/OSSA/#/components/modal/demo/index'
 >
   单个按钮
 </OsButton>
+<OsModal
+  title='单个按钮'
+  cancelText='取消'
+  content='这里是正文这里是正文这里是正文'
+  isShow={showSingleBtn}
+  showCloseIcon={false}
+  onCancel={() => setShowSingleBtn(false)}
+  onClose={() => setShowSingleBtn(false)}
+  onConfirm={() => setShowSingleBtn(false)}
+></OsModal>
 ```
-### 高级用法
+### 高级用法1
+```jsx
+const [showSlot, setShowSlot] = useState(false);
+```
 ```jsx
 <OsButton
   onClick={() => {
@@ -38,8 +68,35 @@ demo_url: 'https://neteaseyanxuan.github.io/OSSA/#/components/modal/demo/index'
 >
   高级用法1
 </OsButton>
+<OsModal
+  cancelText='取消'
+  isShow={showSlot}
+  closeIconPosition='bottom'
+  onCancel={() => setShowSlot(false)}
+  onClose={() => setShowSlot(false)}
+  onConfirm={() => setShowSlot(false)}
+>
+  <View className='custom-content'>
+    <View className='custom-content__title'>活动优惠</View>
+    <View className='custom-content__row'>
+      <Text>套装</Text>
+      <Text>-￥18.00</Text>
+    </View>
+    <View className='custom-content__row'>
+      <Text>满额减</Text>
+      <Text>-￥18.00</Text>
+    </View>
+    <View className='custom-content__row'>
+      <Text>全场满额减</Text>
+      <Text>-￥18.00</Text>
+    </View>
+  </View>
+</OsModal>
 ```
-### 
+### 高级用法2
+```jsx
+const [showSlot1, setShowSlot1] = useState(false);
+```
 ```jsx
 <OsButton
   onClick={() => {
@@ -48,8 +105,27 @@ demo_url: 'https://neteaseyanxuan.github.io/OSSA/#/components/modal/demo/index'
 >
   高级用法2
 </OsButton>
+<OsModal
+  cancelText='取消'
+  isShow={showSlot1}
+  onCancel={() => setShowSlot1(false)}
+  onClose={() => setShowSlot1(false)}
+  onConfirm={() => setShowSlot1(false)}
+  className='custom-demo'
+>
+  <View className='custom-content-1'>
+    <Image
+      className='custom-content-1__img'
+      src='https://yanxuan.nosdn.127.net/15565188113590869.png?imageView&thumbnail=630x336&quality=95'
+      mode='aspectFill'
+    ></Image>
+  </View>
+</OsModal>
 ```
-### 
+### 高级用法3
+```jsx
+const [showDisabled, setShowDisabled] = useState(false);
+```
 ```jsx
 <OsButton
   onClick={() => {
@@ -58,6 +134,24 @@ demo_url: 'https://neteaseyanxuan.github.io/OSSA/#/components/modal/demo/index'
 >
   高级用法3
 </OsButton>
+<OsModal
+  cancelText='取消'
+  confirmText='确定'
+  closeOnClickMask
+  isShow={showDisabled}
+  disableConfirmBtn
+  onCancel={() => setShowDisabled(false)}
+  onConfirm={() => setShowDisabled(false)}
+  onClose={() => setShowDisabled(false)}
+>
+  <View className='custom-content-1'>
+    <Image
+      className='custom-content-1__img'
+      src='https://yanxuan.nosdn.127.net/15565188113590869.png?imageView&thumbnail=630x336&quality=95'
+      mode='aspectFill'
+    ></Image>
+  </View>
+</OsModal>
 ```
 
 

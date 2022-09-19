@@ -10,43 +10,60 @@ demo_url: 'https://neteaseyanxuan.github.io/OSSA/#/components/animate/demo/index
 
 ## 用法
 ### 种类
+
+#### 点击渐现/渐隐
+```jsx
+const [type1, setType1] = useState("fadeIn");
+```
 ```jsx
 <OsButton
   type='primary'
-  onClick={() => {
-    handleClick1();
+  onClick={() => { 
+    setType1(type1 === "fadeIn" ? "fadeOut" : "fadeIn");
   }}
 >
-  {btnTxt1}
+  {type1 === "fadeIn" ? "点击渐现" : "点击渐隐"}
 </OsButton>
 <OsAnimate type={type1}>
   <Text className='inline-item--txt'>OSSA</Text>
 </OsAnimate>
+```
+
+#### 点击顶部飞入/顶部飞出
+```jsx
+const [type2, setType2] = useState("fadeOutDown");
+```
+```jsx
 <OsButton
   type='primary'
   onClick={() => {
-    handleClick2();
+    setType2(type2 === "fadeOutDown" ? "fadeOutUp" : "fadeOutDown");
   }}
 >
-  {btnTxt2}
+  {type2 === "fadeOutDown" ? "点击顶部飞入" : "点击顶部飞出"}
 </OsButton>
 <OsAnimate type={type2}>
   <Text className='inline-item--txt'>OSSA</Text>
 </OsAnimate>
+```
+
+#### 点击底部飞出/底部飞入
+```jsx
+const [type3, setType3] = useState("fadeInUp");
+```
+```jsx
 <OsButton
   type='primary'
   onClick={() => {
-    handleClick3();
+    setType3(type3 === "fadeInDown" ? "fadeInUp" : "fadeInDown");
   }}
 >
-  {btnTxt3}
+  {type3 === "fadeInDown" ? "点击底部飞出" : "点击底部飞入"}
 </OsButton>
 <OsAnimate type={type3}>
   <Text className='inline-item--txt'>OSSA</Text>
 </OsAnimate>
 ```
-
-
 
 ## API
 ### 属性

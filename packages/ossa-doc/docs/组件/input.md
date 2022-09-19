@@ -10,6 +10,11 @@ demo_url: 'https://neteaseyanxuan.github.io/OSSA/#/components/input/demo/index'
 
 ## 用法
 ### 普通
+
+#### 有标题
+```jsx
+const [v1, setV1] = useState("186");
+```
 ```jsx
 <OsInput
   label='标题'
@@ -20,8 +25,12 @@ demo_url: 'https://neteaseyanxuan.github.io/OSSA/#/components/input/demo/index'
     setV1(v);
   }}
 ></OsInput>
+``` 
+
+#### 没有标题
+```jsx
+const [v2, setV2] = useState("186");
 ```
-### 
 ```jsx
 <OsInput
   placeholder='默认文案'
@@ -32,7 +41,10 @@ demo_url: 'https://neteaseyanxuan.github.io/OSSA/#/components/input/demo/index'
   }}
 ></OsInput>
 ```
-### 
+#### 银行卡
+```jsx
+const [v7, setV7] = useState("662712399");
+```
 ```jsx
 <OsInput
   type='bankcard'
@@ -43,7 +55,10 @@ demo_url: 'https://neteaseyanxuan.github.io/OSSA/#/components/input/demo/index'
   }}
 ></OsInput>
 ```
-### 
+#### 密码输入框 
+```jsx
+const [v8, setV8] = useState("662712");
+```
 ```jsx
 <OsInput
   type='password'
@@ -54,7 +69,10 @@ demo_url: 'https://neteaseyanxuan.github.io/OSSA/#/components/input/demo/index'
   }}
 ></OsInput>
 ```
-### 
+#### 数字输入框 
+```jsx
+const [v4, setV4] = useState("123");
+```
 ```jsx
 <OsInput
   type='number'
@@ -65,7 +83,12 @@ demo_url: 'https://neteaseyanxuan.github.io/OSSA/#/components/input/demo/index'
   }}
 ></OsInput>
 ```
-### 
+#### 多行输入
+```jsx
+const [v3, setV3] = useState(
+  "网易严选秉承网易一贯的严谨态度，深入世界各地，严格把关所有商品的产地"
+);
+```
 ```jsx
 <OsInput
   type='textarea'
@@ -78,7 +101,11 @@ demo_url: 'https://neteaseyanxuan.github.io/OSSA/#/components/input/demo/index'
   maxLength={200}
 ></OsInput>
 ```
-### 
+#### 不可编辑 
+```jsx
+const [v5, setV5] = useState("不可编辑的input");
+const [v6, setV6] = useState("不可编辑的textarea");
+```
 ```jsx
 <OsInput
   label='标题'
