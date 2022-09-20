@@ -1,0 +1,37 @@
+.docItemContainer header + *,
+.docItemContainer article > *:first-child {
+  margin-top: 0;
+}
+.row {
+  flex-wrap: nowrap !important;
+}
+
+@media (min-width: 997px) {
+  .docItemCol {
+    max-width: calc(100% - 395px) !important;
+  }
+
+  .iframeContainer {
+    padding-right: 20px;
+    width: 395px;
+    min-height: 812px;
+    height: 100%;
+  }
+
+  .fixed {
+    position: fixed;
+    top: var(--ifm-navbar-height);
+    height: 100%;
+    padding-bottom: 100px;
+  }
+
+  .iframeContainer iframe {
+    box-sizing: border-box;
+    width: 375px;
+    height: 100%;
+    max-height: 812px;
+    margin-bottom: 200px;
+    border-radius: 20px;
+    box-shadow: 0 8px 12px #ebedf0;
+  }
+}

@@ -53,7 +53,7 @@ const initialAPI = {
         "startBgColor",
         "填充渐变开始色，可选",
         "string",
-        "-（2.3.0版本开始支持，仅对primary按钮生效且与endBgColor配合使用）",
+        "-（仅对primary按钮生效且与endBgColor配合使用）",
       ],
     },
     {
@@ -61,7 +61,7 @@ const initialAPI = {
         "endBgColor",
         "填充渐变结束色，可选",
         "string",
-        "-（2.3.0版本开始支持，仅对primary按钮生效且与startBgColor配合使用）",
+        "-（仅对primary按钮生效且与startBgColor配合使用）",
       ],
     },
     {
