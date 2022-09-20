@@ -1,5 +1,25 @@
 # ossaui
 
+## 0.3.2
+
+### Patch Changes
+
+- [#40](https://github.com/NeteaseYanxuan/OSSA/pull/40) [`4fe5d08`](https://github.com/NeteaseYanxuan/OSSA/commit/4fe5d082271600f8f48b6ce6c3b482d5165adfe1) Thanks [@CaedmonW](https://github.com/CaedmonW)! - 修复低版本 taro scss 报错以及 offset
+
+## 0.3.1
+
+### Patch Changes
+
+- [#35](https://github.com/NeteaseYanxuan/OSSA/pull/35) [`9fb66b9`](https://github.com/NeteaseYanxuan/OSSA/commit/9fb66b9da1898d150628941a9481a58ceff5e6bf) Thanks [@CaedmonW](https://github.com/CaedmonW)! - fix not vertical center
+
+* [#34](https://github.com/NeteaseYanxuan/OSSA/pull/34) [`15287c8`](https://github.com/NeteaseYanxuan/OSSA/commit/15287c84eb332af15093a67db9fa83ff2b18a8ec) Thanks [@CaedmonW](https://github.com/CaedmonW)! - when used in miniapp custom tabbar, click not work as expected
+
+## 0.3.0
+
+### Minor Changes
+
+- [#32](https://github.com/NeteaseYanxuan/OSSA/pull/32) [`ec5124e`](https://github.com/NeteaseYanxuan/OSSA/commit/ec5124e6c75cc950d28745076c4dadd43f342c90) Thanks [@CaedmonW](https://github.com/CaedmonW)! - OsTabBar 类型定义更改
+
 ## 0.2.0
 
 ### Minor Changes

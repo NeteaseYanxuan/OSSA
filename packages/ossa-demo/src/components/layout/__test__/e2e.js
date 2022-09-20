@@ -148,5 +148,21 @@ describe("Layout Testing", function () {
           expect(colWidth).to.be.eq(bodywidth / (colNum + 1));
         });
     });
+
+    it("solution #8: offset样式", function () {
+      cy.get(".block__body")
+        .eq(3)
+        .find(".ossa-row")
+        .each(($row, rowIndex, $rowList) => {
+          cy.get($row)
+            .find(".ossa-col")
+            .should(($cols) => {
+              const rowWidth = $cols.parents(".ossa-row").width();
+              const colWidth = parseFloat($cols.css("width"));
+              const offsetWidth = parseFloat($cols.css("margin-left"));
+              expect(rowWidth).to.be.eq(colWidth + offsetWidth);
+            });
+        });
+    });
   });
 });

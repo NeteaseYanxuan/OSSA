@@ -22,7 +22,7 @@ const initialListApi = {
   head: ["参数", "说明", "类型", "默认值"],
   data: [
     {
-      list: ["value", "当前选中的标签索引值，从0开始，可选", "number", "0"],
+      list: ["value", "当前选中的标签索引值，从0开始，必选", "number", "-"],
     },
     {
       list: ["tabsArr", "数据渲染，必选", "<Array><API-TabsArr>", "-"],
@@ -54,7 +54,7 @@ const initialTabsApi = {
     {
       list: [
         "icon",
-        "icon名称，取值参考OsIcon Tabbar分类，必选",
+        "icon名称，取值参考OsIcon TabBar分类，必选",
         "string",
         "-",
       ],
@@ -62,7 +62,7 @@ const initialTabsApi = {
     {
       list: [
         "selectedIcon",
-        "选中icon名称，取值参考OsIcon Tabbar分类，必选",
+        "选中icon名称，取值参考OsIcon TabBar分类，必选",
         "string",
         "-",
       ],
@@ -85,7 +85,7 @@ const initialListEvent = {
   head: ["函数名", "说明", "参数"],
   data: [
     {
-      list: ["onClick", "点击时触发", "(item)当前点击的标签，从0开始"],
+      list: ["onClick", "点击时触发", "(item, index)当前点击的标签，从0开始"],
     },
   ],
 };
@@ -117,16 +117,14 @@ const initialTabsArr = [
   },
 ];
 
-function onClick(item: object) {
-  console.log(item);
-}
-
 const demoTitle = "TabBar 标签栏";
 export default function Index() {
   const [listApi] = useState(initialListApi);
   const [tabs] = useState(initialTabsApi);
   const [listEvent] = useState(initialListEvent);
   const [tabsArr] = useState(initialTabsArr);
+  const [tab1Index, setTab1Index] = useState(2);
+  const [tab2Index, setTab2Index] = useState(0);
   const classObject = getClassObject(); //组件修饰
 
   useEffect(() => {
@@ -135,22 +133,37 @@ export default function Index() {
     });
   }, []);
 
+  const onClick = (item: object) => {
+    console.log(item);
+  }
+
+  const handleTab1Click = (item: object, index: number) => {
+    setTab1Index(index)
+    onClick(item)
+  }
+
+  const handleTab2Click = (item: object, index: number) => {
+    setTab2Index(index)
+    onClick(item)
+  }
+
   return (
     <View className={classNames(classObject)}>
       <DemoHeader title={demoTitle}></DemoHeader>
       <DemoBlock fullScreen title='基础'>
         <OsTabBar
-          value={2}
+          value={tab1Index}
           tabsArr={tabsArr}
-          onClick={(item) => onClick(item)}
+          onClick={(item, index) => handleTab1Click(item, index)}
         ></OsTabBar>
       </DemoBlock>
 
       <DemoBlock fullScreen title='固定底部'>
         <OsTabBar
+          value={tab2Index}
           tabsArr={tabsArr}
           isfixedBt
-          onClick={(item) => onClick(item)}
+          onClick={(item, index) => handleTab2Click(item, index)}
         ></OsTabBar>
       </DemoBlock>
 
