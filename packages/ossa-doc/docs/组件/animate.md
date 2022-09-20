@@ -6,7 +6,7 @@ demo_url: 'https://neteaseyanxuan.github.io/OSSA/#/components/animate/demo/index
 # animate 动画
 
 ## 介绍
-// TODO
+常见的过场动画。
 
 ## 用法
 ### 种类

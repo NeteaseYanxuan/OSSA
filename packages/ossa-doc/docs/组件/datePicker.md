@@ -6,7 +6,7 @@ demo_url: 'https://neteaseyanxuan.github.io/OSSA/#/components/datePicker/demo/in
 # DatePicker 时间选择器
 
 ## 介绍
-// TODO
+显示时间、日期、年月的滚动选择器。
 
 ## 用法
 ### 选择时间

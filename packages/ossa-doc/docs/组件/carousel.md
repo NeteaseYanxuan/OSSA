@@ -6,7 +6,7 @@ demo_url: 'https://neteaseyanxuan.github.io/OSSA/#/components/carousel/demo/inde
 # Carousel 走马灯
 
 ## 介绍
-// TODO
+图片轮播。
 
 ## 用法
 

@@ -6,7 +6,7 @@ demo_url: 'https://neteaseyanxuan.github.io/OSSA/#/components/modal/demo/index'
 # Modal 对话框
 
 ## 介绍
-// TODO
+用于一些信息告知、操作确认的交互式弹窗。
 
 ## 用法
 ### 基础

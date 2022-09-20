@@ -6,7 +6,7 @@ demo_url: 'https://neteaseyanxuan.github.io/OSSA/#/components/list/demo/index'
 # List 列表
 
 ## 介绍
-// TODO
+通用列表展示。
 
 ## 用法
 ### 基础

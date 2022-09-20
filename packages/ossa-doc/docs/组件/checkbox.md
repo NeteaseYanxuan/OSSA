@@ -6,7 +6,7 @@ demo_url: 'https://neteaseyanxuan.github.io/OSSA/#/components/checkbox/demo/inde
 # CheckBox 复选框
 
 ## 介绍
-// TODO
+在一组选项里多选。
 
 ## 用法
 ### 基础

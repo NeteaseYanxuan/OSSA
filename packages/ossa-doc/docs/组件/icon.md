@@ -6,7 +6,7 @@ demo_url: 'https://neteaseyanxuan.github.io/OSSA/#/components/icon/demo/index'
 # Icon 图标
 
 ## 介绍
-// TODO
+常用图表的集合。
 
 ## 用法
 ### 基础

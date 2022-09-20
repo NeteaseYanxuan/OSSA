@@ -6,7 +6,7 @@ demo_url: 'https://neteaseyanxuan.github.io/OSSA/#/components/input/demo/index'
 # Input 输入框
 
 ## 介绍
-// TODO
+表单输入组件，支持单行、多行输入。
 
 ## 用法
 ### 普通

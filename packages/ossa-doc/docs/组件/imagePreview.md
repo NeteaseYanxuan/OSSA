@@ -6,7 +6,7 @@ demo_url: 'https://neteaseyanxuan.github.io/OSSA/#/components/imagePreview/demo/
 # imagePreview 图片预览
 
 ## 介绍
-// TODO
+图片全屏预览，支持多图片滚动查看。
 
 ## 用法
 ### 基础

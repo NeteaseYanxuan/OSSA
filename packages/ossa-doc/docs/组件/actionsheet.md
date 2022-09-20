@@ -6,7 +6,7 @@ demo_url: 'https://neteaseyanxuan.github.io/OSSA/#/components/actionsheet/demo/i
 # Actionsheet 动作面板
 
 ## 介绍
-// TODO
+从底部弹出的动作菜单面板。
 
 ## 用法
 ### 基础

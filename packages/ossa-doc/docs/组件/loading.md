@@ -6,7 +6,7 @@ demo_url: 'https://neteaseyanxuan.github.io/OSSA/#/components/loading/demo/index
 # Loading 加载
 
 ## 介绍
-// TODO
+用于页面或模块的加载中状态。
 
 ## 用法
 ### 基础

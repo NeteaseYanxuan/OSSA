@@ -6,7 +6,7 @@ demo_url: 'https://neteaseyanxuan.github.io/OSSA/#/components/button/demo/index'
 # Button 按钮
 
 ## 介绍
-按钮组件
+按钮，可快速配置成多种样式。（小程序按钮功能待补充）
 
 ## 用法
 

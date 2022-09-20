@@ -6,7 +6,7 @@ demo_url: 'https://neteaseyanxuan.github.io/OSSA/#/components/badge/demo/index'
 # Badge 徽标
 
 ## 介绍
-// TODO
+在右上角展示红点、文字、数字。
 
 ## 用法
 ### dot
