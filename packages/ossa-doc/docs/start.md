@@ -34,7 +34,7 @@ import 'ossaui/dist/style/index.scss'
 
 > 如果不对组件库进行编译，组件库内的样式文件不会经过postcss处理
 
-```javascript
+```javascript title="config/index.js"
 module.exports = {
   // ...
   h5: {
@@ -44,6 +44,23 @@ module.exports = {
 }
 ```
 
+:::caution
+在taro3.5之后的版本中，在开启prebundle(默认开启)的情况下，会导致`ossaui`所引用的`@taro/components`组件没有被打进最终的bundle中，导致页面表现异常。
+:::
+
+为了解决上述问题，可以手动将`ossaui`排除在prebundle列表之外。
+```javascript title="config/index.js"
+module.exports = {
+  // ...
+  framework: 'react',
+  compiler: {
+    type: 'webpack5',
+    prebundle: {
+      exclude: ['ossaui']
+    }
+  },
+}
+```
 
 3. 在页面中引入`OSSA`组件
 
