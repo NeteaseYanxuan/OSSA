@@ -56,6 +56,9 @@ const initialListApi = {
       list: ["customStyle", "自定义样式，可选", "object", "-"],
     },
     {
+      list: ["customHeaderStyle", "预览时Header自定义样式，可选", "object", "-"],
+    },
+    {
       list: ["imagesBgColor", "图片背景色，可选", "string", "2.1.0开始支持"],
     },
   ],

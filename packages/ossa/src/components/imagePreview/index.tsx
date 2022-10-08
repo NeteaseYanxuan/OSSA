@@ -64,6 +64,7 @@ export default function Index(props: OsImagePreviewProps) {
     showPagination,
     loop,
     customStyle,
+    customHeaderStyle,
   } = props;
   let [index = 0, setIndex] = useState(props.value);
   const [baseWidth] = useState(initialBaseWidth);
@@ -242,7 +243,10 @@ export default function Index(props: OsImagePreviewProps) {
         onWrapperClick(e);
       }}
     >
-      <View className='ossa-image-preview__header'>
+      <View
+        className='ossa-image-preview__header'
+        style={customHeaderStyle}
+      >
         {(showBack || !touchable) && (
           <View className='ossa-image-preview__back' onClick={() => onGoback()}>
             <OsIcon color='#fff' type='return'></OsIcon>

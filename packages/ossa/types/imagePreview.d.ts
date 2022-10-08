@@ -1,4 +1,4 @@
-import { ComponentClass, ReactChild } from "react";
+import { ComponentClass, CSSProperties, ReactChild } from "react";
 import OsComponent from "./base";
 
 interface ImagesItemProps extends OsComponent {
@@ -14,7 +14,8 @@ interface ImagePreviewProps extends OsComponent {
   value?: number;
   loop?: boolean;
   show?: boolean;
-  customStyle?: object;
+  customStyle?: object | CSSProperties;
+  customHeaderStyle?: object | CSSProperties;
   className?: string;
   imagesBgColor?: string;
   onClose: (item: object) => void;
