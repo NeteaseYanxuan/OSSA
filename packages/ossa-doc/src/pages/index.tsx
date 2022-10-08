@@ -16,7 +16,7 @@ export default function Home(): JSX.Element {
       <main className={styles.container}>
         <div className={styles.left}>
           <p className={styles.title}>OSSA</p>
-          <p className={styles.slogon}>Taro多端UI组件库</p>
+          <p className={styles.slogon}>Taro官方推荐的企业级UI库</p>
           <div className={styles.logo}>
             <img src='/img/logo.svg' />
           </div>

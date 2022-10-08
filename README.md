@@ -9,7 +9,7 @@
 
 ![OSSA LOGO](https://yanxuan.nosdn.127.net/static-union/16563138291bb87d.png)
 
-一套基于[Taro](https://taro.aotu.io/)框架开发的多端 **UI** 组件库。目前已支持React语法。
+[Taro](https://taro.aotu.io/)官方推荐的企业级多端 **UI** 库。目前已支持React语法。
 
 ## 示例
 #### 微信小程序
