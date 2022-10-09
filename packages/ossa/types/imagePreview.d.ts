@@ -3,8 +3,8 @@ import OsComponent from "./base";
 
 interface ImagesItemProps extends OsComponent {
   img: string;
-  width: number;
-  height: number;
+  width?: number;
+  height?: number;
 }
 interface ImagePreviewProps extends OsComponent {
   showBack?: boolean;
