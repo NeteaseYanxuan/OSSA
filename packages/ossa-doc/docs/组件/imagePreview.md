@@ -64,6 +64,7 @@ const imagesArr1 = [
 | showBack       | 展示后退按钮（touchable为false的时候强制为true），可选 | boolean                            | true            |
 | className      | 自定义类名，可选                                       | string                             | -               |
 | customStyle    | 自定义样式，可选                                       | object                             | -               |
+| customHeaderStyle | 预览时Header的自定义样式，可选                       | object                             | -               |
 | imagesBgColor  | 图片背景色，可选                                       | string                             | 2\.1\.0开始支持 |
 
 
@@ -77,5 +78,5 @@ const imagesArr1 = [
 | 参数   | 说明           | 类型   | 默认值 |
 | ------ | -------------- | ------ | ------ |
 | img    | 图片链接，必选 | string | -      |
-| width  | 图片宽度，必选 | number | -      |
-| height | 图片高度，必选 | number | -      |
+| width  | 图片宽度，计算宽高比，可选 | number | -      |
+| height | 图片高度，计算宽高比，可选 | number | -      |

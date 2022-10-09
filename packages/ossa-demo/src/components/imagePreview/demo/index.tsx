@@ -56,6 +56,9 @@ const initialListApi = {
       list: ["customStyle", "自定义样式，可选", "object", "-"],
     },
     {
+      list: ["customHeaderStyle", "预览时Header自定义样式，可选", "object", "-"],
+    },
+    {
       list: ["imagesBgColor", "图片背景色，可选", "string", "2.1.0开始支持"],
     },
   ],
@@ -69,10 +72,10 @@ const initialimagesArrApi = {
       list: ["img", "图片链接，必选", "string", "-"],
     },
     {
-      list: ["width", "图片宽度，必选", "number", "-"],
+      list: ["width", "图片宽度，计算宽高比，可选", "number", "-"],
     },
     {
-      list: ["height", "图片高度，必选", "number ", "-"],
+      list: ["height", "图片高度，计算宽高比，可选", "number ", "-"],
     },
   ],
 };

@@ -69,9 +69,9 @@ export default class Index extends Component<Props, State> {
         <View className='index-head'>
           <Image className='index-head__img' src={logo}></Image>
           <View className='index-head__texts'>
-            <View className='index-head__title'>Ossa 组件系统</View>
+            <View className='index-head__title'>OSSA</View>
             <View className='index-head__desc'>
-              快捷完成网易严选界面搭建与UI设计规范指南
+              Taro官方推荐的企业级UI库
             </View>
           </View>
         </View>

@@ -64,6 +64,7 @@ export default function Index(props: OsImagePreviewProps) {
     showPagination,
     loop,
     customStyle,
+    customHeaderStyle,
   } = props;
   let [index = 0, setIndex] = useState(props.value);
   const [baseWidth] = useState(initialBaseWidth);
@@ -221,11 +222,12 @@ export default function Index(props: OsImagePreviewProps) {
 
   function getImgStyle(item: any, previewProps: OsImagePreviewProps) {
     const { width, height } = item;
-    const _imgH = (baseWidth * height) / width;
+    const _style: any = {};
 
-    const _style = {
-      height: _imgH + "px",
-    };
+    if(width && height) {
+      const _imgH = (baseWidth * height) / width;
+      _style.height = _imgH + "px";
+    }
 
     if (previewProps.imagesBgColor) {
       _style["background"] = previewProps.imagesBgColor;
@@ -242,7 +244,10 @@ export default function Index(props: OsImagePreviewProps) {
         onWrapperClick(e);
       }}
     >
-      <View className='ossa-image-preview__header'>
+      <View
+        className='ossa-image-preview__header'
+        style={customHeaderStyle}
+      >
         {(showBack || !touchable) && (
           <View className='ossa-image-preview__back' onClick={() => onGoback()}>
             <OsIcon color='#fff' type='return'></OsIcon>
@@ -274,6 +279,7 @@ export default function Index(props: OsImagePreviewProps) {
             >
               <Image
                 style={getImgStyle(item, props)}
+                mode='widthFix'
                 className='ossa-image-preview__swipe-item--image'
                 src={item.img}
               ></Image>
