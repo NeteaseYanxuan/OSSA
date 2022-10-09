@@ -222,6 +222,12 @@ export default function Index(props: OsImagePreviewProps) {
 
   function getImgStyle(item: any, previewProps: OsImagePreviewProps) {
     const { width, height } = item;
+
+    // 没有宽高时，无法计算宽高比例，图片高度自适应
+    if(!width || !height) {
+      return {}
+    }
+
     const _imgH = (baseWidth * height) / width;
 
     const _style = {
@@ -278,6 +284,7 @@ export default function Index(props: OsImagePreviewProps) {
             >
               <Image
                 style={getImgStyle(item, props)}
+                mode='widthFix'
                 className='ossa-image-preview__swipe-item--image'
                 src={item.img}
               ></Image>

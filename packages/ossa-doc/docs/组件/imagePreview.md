@@ -78,5 +78,5 @@ const imagesArr1 = [
 | 参数   | 说明           | 类型   | 默认值 |
 | ------ | -------------- | ------ | ------ |
 | img    | 图片链接，必选 | string | -      |
-| width  | 图片宽度，必选 | number | -      |
-| height | 图片高度，必选 | number | -      |
+| width  | 图片宽度，计算宽高比，可选 | number | -      |
+| height | 图片高度，计算宽高比，可选 | number | -      |

@@ -72,10 +72,10 @@ const initialimagesArrApi = {
       list: ["img", "图片链接，必选", "string", "-"],
     },
     {
-      list: ["width", "图片宽度，必选", "number", "-"],
+      list: ["width", "图片宽度，计算宽高比，可选", "number", "-"],
     },
     {
-      list: ["height", "图片高度，必选", "number ", "-"],
+      list: ["height", "图片高度，计算宽高比，可选", "number ", "-"],
     },
   ],
 };
