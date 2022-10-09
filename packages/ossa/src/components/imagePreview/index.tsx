@@ -222,17 +222,12 @@ export default function Index(props: OsImagePreviewProps) {
 
   function getImgStyle(item: any, previewProps: OsImagePreviewProps) {
     const { width, height } = item;
+    const _style: any = {};
 
-    // 没有宽高时，无法计算宽高比例，图片高度自适应
-    if(!width || !height) {
-      return {}
+    if(width && height) {
+      const _imgH = (baseWidth * height) / width;
+      _style.height = _imgH + "px";
     }
-
-    const _imgH = (baseWidth * height) / width;
-
-    const _style = {
-      height: _imgH + "px",
-    };
 
     if (previewProps.imagesBgColor) {
       _style["background"] = previewProps.imagesBgColor;
