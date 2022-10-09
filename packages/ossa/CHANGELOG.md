@@ -1,5 +1,11 @@
 # ossaui
 
+## 0.3.3
+
+### Patch Changes
+
+- [#44](https://github.com/NeteaseYanxuan/OSSA/pull/44) [`7ececf8`](https://github.com/NeteaseYanxuan/OSSA/commit/7ececf8b2b9f73c66d2eacae0488a89eddaf6e1c) Thanks [@CaedmonW](https://github.com/CaedmonW)! - imagePreview 组件预览时的 header 支持传入自定义样式
+
 ## 0.3.2
 
 ### Patch Changes

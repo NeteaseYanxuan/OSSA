@@ -160,7 +160,7 @@ importers:
       eslint-plugin-react-hooks: ^4.2.0
       mocha: ^6.1.4
       mocha-allure-reporter: ^1.4.0
-      ossaui: workspace:^0.3.2
+      ossaui: workspace:^0.3.3
       react: ^17.0.0
       react-dom: ^17.0.0
       react-refresh: ^0.11.0
@@ -10512,7 +10512,7 @@ packages:
       eslint-import-resolver-webpack:
         optional: true
     dependencies:
-      '@typescript-eslint/parser': 5.29.0_5l3qpfp5j3lxumxlgumia35cvm
+      '@typescript-eslint/parser': 5.29.0_2de3j2mqba4wgeuiaqz2k7syrm
       debug: 3.2.7
       eslint-import-resolver-node: 0.3.6
       find-up: 2.1.0
