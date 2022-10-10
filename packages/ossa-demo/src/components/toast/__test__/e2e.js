@@ -80,7 +80,7 @@ describe("Toast Testing", function () {
         .should(($toast2) => {
           //toast最长宽度检查
           const width = parseFloat($toast2.css("width"));
-          expect(width).to.be.closeTo(372 / 2, 1);
+          expect(width).to.be.closeTo(372 / 2, 10);
         });
     });
   });
