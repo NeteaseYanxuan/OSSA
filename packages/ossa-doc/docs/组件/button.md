@@ -69,6 +69,8 @@ demo_url: 'https://neteaseyanxuan.github.io/OSSA/#/components/button/demo/index'
 ```
 
 ## API
+> 小程序属性和方法，参考Taro组件库文档[Button](https://docs.taro.zone/docs/components/forms/button#api-%E6%94%AF%E6%8C%81%E5%BA%A6) 
+
 ### 属性
 | 参数  | 说明                                             | 类型   | 默认值                  |
 | ----- | ------------------------------------------------ | ------ | ----------------------- |
@@ -84,6 +86,8 @@ demo_url: 'https://neteaseyanxuan.github.io/OSSA/#/components/button/demo/index'
 | isDisabled  | 是否禁用，可选   | boolean | false  |
 | customStyle  | 自定义样式，可选   | object | -  |
 | className  | 自定义类名，可选   | string | -  |
+
+
 
 ### 方法
 | 函数名  | 说明       | 参数      |

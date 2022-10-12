@@ -1,12 +1,13 @@
 @import '../base.scss';
 
-.ossa-button {
+.ossa-button2.ossa-button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   -webkit-tap-highlight-color: transparent;
   box-sizing: border-box;
   max-width: 100%;
+  margin: 0;
   cursor: pointer;
 
   .icon {
@@ -221,5 +222,3 @@
     }
   }
 }
-
-
