@@ -32,6 +32,7 @@ const onClickDeleteIcon = (props) => {
 };
 
 export default function OsInput(props: OsInputProps) {
+  const {type, showSplitLine,isDisabled,maxLength, onChange, isReadonly, onInput: propsOnInput,...otherProps  } = props;
   const rootClassName = ["ossa-input"]; //组件
   const classObject = getClassObject(props); //组件修饰
   const [showPassword, setShowPassword] = useState(false);
@@ -85,6 +86,7 @@ export default function OsInput(props: OsInputProps) {
     props.value &&
     props.type !== "textarea";
   const editable = !props.isReadonly && !props.isDisabled;
+
   return (
     <View
       className={classNames(rootClassName, classObject, props.className)}
@@ -102,6 +104,7 @@ export default function OsInput(props: OsInputProps) {
       <View className='ossa-input__input-wrapper'>
         {props.type === "textarea" ? (
           <Textarea
+            {...otherProps}
             value={value}
             className={classNames({
               ["ossa-input__input--textarea"]: true,
@@ -114,6 +117,7 @@ export default function OsInput(props: OsInputProps) {
             placeholderStyle={props.placeholderStyle}
             placeholderClass={props.placeholderClass}
             onInput={(e) => {
+              propsOnInput?.(e);
               onInput(props, e);
             }}
             onFocus={onFocus}
@@ -121,6 +125,7 @@ export default function OsInput(props: OsInputProps) {
           ></Textarea>
         ) : (
           <Input
+            {...otherProps}
             value={value}
             type={iptType}
             password={!showPassword && props.type === "password"}
@@ -134,6 +139,7 @@ export default function OsInput(props: OsInputProps) {
             placeholderStyle={props.placeholderStyle}
             placeholderClass={props.placeholderClass}
             onInput={(e) => {
+              propsOnInput?.(e);
               onInput(props, e);
             }}
             onFocus={onFocus}

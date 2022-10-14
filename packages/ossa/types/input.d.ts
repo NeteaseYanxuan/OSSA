@@ -1,8 +1,9 @@
 import { ComponentClass, ReactChild } from "react";
 import { CommonEventFunction } from "@tarojs/components/types/common";
+import { InputProps as TaroInputProps } from '@tarojs/components/types/Input';
 import OsComponent from "./base";
 
-interface InputProps extends OsComponent {
+interface InputProps extends OsComponent,TaroInputProps {
   type?: "text" | "number" | "password" | "bankcard" | "textarea" | "border";
   value?: string;
   placeholder?: string;
