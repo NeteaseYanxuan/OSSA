@@ -1,5 +1,11 @@
 # ossa-doc
 
+## 0.0.3
+
+### Patch Changes
+
+- Button support mini program native props
+
 ## 0.0.2
 
 ### Patch Changes

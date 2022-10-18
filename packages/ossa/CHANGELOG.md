@@ -1,5 +1,11 @@
 # ossaui
 
+## 0.3.4
+
+### Patch Changes
+
+- Button support mini program native props
+
 ## 0.3.3
 
 ### Patch Changes
