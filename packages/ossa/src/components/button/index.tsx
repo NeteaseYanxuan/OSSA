@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Taro from "@tarojs/taro";
-import { View } from "@tarojs/components";
+import { View, Button as TaroButton } from "@tarojs/components";
 import classNames from "classnames";
 import OsIcon from "../icon";
 import { OsButtonProps } from "../../../types/index";
@@ -111,7 +111,7 @@ export default function Button(props: OsButtonProps) {
   const [active, setActive] = useState(initialActive);
   const classObject = getClassObject(props, active);
   const styleObject = Object.assign(getStyleObj(props), props.customStyle);
-  const { icon, className, size } = props;
+  const { icon, className, size, type, ...otherProps } = props;
   const iconComponent = icon && (
     <OsIcon
       type={icon}
@@ -126,9 +126,11 @@ export default function Button(props: OsButtonProps) {
   );
 
   return (
-    <View
+    <TaroButton
+      {...otherProps}
       className={classNames(
         "ossa-button",
+        "ossa-button2",
         rootClassName,
         classObject,
         className
@@ -142,7 +144,7 @@ export default function Button(props: OsButtonProps) {
       <View className='ossa-button__text'>{props.children}</View>
       {/* { active && (props.type === 'default') && <View className='button--is-active' style={{background: props.bdColor}}></View>}
       { active && (props.type === 'primary') && <View className='button--is-active'></View>} */}
-    </View>
+    </TaroButton>
   );
 }
 
