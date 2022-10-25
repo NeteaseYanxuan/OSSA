@@ -1,6 +1,6 @@
 import React, { Component, ReactChild } from "react";
 import Taro from "@tarojs/taro";
-import { View, CustomWrapper } from "@tarojs/components";
+import { View } from "@tarojs/components";
 import classNames from "classnames";
 import { ITouchEvent } from "@tarojs/components/types/common";
 //引入组件对应的 类型文件 .d.ts
@@ -341,34 +341,31 @@ export default class DatePicker extends Component<OsDatePickerProps, any> {
     const { height } = this.state;
     return (
       <View className='ossa-group-container'>
-        <CustomWrapper>
-          <OsPickerGroup
-            type='time'
-            range={hourRange}
-            height={height[0]}
-            onUpdateHeight={(...arg) => this.onUpdateHeight(...arg)}
-            columnId='0'
-            customStyle={{
-              width: Taro.pxTransform(750 / 2),
-            }}
-            onTouchStart={() => (this.touching = true)}
-            onTouchEnd={() => (this.touching = false)}
-          />
-        </CustomWrapper>
-        <CustomWrapper>
-          <OsPickerGroup
-            type='time'
-            range={minRange}
-            height={height[1]}
-            onUpdateHeight={(...arg) => this.onUpdateHeight(...arg)}
-            columnId='1'
-            customStyle={{
-              width: Taro.pxTransform(750 / 2),
-            }}
-            onTouchStart={() => (this.touching = true)}
-            onTouchEnd={() => (this.touching = false)}
-          />
-        </CustomWrapper>
+        <OsPickerGroup
+          type='time'
+          range={hourRange}
+          height={height[0]}
+          onUpdateHeight={(...arg) => this.onUpdateHeight(...arg)}
+          columnId='0'
+          customStyle={{
+            width: Taro.pxTransform(750 / 2),
+          }}
+          onTouchStart={() => (this.touching = true)}
+          onTouchEnd={() => (this.touching = false)}
+        />
+      
+        <OsPickerGroup
+          type='time'
+          range={minRange}
+          height={height[1]}
+          onUpdateHeight={(...arg) => this.onUpdateHeight(...arg)}
+          columnId='1'
+          customStyle={{
+            width: Taro.pxTransform(750 / 2),
+          }}
+          onTouchStart={() => (this.touching = true)}
+          onTouchEnd={() => (this.touching = false)}
+        />
       </View>
     );
   }

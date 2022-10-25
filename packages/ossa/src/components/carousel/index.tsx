@@ -128,37 +128,38 @@ export default function Carousel(props: OsCarouselProps) {
         className='ossa-carousel-swiper'
       >
         {data.map((item: any, index: number) => (
-          <SwiperItem
-            className={`ossa-carousel-swiper-item ${
-              vertical
-                ? "ossa-carousel-swiper__item--vertical"
-                : "ossa-carousel-swiper__item"
-            }`}
-            style={
-              (gap &&
-                type === "image" && {
-                  padding: vertical
-                    ? `${Taro.pxTransform(gapWidth / 2)} 0`
-                    : `0 ${Taro.pxTransform(gapWidth / 2)}`,
-                }) ||
-              {}
-            }
-            key={item.content}
-          >
-            {type === "image" ? (
-              <Image
-                src={item.content}
-                className={`ossa-carousel-swiper__item__image ${item.className}`}
-                style={item.style}
-              ></Image>
-            ) : (
-              <View
-                className={`ossa-carousel-swiper__item__text ${item.className}`}
-                style={item.style}
-              >
-                {item.content}
-              </View>
-            )}
+          <SwiperItem key={item.content}>
+            <View
+              className={`ossa-carousel-swiper-item ${
+                vertical
+                  ? "ossa-carousel-swiper__item--vertical"
+                  : "ossa-carousel-swiper__item"
+              }`}
+              style={
+                (gap &&
+                  type === "image" && {
+                    padding: vertical
+                      ? `${Taro.pxTransform(gapWidth / 2)} 0`
+                      : `0 ${Taro.pxTransform(gapWidth / 2)}`,
+                  }) ||
+                {}
+              }
+            >
+              {type === "image" ? (
+                <Image
+                  src={item.content}
+                  className={`ossa-carousel-swiper__item__image ${item.className}`}
+                  style={item.style}
+                ></Image>
+              ) : (
+                <View
+                  className={`ossa-carousel-swiper__item__text ${item.className}`}
+                  style={item.style}
+                >
+                  {item.content}
+                </View>
+              )}
+            </View>
           </SwiperItem>
         ))}
       </Swiper>

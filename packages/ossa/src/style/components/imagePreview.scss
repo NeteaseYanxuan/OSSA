@@ -56,19 +56,20 @@
     height: 100%;
     float: left;
     overflow: hidden;
+    display: flex;
     //border: 1px solid green;
     &--image,
     &--image img {
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
+      // top: 0;
+      // left: 0;
+      // right: 0;
+      // bottom: 0;
       margin: auto;
       width: 100%;
       height: auto;
       max-width: 100%;
       max-height: 100%;
-      position: absolute;
+      // position: absolute;
     }
 
     &--image img {
