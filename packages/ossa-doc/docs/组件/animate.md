@@ -69,7 +69,7 @@ const [type3, setType3] = useState("fadeInUp");
 ### 属性
 |参数|说明|类型|默认值|
 |------|------|------|------|
-|type|fadeIn / fadeOut / fadeOutDown / fadeOutUp / fadeInDown / fadeInUp|string|-|
+|type|动画类型|fadeIn\|fadeOut\|fadeOutDown\|fadeOutUp\|fadeInDown\|fadeInUp|-|
 
 
 ### 方法
