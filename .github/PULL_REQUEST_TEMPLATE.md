@@ -18,6 +18,7 @@ https://github.com/NeteaseYanxuan/OSSA/blob/main/CONTRIBUTING.md
 - [ ] 代码重构(Refactor)
 - [ ] 文档修改(Docs)
 - [ ] 代码风格更新(Code style update)
+- [ ] 类型描述更新(TypeScript definition update)
 - [ ] 其他，请描述(Other, please describe):
 
 **这个 PR 涉及以下平台:**
