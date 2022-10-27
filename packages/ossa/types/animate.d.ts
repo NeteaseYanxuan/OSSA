@@ -7,7 +7,13 @@ import OsComponent from "./base";
  * @description 常见的过场动画
  */
 interface AnimateProps extends OsComponent {
+  /**
+   * @prop 预置动画类型
+   */
   type?: "fadeIn" | "fadeOut" | "fadeOutDown" | "fadeOutUp" | "fadeInDown" | "fadeInUp";
+  /**
+   * @prop 点击回调
+   */
   onClick?: CommonEventFunction;
 }
 

@@ -9,6 +9,7 @@ import OsComponent from "./base";
 interface BadgeProps extends OsComponent {
   /**
    * @prop 徽标类型
+   * @default "dot"
    */
   type?: "dot" | "info" | "text" | "list";
   /**
@@ -22,6 +23,7 @@ interface BadgeProps extends OsComponent {
   max?: number;
   /**
    * @prop 控制徽标是否展示
+   * @default true
    */
   isShow?: boolean;
   /**
