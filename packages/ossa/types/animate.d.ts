@@ -3,7 +3,7 @@ import { CommonEventFunction } from "@tarojs/components/types/common";
 import OsComponent from "./base";
 
 interface AnimateProps extends OsComponent {
-  type?: string;
+  type?: "fadeIn" | "fadeOut" | "fadeOutDown" | "fadeOutUp" | "fadeInDown" | "fadeInUp";
   onClick?: CommonEventFunction;
 }
 
