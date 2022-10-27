@@ -21,7 +21,7 @@ function getClassObject(props: OsAnimateProps) {
   return _classObject;
 }
 
-function handleType(s?: string) {
+function handleType(s?: OsAnimateProps["type"]) {
   if (s) {
     return s.replace(/([A-Z])/g, "-$1").toLowerCase();
   }
