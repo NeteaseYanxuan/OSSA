@@ -4,8 +4,8 @@ import classNames from "classnames";
 
 import { OsBadgeProps } from "../../../types/index";
 
-//组件属性
-const TYPE_CLASS = {
+// 组件属性
+const TYPE_CLASS: Record<Required<OsBadgeProps>["type"], string> = {
   dot: "dot",
   info: "info",
   text: "text",
