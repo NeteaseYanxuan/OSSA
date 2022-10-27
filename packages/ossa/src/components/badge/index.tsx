@@ -1,4 +1,4 @@
-import React from "react";
+import React, { PropsWithChildren } from "react";
 import { View } from "@tarojs/components";
 import classNames from "classnames";
 
@@ -17,7 +17,7 @@ const TYPE_CLASS = {
  *
  */
 
-function getClassObjectRoot(props: OsBadgeProps) {
+function getClassObjectRoot(props: PropsWithChildren<OsBadgeProps>) {
   const { type = "dot" } = props;
 
   const classObject = {
