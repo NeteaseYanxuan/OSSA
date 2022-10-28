@@ -1,5 +1,11 @@
 # ossaui
 
+## 0.3.5
+
+### Patch Changes
+
+- toast 组件 customStyle 报错未生效
+
 ## 0.3.4
 
 ### Patch Changes
