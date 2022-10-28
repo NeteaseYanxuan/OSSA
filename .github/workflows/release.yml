@@ -11,14 +11,18 @@ jobs:
   release:
     name: Release
     runs-on: ubuntu-latest
-    steps:
-      - name: Checkout Repo
-        uses: actions/checkout@v2
+    steps:    
+      - uses: actions/checkout@v3
+      - name: Install pnpm
+        uses: pnpm/action-setup@v2.2.2
+        with:
+            version: 6
 
       - name: Setup Node.js 16.x
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v3
         with:
           node-version: 16.x
+          cache: 'pnpm'
 
       - name: Install Dependencies
         run: pnpm start
