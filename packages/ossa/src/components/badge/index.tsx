@@ -38,8 +38,8 @@ function getClassObjectChild(props) {
   return classObject;
 }
 
-function getInfo(props) {
-  let _info = 0;
+function getInfo(props: OsBadgeProps): string {
+  let _info = "0";
   const { type, max = 99, info } = props;
 
   if (type === "dot" || type === "text" || type === "list") {
@@ -69,6 +69,8 @@ export default function Badge(props: OsBadgeProps) {
   const classObjectRoot = getClassObjectRoot(props);
   const classObjectChild = getClassObjectChild(props);
   const info = getInfo(props);
+  // 当未传 info 或 info 值为 '0' 或 0 时应该隐藏角标
+  const mergedShow = props.isShow && (!!info || info === "0");
   const style = props.customStyle;
 
   return (
@@ -78,7 +80,7 @@ export default function Badge(props: OsBadgeProps) {
       style={style}
     >
       {props.children}
-      {props.isShow && (
+      {mergedShow && (
         <View className={classNames(classObjectChild)}>{info}</View>
       )}
     </View>
