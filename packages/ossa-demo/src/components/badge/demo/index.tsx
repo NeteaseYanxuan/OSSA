@@ -94,7 +94,7 @@ export default function Index() {
       </DemoBlock>
 
       <DemoBlock subTitle='info 为 0 或 不传时隐藏'>
-        <View className='badge-item'>
+        <View className='badge-item' id='hideWhenEmpty'>
           <OsBadge type='info' info='0'>
             <OsIcon
               type='detail-cart'

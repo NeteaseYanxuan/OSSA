@@ -1,5 +1,5 @@
 import React from "react";
-import { View } from "@tarojs/components";
+import { ITouchEvent, View } from "@tarojs/components";
 import classNames from "classnames";
 
 import { OsBadgeProps } from "../../../types/index";
@@ -38,11 +38,15 @@ function getClassObjectChild(props) {
   return classObject;
 }
 
+function isEmptyType(type: OsBadgeProps["type"]) {
+  return type === "dot" || type === "text" || type === "list";
+}
+
 function getInfo(props: OsBadgeProps): string {
   let _info = "0";
   const { type, max = 99, info } = props;
 
-  if (type === "dot" || type === "text" || type === "list") {
+  if (isEmptyType(type)) {
     return "";
   } else if (max) {
     _info = info > max ? max + "+" : info;
@@ -56,8 +60,8 @@ function getInfo(props: OsBadgeProps): string {
  *  事件 start
  *
  */
-function onClick(props) {
-  props.onClick && props.onClick(...arguments);
+function onClick(props: OsBadgeProps, e: ITouchEvent) {
+  props.onClick && props.onClick(e);
 }
 
 export default function Badge(props: OsBadgeProps) {
@@ -69,14 +73,15 @@ export default function Badge(props: OsBadgeProps) {
   const classObjectRoot = getClassObjectRoot(props);
   const classObjectChild = getClassObjectChild(props);
   const info = getInfo(props);
+  const { type = 'dot' } = props;
   // 当未传 info 或 info 值为 '0' 或 0 时应该隐藏角标
-  const mergedShow = props.isShow && (!!info || info === "0");
+  const mergedShow = props.isShow && (isEmptyType(type) || (!!info && info !== "0"));
   const style = props.customStyle;
 
   return (
     <View
       className={classNames(rootClassName, classObjectRoot, props.className)}
-      onClick={onClick.bind(this)}
+      onClick={onClick.bind(this, props)}
       style={style}
     >
       {props.children}
