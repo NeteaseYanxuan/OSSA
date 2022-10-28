@@ -93,6 +93,18 @@ export default function Index() {
         </View>
       </DemoBlock>
 
+      <DemoBlock subTitle='info 为 0 或 不传时隐藏'>
+        <View className='badge-item'>
+          <OsBadge type='info' info='0'>
+            <OsIcon
+              type='detail-cart'
+              className='icon'
+              customStyle={{ verticalAlign: "top" }}
+            ></OsIcon>
+          </OsBadge>
+        </View>
+      </DemoBlock>
+
       <DemoBlock title='text'>
         <View className='badge-item'>
           <OsBadge type='text'>待评价待评价</OsBadge>
