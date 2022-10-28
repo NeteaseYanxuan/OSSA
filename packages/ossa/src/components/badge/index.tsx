@@ -37,11 +37,17 @@ function getClassObjectChild(props) {
 
   return classObject;
 }
-
+/**
+ * 判断当前类型是否为无内容类型
+ */
 function isEmptyType(type: OsBadgeProps["type"]) {
   return type === "dot" || type === "text" || type === "list";
 }
-
+/**
+ * 获取徽标中显示的实际内容
+ * @param {OsBadgeProps} props 
+ * @returns 
+ */
 function getInfo(props: OsBadgeProps): string {
   let _info = "0";
   const { type, max = 99, info } = props;
