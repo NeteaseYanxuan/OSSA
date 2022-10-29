@@ -54,14 +54,14 @@ const initialListApi = {
       list: ["indicatorDots", "展示指示器，可选", "boolean", "false"],
     },
     {
-      list: ["indicatorColor", "指示点颜色，可选", "boolean", "true"],
+      list: ["indicatorColor", "指示点颜色，可选", "string", "rgba(0, 0, 0, .3)"],
     },
     {
       list: [
         "indicatorActiveColor",
         "当前选中指示点颜色，可选",
-        "boolean",
-        "false",
+        "string",
+        "#000000",
       ],
     },
     {

@@ -190,7 +190,7 @@ Carousel.defaultProps = {
   interval: 4000,
   circular: true,
   indicatorDots: false,
-  indicatorColor: "#ffffff",
+  indicatorColor: "rgba(0, 0, 0, 0.3)",
   indicatorActiveColor: "#000000",
   current: 0,
   gap: false,
