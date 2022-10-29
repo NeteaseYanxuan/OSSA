@@ -69,14 +69,50 @@ interface CarouselProps extends OsComponent {
    * @default true
    */
   indicatorDots?: boolean;
+  /**
+   * 指示点颜色
+   * @default "rgba(0, 0, 0, .3)"
+   */
   indicatorColor?: string;
+  /**
+   * 当前选中指示点颜色
+   * @default "#000000"
+   */
   indicatorActiveColor?: string;
+  /**
+   * 当前选中项序号
+   * @default 0
+   */
   current?: number;
+  /**
+   * 是否有分隔（仅图片式下生效）
+   * @default flase
+   */
   gap?: boolean;
+  /**
+   * 分隔式间距大小
+   * @default 20
+   */
   gapWidth?: number;
+  /**
+   * 分隔式下前一张图露出的大小
+   * @default 15
+   */
   prevMargin?: number;
+  /**
+   * 分隔式下后一张图露出的大小
+   * @default 15
+   */
   nextMargin?: number;
+  /**
+   * 切换时触发
+   * @param {number} activeIndex 当前选中的子项索引
+   * @returns void
+   */
   onChange?: (activeIndex: number) => void;
+  /**
+   * 点击子项回调
+   */
   onClick?: () => void;
 }
 
