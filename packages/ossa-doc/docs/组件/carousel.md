@@ -126,6 +126,6 @@ const initTxt = [
 ### 方法
 |函数名|说明|参数|
 |------|------|------|
-|onChange|切换时触发|event对象|
-|onClick|点击时触发|event对象|
+|onChange|切换时触发|`currentIndex`，当前选中子项的索引|
+|onClick|点击时触发|`currentIndex`，当前选中子项的索引；`e`，event对象|
 
