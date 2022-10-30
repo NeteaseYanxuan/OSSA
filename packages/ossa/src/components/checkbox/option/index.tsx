@@ -1,15 +1,16 @@
-import React from "react";
+import React, { CSSProperties } from "react";
 import { View } from "@tarojs/components";
 import classNames from "classnames";
 import OsIcon from "../../icon";
 import { OsCheckboxOptionProps } from "../../../../types/index";
+import { IconProps } from "../../../../types/icon";
 
-function getStyleObj(props: OsCheckboxOptionProps) {
+function getStyleObj(props: OsCheckboxOptionProps): CSSProperties {
   const _styleObj = {};
   return _styleObj;
 }
 
-function getClassObject(props: OsCheckboxOptionProps) {
+function getClassObject(props: OsCheckboxOptionProps): Record<string, string | boolean | number | undefined> {
   const classObject = {
     ["ossa-checkbox__option--disabled"]: props.isDisabled,
     ["ossa-checkbox__option--custom-label"]: typeof props.children !== "string",
@@ -35,10 +36,11 @@ export default function CheckboxOption(props: OsCheckboxOptionProps) {
     } else {
       newValues.push(optionProps.optionValue);
     }
-    optionProps.onClick(newValues);
+    console.log(newValues, optionProps.optionValue);
+    optionProps.onClick(newValues, optionProps.optionValue);
   };
 
-  let iconType = "choose";
+  let iconType: IconProps["type"] = "choose";
   let color;
   if (props.isDisabled) {
     iconType = "choose-disable";
