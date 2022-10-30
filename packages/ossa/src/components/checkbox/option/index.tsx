@@ -36,7 +36,6 @@ export default function CheckboxOption(props: OsCheckboxOptionProps) {
     } else {
       newValues.push(optionProps.optionValue);
     }
-    console.log(newValues, optionProps.optionValue);
     optionProps.onClick(newValues, optionProps.optionValue);
   };
 
