@@ -249,6 +249,7 @@ export default function Index(props: Props) {
             indicatorActiveColor='#DD1A21'
             indicatorColor='#FFF'
             onChange={onChange}
+            onClick={idx => console.log(`idx: ${idx}`)}
           />
         </DemoBlock>
       )}

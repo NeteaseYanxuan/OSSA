@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Taro from "@tarojs/taro";
-import { View, Swiper, SwiperItem, Image } from "@tarojs/components";
+import { View, Swiper, SwiperItem, Image, ITouchEvent } from "@tarojs/components";
 import classNames from "classnames";
 //引入组件对应的 类型文件 .d.ts
 import { OsCarouselProps } from "../../../types/index";
@@ -70,10 +70,8 @@ function onChangeCarousel(
   onChange && onChange(e.detail.current);
 }
 
-function onClickCarousel(e: any, props: OsCarouselProps) {
-  // console.log(e.detail.current);
-  const { onClick } = props;
-  onClick && onClick();
+function onClickCarousel(e: ITouchEvent, props: OsCarouselProps, currentIndex = 0) {
+  props.onClick?.(currentIndex, e);
 }
 
 export default function Carousel(props: OsCarouselProps) {
@@ -124,7 +122,7 @@ export default function Carousel(props: OsCarouselProps) {
         }
         duration={500}
         onChange={(e) => onChangeCarousel(e, props, setActiveIndex)}
-        onClick={(e) => onClickCarousel(e, props)}
+        onClick={(e) => onClickCarousel(e, props, activeIndex)}
         className='ossa-carousel-swiper'
       >
         {data.map((item: any, index: number) => (
