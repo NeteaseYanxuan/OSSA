@@ -72,6 +72,10 @@
   }
 
   &.ossa-carousel-h5 {
+    .swiper-pagination-bullet {
+      opacity: 1;
+    }
+    
     &.ossa-carousel-h5--space {
       height: 100%;
 
