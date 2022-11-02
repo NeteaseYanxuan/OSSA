@@ -14,7 +14,8 @@ interface CountdownProps extends TaroViewProps {
   remainTime?: number;
   onEnd?: () => void;
   interval?: number;
-  children: (formattedRes: FormattedResType) => React.ReactNode;
+  format?: string;
+  children?: (formattedRes: FormattedResType) => React.ReactNode;
 }
 
 declare const Countdown: FC<CountdownProps>;

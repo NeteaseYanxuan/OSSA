@@ -21,6 +21,9 @@ export default function Index() {
       {
         list: ["interval", "切换时间间隔，可选", "number", "1000"],
       },
+      {
+        list: ["format", "格式化（d: 天，H：小时，m：分钟，s：秒），可选", "string", "HH:mm:ss"],
+      },
     ],
   };
   const initialListEvent = {
@@ -39,7 +42,9 @@ export default function Index() {
         <OsCountdown className='cd1' targetDate='2023-01-01' onEnd={() => { console.log('倒计时结束') }}>
           {f => <View>离2023-01-01还有{f.days + '天' + f.hours + '小时' + f.minutes + '分钟' + f.seconds + "秒"}</View>}
         </OsCountdown>
+        format[dd天HH小时mm分钟ss秒]：<OsCountdown format='dd天HH小时mm分钟ss秒' className='cd5' targetDate='2023-01-01' onEnd={() => { console.log('倒计时结束') }} />
       </DemoBlock>
+      
       <DemoBlock title='剩余时间的倒计时'>
         {
           !showCd ?
@@ -50,8 +55,8 @@ export default function Index() {
         }
       </DemoBlock>
       <DemoBlock title='可切换间隔的倒计时'>
-        <OsCountdown className='cd3' remainTime={20000} interval={100} onEnd={() => { console.log('倒计时结束') }}>
-          {f => <View>{f.seconds + ":" + Math.round(f.milliseconds / 100)}</View>}
+        <OsCountdown className='cd3' remainTime={5000} interval={100} onEnd={() => { console.log('倒计时结束') }}>
+          {f => <View>{f.seconds + ":" + Math.floor(f.milliseconds / 100)}</View>}
         </OsCountdown>
       </DemoBlock>
       <DemoBlock>

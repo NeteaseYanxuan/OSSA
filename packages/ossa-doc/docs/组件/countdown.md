@@ -14,6 +14,7 @@ demo_url: 'https://neteaseyanxuan.github.io/OSSA/#/components/countdown/demo/ind
 <OsCountdown targetDate='2023-01-01' onEnd={() => { console.log('倒计时结束') }}>
   {f => <View>离2023-01-01还有{f.days + '天' + f.hours + '小时' + f.minutes + ':' + f.seconds + ":" + f.milliseconds}</View>}
 </OsCountdown>
+<OsCountdown format='dd天HH小时mm分钟ss秒' className='cd5' targetDate='2023-01-01' onEnd={() => { console.log('倒计时结束') }} />
 ```
 ### 剩余时间的倒计时
 ```jsx
@@ -41,6 +42,7 @@ const [showCd, setShowCd] = useState(false)
 |targetDate|目标时间，基于new Date(targetDate)换算毫秒数，可选|number \| string|-|
 |remainTime|剩余时间毫秒数，可选|number|0|
 |interval|切换时间间隔，可选|number|1000|
+|format|格式化（d: 天，H：小时，m：分钟，s：秒），可选|string|HH:mm:ss|
 
 
 ### 方法

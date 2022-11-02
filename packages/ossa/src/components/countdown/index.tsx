@@ -2,6 +2,36 @@ import React, { FC, useMemo, useEffect, useState, useRef } from "react";
 import { View } from "@tarojs/components";
 import { OsCountdownProps } from "../../../types/index";
 
+/**
+* 格式化指定的日期对象。
+* @param res
+* @param format 格式字符串。其中以下字符(区分大小写)会被替换：
+*
+* 字符| 意义        | 示例
+* ----|------------|--------------------
+* d   | 日         | dd: 09, d: 9
+* H   | 时(24小时制)| HH: 13, H: 13
+* m   | 分         | mm: 06, m: 6
+* s   | 秒         | ss: 06, s: 6
+*
+* @return 返回格式化后的字符串。
+*/
+export function dateFormat(res: any, format = "HH:mm:ss") {
+  const newRes = {
+    d: res.days,
+    H: res.hours,
+    m: res.minutes,
+    s: res.seconds,
+  }
+  return format.replace(/([yMdHms])\1*/g, (all: string, key: string) => {
+    key = newRes[key] + "";
+    while (key.length < all.length) {
+      key = "0" + key;
+    }
+    return key;
+  });
+}
+
 interface Options {
   targetDate: string | number;
   interval?: number;
@@ -28,23 +58,25 @@ function useCountDown(options: Options) {
   onEndRef.current = onEnd;
 
   useEffect(() => {
-    if(targetDate) {
+    if (targetDate) {
       calcRemainTime();
-      start();
     }
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    return () => {
+      clear();
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [interval, targetDate])
 
-  function start(){
+  function start() {
     timerRef.current = setTimeout(() => {
       calcRemainTime();
     }, interval);
   }
 
-  function calcRemainTime(){
+  function calcRemainTime() {
     const deltaTime = new Date(targetDate).getTime() - new Date().getTime();
     setRemainTime(deltaTime < 0 ? 0 : deltaTime);
-    if(deltaTime <= interval){
+    if (deltaTime <= interval) {
       clear();
       onEndRef?.current?.();
     }else {
@@ -52,7 +84,7 @@ function useCountDown(options: Options) {
     }
   }
 
-  function clear(){
+  function clear() {
     timerRef.current && clearTimeout(timerRef.current);
   }
 
@@ -61,7 +93,7 @@ function useCountDown(options: Options) {
   }
 }
 
-const CountDown: FC<OsCountdownProps> = ({ targetDate, remainTime = 0, interval = 1000,onEnd, children, ...viewProps }) => {
+const CountDown: FC<OsCountdownProps> = ({ targetDate, remainTime = 0, interval = 1000, format, onEnd, children, ...viewProps }) => {
   const calcTargetDate: string | number = useMemo(() => {
     // 兼容safari
     if (targetDate && /^\d+-\d+-\d+/.test(targetDate)) {
@@ -77,7 +109,11 @@ const CountDown: FC<OsCountdownProps> = ({ targetDate, remainTime = 0, interval 
     interval
   });
 
-  return <View {...viewProps}>{typeof children === "function" && children(formattedRes)}</View>
+  return <View {...viewProps}>
+    {typeof children === "function" ? children(formattedRes) :
+      dateFormat(formattedRes, format || 'HH:mm:ss')
+    }
+  </View>
 }
 
 export default CountDown;
