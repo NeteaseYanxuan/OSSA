@@ -100,6 +100,7 @@ export default function Badge(props: OsBadgeProps) {
 
 Badge.defaultProps = {
   isShow: true,
+  type: 'dot'
 };
 
 Badge.options = {
