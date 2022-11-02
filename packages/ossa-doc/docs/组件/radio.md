@@ -104,11 +104,19 @@ demo_url: 'https://neteaseyanxuan.github.io/OSSA/#/components/radio/demo/index'
 |参数|说明|类型|默认值|
 |------|------|------|------|
 |type|布局类型|column \| row|column|
+|value|选中值，可选| number \| string|-|
+|isDisabled|失效状态，可选|boolean|-|
+|isReadonly|不可执行，可选|boolean|-|
+
+### radio方法
+|函数名|说明|参数|
+|------|------|------|
+|onChange|点击时触发，可选|value|
 
 ### radioOption属性
 |参数|说明|类型|默认值|
 |------|------|------|------|
-|value|选中值，必选|number \| string|-|
+|value|选中值，可选|number \| string|-|
 |optionValue|选项值，必选|number \| string|-|
 |isDisabled|失效状态，可选|boolean|false|
 |isCustom|是否自定义，可选|boolean|false|
@@ -117,5 +125,5 @@ demo_url: 'https://neteaseyanxuan.github.io/OSSA/#/components/radio/demo/index'
 ### radioOption方法
 |函数名|说明|参数|
 |------|------|------|
-|onClick|点击时触发，必选|value|
+|onClick|点击时触发，可选|value|
 
