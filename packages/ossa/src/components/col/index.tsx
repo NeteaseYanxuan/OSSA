@@ -1,10 +1,12 @@
-import React, { CSSProperties, createContext, useContext } from "react";
-import { View } from "@tarojs/components";
+import React, { CSSProperties, useContext } from "react";
+import { ITouchEvent, View } from "@tarojs/components";
 import classNames from "classnames";
-import { OsColProps } from "../../../types/index";
+import type { OsColProps } from "../../../types/index";
+import type { DataContextProps } from "../../../types/row";
 import { DataContext } from '../row/UserContext';
 
-function getStyleObj(context: any) {
+
+function getStyleObj(context: DataContextProps): CSSProperties {
   const _styleObj: CSSProperties = {};
   const { gutter } = context;
   _styleObj.paddingLeft = `${(gutter as number) / 2}px`;
@@ -13,7 +15,7 @@ function getStyleObj(context: any) {
   return _styleObj;
 }
 
-function getClassObject(props: OsColProps, context: any) {
+function getClassObject(props: OsColProps, context: DataContextProps): Record<string, any> {
   const { span, offset } = props;
   const { gutter } = context;
   const _classObject = {
@@ -25,13 +27,13 @@ function getClassObject(props: OsColProps, context: any) {
   return _classObject;
 }
 
-function onClick(e: any, props: OsColProps) {
+function onClick(e: ITouchEvent, props: OsColProps): void {
   props.onClick && props.onClick(e);
 }
 
 export default function Col(props: OsColProps) {
   const rootClassName = 'ossa-col'; //组件
-  const context = useContext(DataContext) as any;
+  const context = useContext<DataContextProps>(DataContext);
   const classObject = getClassObject(props, context); //组件修饰
   const styleObject = Object.assign(
     getStyleObj(context),
