@@ -1,11 +1,11 @@
-import React from "react";
+import React, { CSSProperties } from "react";
 import Taro from "@tarojs/taro";
-import { View, Text } from "@tarojs/components";
+import { View, Text, ITouchEvent } from "@tarojs/components";
 import classNames from "classnames";
 import { OsIconProps } from "../../../types/index";
 
-function getStyleObj(props: OsIconProps) {
-  const _styleObj = {};
+function getStyleObj(props: OsIconProps): CSSProperties {
+  const _styleObj: CSSProperties = {};
   const { color, size, type } = props;
 
   if (color) {
@@ -48,7 +48,7 @@ function getClassObject(props: OsIconProps) {
   return classObject;
 }
 
-function onClick(e: any, props: OsIconProps) {
+function onClick(e: ITouchEvent, props: OsIconProps) {
   props.onClick && props.onClick(e);
 }
 

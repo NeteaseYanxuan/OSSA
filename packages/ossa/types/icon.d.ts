@@ -2,7 +2,9 @@ import { ComponentClass } from "react";
 import { CommonEventFunction } from "@tarojs/components/types/common";
 import OsComponent from "./base";
 
-
+/**
+ * 图标
+ */
 interface IconProps extends OsComponent {
   /**
    * 预置的图标类型
@@ -20,10 +22,19 @@ interface IconProps extends OsComponent {
         | "detail-cart-pressed" | "my-group-buying-select" | "shopping-mall-select" | "delete-input" | "add" | "add-disable"
         | "avatar" | "invisible" | "service" | "visible" | "subtract-disable" | "subtract" | "voice" | "voice-close"
         | "photo" | "sort" | "sort-high" | "sort-low" | "subject" | "close-h5" | "add-photo";
+  /**
+   * 图标尺寸
+   * @default 40
+   */
   size?: number;
+  /**
+   * 图标颜色
+   * @default #7F7F7F
+   */
   color?: string;
-  className?: string;
-  customStyle?: object;
+  /**
+   * 点击回调
+   */
   onClick?: CommonEventFunction;
 }
 

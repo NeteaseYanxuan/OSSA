@@ -3,6 +3,7 @@ import { View, Text } from "@tarojs/components";
 import classNames from "classnames";
 import OsIcon from "../icon";
 import { OsNavBarProps, OsNavBarItemProps } from "../../../types/index";
+import { IconProps } from "../../../types/icon";
 
 function getStyleObj(props: OsNavBarProps) {
   const _styleObj = {};
@@ -101,7 +102,7 @@ export default class NavBar extends Component<OsNavBarProps> {
         <View className={`ossa-navbar--${whichSide}`}>
           {icon[whichSide] && (
             <View className={`ossa-navbar__${whichSide}Icons`}>
-              {icon[whichSide].map((item: string) => (
+              {icon[whichSide].map((item: IconProps["type"]) => (
                 <OsIcon
                   type={item}
                   color={iconColor}

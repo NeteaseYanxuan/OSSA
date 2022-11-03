@@ -3,7 +3,7 @@ import Taro from "@tarojs/taro";
 import { View, Text } from "@tarojs/components";
 import classNames from "classnames";
 import OsIcon from "../icon";
-import { OsRateProps } from "../../../types/index";
+import { OsIconProps, OsRateProps } from "../../../types/index";
 
 function getStyleObj(props: OsRateProps) {
   const _styleObj = {};
@@ -93,7 +93,7 @@ export default function Rate(props: OsRateProps) {
           >
             <OsIcon
               size={_size}
-              type={item.selected ? selectedIcon : icon}
+              type={(item.selected ? selectedIcon : icon) as OsIconProps["type"]}
               color={item.selected ? selectedIconColor : color}
               customStyle={{ verticalAlign: "top" }}
             ></OsIcon>

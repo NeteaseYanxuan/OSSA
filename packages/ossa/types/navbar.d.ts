@@ -1,4 +1,5 @@
 import { ComponentClass, ReactChild } from "react";
+import { IconProps } from "./icon";
 import OsComponent from "./base";
 
 export interface NavBarItemProps extends OsComponent {
@@ -10,11 +11,11 @@ export interface NavBarProps extends OsComponent {
   type?: String;
   iconColor?: string;
   middleSlot?: ReactChild;
-  leftIcons?: Array<string>;
+  leftIcons?: Array<IconProps["type"]>;
   leftTexts?: Array<NavBarItemProps>;
   leftSlot?: ReactChild;
   rightTexts?: Array<NavBarItemProps>;
-  rightIcons?: Array<string>;
+  rightIcons?: Array<IconProps["type"]>;
   rightSlot?: ReactChild;
   showSplitLine?: boolean;
   onLeftIconClick?: (item: string) => {};

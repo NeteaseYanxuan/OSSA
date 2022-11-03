@@ -28,14 +28,6 @@ interface BadgeProps extends OsComponent {
    */
   isShow?: boolean;
   /**
-   * 自定义样式名
-   */
-  className?: string;
-  /**
-   * 自定义行内样式
-   */
-  customStyle?: CSSProperties;
-  /**
    * 点击徽标回调
    */
   onClick?: CommonEventFunction;

@@ -3,7 +3,7 @@ import Taro from "@tarojs/taro";
 import { View, Text, Block } from "@tarojs/components";
 import classNames from "classnames";
 import OsIcon from "../../icon";
-import { OsTabsHeaderItemProps } from "../../../../types/index";
+import { OsIconProps, OsTabsHeaderItemProps } from "../../../../types/index";
 
 function getStyleObject(props: OsTabsHeaderItemProps) {
   const { index, current, selectedColor, color } = props;
@@ -91,7 +91,7 @@ export default function Index(props: OsTabsHeaderItemProps) {
                   }}
                   size={26}
                   color='inherit'
-                  type={index !== current ? icon : selectedIcon}
+                  type={(index !== current ? icon : selectedIcon) as OsIconProps["type"]}
                 ></OsIcon>
               )}
             </Block>

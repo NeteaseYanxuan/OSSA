@@ -1,14 +1,14 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, CSSProperties } from "react";
 import Taro from "@tarojs/taro";
-import { View, Image } from "@tarojs/components";
+import { View, Image, ITouchEvent } from "@tarojs/components";
 import classNames from "classnames";
 import OsIcon from "../icon";
 //引入组件对应的 类型文件 .d.ts
 import { OsImagePreviewProps, OsImagesItemProps } from "../../../types/index";
 
-function getStyleObj(props: OsImagePreviewProps) {
+function getStyleObj(props: OsImagePreviewProps): CSSProperties {
   const { show } = props;
-  const _styleObj = {};
+  const _styleObj: CSSProperties = {};
   if (show) {
     // setShow(true);
     _styleObj["display"] = "block";
@@ -24,7 +24,7 @@ function getClassObject(props: OsImagePreviewProps) {
   return _classObject;
 }
 
-function getPageInfo(props: OsImagePreviewProps, index: number) {
+function getPageInfo(props: OsImagePreviewProps, index: number): string {
   const { imagesArr = [] } = props;
   return `${index + 1}/${imagesArr.length}`;
 }
@@ -33,7 +33,7 @@ const initialBaseWidth = function () {
   return Taro.getSystemInfoSync().windowWidth;
 };
 
-function getSwipeStyle(offset, swiping, totalWidth) {
+function getSwipeStyle(offset, swiping, totalWidth): CSSProperties {
   return {
     width: `${totalWidth}px`,
     transform: `translateX(${offset}px)`,
@@ -41,7 +41,7 @@ function getSwipeStyle(offset, swiping, totalWidth) {
   };
 }
 
-function getSwipeItemStyle(swipes: any, baseWidth: number) {
+function getSwipeItemStyle(swipes: any, baseWidth: number): CSSProperties[] {
   const styleList = swipes.map((swipe: any) => ({
     width: baseWidth + "px",
     height: "100%",
@@ -50,7 +50,7 @@ function getSwipeItemStyle(swipes: any, baseWidth: number) {
   return styleList;
 }
 
-function getTotalWidth(imagesArr, baseWidth) {
+function getTotalWidth(imagesArr, baseWidth): number {
   return baseWidth * imagesArr.length;
 }
 
@@ -162,7 +162,7 @@ export default function Index(props: OsImagePreviewProps) {
     setOffset(Math.round(_offset - index * size));
   }
 
-  function onImgTouchMove(event: any) {
+  function onImgTouchMove(event: ITouchEvent) {
     event.preventDefault();
     event.stopPropagation();
     if (!swiping) return;
@@ -175,7 +175,7 @@ export default function Index(props: OsImagePreviewProps) {
     move({ _offset: Math.min(Math.max(deltaX, -baseWidth), baseWidth) });
   }
 
-  function touchMove(event: any) {
+  function touchMove(event: ITouchEvent) {
     const touch = event.touches[0];
 
     setDeltaX(touch.clientX - startX);
@@ -196,21 +196,21 @@ export default function Index(props: OsImagePreviewProps) {
     }
     setSwiping(false);
     const _index = index >= imagesArr.length ? 0 : index;
-    props.onChange && props.onChange({ index: _index, url: imagesArr[_index] });
+    props.onChange && props.onChange({ index: _index, url: imagesArr[_index], item: imagesArr[_index] });
   }
 
-  function onWrapperClick(event: any) {
+  function onWrapperClick(event: ITouchEvent) {
     if (touchable && offsetX < 10 && offsetY < 10) {
       setShow(false);
       clearStates();
-      props.onClose && props.onClose({ index: index, url: imagesArr[index] });
+      props.onClose && props.onClose({ index: index, url: imagesArr[index], item: imagesArr[index] });
     }
   }
 
   function onGoback() {
     setShow(false);
     clearStates();
-    props.onClose && props.onClose({ index: index, url: imagesArr[index] });
+    props.onClose && props.onClose({ index: index, url: imagesArr[index], item: imagesArr[index] });
   }
 
   function clearStates() {

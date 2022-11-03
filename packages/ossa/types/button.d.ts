@@ -57,10 +57,6 @@ interface ButtonProps extends OsComponent,TaroButtonProps {
    */
   bdColor?: string;
   /**
-   * 自定义样式名
-   */
-  className?: string;
-  /**
    * 按钮显示的图标
    */
   icon?: IconProps["type"];
@@ -68,10 +64,6 @@ interface ButtonProps extends OsComponent,TaroButtonProps {
    * 点击回调
    */
   onClick?: CommonEventFunction;
-  /**
-   * 自定义行间样式
-   */
-  customStyle?: CSSProperties;
   /**
    * 按钮渐变色起始颜色
    */

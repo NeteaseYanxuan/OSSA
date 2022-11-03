@@ -3,7 +3,7 @@ import Taro from "@tarojs/taro";
 import { View, Text } from "@tarojs/components";
 import classNames from "classnames";
 import OsIcon from "../icon";
-import { OsTabBarProps, OsTabBarItemProps } from "../../../types/index";
+import { OsTabBarProps, OsTabBarItemProps, OsIconProps } from "../../../types/index";
 
 function getItemStyleObj(props: OsTabBarProps, index: number, current: number) {
   const _styleObj = {};
@@ -75,8 +75,8 @@ export default function TabBar(props: OsTabBarProps) {
               size={40}
               type={
                 index === current
-                  ? (item.selectedIcon as string)
-                  : (item.icon as string)
+                  ? (item.selectedIcon as OsIconProps["type"])
+                  : (item.icon as OsIconProps["type"])
               }
               color='inherit'
             ></OsIcon>

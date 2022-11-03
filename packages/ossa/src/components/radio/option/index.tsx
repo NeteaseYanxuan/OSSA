@@ -2,7 +2,7 @@ import React from "react";
 import { View } from "@tarojs/components";
 import classNames from "classnames";
 import OsIcon from "../../icon";
-import { OsRadioOptionProps } from "../../../../types/index";
+import { OsIconProps, OsRadioOptionProps } from "../../../../types/index";
 
 // function getStyleObj(props: Props) {
 //   let _styleObj = {}
@@ -49,7 +49,7 @@ export default function RadioOption(props: OsRadioOptionProps) {
       ])}
       onClick={() => onClickOption(props)}
     >
-      <OsIcon type={iconType} size={36}></OsIcon>
+      <OsIcon type={iconType as OsIconProps["type"]} size={36}></OsIcon>
       <View className={classNames("ossa-radio__option-label")}>
         {props.children}
       </View>
