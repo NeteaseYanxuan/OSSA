@@ -84,7 +84,13 @@ describe("Badge Testing", function () {
         });
     });
 
-    it("solution #4 text-样式", function () {
+    it("solution #4 info 为空时隐藏角标", function () {
+      cy.get("#hideWhenEmpty>.ossa-badge__info--info").should("have.length", 0);
+      cy.get("#hideWhenEmpty>.ossa-badge__info--text").should("have.length", 0);
+      cy.get("#hideWhenEmpty>.ossa-badge__info--dot").should("have.length", 0);
+    });
+
+    it("solution #5 text-样式", function () {
       cy.get(".ossa-badge--text")
         .get(".ossa-badge__info--text")
         .and(($badgeText) => {
