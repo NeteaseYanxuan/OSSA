@@ -50,7 +50,7 @@ const initialListApi = {
       list: ["label", "表单说明，可选", "string", "-"],
     },
     {
-      list: ["maxLength", "最大字符数，可选", "mumber", "500"],
+      list: ["maxLength", "最大字符数，可选", "number", "500"],
     },
     {
       list: ["isReadonly", "是否可编辑，可选", "boolean", "false"],

@@ -150,7 +150,7 @@ const [v6, setV6] = useState("不可编辑的textarea");
 |placeholderStyle|placeholder样式，只支持小程序，可选|string|-|
 |placeholderClass|placeholder样式类，可选|string|-|
 |label|表单说明，可选|string|-|
-|maxLength|最大字符数，可选|mumber|500|
+|maxLength|最大字符数，可选|number|500|
 |isReadonly|是否可编辑，可选|boolean|false|
 |isDisabled|表单是否失效，可选|boolean|false|
 |disabledClear|是否隐藏一键删除按钮，可选|boolean|false|
