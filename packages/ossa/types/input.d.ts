@@ -16,11 +16,31 @@ interface InputProps extends OsComponent {
    * - textarea: 文本域
    */
   type?: "text" | "number" | "password" | "bankcard" | "textarea" | "border";
+  /**
+   * 当前输入框的值
+   */
   value?: string;
+  /**
+   * 文本框占位文字
+   */
   placeholder?: string;
+  /**
+   * 占位文字的样式
+   * @support minprogram
+   */
   placeholderStyle?: string; // 只有小程序支持 ^_^
+  /**
+   * 占位文字的类名
+   */
   placeholderClass?: string;
+  /**
+   * 表单说明
+   */
   label?: string;
+  /**
+   * 允许输入的最大长度
+   * @default 500
+   */
   maxLength?: number;
   isReadonly?: boolean;
   isDisabled?: boolean;
