@@ -144,7 +144,7 @@ const [v6, setV6] = useState("不可编辑的textarea");
 ### 属性
 |参数|说明|类型|默认值|
 |------|------|------|------|
-|type|输入框类型，可选|text \| number \| password \| bankcard \| textarea \| border|text|
+|type|输入框类型，可选|text \| number \| password \| bankcard \| textarea |text|
 |value|表单值，可选|string|-|
 |placeholder|placeholder，可选|string|-|
 |placeholderStyle|placeholder样式，只支持小程序，可选|string|-|
