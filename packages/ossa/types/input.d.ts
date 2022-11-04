@@ -14,6 +14,7 @@ interface InputProps extends OsComponent {
    * - password: 密码输入框
    * - bankcard: 银行卡号码输入框
    * - textarea: 文本域
+   * @default "text"
    */
   type?: "text" | "number" | "password" | "bankcard" | "textarea" | "border";
   /**
@@ -42,9 +43,25 @@ interface InputProps extends OsComponent {
    * @default 500
    */
   maxLength?: number;
+  /**
+   * 是否只读
+   * @default false
+   */
   isReadonly?: boolean;
+  /**
+   * 是否禁用
+   * @default false
+   */
   isDisabled?: boolean;
+  /**
+   * 是否隐藏一键删除按钮
+   * @default false
+   */
   disabledClear?: boolean;
+  /**
+   * 是否展示输入框底部的分割线
+   * @default true
+   */
   showSplitLine?: boolean;
   countDown?: boolean;
   onChange?: (v: string) => void;
