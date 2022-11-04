@@ -190,7 +190,7 @@ export default function Index(props: any) {
             onChange={(v) => {
               setV3(v);
             }}
-            countDown
+            showCount
             maxLength={200}
           ></OsInput>
         </View>
@@ -223,7 +223,7 @@ export default function Index(props: any) {
             onChange={(v) => {
               setV6(v);
             }}
-            countDown
+            showCount
             isDisabled
           ></OsInput>
         </View>
