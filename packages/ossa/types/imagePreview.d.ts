@@ -2,7 +2,7 @@ import { ComponentClass, CSSProperties, ReactChild } from "react";
 import OsComponent from "./base";
 
 /**
- * 图片项
+ * @name 图片项
  */
 interface ImagesItemProps extends OsComponent {
   /**

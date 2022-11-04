@@ -2,7 +2,19 @@ import { ComponentClass, ReactChild } from "react";
 import { CommonEventFunction } from "@tarojs/components/types/common";
 import OsComponent from "./base";
 
+/**
+ * @name 文本输入框
+ */
 interface InputProps extends OsComponent {
+  /**
+   * 输入框类型
+   * @desc
+   * - text: 普通文本输入框
+   * - number: 数字输入框
+   * - password: 密码输入框
+   * - bankcard: 银行卡号码输入框
+   * - textarea: 文本域
+   */
   type?: "text" | "number" | "password" | "bankcard" | "textarea" | "border";
   value?: string;
   placeholder?: string;
