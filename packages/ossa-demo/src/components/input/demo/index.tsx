@@ -64,6 +64,14 @@ const initialListApi = {
     {
       list: [
         "countDown",
+        "是否显示字符计数器，textarea有效，可选。`countDown`字段将在未来版本中被移除,请使用`showCount`代替",
+        "boolean",
+        "false",
+      ],
+    },
+    {
+      list: [
+        "showCount",
         "是否显示字符计数器，textarea有效，可选",
         "boolean",
         "false",

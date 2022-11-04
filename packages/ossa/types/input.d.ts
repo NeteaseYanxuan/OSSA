@@ -14,7 +14,15 @@ interface InputProps extends OsComponent {
   isDisabled?: boolean;
   disabledClear?: boolean;
   showSplitLine?: boolean;
+  /**
+   * 是否显示字符计数器，textarea有效，可选
+   * @deprecated `countDown`字段将在未来版本中被移除,请使用`showCount`代替
+   */
   countDown?: boolean;
+  /**
+   * 是否显示字符计数器，textarea有效，可选
+   */
+  showCount?: boolean;
   onChange?: (v: string) => void;
   onFocus?: CommonEventFunction;
   onBlur?: CommonEventFunction;
