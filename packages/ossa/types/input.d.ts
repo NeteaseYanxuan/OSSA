@@ -3,7 +3,7 @@ import { CommonEventFunction } from "@tarojs/components/types/common";
 import OsComponent from "./base";
 
 interface InputProps extends OsComponent {
-  type?: "text" | "number" | "password" | "bankcard" | "textarea" | "border";
+  type?: "text" | "number" | "password" | "bankcard" | "textarea";
   value?: string;
   placeholder?: string;
   placeholderStyle?: string; // 只有小程序支持 ^_^
