@@ -56,7 +56,6 @@ demo_url: 'https://neteaseyanxuan.github.io/OSSA/#/components/list/demo/index'
 >
   <OsBadge type='list'></OsBadge>
 </OsList>
-<OsBadge type='list'></OsBadge>
 ```
 ### 内容自定义
 ```jsx
