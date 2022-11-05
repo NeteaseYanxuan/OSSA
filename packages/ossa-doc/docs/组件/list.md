@@ -85,6 +85,7 @@ demo_url: 'https://neteaseyanxuan.github.io/OSSA/#/components/list/demo/index'
 |descColor|副标题或者描述字体颜色，可选|string|#7f7f7f|
 |bgColor|背景色，可选|string|#ffffff|
 |activeBgColor|激活态背景色，可选|string|#f9f9f9|
+|leftIconSize|左侧图标尺寸，可选|number|36|
 |className|自定义类名，可选|string|-|
 |customStyle|自定义样式，可选|object|-|
 

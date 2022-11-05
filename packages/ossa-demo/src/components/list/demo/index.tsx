@@ -55,6 +55,9 @@ const initialListApi = {
       list: ["activeBgColor", "激活态背景色，可选", "string", "#f9f9f9"],
     },
     {
+      list: ["leftIconSize", "左侧图标尺寸，可选", "number", "36"],
+    },
+    {
       list: ["className", "自定义类名，可选", "string", "-"],
     },
     {
