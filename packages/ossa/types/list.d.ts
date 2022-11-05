@@ -23,6 +23,7 @@ interface ListProps extends OsComponent {
    * 副标题
    */
   subTitle?: string;
+  
   rightIcon?: IconProps["type"];
   leftIcon?: IconProps["type"];
   desc?: string;
