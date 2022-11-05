@@ -64,8 +64,17 @@ interface InputProps extends OsComponent {
    */
   showSplitLine?: boolean;
   countDown?: boolean;
+  /**
+   * 当文本框的内容发生变化时触发
+   */
   onChange?: (v: string) => void;
+  /**
+   * 聚焦回调
+   */
   onFocus?: CommonEventFunction;
+  /**
+   * 失焦回调
+   */
   onBlur?: CommonEventFunction;
 }
 
