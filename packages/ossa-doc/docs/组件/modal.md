@@ -50,7 +50,7 @@ const [showSingleBtn, setShowSingleBtn] = useState(false);
   cancelText='取消'
   content='这里是正文这里是正文这里是正文'
   isShow={showSingleBtn}
-  showCloseIcon={false}
+  closable={false}
   onCancel={() => setShowSingleBtn(false)}
   onClose={() => setShowSingleBtn(false)}
   onConfirm={() => setShowSingleBtn(false)}
@@ -169,7 +169,8 @@ const [showDisabled, setShowDisabled] = useState(false);
 |disableConfirmBtn|置灰确认按钮，可选|boolean|false|
 |closeOnClickMask|点击遮罩是否隐藏弹窗，可选|boolean|false|
 |custom|是否仅保留遮罩，完全自定义弹窗内容，可选|boolean|false|
-|showCloseIcon|是否显示关闭icon，可选|boolean|true|
+|showCloseIcon|是否显示关闭按钮，可选，`showCloseIcon`属性在未来版本中将被删除，请使用`closable`代替|boolean|true|
+|closable|是否显示关闭按钮，可选|boolean|true|
 |closeIconPosition|关闭icon位置，可选|top-left \| top-right \| bottom-left \| bottom-right \| top \| bottom|top-right|
 
 
