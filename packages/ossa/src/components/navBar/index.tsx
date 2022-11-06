@@ -22,7 +22,7 @@ function getClassObject(props: OsNavBarProps) {
   return classObject;
 }
 
-function onLeftIconClick(props: OsNavBarProps, item: string) {
+function onLeftIconClick(props: OsNavBarProps, item: IconProps["type"]) {
   props.onLeftIconClick && props.onLeftIconClick(item);
 }
 
@@ -30,7 +30,7 @@ function onLeftTextClick(props: OsNavBarProps, id: number) {
   props.onLeftTextClick && props.onLeftTextClick(id);
 }
 
-function onRightIconClick(props: OsNavBarProps, item: string) {
+function onRightIconClick(props: OsNavBarProps, item: IconProps["type"]) {
   props.onRightIconClick && props.onRightIconClick(item);
 }
 
@@ -139,6 +139,9 @@ export default class NavBar extends Component<OsNavBarProps> {
     const styleObject = Object.assign(getStyleObj(props), props.customStyle);
     const { type, title, middleSlot } = props;
 
+    const mergedTitle = title ?? middleSlot;
+    const isSimpleTitle = typeof mergedTitle === "string";
+
     return (
       <View
         className={classNames(rootClassName, classObject, props.className)}
@@ -147,9 +150,11 @@ export default class NavBar extends Component<OsNavBarProps> {
         {this.renderSideContent(props, "left")}
         {type !== "2column" && type !== "custom" && (
           <View className='ossa-navbar--middle'>
-            {middleSlot
-              ? middleSlot
-              : title && <View className='ossa-navbar__title'>{title}</View>}
+            {isSimpleTitle ? (
+              title && <View className='ossa-navbar__title'>{title}</View>
+            ) : (
+              title
+            )}
           </View>
         )}
         {this.renderSideContent(props, "right")}

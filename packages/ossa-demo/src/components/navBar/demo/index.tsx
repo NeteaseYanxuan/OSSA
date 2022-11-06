@@ -5,7 +5,7 @@ import classNames from "classnames";
 import DemoBlock from "../../demoBlock";
 import DemoHeader from "../../demoHeader";
 import DemoTable from "../../demoTable";
-import { OsNavBar, OsIcon, OsBadge, OsSearch } from "ossaui";
+import { OsNavBar, OsIcon, OsBadge, OsSearch, OsIconProps } from "ossaui";
 // import './index.scss'
 import "./index.scss";
 
@@ -25,12 +25,12 @@ const initialListApi = {
       list: ["type", "2column | 3column | custom，可选", "string", "3column"],
     },
     {
-      list: ["title", "导航标题，可选", "string", "-"],
+      list: ["title", "导航标题，可选", "ReactChild", "-"],
     },
     {
       list: [
         "middleSlot",
-        "自定义左侧内容，存在时覆盖title，但比custom优先级低，可选",
+        "自定义左侧内容，存在时覆盖title，但比custom优先级低，可选，`middleSlot`属性将在未来的版本中被删除，请使用`title`替代",
         "any",
         "-",
       ],
@@ -50,7 +50,7 @@ const initialListApi = {
       list: [
         "leftSlot",
         "自定义左侧内容，存在时覆盖leftIcons和leftTexts，但比custom优先级低，可选",
-        "any",
+        "ReactChild",
         "-",
       ],
     },
@@ -69,7 +69,7 @@ const initialListApi = {
       list: [
         "rightSlot",
         "自定义左侧内容，存在时覆盖rightIcons和rightTexts，但比custom优先级低，可选",
-        "any",
+        "ReactChild",
         "-",
       ],
     },
@@ -80,7 +80,7 @@ const initialListApi = {
       list: [
         "custom",
         "自定义整个导航，会用custom中的内容作为整个导航的内容，覆盖所有icon/text/title/slot，可选",
-        "any",
+        "ReactChild",
         "-",
       ],
     },
@@ -131,11 +131,11 @@ const initialListEvent = {
     },
   ],
 };
-const initialLeftIcons = ["return"];
+const initialLeftIcons: OsIconProps["type"][] = ["return"];
 const initialRightTxts = [{ id: 1, text: "按钮" }];
 const initialLeftTxts = [{ id: 1, text: "返回" }];
-const initialRightIcons3 = ["search", "detail-cart"];
-const initialLeftIcons3 = ["detail-home"];
+const initialRightIcons3: OsIconProps["type"][] = ["search", "detail-cart"];
+const initialLeftIcons3: OsIconProps["type"][] = ["detail-home"];
 const initialRightTxts1 = [
   { id: 1, text: "按钮" },
   { id: 2, text: "领券" },
@@ -184,6 +184,23 @@ export default function Index(props: Props) {
       <DemoBlock title='基础' fullScreen>
         <OsNavBar
           title='标题'
+          leftIcons={leftIcons}
+          rightTexts={rightTexts}
+          onLeftIconClick={onLeftIconClick.bind(this)}
+          onRightTextClick={onRightTextClick.bind(this)}
+        ></OsNavBar>
+      </DemoBlock>
+
+      <DemoBlock title='标题自定义' fullScreen>
+        <OsNavBar
+          title={<>
+            <OsIcon
+              type='home'
+              size={40}
+              customStyle={{verticalAlign: "baseline"}}
+            ></OsIcon>
+              &nbsp;首页
+          </>}
           leftIcons={leftIcons}
           rightTexts={rightTexts}
           onLeftIconClick={onLeftIconClick.bind(this)}

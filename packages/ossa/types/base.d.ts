@@ -11,7 +11,7 @@ interface BaseOsComponent {
   /**
    * @desc 自定义行间样式
    */
-  customStyle?: object | CSSProperties;
+  customStyle?: CSSProperties;
 }
 /**
  * @desc 组件公共属性

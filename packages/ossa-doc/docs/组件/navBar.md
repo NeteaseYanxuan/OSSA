@@ -98,16 +98,16 @@ const rightTexts = [{ id: 1, text: "按钮" }]
 |参数|说明|类型|默认值|
 |------|------|------|------|
 |type|2column \| 3column \| custom，可选|string|3column|
-|title|导航标题，可选|string|-|
-|middleSlot|自定义左侧内容，存在时覆盖title，但比custom优先级低，可选|any|-|
+|title|导航标题，可选|ReactChild|-|
+|middleSlot|自定义左侧内容，存在时覆盖title，但比custom优先级低，可选，`middleSlot`属性将在未来的版本中被删除，请使用`title`替代|any|-|
 |leftIcons|左侧icon,取值参考OsIcon，可选|string[]|-|
 |leftTexts|左侧文案，可选|Texts[]|-|
-|leftSlot|自定义左侧内容，存在时覆盖leftIcons和leftTexts，但比custom优先级低，可选|any|-|
+|leftSlot|自定义左侧内容，存在时覆盖leftIcons和leftTexts，但比custom优先级低，可选|ReactChild|-|
 |rightIcons|右侧icon,取值参考OsIcon，可选|string[]|-|
 |rightTexts|右侧文案，可选|Texts[]|-|
-|rightSlot|自定义左侧内容，存在时覆盖rightIcons和rightTexts，但比custom优先级低，可选|any|-|
+|rightSlot|自定义左侧内容，存在时覆盖rightIcons和rightTexts，但比custom优先级低，可选|ReactChild|-|
 |showSplitLine|展示分割线，可选|boolean|true|
-|custom|自定义整个导航，会用custom中的内容作为整个导航的内容，覆盖所有icon/text/title/slot，可选|any|-|
+|custom|自定义整个导航，会用custom中的内容作为整个导航的内容，覆盖所有icon/text/title/slot，可选|ReactChild|-|
 |iconColor|icon的颜色，仅当使用ossa提供的icon时有效，可选|string|#7f7f7f|
 |className|自定义类名，可选|string|-|
 |customStyle|自定义样式，可选|object|-|
