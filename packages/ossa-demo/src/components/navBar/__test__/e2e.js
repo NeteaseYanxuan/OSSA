@@ -46,9 +46,34 @@ describe("Navbar Testing", function () {
         });
     });
 
-    it("case #2: 左侧定制的导航栏", function () {
+    it("case #2: 自定义标题栏", function () {
       cy.get(".block")
         .eq(1)
+        .within(() => {
+          cy.get(
+            ".ossa-navbar.ossa-navbar--3column.ossa-navbar--show-split-line"
+          )
+            .eq(0)
+            .within(() => {
+              cy.get(".ossa-navbar--middle")
+                .eq(0)
+                .within(($bar) => {
+                  const partWidth = $bar.width();
+                  const width = $bar.parent().width();
+                  // expect(partWidth).to.be.closeTo(width/3, 1)
+                  cy.get(".ossa-navbar__title").should("be.exist");
+                  cy.get(".ossa-icon--home").should("be.exist");
+                  cy.get(".ossa-navbar__title").then((title) => {
+                    expect(title).to.contain.text("首页");
+                  });
+                });
+            });
+        });
+    });
+
+    it("case #3: 左侧定制的导航栏", function () {
+      cy.get(".block")
+        .eq(2)
         .within(() => {
           cy.get(
             ".ossa-navbar.ossa-navbar--3column.ossa-navbar--show-split-line"
@@ -84,9 +109,9 @@ describe("Navbar Testing", function () {
         });
     });
 
-    it("case #3: 右侧定制的导航栏", function () {
+    it("case #4: 右侧定制的导航栏", function () {
       cy.get(".block")
-        .eq(2)
+        .eq(3)
         .within(() => {
           cy.get(
             ".ossa-navbar.ossa-navbar--3column.ossa-navbar--show-split-line"
@@ -121,9 +146,9 @@ describe("Navbar Testing", function () {
         });
     });
 
-    it("case #4: 2列均分的导航栏", function () {
+    it("case #5: 2列均分的导航栏", function () {
       cy.get(".block")
-        .eq(3)
+        .eq(4)
         .within(() => {
           cy.get(
             ".ossa-navbar.ossa-navbar--2column.ossa-navbar--show-split-line"
@@ -150,9 +175,9 @@ describe("Navbar Testing", function () {
         });
     });
 
-    it("case #5: 自定义的导航栏", function () {
+    it("case #6: 自定义的导航栏", function () {
       cy.get(".block")
-        .eq(4)
+        .eq(5)
         .within(() => {
           cy.get(".ossa-navbar.ossa-navbar--custom")
             .eq(0)
