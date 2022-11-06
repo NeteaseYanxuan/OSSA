@@ -50,7 +50,7 @@ const initialListApi = {
       list: ["label", "表单说明，可选", "string", "-"],
     },
     {
-      list: ["maxLength", "最大字符数，可选", "mumber", "500"],
+      list: ["maxLength", "最大字符数，可选", "number", "500"],
     },
     {
       list: ["isReadonly", "是否可编辑，可选", "boolean", "false"],
@@ -60,6 +60,9 @@ const initialListApi = {
     },
     {
       list: ["disabledClear", "是否隐藏一键删除按钮，可选", "boolean", "false"],
+    },
+    {
+      list: ["showSplitLine", "是否展示底部分割线，当`type`为`bankcard`时无效，可选", "boolean", "true"],
     },
     {
       list: [
