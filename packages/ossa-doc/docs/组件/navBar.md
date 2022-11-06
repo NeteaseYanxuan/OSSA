@@ -105,7 +105,7 @@ const rightTexts = [{ id: 1, text: "按钮" }]
 |leftSlot|自定义左侧内容，存在时覆盖leftIcons和leftTexts，但比custom优先级低，可选|any|-|
 |rightIcons|右侧icon,取值参考OsIcon，可选|string[]|-|
 |rightTexts|右侧文案，可选|Texts[]|-|
-|rightSlot|自定义左侧内容，存在时覆盖rightIcons和rightTexts，但比custom优先级低，可选|any|-|
+|rightSlot|自定义右侧内容，存在时覆盖rightIcons和rightTexts，但比custom优先级低，可选|any|-|
 |showSplitLine|展示分割线，可选|boolean|true|
 |custom|自定义整个导航，会用custom中的内容作为整个导航的内容，覆盖所有icon/text/title/slot，可选|any|-|
 |iconColor|icon的颜色，仅当使用ossa提供的icon时有效，可选|string|#7f7f7f|
