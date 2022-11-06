@@ -62,6 +62,9 @@ const initialListApi = {
       list: ["disabledClear", "是否隐藏一键删除按钮，可选", "boolean", "false"],
     },
     {
+      list: ["showSplitLine", "是否展示底部分割线，当`type`为`bankcard`时无效，可选", "boolean", "true"],
+    },
+    {
       list: [
         "countDown",
         "是否显示字符计数器，textarea有效，可选",
