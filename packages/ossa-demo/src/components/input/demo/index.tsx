@@ -67,6 +67,14 @@ const initialListApi = {
     {
       list: [
         "countDown",
+        "是否显示字符计数器，textarea有效，可选。`countDown`字段将在未来版本中被移除,请使用`showCount`代替",
+        "boolean",
+        "false",
+      ],
+    },
+    {
+      list: [
+        "showCount",
         "是否显示字符计数器，textarea有效，可选",
         "boolean",
         "false",
@@ -185,7 +193,7 @@ export default function Index(props: any) {
             onChange={(v) => {
               setV3(v);
             }}
-            countDown
+            showCount
             maxLength={200}
           ></OsInput>
         </View>
@@ -218,7 +226,7 @@ export default function Index(props: any) {
             onChange={(v) => {
               setV6(v);
             }}
-            countDown
+            showCount
             isDisabled
           ></OsInput>
         </View>

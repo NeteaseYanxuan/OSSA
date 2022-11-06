@@ -154,8 +154,9 @@ const [v6, setV6] = useState("不可编辑的textarea");
 |isReadonly|是否可编辑，可选|boolean|false|
 |isDisabled|表单是否失效，可选|boolean|false|
 |disabledClear|是否隐藏一键删除按钮，可选|boolean|false|
+|countDown|是否显示字符计数器，textarea有效，可选，`countDown`字段将在未来版本中被移除,请使用`showCount`代替|boolean|false|
+|showCount|是否显示字符计数器，textarea有效，可选|boolean|false|
 |showSplitLine|是否展示底部分割线，当`type`为`bankcard`时无效，可选|boolean|true|
-|countDown|是否显示字符计数器，textarea有效，可选|boolean|false|
 
 
 ### 方法
