@@ -20,9 +20,7 @@ function getClassObject(props: OsModalProps) {
 }
 
 function onClose(props: OsModalProps) {
-  if (props.onClose) {
-    props.onClose();
-  }
+  props.onClose?.();
 }
 
 function onClickMask(props: OsModalProps) {
@@ -35,9 +33,7 @@ function onClickCancelBtn(props: OsModalProps) {
   if (props.disableCancelBtn) {
     return;
   }
-  if (props.onCancel) {
-    props.onCancel();
-  }
+  props.onCancel?.();
   onClose(props);
 }
 
@@ -45,12 +41,8 @@ function onClickConfirmBtn(props: OsModalProps) {
   if (props.disableConfirmBtn) {
     return;
   }
-  if (props.onConfirm) {
-    props.onConfirm();
-  }
-  if (props.closeOnConfirm) {
-    onClose(props);
-  }
+  props.onConfirm?.()
+  props.closeOnConfirm && onClose(props);
 }
 
 export default function Index(props: OsModalProps) {
