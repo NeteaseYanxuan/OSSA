@@ -1,8 +1,8 @@
 import React from "react";
-import { View, Image, Text } from "@tarojs/components";
+import { View, Image, Text, Button } from "@tarojs/components";
 import classNames from "classnames";
-//引入组件对应的 类型文件 .d.ts
 import { OsModalProps } from "../../../types/index";
+import getOpenTypeRelatedProps from "../../utils/getOpenTypeRelatedProps";
 
 const closeIconImg =
   "https://yanxuan-static.nosdn.127.net/hxm/yanxuan-wap/p/20161201/style/img/icon-normal/modalClose-9d2d6d39f7.png?imageView";
@@ -48,7 +48,9 @@ function onClickConfirmBtn(props: OsModalProps) {
   if (props.onConfirm) {
     props.onConfirm();
   }
-  onClose(props);
+  if (props.closeOnConfirm) {
+    onClose(props);
+  }
 }
 
 export default function Index(props: OsModalProps) {
@@ -56,6 +58,7 @@ export default function Index(props: OsModalProps) {
   const classObject = getClassObject(props); //组件修饰
   const styleObject = getStyleObj(props);
   const className = classNames(rootClassName, classObject, props.className);
+  const openTypeRelatedProps = getOpenTypeRelatedProps(props)
 
   const {
     title,
@@ -65,6 +68,7 @@ export default function Index(props: OsModalProps) {
     custom,
     showCloseIcon,
     closeIconPosition,
+    confirmOpenType
   } = props;
 
   const isRenderAction = confirmText || cancelText;
@@ -100,7 +104,7 @@ export default function Index(props: OsModalProps) {
           {isRenderAction && (
             <View className='ossa-modal__footer'>
               {cancelText && (
-                <View
+                <Button
                   className={classNames({
                     ["ossa-action-btn"]: true,
                     ["ossa-action-btn--cancel"]: true,
@@ -109,19 +113,21 @@ export default function Index(props: OsModalProps) {
                   onClick={(e) => onClickCancelBtn(props)}
                 >
                   {cancelText}
-                </View>
+                </Button>
               )}
               {confirmText && (
-                <View
+                <Button
                   className={classNames({
                     ["ossa-action-btn"]: true,
                     ["ossa-action-btn--confirm"]: true,
                     ["ossa-action-btn--disabled"]: props.disableConfirmBtn,
                   })}
+                  openType={confirmOpenType}
+                  {...openTypeRelatedProps}
                   onClick={(e) => onClickConfirmBtn(props)}
                 >
                   {confirmText}
-                </View>
+                </Button>
               )}
             </View>
           )}
@@ -147,7 +153,7 @@ export default function Index(props: OsModalProps) {
           {isRenderAction && (
             <View className='ossa-modal__footer'>
               {cancelText && (
-                <View
+                <Button
                   className={classNames({
                     ["ossa-action-btn"]: true,
                     ["ossa-action-btn--cancel"]: true,
@@ -156,19 +162,21 @@ export default function Index(props: OsModalProps) {
                   onClick={(e) => onClickCancelBtn(props)}
                 >
                   {cancelText}
-                </View>
+                </Button>
               )}
               {confirmText && (
-                <View
+                <Button
                   className={classNames({
                     ["ossa-action-btn"]: true,
                     ["ossa-action-btn--confirm"]: true,
                     ["ossa-action-btn--disabled"]: props.disableConfirmBtn,
                   })}
+                  openType={confirmOpenType}
+                  {...openTypeRelatedProps}
                   onClick={(e) => onClickConfirmBtn(props)}
                 >
                   {confirmText}
-                </View>
+                </Button>
               )}
             </View>
           )}
@@ -185,6 +193,7 @@ Index.defaultProps = {
   cancelText: null,
   confirmText: null,
   closeOnClickMask: true,
+  closeOnConfirm: false,
   showCloseIcon: true,
   closeIconPosition: "top-right",
   onClose: null,
