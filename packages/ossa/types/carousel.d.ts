@@ -1,3 +1,4 @@
+import { ITouchEvent } from "@tarojs/components";
 import { ComponentClass, CSSProperties } from "react";
 import OsComponent from "./base";
 
@@ -113,7 +114,7 @@ interface CarouselProps extends OsComponent {
   /**
    * 点击子项回调
    */
-  onClick?: () => void;
+  onClick?: (activeIndex: number, e: ITouchEvent) => void;
 }
 
 declare const Carousel: ComponentClass<CarouselProps>;

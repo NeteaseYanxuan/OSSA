@@ -1,5 +1,19 @@
 # ossaui
 
+## 0.4.0
+
+### Minor Changes
+
+- [#49](https://github.com/NeteaseYanxuan/OSSA/pull/49) [`57019bc`](https://github.com/NeteaseYanxuan/OSSA/commit/57019bc6da770de0e34eba4e3f80e8cde65f5ee8) Thanks [@Zeng-J](https://github.com/Zeng-J)! - Radio 受控 可由 RadioGroup 控制
+
+### Patch Changes
+
+- [#61](https://github.com/NeteaseYanxuan/OSSA/pull/61) [`fd2910a`](https://github.com/NeteaseYanxuan/OSSA/commit/fd2910a9db05fb95d9f3b66b0c767c5e3ade3ebf) Thanks [@kiner-tang](https://github.com/kiner-tang)! - feat(Carousel): 走马灯点击回调支持传入当前点击子项索引
+
+* [#60](https://github.com/NeteaseYanxuan/OSSA/pull/60) [`752dd04`](https://github.com/NeteaseYanxuan/OSSA/commit/752dd043683877dac417e311cdbfd3bd1175154e) Thanks [@kiner-tang](https://github.com/kiner-tang)! - indicatorColor 与默认保持一致
+
+- [#58](https://github.com/NeteaseYanxuan/OSSA/pull/58) [`6d50ebe`](https://github.com/NeteaseYanxuan/OSSA/commit/6d50ebe652716ac2fb3a6f93107271b98d06034b) Thanks [@kiner-tang](https://github.com/kiner-tang)! - fix(Badge): 修复 Badge 的 info 为 0 或为空时显示异常问题
+
 ## 0.3.5
 
 ### Patch Changes

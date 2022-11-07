@@ -3,16 +3,20 @@ import OsComponent from "./base";
 
 interface RadioProps extends OsComponent {
   type?: "column" | "row";
+  value?: number | string;
+  isDisabled?: boolean;
+  isReadonly?: boolean;
+  onChange?: (v) => void;
 }
 
 interface RadioOptionProps extends OsComponent {
   optionValue: number | string;
-  value: number | string;
+  value?: number | string;
   isDisabled?: boolean;
   isReadonly?: boolean;
   isCustom?: boolean;
   type?: "column" | "row";
-  onClick: (v) => void;
+  onClick?: (v) => void;
 }
 
 declare const Radio: ComponentClass<RadioProps>;

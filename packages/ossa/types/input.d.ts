@@ -16,7 +16,7 @@ interface InputProps extends OsComponent {
    * - textarea: 文本域
    * @default "text"
    */
-  type?: "text" | "number" | "password" | "bankcard" | "textarea" | "border";
+  type?: "text" | "number" | "password" | "bankcard" | "textarea";
   /**
    * 当前输入框的值
    */
@@ -63,7 +63,15 @@ interface InputProps extends OsComponent {
    * @default true
    */
   showSplitLine?: boolean;
+  /**
+   * 是否显示字符计数器，textarea有效，可选
+   * @deprecated `countDown`字段将在未来版本中被移除,请使用`showCount`代替
+   */
   countDown?: boolean;
+  /**
+   * 是否显示字符计数器，textarea有效，可选
+   */
+  showCount?: boolean;
   /**
    * 当文本框的内容发生变化时触发
    */

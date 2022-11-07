@@ -24,6 +24,25 @@ const initialRadioListApi = {
     {
       list: ["type", "布局类型", "column | row", "column"],
     },
+    {
+      list: ["value", "选中值，可选", "number | string", "-"],
+    },
+    {
+      list: ["isDisabled", "失效状态，可选", "boolean", "-"],
+    },
+    {
+      list: ["isReadonly", "不可执行，可选", "boolean", "-"],
+    },
+  ],
+};
+
+const initialRadioListEvent = {
+  title: "Event-OsRadio",
+  head: ["函数名", "说明", "参数"],
+  data: [
+    {
+      list: ["onChange", "value改变时触发，可选", "value"],
+    },
   ],
 };
 
@@ -68,6 +87,7 @@ export default function Index(props: Props) {
   const [v5, setV5] = useState(0);
   const [v6, setV6] = useState(0);
   const [v7, setV7] = useState(0);
+  const [v8, setV8] = useState(0);
 
   useEffect(() => {
     Taro.setNavigationBarTitle({
@@ -258,8 +278,23 @@ export default function Index(props: Props) {
         </OsRadio>
       </DemoBlock>
 
+      <DemoBlock title='RadioGroup控制value' fullScreen>
+        <OsRadio type='row' value={v8} onChange={setV8}>
+          <OsRadioOption optionValue={0} type='row'>
+            选项A
+          </OsRadioOption>
+          <OsRadioOption optionValue={1} type='row'>
+            选项B
+          </OsRadioOption>
+        </OsRadio>
+      </DemoBlock>
+
       <DemoBlock>
         <DemoTable list={initialRadioListApi}></DemoTable>
+      </DemoBlock>
+
+      <DemoBlock>
+        <DemoTable list={initialRadioListEvent}></DemoTable>
       </DemoBlock>
 
       <DemoBlock>

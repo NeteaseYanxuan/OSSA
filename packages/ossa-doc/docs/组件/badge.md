@@ -64,7 +64,7 @@ demo_url: 'https://neteaseyanxuan.github.io/OSSA/#/components/badge/demo/index'
 |------|------|------|------|
 |type|dot \| info \| text \| list，可选|string|dot|
 |isShow|展示徽标，可选|booelan|true|
-|info|角标值，可选|number \| string|9|
+|info|角标值，可选，当 info 为空或为`'0'`或`0`时隐藏角标|number \| string|-|
 |max|角标阀值，可选|number|99\(\>99显示99\+\)|
 |className|自定义类名，可选|string|-|
 |customStyle|自定义样式，可选|object|-|

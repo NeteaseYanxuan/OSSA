@@ -99,6 +99,7 @@ export default function OsInput(props: OsInputProps) {
     props.value &&
     props.type !== "textarea";
   const editable = !props.isReadonly && !props.isDisabled;
+  const mergedShowCount = props.showCount ?? props.countDown;
   return (
     <View
       className={classNames(rootClassName, classObject, props.className)}
@@ -167,7 +168,7 @@ export default function OsInput(props: OsInputProps) {
           </View>
         )}
       </View>
-      {props.type === "textarea" && props.countDown && (
+      {props.type === "textarea" && mergedShowCount && (
         <View className='ossa-input__count-down'>
           {Number(props.maxLength) - value.length}
         </View>

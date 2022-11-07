@@ -144,17 +144,19 @@ const [v6, setV6] = useState("不可编辑的textarea");
 ### 属性
 |参数|说明|类型|默认值|
 |------|------|------|------|
-|type|输入框类型，可选|text \| number \| password \| bankcard \| textarea \| border|text|
+|type|输入框类型，可选|text \| number \| password \| bankcard \| textarea |text|
 |value|表单值，可选|string|-|
 |placeholder|placeholder，可选|string|-|
 |placeholderStyle|placeholder样式，只支持小程序，可选|string|-|
 |placeholderClass|placeholder样式类，可选|string|-|
 |label|表单说明，可选|string|-|
-|maxLength|最大字符数，可选|mumber|500|
+|maxLength|最大字符数，可选|number|500|
 |isReadonly|是否可编辑，可选|boolean|false|
 |isDisabled|表单是否失效，可选|boolean|false|
 |disabledClear|是否隐藏一键删除按钮，可选|boolean|false|
-|countDown|是否显示字符计数器，textarea有效，可选|boolean|false|
+|countDown|是否显示字符计数器，textarea有效，可选，`countDown`字段将在未来版本中被移除,请使用`showCount`代替|boolean|false|
+|showCount|是否显示字符计数器，textarea有效，可选|boolean|false|
+|showSplitLine|是否展示底部分割线，当`type`为`bankcard`时无效，可选|boolean|true|
 
 
 ### 方法

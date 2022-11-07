@@ -68,7 +68,7 @@ const initialListApi = {
     {
       list: [
         "rightSlot",
-        "自定义左侧内容，存在时覆盖rightIcons和rightTexts，但比custom优先级低，可选",
+        "自定义右侧内容，存在时覆盖rightIcons和rightTexts，但比custom优先级低，可选",
         "ReactChild",
         "-",
       ],

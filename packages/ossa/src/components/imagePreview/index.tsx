@@ -82,15 +82,9 @@ export default function Index(props: OsImagePreviewProps) {
   const [offsetY, setOffsetY] = useState(0);
   const [startX, setStartX] = useState(0);
   const [startY, setStartY] = useState(0);
-  const [, setShow] = useState(false);
   const styleObject = Object.assign(getStyleObj(props), customStyle);
   const _pageInfo = getPageInfo(props, index);
   const swipeStyle = getSwipeStyle(offset, swiping, totalWidth);
-
-  useEffect(() => {
-    const isShow = props.show || false;
-    setShow(isShow);
-  }, [props.show]);
 
   function resetTouchStatus() {
     setDeltaX(0);
@@ -201,14 +195,12 @@ export default function Index(props: OsImagePreviewProps) {
 
   function onWrapperClick(event: ITouchEvent) {
     if (touchable && offsetX < 10 && offsetY < 10) {
-      setShow(false);
       clearStates();
       props.onClose && props.onClose({ index: index, url: imagesArr[index], item: imagesArr[index] });
     }
   }
 
   function onGoback() {
-    setShow(false);
     clearStates();
     props.onClose && props.onClose({ index: index, url: imagesArr[index], item: imagesArr[index] });
   }

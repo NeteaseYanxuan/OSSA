@@ -31,13 +31,10 @@ jobs:
         id: changesets
         uses: changesets/action@v1
         with:
+          # this expects you to have a npm script called version that runs some logic and then calls `changeset version`.
+          version: pnpm version-packages:ci
           # This expects you to have a script called release which does a build for your packages and calls changeset publish
           publish: pnpm release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-
-      - name: Send a Slack notification if a publish happens
-        if: steps.changesets.outputs.published == 'true'
-        # You can do something when a publish happens.
-        run: my-slack-bot send-notification --message "A new version of ${GITHUB_REPOSITORY} was published!"
