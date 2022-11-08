@@ -43,7 +43,7 @@ function onClick(
   item: OsTabBarItemProps,
   index: number
 ) {
-  props.onClick && props.onClick(item, index);
+  props.onClick?.(item, index);
 }
 
 export default function TabBar(props: OsTabBarProps) {

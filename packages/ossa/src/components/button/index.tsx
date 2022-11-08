@@ -84,7 +84,7 @@ function getSize(props: OsButtonProps, size: string): string {
 
 function onClick(e: ITouchEvent, props: OsButtonProps): void {
   if (!props.disabled) {
-    props.onClick && props.onClick(e);
+    props.onClick?.(e);
   }
 }
 

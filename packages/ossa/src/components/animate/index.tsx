@@ -28,7 +28,7 @@ function handleType(s?: OsAnimateProps["type"]) {
 }
 
 function onClick(e: any, props: OsAnimateProps) {
-  props.onClick && props.onClick(e);
+  props.onClick?.(e);
 }
 
 export default function Index(props: OsAnimateProps) {

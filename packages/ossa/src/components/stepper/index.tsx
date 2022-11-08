@@ -58,8 +58,8 @@ export default function Stepper(props: OsStepperProps) {
         });
       } else {
         lowThanMin
-          ? props.onDisabledSubtract && props.onDisabledSubtract(value)
-          : props.onDisabledAdd && props.onDisabledAdd(value);
+          ? props.onDisabledSubtract?.(value)
+          : props.onDisabledAdd?.(value);
         handleError({
           type: lowThanMin ? "LOW" : "OVER",
           errorValue,
@@ -72,9 +72,9 @@ export default function Stepper(props: OsStepperProps) {
     newValue = handleValue(newValue);
     props.onChange(newValue);
     if (clickType === "minus") {
-      props.onSubtract && props.onSubtract(newValue);
+      props.onSubtract?.(newValue);
     } else {
-      props.onAdd && props.onAdd(newValue);
+      props.onAdd?.(newValue);
     }
   }
 
@@ -121,7 +121,7 @@ export default function Stepper(props: OsStepperProps) {
     const newValue = handleValue(value);
     value !== newValue && props.onChange(newValue);
 
-    props.onBlur && props.onBlur(event);
+    props.onBlur?.(event);
   }
 
   function handleError(errorValue) {

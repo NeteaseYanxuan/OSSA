@@ -13,9 +13,7 @@ function getClassObject(props: OsActionsheetProps) {
 }
 
 const onClose = (props: OsActionsheetProps) => {
-  if (props.onClose) {
-    props.onClose();
-  }
+  props.onClose?.();
 };
 
 const onClickMask = (props: OsActionsheetProps) => {

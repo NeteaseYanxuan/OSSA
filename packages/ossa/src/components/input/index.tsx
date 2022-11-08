@@ -34,15 +34,11 @@ const onInput = (
   if (props.type === "bankcard") {
     value = value.replace(/(\s)/g, "");
   }
-  if (props.onChange) {
-    props.onChange(value);
-  }
+  props.onChange?.(value);
 };
 
 const onClickDeleteIcon = (props: OsInputProps) => {
-  if (props.onChange) {
-    props.onChange("");
-  }
+  props.onChange?.("");
 };
 
 export default function OsInput(props: OsInputProps) {
@@ -65,10 +61,7 @@ export default function OsInput(props: OsInputProps) {
       return;
     }
 
-    if (!props.onChange) {
-      return;
-    }
-    props.onChange(value.slice(0, props.maxLength));
+    props.onChange?.(value.slice(0, props.maxLength));
   }, [props.value, props.type, props.maxLength, props, value]);
 
   const onClickVisibleIcon = () => {
@@ -87,11 +80,11 @@ export default function OsInput(props: OsInputProps) {
           e.currentTarget.scrollIntoView(true);
       }, 1);
     }
-    props.onFocus && props.onFocus(e);
+    props.onFocus?.(e);
   };
 
   const onBlur = (e) => {
-    props.onBlur && props.onBlur(e);
+    props.onBlur?.(e);
   };
   const showDelIcon =
     !props.isDisabled &&

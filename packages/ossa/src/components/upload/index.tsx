@@ -36,7 +36,7 @@ function onRemoveImg(
   } else {
     setUpload(true);
   }
-  props.onChange && props.onChange(newFiles, "remove", index);
+  props.onChange?.(newFiles, "remove", index);
 }
 
 const initialUploads = true;
@@ -83,7 +83,7 @@ function setNewFiles(
   if (newFiles.length >= max) {
     setUpload(false);
   }
-  props.onChange && props.onChange(newFiles, "add", 0);
+  props.onChange?.(newFiles, "add", 0);
 }
 
 export default function Upload(props: OsUploadProps) {

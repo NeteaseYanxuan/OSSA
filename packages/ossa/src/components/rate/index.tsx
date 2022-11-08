@@ -50,7 +50,7 @@ function onClick(
   const { onChange } = props;
 
   setCurrent(index);
-  onChange && onChange(item);
+  onChange?.(item);
 }
 
 export default function Rate(props: OsRateProps) {

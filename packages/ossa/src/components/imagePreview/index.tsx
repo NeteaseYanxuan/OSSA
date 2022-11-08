@@ -190,19 +190,19 @@ export default function Index(props: OsImagePreviewProps) {
     }
     setSwiping(false);
     const _index = index >= imagesArr.length ? 0 : index;
-    props.onChange && props.onChange({ index: _index, url: imagesArr[_index], item: imagesArr[_index] });
+    props.onChange?.({ index: _index, url: imagesArr[_index], item: imagesArr[_index] });
   }
 
   function onWrapperClick(event: ITouchEvent) {
     if (touchable && offsetX < 10 && offsetY < 10) {
       clearStates();
-      props.onClose && props.onClose({ index: index, url: imagesArr[index], item: imagesArr[index] });
+      props.onClose?.({ index: index, url: imagesArr[index], item: imagesArr[index] });
     }
   }
 
   function onGoback() {
     clearStates();
-    props.onClose && props.onClose({ index: index, url: imagesArr[index], item: imagesArr[index] });
+    props.onClose?.({ index: index, url: imagesArr[index], item: imagesArr[index] });
   }
 
   function clearStates() {

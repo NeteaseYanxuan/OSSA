@@ -23,19 +23,19 @@ function getClassObject(props: OsNavBarProps) {
 }
 
 function onLeftIconClick(props: OsNavBarProps, item: IconProps["type"]) {
-  props.onLeftIconClick && props.onLeftIconClick(item);
+  props.onLeftIconClick?.(item);
 }
 
 function onLeftTextClick(props: OsNavBarProps, id: number) {
-  props.onLeftTextClick && props.onLeftTextClick(id);
+  props.onLeftTextClick?.(id);
 }
 
 function onRightIconClick(props: OsNavBarProps, item: IconProps["type"]) {
-  props.onRightIconClick && props.onRightIconClick(item);
+  props.onRightIconClick?.(item);
 }
 
 function onRightTextClick(props: OsNavBarProps, id: number) {
-  props.onRightTextClick && props.onRightTextClick(id);
+  props.onRightTextClick?.(id);
 }
 
 export default class NavBar extends Component<OsNavBarProps> {

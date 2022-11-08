@@ -47,15 +47,14 @@ class PickerGroup extends Component<OsPickerGroupProps> {
     this.touchEnd = false;
 
     // 点击超过范围，点击到补帧时，先跳到另一端的补帧
-    onUpdateHeight &&
-      onUpdateHeight(-range * factor * LINE_HEIGHT + height, columnId);
+    onUpdateHeight?.(-range * factor * LINE_HEIGHT + height, columnId);
 
     // 再做过渡动画
     setTimeout(() => {
       this.touchEnd = true;
       const index = Math.round(absoluteHeight / -LINE_HEIGHT) + range * factor;
       const relativeHeight = TOP - LINE_HEIGHT * index;
-      onUpdateHeight && onUpdateHeight(relativeHeight, columnId, true);
+      onUpdateHeight?.(relativeHeight, columnId, true);
     }, 0);
   }
 
@@ -65,9 +64,7 @@ class PickerGroup extends Component<OsPickerGroupProps> {
       this.startY = e.changedTouches[0].clientY;
       this.preY = e.changedTouches[0].clientY;
       this.hadMove = false;
-      if (this.props.onTouchStart) {
-        this.props.onTouchStart(e);
-      }
+      this.props.onTouchStart?.(e);
     };
 
     const onTouchMove = (e) => {
@@ -103,11 +100,9 @@ class PickerGroup extends Component<OsPickerGroupProps> {
         }
       }
 
-      if (this.props.onUpdateHeight)
-        this.props.onUpdateHeight(newPos, columnId);
-      if (this.props.onTouchMove) {
-        this.props.onTouchMove(e);
-      }
+      
+      this.props.onUpdateHeight?.(newPos, columnId);
+      this.props.onTouchMove?.(e);
       e.preventDefault();
       e.stopPropagation();
     };
@@ -182,38 +177,32 @@ class PickerGroup extends Component<OsPickerGroupProps> {
 
       if (this.props.type === "date" || this.props.type === "complete") {
         if (this.props.columnId === "0") {
-          this.props.onUpdateDay &&
-            this.props.onUpdateDay(
+          this.props.onUpdateDay?.(
               +this.props.range[index].replace(/[^0-9]/gi, ""),
               0
             );
         }
         if (this.props.columnId === "1") {
-          this.props.onUpdateDay &&
-            this.props.onUpdateDay(
+          this.props.onUpdateDay?.(
               +this.props.range[index].replace(/[^0-9]/gi, ""),
               1
             );
         }
         if (this.props.columnId === "2") {
-          this.props.onUpdateDay &&
-            this.props.onUpdateDay(
+          this.props.onUpdateDay?.(
               +this.props.range[index].replace(/[^0-9]/gi, ""),
               2
             );
         }
       }
 
-      onUpdateHeight &&
-        onUpdateHeight(
+      onUpdateHeight?.(
           relativeHeight,
           columnId,
           type === "time" || type === "date"
         );
-      onColumnChange && onColumnChange(relativeHeight, columnId, e);
-      if (this.props.onTouchEnd) {
-        this.props.onTouchEnd(e);
-      }
+      onColumnChange?.(relativeHeight, columnId, e);
+      this.props.onTouchEnd?.(e);
     };
 
     const rootClassName = "picker-group"; //组件

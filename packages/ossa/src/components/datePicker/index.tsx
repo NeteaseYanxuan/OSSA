@@ -114,13 +114,13 @@ export default class DatePicker extends Component<OsDatePickerProps, any> {
       eventObj.detail.value = `${this.val[0]}-${this.val[1]}-${this.val[2]} ${this.val[3]}:${this.val[4]}`;
     }
 
-    this.props.onConfirm && this.props.onConfirm(eventObj);
+    this.props.onConfirm?.(eventObj);
   };
 
   // 点击取消或蒙层
   onCancel = (e: ITouchEvent) => {
     this.hidePicker();
-    this.props.onCancel && this.props.onCancel();
+    this.props.onCancel?.();
   };
 
   // 统一抛出的事件对象，和小程序对齐

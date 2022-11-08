@@ -28,7 +28,7 @@ function getClassObject(props: OsColProps, context: DataContextProps): Record<st
 }
 
 function onClick(e: ITouchEvent, props: OsColProps): void {
-  props.onClick && props.onClick(e);
+  props.onClick?.(e);
 }
 
 export default function Col(props: OsColProps) {
