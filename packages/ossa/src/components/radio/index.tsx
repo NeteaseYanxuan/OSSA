@@ -57,8 +57,8 @@ export default function Index(props: OsRadioProps) {
                 ...coommonChildProps,
                 onClick: (v) => {
                   const onClick = (child.props as OsRadioOptionProps).onClick;
-                  onClick && onClick(v);
-                  props.onChange && props.onChange(v);
+                  onClick?.(v);
+                  props.onChange?.(v);
                 },
               })
             : child;

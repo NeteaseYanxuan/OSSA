@@ -17,7 +17,7 @@ function getClassObject(props: OsRowProps) {
 }
 
 function onClick(e: any, props: OsRowProps) {
-  props.onClick && props.onClick(e);
+  props.onClick?.(e);
 }
 
 export default function Row(props: OsRowProps) {

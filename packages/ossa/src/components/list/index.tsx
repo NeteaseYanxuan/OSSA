@@ -50,7 +50,7 @@ function getClassObject(props: OsListProps, active: boolean) {
 }
 
 function onClick(e: any, props: OsListProps) {
-  props.onClick && props.onClick(e);
+  props.onClick?.(e);
 }
 
 function onTouchstart(

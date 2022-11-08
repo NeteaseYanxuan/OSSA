@@ -26,7 +26,7 @@ function getClassObject(props: OsColProps, context: any) {
 }
 
 function onClick(e: any, props: OsColProps) {
-  props.onClick && props.onClick(e);
+  props.onClick?.(e);
 }
 
 export default function Col(props: OsColProps) {
