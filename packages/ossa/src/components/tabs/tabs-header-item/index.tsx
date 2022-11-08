@@ -39,7 +39,7 @@ function getText(text: string) {
 
 function onClick(props: OsTabsHeaderItemProps) {
   const { index } = props;
-  props.onClick && props.onClick(index);
+  props.onClick?.(index);
 }
 
 export default function Index(props: OsTabsHeaderItemProps) {

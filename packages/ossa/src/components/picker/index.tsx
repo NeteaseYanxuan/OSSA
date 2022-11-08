@@ -29,13 +29,13 @@ export default function Index(props: OsPickerProps) {
   };
 
   const onCancel = () => {
-    props.onCancel && props.onCancel();
+    props.onCancel?.();
     onClose();
   };
 
   const onConfirm = () => {
     const newIndex = Math.round((ITEM_HEIGHT * 2 - groupOffsetY) / ITEM_HEIGHT);
-    props.onConfirm && props.onConfirm(newIndex);
+    props.onConfirm?.(newIndex);
     onClose();
   };
 

@@ -82,7 +82,7 @@ function getSize(props: OsButtonProps, size: string) {
 
 function onClick(e: any, props: OsButtonProps) {
   if (!props.disabled) {
-    props.onClick && props.onClick(e);
+    props.onClick?.(e);
   }
 }
 

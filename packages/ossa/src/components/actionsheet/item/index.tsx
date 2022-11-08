@@ -14,7 +14,7 @@ function onCLickItem(props: OsActionsheetItemProps) {
   if (props.disabled) {
     return;
   }
-  props.onClick && props.onClick();
+  props.onClick?.();
 }
 
 export default function ActionsheetItem(props: OsActionsheetItemProps) {

@@ -67,7 +67,7 @@ function getInfo(props: OsBadgeProps): string {
  *
  */
 function onClick(props: OsBadgeProps, e: ITouchEvent) {
-  props.onClick && props.onClick(e);
+  props.onClick?.(e);
 }
 
 export default function Badge(props: OsBadgeProps) {

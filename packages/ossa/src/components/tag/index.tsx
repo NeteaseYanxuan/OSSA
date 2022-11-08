@@ -67,7 +67,7 @@ export default function Tag(props: OsTagProps) {
       className={classNames(rootClassName, classObject, className)}
       style={styleObject}
       onClick={(e) => {
-        props.onClick && props.onClick(e);
+        props.onClick?.(e);
       }}
     >
       {props.type === "radius" ? (

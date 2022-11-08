@@ -26,7 +26,7 @@ export default function RadioOption(props: OsRadioOptionProps) {
 
   const onClickOption = (optionProps: OsRadioOptionProps) => {
     if (optionProps.isDisabled || optionProps.isReadonly) return;
-    optionProps.onClick && optionProps.onClick(optionProps.optionValue);
+    optionProps.onClick?.(optionProps.optionValue);
   };
 
   let iconType = "check";

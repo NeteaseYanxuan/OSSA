@@ -67,7 +67,7 @@ function onChangeCarousel(
 ) {
   const { onChange } = props;
   setActiveIndex(e.detail.current);
-  onChange && onChange(e.detail.current);
+  onChange?.(e.detail.current);
 }
 
 function onClickCarousel(e: ITouchEvent, props: OsCarouselProps, currentIndex = 0) {

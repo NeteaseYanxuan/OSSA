@@ -30,7 +30,7 @@ export default function Toast(props: OsToastProps) {
   const classObject = getClassObject(props, show); //组件修饰
 
   function onClose() {
-    props.onClose && props.onClose();
+    props.onClose?.();
   }
 
   useEffect(() => {
