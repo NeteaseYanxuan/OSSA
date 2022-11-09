@@ -6,6 +6,10 @@ export interface NavBarItemProps extends OsComponent {
   id: number;
   text: string;
 }
+
+/**
+ * @name 导航栏
+ */
 export interface NavBarProps extends OsComponent {
   /**
    * 导航标题
