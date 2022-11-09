@@ -52,7 +52,7 @@ describe("noticebar Testing", function () {
 
     it("case #3: 可关闭的通知栏框", function () {
       cy.get(".block")
-        .eq(2)
+        .eq(3)
         .within(() => {
           cy.get(".ossa-notice-bar").within(() => {
             cy.get(".ossa-notice-bar__content-wrapper").within(() => {
@@ -72,7 +72,7 @@ describe("noticebar Testing", function () {
 
     it("case #4: 可跳转的通知栏框", function () {
       cy.get(".block")
-        .eq(3)
+        .eq(4)
         .within(() => {
           cy.get(".ossa-notice-bar").within(() => {
             cy.get(".ossa-notice-bar__content-wrapper").within(() => {

@@ -45,9 +45,10 @@ demo_url: 'https://neteaseyanxuan.github.io/OSSA/#/components/noticeBar/demo/ind
 |------|------|------|------|
 |closeable|是否显示关闭按钮，可选|boolean|false|
 |scrollable|文字是否可滚动，可选|boolean|false|
-|speed|文字滚动速度，可选|number|50|
+|speed|文字滚动一屏的总时长，单位秒，可选，`speed`字段将在未来版本中被移除,请使用`duration`代替|number|16,单位秒|
+|duration|文字滚动一屏的总时长，单位秒，可选|number|16,单位秒|
 |leftIcon|左侧Icon，可选|OsIcon|-|
-|more|是否显示更多按钮，可选|boolean|50|
+|more|是否显示更多按钮，可选|boolean|false|
 |color|文字颜色，可选|string|#f48f18|
 |bgColor|背景颜色，可选|string|#fff8d8|
 

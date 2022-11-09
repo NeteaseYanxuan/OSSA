@@ -1,12 +1,27 @@
-import React from "react";
+import React, { CSSProperties } from "react";
 import { View } from "@tarojs/components";
 import classNames from "classnames";
 //引入组件对应的 类型文件 .d.ts
 import { OsNoticeBarProps } from "../../../types/index";
 import OsIcon from "../icon";
 
-function getStyleObj(props: OsNoticeBarProps) {
-  const _styleObj = {};
+function getStyleObj(props: OsNoticeBarProps): CSSProperties {
+  const _styleObj: CSSProperties = {
+
+  };
+  return _styleObj;
+}
+
+
+function getContentStyleObj({
+  speed = 16,
+  duration = 16
+}: OsNoticeBarProps): CSSProperties {
+  const mergedDuration = duration ?? speed;
+  const _styleObj: CSSProperties = {
+    'animationDuration': `${mergedDuration}s`,
+    'WebkitAnimationDuration': `${mergedDuration}s`,
+  };
   return _styleObj;
 }
 
@@ -22,6 +37,7 @@ export default function Index(props: OsNoticeBarProps) {
   const rootClassName = "ossa-notice-bar"; //组件
   const classObject = getClassObject(props); //组件修饰
   const styleObject = Object.assign(getStyleObj(props), props.customStyle);
+  const contentStyleObject = getContentStyleObj(props);
 
   return (
     <View
@@ -42,6 +58,7 @@ export default function Index(props: OsNoticeBarProps) {
           className={classNames({
             ["ossa-notice-bar__content"]: true,
           })}
+          style={contentStyleObject}
         >
           {props.children}
         </View>
