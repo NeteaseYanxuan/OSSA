@@ -5,9 +5,14 @@ interface BaseRadioProps {
   /**
    * 单选按钮类型
    * @desc
-   * - column: 
+   * - column: 单行独占单选按钮
+   * - row: 横向布局单选按钮
+   * @default column
    */
   type?: "column" | "row";
+  /**
+   * 单选按钮的值
+   */
   value?: number | string;
   /**
    * 是否禁用
@@ -34,12 +39,26 @@ interface BaseRadioProps {
 }
 
 interface RadioProps extends BaseRadioProps, OsComponent {
-  onChange?: (v) => void;
+  /**
+   * 单选按钮值改变时回到
+   * @param {number | string} v 当前值
+   */
+  onChange?: (v: number | string) => void;
 }
 
 interface RadioOptionProps extends BaseRadioProps, OsComponent {
+  /**
+   * 选项值
+   */
   optionValue: number | string;
+  /**
+   * 是否自定义
+   * @default false
+   */
   isCustom?: boolean;
+  /**
+   * 点击回调
+   */
   onClick?: (v) => void;
 }
 
