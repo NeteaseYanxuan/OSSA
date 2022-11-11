@@ -28,13 +28,13 @@ const initialRadioListApi = {
       list: ["value", "选中值，可选", "number | string", "-"],
     },
     {
-      list: ["isDisabled", "失效状态，可选", "boolean", "false"],
+      list: ["isDisabled", "失效状态，可选，`isDisabled`属性在未来版本中将被删除，请使用`disable`代替", "boolean", "false"],
     },
     {
       list: ["disabled", "失效状态，可选", "boolean", "false"],
     },
     {
-      list: ["isReadonly", "不可执行，可选", "boolean", "false"],
+      list: ["isReadonly", "不可执行，可选，`isReadonly`属性在未来版本中将被删除，请使用`readonly`代替", "boolean", "false"],
     },
     {
       list: ["readonly", "失效状态，可选", "boolean", "false"],
