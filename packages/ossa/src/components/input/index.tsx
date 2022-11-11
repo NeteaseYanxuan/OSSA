@@ -81,7 +81,7 @@ export default function OsInput(props: OsInputProps) {
   const editable = !props.isReadonly && !props.isDisabled;
   const mergedShowCount = deprecatedProp(props.showCount, props.countDown, {
     newPropName: "showCount",
-    oldPropName: "countdown",
+    oldPropName: "countDown",
     moduleName: "input"
   });
   return (
