@@ -22,11 +22,33 @@ interface NoticeBarProps extends OsComponent {
    * @default 50
    */
   speed?: number;
+  /**
+   * 左侧图标，取值参考OsIcon
+   * @see https://ossa.miaode.com/docs/%E7%BB%84%E4%BB%B6/icon
+   */
   leftIcon?: IconProps["type"];
+  /**
+   * 是否显示更多按钮
+   * @default false
+   */
   more?: boolean;
+  /**
+   * 文字颜色
+   * @default "#f48f18"
+   */
   color?: string;
+  /**
+   * 背景颜色
+   * @default "fff8d8"
+   */
   bgColor?: string;
+  /**
+   * 关闭时回调
+   */
   onClose?: CommonEventFunction;
+  /**
+   * 点击时回调
+   */
   onClick?: CommonEventFunction;
 }
 
