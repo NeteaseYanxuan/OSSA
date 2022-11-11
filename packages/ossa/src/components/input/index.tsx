@@ -5,6 +5,7 @@ import classNames from "classnames";
 import OsIcon from "../icon";
 import { OsInputProps } from "../../../types/index";
 import { isAndroid } from "../common/util";
+import { deprecatedProp } from "../../utils";
 
 function getClassObject(props: OsInputProps) {
   const classObject = {
@@ -78,7 +79,11 @@ export default function OsInput(props: OsInputProps) {
     props.value &&
     props.type !== "textarea";
   const editable = !props.isReadonly && !props.isDisabled;
-  const mergedShowCount = props.showCount ?? props.countDown;
+  const mergedShowCount = deprecatedProp(props.showCount, props.countDown, {
+    newPropName: "showCount",
+    oldPropName: "countdown",
+    moduleName: "input"
+  });
   return (
     <View
       className={classNames(rootClassName, classObject, props.className)}

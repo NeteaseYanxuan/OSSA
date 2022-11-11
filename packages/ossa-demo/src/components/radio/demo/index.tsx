@@ -28,10 +28,16 @@ const initialRadioListApi = {
       list: ["value", "选中值，可选", "number | string", "-"],
     },
     {
-      list: ["isDisabled", "失效状态，可选", "boolean", "-"],
+      list: ["isDisabled", "失效状态，可选", "boolean", "false"],
     },
     {
-      list: ["isReadonly", "不可执行，可选", "boolean", "-"],
+      list: ["disabled", "失效状态，可选", "boolean", "false"],
+    },
+    {
+      list: ["isReadonly", "不可执行，可选", "boolean", "false"],
+    },
+    {
+      list: ["readonly", "失效状态，可选", "boolean", "false"],
     },
   ],
 };
@@ -57,13 +63,19 @@ const initialListApi = {
       list: ["optionValue", "选项值，必选", "number | string", "-"],
     },
     {
-      list: ["isDisabled", "失效状态，可选", "boolean", "false"],
+      list: ["isDisabled", "失效状态，可选，`isDisabled`属性在未来版本中将被删除，请使用`disable`代替", "boolean", "false"],
+    },
+    {
+      list: ["disabled", "失效状态，可选", "boolean", "false"],
     },
     {
       list: ["isCustom", "是否自定义，可选", "boolean", "false"],
     },
     {
-      list: ["isReadonly", "不可执行，可选", "boolean", "false"],
+      list: ["isReadonly", "不可执行，可选，`isReadonly`属性在未来版本中将被删除，请使用`readonly`代替", "boolean", "false"],
+    },
+    {
+      list: ["readonly", "失效状态，可选", "boolean", "false"],
     },
   ],
 };
@@ -149,10 +161,10 @@ export default function Index(props: Props) {
 
       <DemoBlock title='禁用' subTitle='普通' fullScreen>
         <OsRadio>
-          <OsRadioOption value={v3} optionValue={0} onClick={setV3} isDisabled>
+          <OsRadioOption value={v3} optionValue={0} onClick={setV3} disabled>
             选项A
           </OsRadioOption>
-          <OsRadioOption value={v3} optionValue={1} onClick={setV3} isDisabled>
+          <OsRadioOption value={v3} optionValue={1} onClick={setV3} disabled>
             选项B
           </OsRadioOption>
         </OsRadio>
@@ -164,7 +176,7 @@ export default function Index(props: Props) {
             value={v4}
             optionValue={0}
             onClick={setV4}
-            isDisabled
+            disabled
             isCustom
           >
             <View className='custom-option'>
@@ -185,7 +197,7 @@ export default function Index(props: Props) {
             value={v4}
             optionValue={1}
             onClick={setV4}
-            isDisabled
+            disabled
             isCustom
           >
             <View className='custom-option'>
@@ -209,10 +221,10 @@ export default function Index(props: Props) {
 
       <DemoBlock title='不可执行' subTitle='普通' fullScreen>
         <OsRadio>
-          <OsRadioOption value={v5} optionValue={0} onClick={setV5} isReadonly>
+          <OsRadioOption value={v5} optionValue={0} onClick={setV5} readonly>
             选项A
           </OsRadioOption>
-          <OsRadioOption value={v5} optionValue={1} onClick={setV5} isReadonly>
+          <OsRadioOption value={v5} optionValue={1} onClick={setV5} readonly>
             选项B
           </OsRadioOption>
         </OsRadio>
@@ -224,7 +236,7 @@ export default function Index(props: Props) {
             value={v6}
             optionValue={0}
             onClick={setV6}
-            isReadonly
+            readonly
             isCustom
           >
             <View className='custom-option'>
@@ -245,7 +257,7 @@ export default function Index(props: Props) {
             value={v6}
             optionValue={1}
             onClick={setV6}
-            isReadonly
+            readonly
             isCustom
           >
             <View className='custom-option'>

@@ -59,10 +59,10 @@ demo_url: 'https://neteaseyanxuan.github.io/OSSA/#/components/radio/demo/index'
 ### 禁用
 ```jsx
 <OsRadio>
-  <OsRadioOption value={v3} optionValue={0} onClick={setV3} isDisabled>
+  <OsRadioOption value={v3} optionValue={0} onClick={setV3} disabled>
     选项A
   </OsRadioOption>
-  <OsRadioOption value={v3} optionValue={1} onClick={setV3} isDisabled>
+  <OsRadioOption value={v3} optionValue={1} onClick={setV3} disabled>
     选项B
   </OsRadioOption>
 </OsRadio>
@@ -70,10 +70,10 @@ demo_url: 'https://neteaseyanxuan.github.io/OSSA/#/components/radio/demo/index'
 ### 不可执行
 ```jsx
 <OsRadio>
-  <OsRadioOption value={v5} optionValue={0} onClick={setV5} isReadonly>
+  <OsRadioOption value={v5} optionValue={0} onClick={setV5} readonly>
     选项A
   </OsRadioOption>
-  <OsRadioOption value={v5} optionValue={1} onClick={setV5} isReadonly>
+  <OsRadioOption value={v5} optionValue={1} onClick={setV5} readonly>
     选项B
   </OsRadioOption>
 </OsRadio>
@@ -105,8 +105,10 @@ demo_url: 'https://neteaseyanxuan.github.io/OSSA/#/components/radio/demo/index'
 |------|------|------|------|
 |type|布局类型|column \| row|column|
 |value|选中值，可选| number \| string|-|
-|isDisabled|失效状态，可选|boolean|-|
-|isReadonly|不可执行，可选|boolean|-|
+|isDisabled|失效状态，可选，`isDisabled`属性在未来版本中将被删除，请使用`disable`代替|boolean|false|
+|disabled|失效状态，可选|boolean|false|
+|isReadonly|不可执行，可选，`isReadonly`属性在未来版本中将被删除，请使用`readonly`代替|boolean|false|
+|readonly|不可执行，可选|boolean|false|
 
 ### radio方法
 |函数名|说明|参数|
@@ -118,9 +120,11 @@ demo_url: 'https://neteaseyanxuan.github.io/OSSA/#/components/radio/demo/index'
 |------|------|------|------|
 |value|选中值，可选|number \| string|-|
 |optionValue|选项值，必选|number \| string|-|
-|isDisabled|失效状态，可选|boolean|false|
+|isDisabled|失效状态，可选，`isDisabled`属性在未来版本中将被删除，请使用`disable`代替|boolean|false|
+|disabled|失效状态，可选|boolean|false|
 |isCustom|是否自定义，可选|boolean|false|
-|isReadonly|不可执行，可选|boolean|false|
+|isReadonly|不可执行，可选，`isReadonly`属性在未来版本中将被删除，请使用`readonly`代替|boolean|false|
+|readonly|不可执行，可选|boolean|false|
 
 ### radioOption方法
 |函数名|说明|参数|
