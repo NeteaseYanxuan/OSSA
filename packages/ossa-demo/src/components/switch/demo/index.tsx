@@ -33,7 +33,10 @@ const initialListApi = {
       list: ["nodeColor", "滑块颜色，可选", "string", "-"],
     },
     {
-      list: ["isDisabled", "禁用，可选", "boolean", "false"],
+      list: ["isDisabled", "禁用，可选，`isDisabled`属性在未来版本中将被删除，请使用`disable`代替", "boolean", "false"],
+    },
+    {
+      list: ["disabled", "禁用，可选", "boolean", "false"],
     },
   ],
 };
@@ -102,13 +105,13 @@ export default function Index(props: Props) {
 
       <DemoBlock title='禁用' subTitle='on'>
         <View className='block-section'>
-          <OsSwitch isChecked={v6} onChange={setV6} isDisabled></OsSwitch>
+          <OsSwitch isChecked={v6} onChange={setV6} disabled></OsSwitch>
         </View>
       </DemoBlock>
 
       <DemoBlock subTitle='off'>
         <View className='block-section'>
-          <OsSwitch isChecked={v7} onChange={setV7} isDisabled></OsSwitch>
+          <OsSwitch isChecked={v7} onChange={setV7} disabled></OsSwitch>
         </View>
       </DemoBlock>
 

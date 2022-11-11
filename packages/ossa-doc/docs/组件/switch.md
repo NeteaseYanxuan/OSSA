@@ -31,9 +31,9 @@ demo_url: 'https://neteaseyanxuan.github.io/OSSA/#/components/switch/demo/index'
 ```
 ### 禁用
 ```jsx
-<OsSwitch isChecked={v6} onChange={setV6} isDisabled></OsSwitch>
+<OsSwitch isChecked={v6} onChange={setV6} disabled></OsSwitch>
 
-<OsSwitch isChecked={v7} onChange={setV7} isDisabled></OsSwitch>
+<OsSwitch isChecked={v7} onChange={setV7} disabled></OsSwitch>
 ```
 
 
@@ -46,7 +46,8 @@ demo_url: 'https://neteaseyanxuan.github.io/OSSA/#/components/switch/demo/index'
 |onColor|打开时的背景色，可选|string|-|
 |offColor|关闭时的背景色，可选|string|-|
 |nodeColor|滑块颜色，可选|string|-|
-|isDisabled|禁用，可选|boolean|false|
+|isDisabled|禁用，可选，`isDisabled`属性在未来版本中将被删除，请使用`disable`代替|boolean|false|
+|disabled|禁用，可选|boolean|false|
 
 
 ### 方法

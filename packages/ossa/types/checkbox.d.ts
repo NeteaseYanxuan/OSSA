@@ -6,7 +6,17 @@ interface CheckboxProps extends OsComponent {}
 interface CheckboxOptionProps extends OsComponent {
   optionValue: number | string;
   value: Array<number | string>;
+  /**
+   * 是否禁用
+   * @deprecated `isDisabled`属性在未来版本中将被删除，请使用`disable`代替
+   * @default false
+   */
   isDisabled?: boolean;
+  /**
+   * 是否禁用
+   * @default false
+   */
+  disabled?: boolean;
   onClick: (v) => void;
 }
 

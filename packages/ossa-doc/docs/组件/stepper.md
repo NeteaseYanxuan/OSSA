@@ -25,7 +25,7 @@ demo_url: 'https://neteaseyanxuan.github.io/OSSA/#/components/stepper/demo/index
 ### 数量不可编辑
 ```jsx
 <OsStepper
-  isReadonly
+  readonly
   value={current1}
   onChange={(value) => onChange1(value, setCurrent1)}
 ></OsStepper>
@@ -33,7 +33,7 @@ demo_url: 'https://neteaseyanxuan.github.io/OSSA/#/components/stepper/demo/index
 ### 不可点击
 ```jsx
 <OsStepper
-  isDisabled
+  disabled
   value={current2}
   onChange={(value) => onChange2(value, setCurrent2)}
 ></OsStepper>
@@ -48,8 +48,10 @@ demo_url: 'https://neteaseyanxuan.github.io/OSSA/#/components/stepper/demo/index
 |value|当前值，开发者需要通过 onChange 事件来更新 value 值，必选|number|1|
 |max|最大值，可选|number|99|
 |min|最小值，可选|number|1|
-|isReadonly|数量不可编辑，可选|boolean|false|
-|isDisabled|不可点击，可选|boolean|false|
+|isReadonly|数量不可编辑，可选，`isReadonly`属性在未来版本中将被删除，请使用`readonly`代替|boolean|false|
+|readonly|数量不可编辑，可选|boolean|false|
+|isDisabled|不可点击，可选，`isDisabled`属性在未来版本中将被删除，请使用`disable`代替|boolean|false|
+|disabled|不可点击，可选|boolean|false|
 |customStyle|自定义样式，可选|object|-|
 |className|自定义类名，可选|string|-|
 

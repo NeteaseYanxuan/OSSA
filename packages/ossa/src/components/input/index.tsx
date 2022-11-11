@@ -36,6 +36,17 @@ export default function OsInput(props: OsInputProps) {
   if (props.type === "number" || props.type === "bankcard") {
     iptType = "digit";
   }
+  
+  const mergedDisabled = deprecatedProp(props.disabled, props.isDisabled, {
+    newPropName: "disabled",
+    oldPropName: "isDisabled",
+    moduleName: "Input"
+  });
+  const mergedReadonly = deprecatedProp(props.readonly, props.isReadonly, {
+    newPropName: "disabled",
+    oldPropName: "isDisabled",
+    moduleName: "Input"
+  });
 
   useEffect(() => {
     if (
@@ -74,15 +85,15 @@ export default function OsInput(props: OsInputProps) {
   };
   const value = props.value || "";
   const showDelIcon =
-    !props.isDisabled &&
-    !props.isReadonly &&
+    !mergedDisabled &&
+    !mergedReadonly &&
     props.value &&
     props.type !== "textarea";
-  const editable = !props.isReadonly && !props.isDisabled;
+  const editable = !mergedReadonly && !mergedDisabled;
   const mergedShowCount = deprecatedProp(props.showCount, props.countDown, {
     newPropName: "showCount",
     oldPropName: "countDown",
-    moduleName: "input"
+    moduleName: "Input"
   });
   return (
     <View
@@ -180,6 +191,8 @@ OsInput.defaultProps = {
   maxLength: 500,
   isDisabled: false,
   isReadonly: false,
+  disabled: false,
+  readonly: false,
   disabledClear: false,
   showSplitLine: true,
   value: "",

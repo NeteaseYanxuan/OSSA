@@ -36,10 +36,16 @@ const initialListApi = {
       list: ["min", "最小值，可选", "number", "1"],
     },
     {
-      list: ["isReadonly", "数量不可编辑，可选", "boolean", "false"],
+      list: ["isReadonly", "数量不可编辑，可选，`isReadonly`属性在未来版本中将被删除，请使用`readonly`代替", "boolean", "false"],
     },
     {
-      list: ["isDisabled", "不可点击，可选", "boolean", "false"],
+      list: ["readonly", "数量不可编辑，可选", "boolean", "false"],
+    },
+    {
+      list: ["isDisabled", "不可点击，可选，`isDisabled`属性在未来版本中将被删除，请使用`disable`代替", "boolean", "false"],
+    },
+    {
+      list: ["disabled", "不可点击，可选", "boolean", "false"],
     },
     {
       list: ["customStyle", "自定义样式，可选", "object", "-"],

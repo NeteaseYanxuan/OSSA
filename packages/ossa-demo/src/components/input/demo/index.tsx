@@ -53,10 +53,16 @@ const initialListApi = {
       list: ["maxLength", "最大字符数，可选", "number", "500"],
     },
     {
-      list: ["isReadonly", "是否可编辑，可选", "boolean", "false"],
+      list: ["isReadonly", "是否可编辑，可选，`isReadonly`属性在未来版本中将被删除，请使用`readonly`代替", "boolean", "false"],
     },
     {
-      list: ["isDisabled", "表单是否失效，可选", "boolean", "false"],
+      list: ["readonly", "是否可编辑，可选", "boolean", "false"],
+    },
+    {
+      list: ["isDisabled", "表单是否失效，可选，`isDisabled`属性在未来版本中将被删除，请使用`disable`代替", "boolean", "false"],
+    },
+    {
+      list: ["disabled", "表单是否失效，可选", "boolean", "false"],
     },
     {
       list: ["disabledClear", "是否隐藏一键删除按钮，可选", "boolean", "false"],
@@ -207,7 +213,7 @@ export default function Index(props: any) {
             onChange={(v) => {
               setV5(v);
             }}
-            isReadonly
+            readonly
           ></OsInput>
           <OsInput
             label='标题'
@@ -216,7 +222,7 @@ export default function Index(props: any) {
             onChange={(v) => {
               setV5(v);
             }}
-            isDisabled
+            disabled
           ></OsInput>
           <OsInput
             type='textarea'
@@ -227,7 +233,7 @@ export default function Index(props: any) {
               setV6(v);
             }}
             showCount
-            isDisabled
+            disabled
           ></OsInput>
         </View>
       </DemoBlock>
