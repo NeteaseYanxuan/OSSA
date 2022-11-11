@@ -17,11 +17,23 @@ const mergeDisabled = (props: SwitchProps) => {
     }
   );
 }
+const mergeChecked = (props: SwitchProps) => {
+  return deprecatedProp(
+    props.checked,
+    props.isChecked,
+    {
+      newPropName: "checked",
+      oldPropName: "isChecked",
+      moduleName: "Switch"
+    }
+  );
+}
 
 function getStyleObj(props: SwitchProps) {
   const _styleObj = {};
   const mergedDisabled = mergeDisabled(props);
-  if (!mergedDisabled && props.isChecked && props.onColor) {
+  const mergedChecked = mergeChecked(props);
+  if (!mergedDisabled && mergedChecked && props.onColor) {
     _styleObj["backgroundColor"] = props.onColor;
     _styleObj["borderColor"] = props.onColor;
   }
@@ -58,9 +70,11 @@ function getNodeObj(props: SwitchProps) {
 }
 
 function getClassObject(props: SwitchProps) {
+  const mergedDisabled = mergeDisabled(props);
+  const mergedChecked = mergeChecked(props);
   const classObject = {
-    ["ossa-switch--checked"]: props.isChecked,
-    ["ossa-switch--disabled"]: props.isDisabled,
+    ["ossa-switch--checked"]: mergedChecked,
+    ["ossa-switch--disabled"]: mergedDisabled,
   };
   return classObject;
 }
@@ -73,11 +87,12 @@ export default function Index(props: SwitchProps) {
   const styleBgOff = getBgOffStyleObj(props);
   const styleNode = getNodeObj(props);
   const mergedDisabled = mergeDisabled(props);
+  const mergedChecked = mergeChecked(props);
   const onClick = (e) => {
     if (mergedDisabled) {
       return;
     }
-    props.onChange(!props.isChecked);
+    props.onChange(!mergedChecked);
   };
 
   return (
