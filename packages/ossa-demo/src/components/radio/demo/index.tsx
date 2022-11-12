@@ -28,7 +28,7 @@ const initialRadioListApi = {
       list: ["value", "选中值，可选", "number | string", "-"],
     },
     {
-      list: ["isDisabled", "失效状态，可选，`isDisabled`属性在未来版本中将被删除，请使用`disable`代替", "boolean", "false"],
+      list: ["isDisabled", "失效状态，可选，`isDisabled`属性在未来版本中将被删除，请使用`disabled`代替", "boolean", "false"],
     },
     {
       list: ["disabled", "失效状态，可选", "boolean", "false"],
@@ -63,7 +63,7 @@ const initialListApi = {
       list: ["optionValue", "选项值，必选", "number | string", "-"],
     },
     {
-      list: ["isDisabled", "失效状态，可选，`isDisabled`属性在未来版本中将被删除，请使用`disable`代替", "boolean", "false"],
+      list: ["isDisabled", "失效状态，可选，`isDisabled`属性在未来版本中将被删除，请使用`disabled`代替", "boolean", "false"],
     },
     {
       list: ["disabled", "失效状态，可选", "boolean", "false"],
