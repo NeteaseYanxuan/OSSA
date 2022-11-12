@@ -7,7 +7,6 @@ import { OsStepperProps } from "../../../types/index";
 import OsIcon from "../icon";
 import { deprecatedProp } from "../../utils"
 
-
 const mergeReadonly = (optionProps: OsStepperProps) => {
   return deprecatedProp(
     optionProps.readonly,
@@ -61,6 +60,8 @@ function parseValue(num) {
 }
 
 export default function Stepper(props: OsStepperProps) {
+  const mergedDisabled = mergeDisabled(props);
+  const mergedReadonly = mergeReadonly(props);
   function onClick(clickType: string) {
     const {
       value,
@@ -68,8 +69,6 @@ export default function Stepper(props: OsStepperProps) {
       max = 99,
       step = 1,
     } = props;
-    const mergedDisabled = mergeDisabled(props);
-    const mergedReadonly = mergeReadonly(props);
     const lowThanMin = clickType === "minus" && value <= min;
     const overThanMax = clickType === "plus" && value >= max;
 
@@ -127,9 +126,6 @@ export default function Stepper(props: OsStepperProps) {
 
   function onInput(e) {
     const { value } = e.target;
-    
-    const mergedDisabled = mergeDisabled(props);
-    const mergedReadonly = mergeReadonly(props);
     if(mergedDisabled || mergedReadonly) return;
 
     // input时只做数字转换，且允许删空，改在blur时处理值
@@ -159,8 +155,6 @@ export default function Stepper(props: OsStepperProps) {
   }
 
   function getContentClassObject(stepperProps: OsStepperProps) {
-    const mergedDisabled = mergeDisabled(stepperProps);
-    const mergedReadonly = mergeReadonly(stepperProps);
     const _classObject = {
       ["ossa-stepper__input--is-readonly"]: mergedReadonly,
       ["ossa-stepper__input--is-disabled"]: mergedDisabled,
@@ -175,10 +169,6 @@ export default function Stepper(props: OsStepperProps) {
     min = 1,
     max = 99,
   } = props;
-
-
-  const mergedDisabled = mergeDisabled(props);
-  const mergedReadonly = mergeReadonly(props);
 
   const inputValue = handleValue(value);
   const rootClassName = [
