@@ -50,7 +50,7 @@ demo_url: 'https://neteaseyanxuan.github.io/OSSA/#/components/stepper/demo/index
 |min|最小值，可选|number|1|
 |isReadonly|数量不可编辑，可选，`isReadonly`属性在未来版本中将被删除，请使用`readonly`代替|boolean|false|
 |readonly|数量不可编辑，可选|boolean|false|
-|isDisabled|不可点击，可选，`isDisabled`属性在未来版本中将被删除，请使用`disable`代替|boolean|false|
+|isDisabled|不可点击，可选，`isDisabled`属性在未来版本中将被删除，请使用`disabled`代替|boolean|false|
 |disabled|不可点击，可选|boolean|false|
 |customStyle|自定义样式，可选|object|-|
 |className|自定义类名，可选|string|-|

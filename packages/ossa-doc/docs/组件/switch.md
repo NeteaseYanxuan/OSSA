@@ -47,7 +47,7 @@ demo_url: 'https://neteaseyanxuan.github.io/OSSA/#/components/switch/demo/index'
 |onColor|打开时的背景色，可选|string|-|
 |offColor|关闭时的背景色，可选|string|-|
 |nodeColor|滑块颜色，可选|string|-|
-|isDisabled|禁用，可选，`isDisabled`属性在未来版本中将被删除，请使用`disable`代替|boolean|false|
+|isDisabled|禁用，可选，`isDisabled`属性在未来版本中将被删除，请使用`disabled`代替|boolean|false|
 |disabled|禁用，可选|boolean|false|
 
 

@@ -153,7 +153,7 @@ const [v6, setV6] = useState("不可编辑的textarea");
 |maxLength|最大字符数，可选|number|500|
 |isReadonly|是否可编辑，可选，`isReadonly`属性在未来版本中将被删除，请使用`readonly`代替|boolean|false|
 |readonly|是否可编辑，可选|boolean|false|
-|isDisabled|表单是否失效，可选，`isDisabled`属性在未来版本中将被删除，请使用`disable`代替|boolean|false|
+|isDisabled|表单是否失效，可选，`isDisabled`属性在未来版本中将被删除，请使用`disabled`代替|boolean|false|
 |disabled|表单是否失效，可选|boolean|false|
 |disabledClear|是否隐藏一键删除按钮，可选|boolean|false|
 |countDown|是否显示字符计数器，textarea有效，可选，`countDown`字段将在未来版本中被移除,请使用`showCount`代替|boolean|false|
