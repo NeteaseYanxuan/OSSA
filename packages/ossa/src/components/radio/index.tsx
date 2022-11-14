@@ -17,10 +17,10 @@ function getClassObject(props: OsRadioProps) {
 }
 
 function getCommonChildProps(props: OsRadioProps) {
-  const childProps: Pick<OsRadioProps, "value" | "isDisabled" | "isReadonly"> =
+  const childProps: Pick<OsRadioProps, "value" | "disabled" | "readonly"| "isDisabled" | "isReadonly"> =
     {};
 
-  ["value", "isDisabled", "isReadonly"].forEach((key) => {
+  ["value", "disabled", "readonly", "isDisabled", "isReadonly"].forEach((key) => {
     if (props[key] !== undefined) {
       childProps[key] = props[key];
     }

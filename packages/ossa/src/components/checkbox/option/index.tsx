@@ -3,15 +3,29 @@ import { View } from "@tarojs/components";
 import classNames from "classnames";
 import OsIcon from "../../icon";
 import { OsCheckboxOptionProps } from "../../../../types/index";
+import { deprecatedProp } from "../../../utils";
 
 function getStyleObj(props: OsCheckboxOptionProps) {
   const _styleObj = {};
   return _styleObj;
 }
 
+
+const mergeDisabled = (optionProps: OsCheckboxOptionProps) => {
+  return deprecatedProp(
+    optionProps.disabled,
+    optionProps.isDisabled,
+    {
+      newPropName: "disabled",
+      oldPropName: "isDisabled",
+      moduleName: "Checkbox"
+    }
+  );
+}
+
 function getClassObject(props: OsCheckboxOptionProps) {
   const classObject = {
-    ["ossa-checkbox__option--disabled"]: props.isDisabled,
+    ["ossa-checkbox__option--disabled"]: mergeDisabled(props),
     ["ossa-checkbox__option--custom-label"]: typeof props.children !== "string",
   };
   return classObject;
@@ -25,8 +39,10 @@ export default function CheckboxOption(props: OsCheckboxOptionProps) {
 
   const { value = [] } = props;
 
+  const mergedDisabled = mergeDisabled(props);
+
   const onClickOption = (optionProps: OsCheckboxOptionProps) => {
-    if (optionProps.isDisabled) return;
+    if (mergeDisabled(optionProps)) return;
     let newValues = value.slice(0);
     if (value.includes(optionProps.optionValue)) {
       newValues = value.filter((v) => {
@@ -40,7 +56,7 @@ export default function CheckboxOption(props: OsCheckboxOptionProps) {
 
   let iconType = "choose";
   let color;
-  if (props.isDisabled) {
+  if (mergedDisabled) {
     iconType = "choose-disable";
   } else if (value.includes(props.optionValue)) {
     iconType = "choose-selected";

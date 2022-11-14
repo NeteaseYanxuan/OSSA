@@ -28,7 +28,10 @@ const initialListApi = {
       list: ["optionValue", "选项值，必选", "number | string", "-"],
     },
     {
-      list: ["isDisabled", "失效状态，可选", "boolean", "false"],
+      list: ["isDisabled", "失效状态，可选，`isDisabled`属性在未来版本中将被删除，请使用`disabled`代替", "boolean", "false"],
+    },
+    {
+      list: ["disabled", "失效状态，可选", "boolean", "false"],
     },
   ],
 };
@@ -113,7 +116,7 @@ export default function Index() {
             value={v1}
             optionValue={0}
             onClick={setV1}
-            isDisabled
+            disabled
           >
             选项A
           </OsCheckboxOption>
@@ -121,7 +124,7 @@ export default function Index() {
             value={v1}
             optionValue={1}
             onClick={setV1}
-            isDisabled
+            disabled
           >
             选项B
           </OsCheckboxOption>
