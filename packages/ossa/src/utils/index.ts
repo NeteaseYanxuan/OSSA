@@ -23,7 +23,7 @@ export function deprecatedProp<T = unknown, P = T>(newProp: T, oldProp: P, warin
     oldPropName: string;
     moduleName: string;
 }): T | P {
-    if(oldProp && waringInfo && waringInfo.oldPropName && process.env.NODE_ENV === "development") {
+    if(typeof oldProp !== 'undefined' && waringInfo && waringInfo.oldPropName && process.env.NODE_ENV === "development") {
         warnDeprecatedProp(waringInfo.moduleName, waringInfo.newPropName, waringInfo.oldPropName);
     }
     return newProp ?? oldProp;
