@@ -28,16 +28,13 @@ const initialListApi = {
       list: ["scrollable", "文字是否可滚动，可选", "boolean", "false"],
     },
     {
-      list: ["speed", "文字滚动一屏的总时长，单位秒，可选，`speed`字段将在未来版本中被移除,请使用`duration`代替", "number", "16"],
-    },
-    {
-      list: ["duration", "文字滚动一屏的总时长，单位秒，可选", "number", "16"],
+      list: ["speed", "文字滚动速度，可选", "number", "16"],
     },
     {
       list: ["leftIcon", "左侧Icon，可选", "OsIcon", "-"],
     },
     {
-      list: ["more", "是否显示更多按钮，可选", "boolean", "50"],
+      list: ["more", "是否显示更多按钮，可选", "boolean", "false"],
     },
     {
       list: ["color", "文字颜色，可选", "string", "#f48f18"],
@@ -91,9 +88,9 @@ export default function Index(props: Props) {
           </OsNoticeBar>
         </View>
       </DemoBlock>
-      <DemoBlock subTitle='自定义滚动时长'>
+      <DemoBlock subTitle='自定义滚动速度'>
         <View className='block-section'>
-          <OsNoticeBar leftIcon='inform' scrollable duration={5}>
+          <OsNoticeBar leftIcon='inform' scrollable speed={60}>
             你可能已经注意到了，我们使用let关键字来代替var
           </OsNoticeBar>
         </View>

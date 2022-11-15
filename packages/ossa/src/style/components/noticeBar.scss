@@ -17,17 +17,6 @@
   background-color: $--fill-notice-bar;
   box-sizing: border-box;
 
-  &--play-infinite {
-    .ossa-notice-bar__content {
-      overflow: visible;
-      animation: notice-bar-play-infinite linear infinite;
-      animation-delay: 0s;
-      animation-duration: 16s;
-      padding-left: 100%;
-      display: inline-block;
-    }
-  }
-
   &--with-icon {
     .ossa-notice-bar__content-wrapper {
       margin-left: 16px;

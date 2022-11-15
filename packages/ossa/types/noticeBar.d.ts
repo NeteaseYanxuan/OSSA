@@ -8,14 +8,8 @@ interface NoticeBarProps extends OsComponent {
   /**
    * 文字滚动一屏的总时长，单位秒
    * @default 16
-   * @deprecated `speed`字段将在未来版本中被移除,请使用`duration`代替
    */
   speed?: number;
-  /**
-   * 文字滚动一屏的总时长，单位秒
-   * @default 16
-   */
-  duration?: number;
   leftIcon?: string;
   more?: boolean;
   color?: string;

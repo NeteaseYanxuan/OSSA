@@ -1,6 +1,7 @@
 import React, { CSSProperties } from "react";
 import { View } from "@tarojs/components";
 import classNames from "classnames";
+import Marquee from "react-fast-marquee";
 //引入组件对应的 类型文件 .d.ts
 import { OsNoticeBarProps } from "../../../types/index";
 import OsIcon from "../icon";
@@ -13,15 +14,8 @@ function getStyleObj(props: OsNoticeBarProps): CSSProperties {
 }
 
 
-function getContentStyleObj({
-  speed = 16,
-  duration = 16
-}: OsNoticeBarProps): CSSProperties {
-  const mergedDuration = duration ?? speed;
-  const _styleObj: CSSProperties = {
-    'animationDuration': `${mergedDuration}s`,
-    'WebkitAnimationDuration': `${mergedDuration}s`,
-  };
+function getContentStyleObj({}: OsNoticeBarProps): CSSProperties {
+  const _styleObj: CSSProperties = {};
   return _styleObj;
 }
 
@@ -60,7 +54,7 @@ export default function Index(props: OsNoticeBarProps) {
           })}
           style={contentStyleObject}
         >
-          {props.children}
+          <Marquee speed={props.speed} gradientColor={[255, 248, 216]} gradientWidth={10}>{props.children}</Marquee>
         </View>
       </View>
       {props.more ? (
