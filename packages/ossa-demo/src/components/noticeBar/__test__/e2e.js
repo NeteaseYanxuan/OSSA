@@ -50,7 +50,7 @@ describe("noticebar Testing", function () {
         });
     });
 
-    it("case #3: 自定义一屏滚动时长滚动通知栏框", function () {
+    it("case #3: 自定义滚动速度通知栏框", function () {
       cy.get(".block")
         .eq(2)
         .within(() => {
@@ -64,9 +64,7 @@ describe("noticebar Testing", function () {
             });
             cy.get(".ossa-notice-bar__content-wrapper").within(() => {
               cy.get(".ossa-notice-bar__content").should(($content) => {
-                expect($content.attr("style")).contains(
-                  "animation-duration: 5s;"
-                );
+                expect($content.attr("style")).contains("--duration:5.26641s");
               });
             });
           });
