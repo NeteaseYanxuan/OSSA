@@ -63,8 +63,10 @@ describe("noticebar Testing", function () {
               expect($icon).to.have.css("color").eq("rgb(244, 143, 24)");
             });
             cy.get(".ossa-notice-bar__content-wrapper").within(() => {
-              cy.get(".marquee").should(($content) => {
-                expect($content.eq(0).attr("style")).contains("--duration:5.2");
+              cy.get("#marqueeContainer").should(($content) => {
+                expect($content.eq(0).attr("style")).contains(
+                  "animation-duration: 6.2"
+                );
               });
             });
           });
