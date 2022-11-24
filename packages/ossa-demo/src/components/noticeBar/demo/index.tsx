@@ -91,7 +91,7 @@ export default function Index(props: Props) {
       <DemoBlock subTitle='自定义滚动速度'>
         <View className='block-section'>
           <OsNoticeBar leftIcon='inform' scrollable speed={50}>
-            你可能已经注意到了，我们使用let关键字来代替var
+            you may have noticed, we use the `let` to instead of `var` to solve this problem
           </OsNoticeBar>
         </View>
       </DemoBlock>
