@@ -2,7 +2,7 @@ import React from "react";
 import { View } from "@tarojs/components";
 import classNames from "classnames";
 //引入组件对应的 类型文件 .d.ts
-import { OsTabsPanelProps } from "../../../../types/index";
+import { OsTabsPanelProps } from "../../../types/index";
 
 function getStyleObj(props: OsTabsPanelProps) {
   const _styleObj = {};

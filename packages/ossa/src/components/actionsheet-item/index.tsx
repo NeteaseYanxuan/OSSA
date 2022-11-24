@@ -1,7 +1,7 @@
 import React from "react";
 import { View, Text } from "@tarojs/components";
 import classNames from "classnames";
-import { OsActionsheetItemProps } from "../../../../types/index";
+import { OsActionsheetItemProps } from "../../../types/index";
 
 function getClassObject(props: OsActionsheetItemProps) {
   const _classObject = {
