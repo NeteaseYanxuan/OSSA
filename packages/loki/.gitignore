@@ -1,0 +1,15 @@
+
+# vs
+.DS_Store
+.vscode
+# npm
+npm-debug.log
+
+#dist
+dist
+
+# node_modules
+node_modules/
+
+
+

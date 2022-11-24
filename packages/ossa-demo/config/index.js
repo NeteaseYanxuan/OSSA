@@ -9,7 +9,7 @@ const config = {
   },
   sourceRoot: "src",
   outputRoot: "dist",
-  plugins: [],
+  plugins: ["@tarojs/plugin-html"],
   defineConstants: {},
   copy: {
     patterns: [],
@@ -23,7 +23,7 @@ const config = {
         "@vh-mobile/pro-components",
         "@vh-mobile/pro-services",
         "@vh-mobile/pro-utils",
-        "ossaui"
+        "ossaui",
       ],
     },
   },

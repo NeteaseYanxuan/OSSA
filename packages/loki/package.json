@@ -1,0 +1,72 @@
+{
+  "name": "ossaui-loki",
+  "version": "1.0.0",
+  "description": "loki interat component",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "source": "src/index.ts",
+  "types": "./src/types/loki.d.ts",
+  "files": [
+    "components",
+    "dist",
+    "types",
+    "README.md"
+  ],
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development webpack",
+    "dev:taro": "cross-env NODE_ENV=development webpack",
+    "build:dev:h5": "cross-env NODE_ENV=build_development webpack",
+    "build:prod": "cross-env NODE_ENV=build_production webpack",
+    "build": "npm run build:rollup && npm run clean && npm run build:components",
+    "build:rollup": "rollup --config ./rollup.config.mjs",
+    "build:components": "tsc --project ./tsconfig.components.json",
+    "clean": "rm -rf ./components"
+  },
+  "author": "yang.x",
+  "license": "MIT",
+  "peerDependencies": {
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0"
+  },
+  "dependencies": {
+    "@babel/runtime-corejs3": "^7.17.9"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.17.9",
+    "@babel/plugin-proposal-class-properties": "^7.16.7",
+    "@babel/plugin-proposal-object-rest-spread": "^7.17.3",
+    "@babel/plugin-transform-runtime": "^7.17.0",
+    "@babel/preset-env": "^7.16.11",
+    "@babel/preset-react": "^7.16.7",
+    "@babel/preset-typescript": "^7.16.7",
+    "@rollup/plugin-commonjs": "^23.0.2",
+    "@rollup/plugin-json": "^5.0.1",
+    "@rollup/plugin-node-resolve": "^15.0.1",
+    "@types/node": "^18.11.9",
+    "@types/react": "^16.14.24",
+    "@types/react-dom": "^16.9.14",
+    "autoprefixer": "^10.4.4",
+    "babel-loader": "^8.2.4",
+    "cross-env": "^7.0.3",
+    "css-loader": "^6.7.1",
+    "fs-extra": "^10.1.0",
+    "html-webpack-plugin": "^5.5.0",
+    "mini-css-extract-plugin": "^2.6.1",
+    "postcss-loader": "^6.2.1",
+    "postcss-preset-env": "^7.4.3",
+    "rollup": "^2.78.0",
+    "rollup-plugin-copy": "^3.4.0",
+    "rollup-plugin-delete": "^2.0.0",
+    "rollup-plugin-postcss": "^4.0.2",
+    "rollup-plugin-typescript2": "^0.34.1",
+    "sass": "^1.54.0",
+    "sass-loader": "^12.6.0",
+    "style-loader": "^3.3.1",
+    "typescript": "^4.9.3",
+    "webpack": "^5.72.0",
+    "webpack-bundle-analyzer": "^4.5.0",
+    "webpack-cli": "^4.9.2",
+    "webpack-dev-server": "^4.8.1",
+    "webpack-merge": "^5.8.0"
+  }
+}

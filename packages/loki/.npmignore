@@ -1,0 +1,15 @@
+# build
+build/
+# src
+src/
+
+#node_modules
+node_modules
+
+# project
+.babelrc
+.browserslistrc
+.gitignore
+.npmignore
+tsconfig.json
+webpack.config.js
