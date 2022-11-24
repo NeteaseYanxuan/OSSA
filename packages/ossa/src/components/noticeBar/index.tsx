@@ -1,5 +1,5 @@
-import React, { CSSProperties, useEffect, useState } from "react";
-import { createSelectorQuery } from "@tarojs/taro";
+import React, { CSSProperties, useEffect, useRef, useState } from "react";
+import { createSelectorQuery, getSystemInfoSync } from "@tarojs/taro";
 import { View } from "@tarojs/components";
 import classNames from "classnames";
 //引入组件对应的 类型文件 .d.ts
@@ -10,7 +10,6 @@ function getStyleObj(props: OsNoticeBarProps): CSSProperties {
   const _styleObj: CSSProperties = {};
   return _styleObj;
 }
-
 
 function getClassObject(props: OsNoticeBarProps) {
   const _classObject = {
@@ -25,27 +24,39 @@ async function getElementWidth(selector: string): Promise<number> {
     const query = createSelectorQuery();
     query.select(selector).boundingClientRect();
     query.exec(function (res) {
-      resolve(res[0].width);
+      resolve(res?.[0]?.width || 0);
     });
   });
 }
-
+let uuid: number = 0;
+function getUUID() {
+  return ++uuid;
+}
 export default function Index(props: OsNoticeBarProps) {
   const rootClassName = "ossa-notice-bar"; //组件
   const classObject = getClassObject(props); //组件修饰
   const styleObject = Object.assign(getStyleObj(props), props.customStyle);
   const [duration, setDuration] = useState(0);
+  const id = useRef<number>(getUUID());
   const { speed = 16 } = props;
 
   useEffect(() => {
-    getElementWidth('#marqueeContainer').then(width => {
-      setDuration(width / speed)
+    const frameId = requestAnimationFrame(() => {
+      getElementWidth(`#marqueeContainer_${id.current}`).then((width) => {
+        if (width === 0) {
+          width = getSystemInfoSync().windowWidth;
+        }
+        setDuration(width / speed);
+      });
     });
+    return () => {
+      cancelAnimationFrame(frameId);
+    };
   }, [speed]);
 
   const marqueeStyle: CSSProperties = {
-    'animationDuration': `${duration}s`,
-    'WebkitAnimationDuration': `${duration}s`,
+    animationDuration: `${duration}s`,
+    WebkitAnimationDuration: `${duration}s`,
   };
 
   return (
@@ -64,7 +75,7 @@ export default function Index(props: OsNoticeBarProps) {
       ) : null}
       <View className='ossa-notice-bar__content-wrapper'>
         <View
-          id='marqueeContainer'
+          id={`marqueeContainer_${id.current}`}
           className={classNames({
             ["ossa-notice-bar__content"]: true,
           })}
