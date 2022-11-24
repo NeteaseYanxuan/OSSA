@@ -46,7 +46,7 @@ export default function Index(props: OsNoticeBarProps) {
         if (width === 0) {
           width = getSystemInfoSync().windowWidth;
         }
-        setDuration(width / speed);
+        setDuration(Number((width / speed).toFixed(2)));
       });
     });
     return () => {
