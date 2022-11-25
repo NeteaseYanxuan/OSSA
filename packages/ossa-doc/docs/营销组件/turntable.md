@@ -26,7 +26,7 @@ import "@ossa/loki/dist/style/bigWheel.scss";
 const bigWheelConfig = {
   size: 300,
   prizeOffset: 20,
-  turnableImage:
+  turntableImage:
     "https://yanxuan.nosdn.127.net/static-union/1659516044835746.png",
   pointerImage:
     "https://yanxuan.nosdn.127.net/static-union/16595160444ef771.png",
@@ -157,15 +157,15 @@ const handlePlay = (onFinish) => {
 
 ### 配置属性 config
 
-| 参数          | 说明                                                           | 类型          | 默认值 |
-| ------------- | -------------------------------------------------------------- | ------------- | ------ |
-| size          | 转盘大小                                                       | number        | 600    |
-| turnableImage | 转盘图片                                                       | string        | -      |
-| pointerImage  | 指针图片                                                       | string        | -      |
-| offsetRotate  | 奖品偏移角度，具体详见奖品偏移角度部分                         | number        | 0      |
-| prizeOffset   | 奖品偏移量用于设置奖品距离转盘边缘的距离，具体详见奖品配置部分 | number        | 0      |
-| prizeScale    | 奖品缩放                                                       | number, [0,1] | 0.7    |
-| prize         | 奖品其他配置，具体详见奖品配置部分                             | object        | -      |
+| 参数           | 说明                                                           | 类型          | 默认值 |
+| -------------- | -------------------------------------------------------------- | ------------- | ------ |
+| size           | 转盘大小                                                       | number        | 600    |
+| turntableImage | 转盘图片                                                       | string        | -      |
+| pointerImage   | 指针图片                                                       | string        | -      |
+| offsetRotate   | 奖品偏移角度，具体详见奖品偏移角度部分                         | number        | 0      |
+| prizeOffset    | 奖品偏移量用于设置奖品距离转盘边缘的距离，具体详见奖品配置部分 | number        | 0      |
+| prizeScale     | 奖品缩放                                                       | number, [0,1] | 0.7    |
+| prize          | 奖品其他配置，具体详见奖品配置部分                             | object        | -      |
 
 ### 奖品配置 prizeGroup
 

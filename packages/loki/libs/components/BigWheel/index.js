@@ -27,7 +27,7 @@ const BigWheel = function ({
 }) {
   const {
     size = 600,
-    turnableImage,
+    turntableImage,
     pointerImage,
     prize,
     animation,
@@ -57,10 +57,10 @@ const BigWheel = function ({
       }`,
       WebkitTransform: `rotate(${rotateAngle}deg)`,
       transform: `rotate(${rotateAngle}deg)`,
-      background: `url(${turnableImage}) no-repeat center top`,
+      background: `url(${turntableImage}) no-repeat center top`,
       backgroundSize: "100%",
     };
-  }, [duration, mode, rotateAngle, turnableImage]);
+  }, [duration, mode, rotateAngle, turntableImage]);
   //指针的style
   const pointerStyle = useMemo(() => {
     return {
@@ -155,18 +155,17 @@ const BigWheel = function ({
     width: "auto",
     height: "auto",
   });
-  const pointerOnLoad = (e) => {
-    if (!e.detail) {
-      setPointerImgStyle(pointerImgStyle);
-      return;
-    }
-    setPointerImgStyle(
-      Object.assign(Object.assign({}, pointerImgStyle), {
-        width: `${px2rem(e.detail.width)}`,
-        height: `${px2rem(e.detail.height)}`,
-      })
-    );
-  };
+  // const pointerOnLoad = (e) => {
+  //   if (!e.detail) {
+  //     setPointerImgStyle(pointerImgStyle);
+  //     return;
+  //   }
+  //   setPointerImgStyle({
+  //     ...pointerImgStyle,
+  //     width: `${px2rem(e.detail.width)}`,
+  //     height: `${px2rem(e.detail.height)}`,
+  //   });
+  // };
   return React.createElement(
     "div",
     { className: cls("loki-bigwheel x-wheel", className), style: style },
@@ -186,10 +185,9 @@ const BigWheel = function ({
           style: pointerStyle,
           onClick: startGame,
         },
-        React.createElement("img", {
-          src: pointerImage,
-          style: pointerImgStyle,
-          onLoad: pointerOnLoad,
+        React.createElement(Image, {
+          image: pointerImage,
+          imgStyle: pointerImgStyle,
         })
       ),
       React.createElement(

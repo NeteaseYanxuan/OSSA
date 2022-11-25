@@ -26,7 +26,7 @@ export interface INineGrid {
 
 type IBigWheelConfig = {
   size: number; // 转盘尺寸
-  turnableImage: string; // 转盘底盘
+  turntableImage: string; // 转盘底盘
   pointerImage: string; // 转盘指针
   prize: {
     fontSize: number;

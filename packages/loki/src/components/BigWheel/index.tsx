@@ -30,7 +30,7 @@ const BigWheel: React.FC<IBigWheel> = function ({
 }) {
   const {
     size = 600,
-    turnableImage,
+    turntableImage,
     pointerImage,
     prize,
     animation,
@@ -58,10 +58,10 @@ const BigWheel: React.FC<IBigWheel> = function ({
       transition: `transform ${duration}ms ${animation?.mode || "ease-in-out"}`,
       WebkitTransform: `rotate(${rotateAngle}deg)`,
       transform: `rotate(${rotateAngle}deg)`,
-      background: `url(${turnableImage}) no-repeat center top`,
+      background: `url(${turntableImage}) no-repeat center top`,
       backgroundSize: "100%",
     };
-  }, [duration, mode, rotateAngle, turnableImage]);
+  }, [duration, mode, rotateAngle, turntableImage]);
 
   //指针的style
   const pointerStyle = useMemo(() => {
@@ -160,17 +160,17 @@ const BigWheel: React.FC<IBigWheel> = function ({
     width: "auto",
     height: "auto",
   });
-  const pointerOnLoad = (e) => {
-    if (!e.detail) {
-      setPointerImgStyle(pointerImgStyle);
-      return;
-    }
-    setPointerImgStyle({
-      ...pointerImgStyle,
-      width: `${px2rem(e.detail.width)}`,
-      height: `${px2rem(e.detail.height)}`,
-    });
-  };
+  // const pointerOnLoad = (e) => {
+  //   if (!e.detail) {
+  //     setPointerImgStyle(pointerImgStyle);
+  //     return;
+  //   }
+  //   setPointerImgStyle({
+  //     ...pointerImgStyle,
+  //     width: `${px2rem(e.detail.width)}`,
+  //     height: `${px2rem(e.detail.height)}`,
+  //   });
+  // };
 
   return (
     <div className={cls("loki-bigwheel x-wheel", className)} style={style}>
@@ -186,11 +186,7 @@ const BigWheel: React.FC<IBigWheel> = function ({
           style={pointerStyle}
           onClick={startGame}
         >
-          <img
-            src={pointerImage}
-            style={pointerImgStyle}
-            onLoad={pointerOnLoad}
-          />
+          <Image image={pointerImage} imgStyle={pointerImgStyle} />
         </div>
         <div className="x-wheel-bg" style={rotateStyle}>
           <ul className="x-prize-list">

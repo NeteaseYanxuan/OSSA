@@ -16,7 +16,7 @@ const Index = () => {
         list: ["size", "转盘大小", "number", "600"],
       },
       {
-        list: ["turnableImage", "转盘图片", "string", "/"],
+        list: ["turntableImage", "转盘图片", "string", "/"],
       },
       {
         list: ["pointerImage", "指针图片", "number | string", "/"],
@@ -96,7 +96,7 @@ const Index = () => {
   const bigWheelConfig = {
     size: 300,
     prizeOffset: 20,
-    turnableImage:
+    turntableImage:
       "https://yanxuan.nosdn.127.net/static-union/1659516044835746.png",
     pointerImage:
       "https://yanxuan.nosdn.127.net/static-union/16595160444ef771.png",
