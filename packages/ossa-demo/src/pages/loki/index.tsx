@@ -15,7 +15,7 @@ export default class Index extends Component<Props, State> {
         {
           title: "抽奖转盘",
           desc: "",
-          id: "turnable",
+          id: "turntable",
         },
         {
           title: "九宫格",

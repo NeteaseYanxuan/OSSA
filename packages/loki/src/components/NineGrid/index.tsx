@@ -11,6 +11,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import Utils from "./../../utils/index";
 import Image from "../../baseComponents/common/Image";
+import { INineGrid } from "./../../types/loki";
 
 const { px2rem, cls } = Utils;
 
@@ -25,7 +26,7 @@ const lottery = {
   win: 0, //中奖位置 0 默认不中奖
 };
 
-const NineGrid: React.FC<Loki.INineGrid> = function ({
+const NineGrid: React.FC<INineGrid> = function ({
   appEnv,
   className = "",
   style = {},

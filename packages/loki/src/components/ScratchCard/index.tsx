@@ -5,8 +5,9 @@
  **/
 import React, { useState, useEffect, useRef } from "react";
 import { cls } from "./../../utils/index";
+import { IScratchCard } from "./../../types/loki";
 
-const ScratchCard: React.FC<Loki.IScratchCard> = ({
+const ScratchCard: React.FC<IScratchCard> = ({
   appEnv,
   className = "",
   style = {},

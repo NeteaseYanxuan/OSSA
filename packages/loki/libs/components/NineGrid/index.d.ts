@@ -9,5 +9,6 @@
  *   4.转动效果 时长
  **/
 import React from "react";
-declare const NineGrid: React.FC<Loki.INineGrid>;
+import { INineGrid } from "./../../types/loki";
+declare const NineGrid: React.FC<INineGrid>;
 export default NineGrid;

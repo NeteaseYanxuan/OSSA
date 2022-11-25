@@ -5,7 +5,7 @@
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
   "source": "src/index.ts",
-  "types": "./src/types/loki.d.ts",
+  "types": "./types/loki.d.ts",
   "files": [
     "components",
     "dist",
@@ -20,7 +20,7 @@
     "build": "npm run build:rollup && npm run clean && npm run build:components",
     "build:rollup": "rollup --config ./rollup.config.mjs",
     "build:components": "tsc --project ./tsconfig.components.json",
-    "clean": "rm -rf ./components"
+    "clean": "rm -rf ./libs"
   },
   "author": "yang.x",
   "license": "MIT",

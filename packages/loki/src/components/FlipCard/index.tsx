@@ -12,6 +12,8 @@
  **/
 import React, { useState, useEffect } from "react";
 import Utils from "./../../utils/index";
+import { IFlipCard } from "./../../types/loki";
+
 const { px2rem, cls } = Utils;
 
 const Card = ({ appEnv, config, onClick }) => {
@@ -61,7 +63,7 @@ const Card = ({ appEnv, config, onClick }) => {
   );
 };
 
-const FlipCard: React.FC<Loki.IFlipCard> = function ({
+const FlipCard: React.FC<IFlipCard> = function ({
   appEnv,
   className = "",
   style = {},

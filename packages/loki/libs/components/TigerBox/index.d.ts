@@ -4,5 +4,6 @@
  * @description
  **/
 import React from "react";
-declare const TigerBox: React.FC<Loki.ITigerBox>;
+import { ITigerBox } from "./../../types/loki";
+declare const TigerBox: React.FC<ITigerBox>;
 export default TigerBox;

@@ -4,36 +4,31 @@ sidebar_position: 1
 
 # 快速开始
 
-#### 安装
+### 安装
 
 ```bash
 npm install @ossa/loki
 ```
 
-#### 单独引入
+### 使用
 
-#### 在 React 应用中使用
+#### 全局引入方式
 
-```
-import BigWheel from '@ossa/loki/components/components/BigWheel';
-import '@ossa/loki/dist/style/BigWheel/index.css';
-
-<BigWheel
-  config={转盘配置}
-  prizeGroup={奖品组配置}
-  onPlay={开始函数}
-/>
-```
-
-#### 在 Taro 应用中使用
+1. 入口引入样式文件
 
 ```
-import BigWheel from '@ossa/loki/components/components/BigWheel';
-import '@ossa/loki/dist/style/BigWheel/index.css';
+import '@ossa/loki/dist/style/index.scss';
+```
 
-<BigWheel
-  config={转盘配置}
-  prizeGroup={奖品组配置}
-  onPlay={开始函数}
-/>
+2. 组件引入
+
+```
+import { BigWheel } from "@ossa/loki";
+```
+
+### 单组件引入方式
+
+```
+import BigWheel from '@ossa/loki/libs/components/BigWheel';
+import '@ossa/loki/dist/style/BigWheel/index.scss';
 ```

@@ -15,11 +15,12 @@
 import React, { useState, useEffect, useMemo } from "react";
 import Utils from "./../../utils/index";
 import Image from "../../baseComponents/common/Image";
+import { IBigWheel } from "./../../types/loki";
 
 const { px2rem, cls } = Utils;
 const CIRCLE_ANGLE = 360;
 
-const BigWheel: React.FC<Loki.IBigWheel> = function ({
+const BigWheel: React.FC<IBigWheel> = function ({
   appEnv,
   className = "",
   style = {},

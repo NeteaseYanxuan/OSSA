@@ -4,5 +4,6 @@
  * @description
  **/
 import React from "react";
-declare const ScratchCard: React.FC<Loki.IScratchCard>;
+import { IScratchCard } from "./../../types/loki";
+declare const ScratchCard: React.FC<IScratchCard>;
 export default ScratchCard;

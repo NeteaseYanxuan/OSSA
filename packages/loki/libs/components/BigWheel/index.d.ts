@@ -12,5 +12,6 @@
  *   7.文字颜色可配置
  **/
 import React from "react";
-declare const BigWheel: React.FC<Loki.IBigWheel>;
+import { IBigWheel } from "./../../types/loki";
+declare const BigWheel: React.FC<IBigWheel>;
 export default BigWheel;

@@ -7,10 +7,11 @@
  **/
 import React, { useState, useEffect, useRef } from "react";
 import Utils from "./../../utils/index";
+import { ITigerBox } from "./../../types/loki";
 
 const { px2rem, cls } = Utils;
 
-const TigerBox: React.FC<Loki.ITigerBox> = ({
+const TigerBox: React.FC<ITigerBox> = ({
   appEnv,
   className = "",
   style = {},

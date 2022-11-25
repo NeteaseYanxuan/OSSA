@@ -1,7 +1,7 @@
 /* eslint-disable jsx-quotes */
 import React, { Component } from "react";
 import Taro from "@tarojs/taro";
-import BigWheel from "@ossa/loki/components/components/BigWheel";
+import BigWheel from "@ossa/loki/libs/components/BigWheel";
 import "@ossa/loki/dist/style/components/bigWheel.scss";
 import DemoHeader from "../../../components/demoHeader";
 import DemoBlock from "../../../components/demoBlock";
@@ -25,7 +25,7 @@ const Index = () => {
         list: [
           "offsetRotate",
           "奖品偏移角度，具体详见奖品偏移角度部分",
-          "string",
+          "number",
           "0",
         ],
       },
@@ -33,7 +33,7 @@ const Index = () => {
         list: [
           "prizeOffset",
           "奖品偏移量用于设置奖品距离转盘边缘的距离，具体详见奖品配置部分",
-          "object",
+          "number",
           "0",
         ],
       },

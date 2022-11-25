@@ -39,7 +39,7 @@ export default {
     "components/animate/demo/index",
 
     "pages/loki/index",
-    "pages/loki/turnable/index",
+    "pages/loki/turntable/index",
     "pages/loki/ninegrid/index",
   ],
   window: {

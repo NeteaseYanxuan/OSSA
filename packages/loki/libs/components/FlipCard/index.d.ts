@@ -10,5 +10,6 @@
  *   5.奖品兜底
  **/
 import React from "react";
-declare const FlipCard: React.FC<Loki.IFlipCard>;
+import { IFlipCard } from "./../../types/loki";
+declare const FlipCard: React.FC<IFlipCard>;
 export default FlipCard;
