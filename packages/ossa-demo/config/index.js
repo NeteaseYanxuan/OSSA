@@ -24,6 +24,7 @@ const config = {
         "@vh-mobile/pro-services",
         "@vh-mobile/pro-utils",
         "ossaui",
+        "@ossa/loki",
       ],
     },
   },
