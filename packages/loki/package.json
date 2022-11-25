@@ -22,7 +22,7 @@
     "build:components": "tsc --project ./tsconfig.components.json",
     "clean": "rm -rf ./libs"
   },
-  "author": "yang.x",
+  "author": "EchoHub",
   "license": "MIT",
   "peerDependencies": {
     "react": "^16.14.0",
