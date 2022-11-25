@@ -7,14 +7,16 @@ sidebar_position: 1
 #### 安装
 
 ```bash
-npm install ossa/loki
+npm install @ossa/loki
 ```
+
+#### 单独引入
 
 #### 在 React 应用中使用
 
 ```
-import BigWheel from 'ossa/loki/dist/h5/components/BigWheel';
-import 'ossa/loki/dist/h5/components/BigWheel/index.css';
+import BigWheel from '@ossa/loki/components/components/BigWheel';
+import '@ossa/loki/dist/style/BigWheel/index.css';
 
 <BigWheel
   config={转盘配置}
@@ -26,8 +28,8 @@ import 'ossa/loki/dist/h5/components/BigWheel/index.css';
 #### 在 Taro 应用中使用
 
 ```
-import BigWheel from 'ossa/loki/dist/taro/components/BigWheel';
-import 'ossa/loki/dist/taro/components/BigWheel/index.css';
+import BigWheel from '@ossa/loki/components/components/BigWheel';
+import '@ossa/loki/dist/style/BigWheel/index.css';
 
 <BigWheel
   config={转盘配置}
@@ -35,5 +37,3 @@ import 'ossa/loki/dist/taro/components/BigWheel/index.css';
   onPlay={开始函数}
 />
 ```
-
-#### 基础示例

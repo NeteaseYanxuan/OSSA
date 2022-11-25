@@ -2,7 +2,7 @@
 import React, { Component } from "react";
 import Taro from "@tarojs/taro";
 import BigWheel from "@ossa/loki/components/components/BigWheel";
-import "@ossa/loki/dist/style/components/BigWheel.scss";
+import "@ossa/loki/dist/style/components/bigWheel.scss";
 import DemoHeader from "../../../components/demoHeader";
 import DemoBlock from "../../../components/demoBlock";
 import DemoTable from "../../../components/demoTable";

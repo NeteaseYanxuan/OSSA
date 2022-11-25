@@ -2,7 +2,7 @@
 import React, { Component } from "react";
 import Taro from "@tarojs/taro";
 import NineGrid from "@ossa/loki/components/components/NineGrid";
-import "@ossa/loki/dist/style/components/NineGrid.scss";
+import "@ossa/loki/dist/style/components/ninegrid.scss";
 import DemoHeader from "../../../components/demoHeader";
 import DemoBlock from "../../../components/demoBlock";
 import DemoTable from "../../../components/demoTable";
