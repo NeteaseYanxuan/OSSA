@@ -207,6 +207,7 @@ importers:
     specifiers:
       '@babel/core': ^7.8.0
       '@babel/runtime': ^7.7.7
+      '@ossa/loki': workspace:^1.0.0
       '@pmmmwh/react-refresh-webpack-plugin': ^0.5.5
       '@tarojs/cli': 3.5.4
       '@tarojs/components': 3.5.4
@@ -243,7 +244,6 @@ importers:
       mocha: ^6.1.4
       mocha-allure-reporter: ^1.4.0
       ossaui: workspace:^0.4.1
-      ossaui-loki: workspace:^1.0.0
       react: ^17.0.0
       react-dom: ^17.0.0
       react-refresh: ^0.11.0
@@ -253,6 +253,7 @@ importers:
       yargs: ^17.5.1
     dependencies:
       '@babel/runtime': 7.18.3
+      '@ossa/loki': link:../loki
       '@tarojs/components': 3.5.4_@types+react@17.0.47
       '@tarojs/helper': 3.5.4
       '@tarojs/plugin-framework-react': 3.5.4_hgmpm45epxjtzegh6zpttyzlzy
@@ -270,7 +271,6 @@ importers:
       '@tarojs/taro': 3.5.4_@types+react@17.0.47
       '@tarojs/taro-h5': 3.5.4_@types+react@17.0.47
       ossaui: link:../ossa
-      ossaui-loki: link:../loki
       react: 17.0.2
       react-dom: 17.0.2_react@17.0.2
     devDependencies:

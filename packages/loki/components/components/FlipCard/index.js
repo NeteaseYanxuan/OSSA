@@ -1,3 +1,5 @@
+/* eslint-disable jsx-quotes */
+/* eslint-disable import/newline-after-import */
 /**
  * @name 翻卡
  * @description

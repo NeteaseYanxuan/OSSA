@@ -1,8 +1,8 @@
 /* eslint-disable jsx-quotes */
 import React, { Component } from "react";
 import Taro from "@tarojs/taro";
-import BigWheel from "ossaui-loki/components/components/BigWheel";
-import "ossaui-loki/dist/style/style/components/BigWheel.scss";
+import BigWheel from "@ossa/loki/components/components/BigWheel";
+import "@ossa/loki/dist/style/components/BigWheel.scss";
 import DemoHeader from "../../../components/demoHeader";
 import DemoBlock from "../../../components/demoBlock";
 import DemoTable from "../../../components/demoTable";

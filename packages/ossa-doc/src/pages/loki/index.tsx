@@ -13,7 +13,7 @@ export default function Home(): JSX.Element {
     <Layout title={`${siteConfig.title}`} description="OSSA 官网">
       <main className={styles.container}>
         <div className={styles.left}>
-          <p className={styles.title}>ossaui-loki</p>
+          <p className={styles.title}>@ossa/loki</p>
           <p className={styles.slogon}>
             <span>功能强大</span>且<span>专业可靠</span>的营销组件
           </p>

@@ -1,3 +1,6 @@
+/* eslint-disable jsx-quotes */
+/* eslint-disable @typescript-eslint/no-shadow */
+/* eslint-disable @typescript-eslint/no-unused-vars */
 /**
  * @name 老虎机
  * @description

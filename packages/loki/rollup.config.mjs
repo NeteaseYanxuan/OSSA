@@ -54,7 +54,7 @@ export default {
       targets: [
         {
           src: "src/style",
-          dest: "dist/style",
+          dest: "dist",
         },
       ],
     }),

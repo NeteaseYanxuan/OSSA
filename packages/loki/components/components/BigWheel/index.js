@@ -1,3 +1,5 @@
+/* eslint-disable jsx-quotes */
+/* eslint-disable @typescript-eslint/no-shadow */
 /**
  * @name 大转盘
  * @description

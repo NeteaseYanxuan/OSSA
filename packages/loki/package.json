@@ -1,5 +1,5 @@
 {
-  "name": "ossaui-loki",
+  "name": "@ossa/loki",
   "version": "1.0.0",
   "description": "loki interat component",
   "main": "dist/index.js",

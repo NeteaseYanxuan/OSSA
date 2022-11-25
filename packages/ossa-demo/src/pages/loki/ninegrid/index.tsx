@@ -1,8 +1,8 @@
 /* eslint-disable jsx-quotes */
 import React, { Component } from "react";
 import Taro from "@tarojs/taro";
-import NineGrid from "ossaui-loki/components/components/NineGrid";
-import "ossaui-loki/dist/style/style/components/NineGrid.scss";
+import NineGrid from "@ossa/loki/components/components/NineGrid";
+import "@ossa/loki/dist/style/components/NineGrid.scss";
 import DemoHeader from "../../../components/demoHeader";
 import DemoBlock from "../../../components/demoBlock";
 import DemoTable from "../../../components/demoTable";

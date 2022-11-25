@@ -1,3 +1,6 @@
+/* eslint-disable import/newline-after-import */
+/* eslint-disable jsx-quotes */
+/* eslint-disable react/jsx-curly-brace-presence */
 import React, { useState } from "react";
 import Utils from "./../../../utils/index";
 const { px2rem } = Utils;

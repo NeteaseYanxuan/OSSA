@@ -1,3 +1,4 @@
+/* eslint-disable jsx-quotes */
 /**
  * @name 刮刮卡
  * @description
