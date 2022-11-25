@@ -64,9 +64,11 @@ describe("noticebar Testing", function () {
             });
             cy.get(".ossa-notice-bar__content-wrapper").within(() => {
               cy.get("#marqueeContainer_3").should(($content) => {
-                expect($content.eq(0).attr("style")).contains(
-                  "animation-duration: 16.21s"
-                );
+                expect(
+                  Number(
+                    $content.eq(0).css("animation-duration").replace("s", "")
+                  )
+                ).to.be.closeTo(16, 1);
               });
             });
           });
