@@ -1,5 +1,20 @@
 # ossa-demo
 
+## 1.5.2
+
+### Patch Changes
+
+- [#88](https://github.com/NeteaseYanxuan/OSSA/pull/88) [`a553577`](https://github.com/NeteaseYanxuan/OSSA/commit/a553577eb98d69e0314c5cbe886bfdc638da2cc6) Thanks [@CaedmonW](https://github.com/CaedmonW)! - 修复测试在 CI 执行中的误差
+
+* [#86](https://github.com/NeteaseYanxuan/OSSA/pull/86) [`ed93bc1`](https://github.com/NeteaseYanxuan/OSSA/commit/ed93bc1d901f0c032b3ec6f599a8a11c809127bb) Thanks [@kiner-tang](https://github.com/kiner-tang)! - fix: 临时将 noticeBar 自定义滚动示例中的内容改为英文,解决 ci 运行测试任务中文乱码导致不通过问题
+
+- [#78](https://github.com/NeteaseYanxuan/OSSA/pull/78) [`1039034`](https://github.com/NeteaseYanxuan/OSSA/commit/10390343772e0edacdf165f27866323b46dc2241) Thanks [@kiner-tang](https://github.com/kiner-tang)! - feat(noticeBar): 通知栏自定义滚动时长支持
+
+* [#84](https://github.com/NeteaseYanxuan/OSSA/pull/84) [`bb56338`](https://github.com/NeteaseYanxuan/OSSA/commit/bb563383ecfb510f45da26de3729ba32f2741295) Thanks [@CaedmonW](https://github.com/CaedmonW)! - 文件命名格式更改
+
+* Updated dependencies [[`1039034`](https://github.com/NeteaseYanxuan/OSSA/commit/10390343772e0edacdf165f27866323b46dc2241), [`bb56338`](https://github.com/NeteaseYanxuan/OSSA/commit/bb563383ecfb510f45da26de3729ba32f2741295)]:
+  - ossaui@0.4.2
+
 ## 1.5.1
 
 ### Patch Changes
