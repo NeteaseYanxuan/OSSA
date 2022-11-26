@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { CSSProperties, useState } from "react";
 import Taro from "@tarojs/taro";
 import { View, Image } from "@tarojs/components";
 import classNames from "classnames";
@@ -92,7 +92,7 @@ export default function Upload(props: OsUploadProps) {
   const styleObject = Object.assign(getStyleObj(props), props.customStyle);
   const [upload, setUpload] = useState(initialUploads);
   const [files = [], setFiles] = useState(props.files);
-  const _deleteIconStyle = {
+  const _deleteIconStyle: CSSProperties = {
     position: "absolute",
     right: Taro.pxTransform(-18),
     top: Taro.pxTransform(-18),

@@ -4,7 +4,7 @@ import classNames from "classnames";
 import OsIcon from "../icon";
 import { OsCheckboxOptionProps } from "../../../types/index";
 import { deprecatedProp } from "../../utils";
-import { IconProps } from "../../../../types/icon";
+import { IconProps } from "../../../types/icon";
 
 function getStyleObj(props: OsCheckboxOptionProps): CSSProperties {
   const _styleObj = {};

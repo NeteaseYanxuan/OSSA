@@ -26,7 +26,10 @@ interface CheckboxOptionProps extends OsComponent {
    * @default false
    */
   disabled?: boolean;
-  onClick: (v) => void;
+  /**
+   * 点击选项
+   */
+  onClick: (values: (number | string)[], optionValue: number | string) => void;
 }
 
 declare const Checkbox: ComponentClass<CheckboxProps>;
