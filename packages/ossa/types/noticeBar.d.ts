@@ -18,7 +18,7 @@ interface NoticeBarProps extends OsComponent {
    */
   scrollable?: boolean;
   /**
-   * 文字滚动一屏的总时长，单位秒
+   * 文字滚动一屏的总时长，单位px/s
    * @default 16
    */
   speed?: number;
