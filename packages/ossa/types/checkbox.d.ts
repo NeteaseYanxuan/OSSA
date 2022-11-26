@@ -16,16 +16,17 @@ interface CheckboxOptionProps extends OsComponent {
    */
   value: Array<number | string>;
   /**
-   * 是否失效
+   * 是否禁用
+   * @deprecated `isDisabled`属性在未来版本中将被删除，请使用`disabled`代替
    * @default false
    */
   isDisabled?: boolean;
   /**
-   * 点击回调
-   * @param value 当前复选框组选中的所有复选框的值
-   * @param curValue 当前点击的复选框的值
+   * 是否禁用
+   * @default false
    */
-  onClick: (value: CheckboxOptionProps["value"], curValue?: CheckboxOptionProps["optionValue"]) => void;
+  disabled?: boolean;
+  onClick: (v) => void;
 }
 
 declare const Checkbox: ComponentClass<CheckboxProps>;

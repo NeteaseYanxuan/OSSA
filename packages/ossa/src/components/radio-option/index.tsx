@@ -1,8 +1,9 @@
 import React from "react";
 import { View } from "@tarojs/components";
 import classNames from "classnames";
-import OsIcon from "../../icon";
-import { OsIconProps, OsRadioOptionProps } from "../../../../types/index";
+import OsIcon from "../icon";
+import { OsIconProps, OsRadioOptionProps } from "../../../types/index";
+import { deprecatedProp } from "../../utils";
 
 // function getStyleObj(props: Props) {
 //   let _styleObj = {}
@@ -24,15 +25,48 @@ export default function RadioOption(props: OsRadioOptionProps) {
   const classObject = getClassObject(props); //组件修饰
   //const styleObject = getStyleObj(props);
 
+  const unClickable = (optionProps: OsRadioOptionProps) => {
+    const mergedDisabled = deprecatedProp(
+      optionProps.disabled,
+      optionProps.isDisabled,
+      {
+        newPropName: "disabled",
+        oldPropName: "isDisabled",
+        moduleName: "Radio"
+      }
+    );
+    const mergedReadonly = deprecatedProp(
+      optionProps.readonly,
+      optionProps.isReadonly,
+      {
+        newPropName: "readonly",
+        oldPropName: "isReadonly",
+        moduleName: "Radio"
+      }
+    );
+    return mergedDisabled || mergedReadonly;
+  }
+
+  
+  const mergedReadonly = deprecatedProp(
+    props.readonly,
+    props.isReadonly,
+    {
+      newPropName: "readonly",
+      oldPropName: "isReadonly",
+      moduleName: "Radio"
+    }
+  );
+
   const onClickOption = (optionProps: OsRadioOptionProps) => {
-    if (optionProps.isDisabled || optionProps.isReadonly) return;
+    if (unClickable(optionProps)) return;
     optionProps.onClick?.(optionProps.optionValue);
   };
 
   let iconType = "check";
 
   if (props.value === props.optionValue) {
-    if (props.isReadonly) {
+    if (mergedReadonly) {
       iconType = "check-irrevocable";
     } else if (props.value === props.optionValue) {
       iconType = "check-selected";

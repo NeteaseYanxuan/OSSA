@@ -1,5 +1,29 @@
 # ossaui
 
+## 0.4.2
+
+### Patch Changes
+
+- [#78](https://github.com/NeteaseYanxuan/OSSA/pull/78) [`1039034`](https://github.com/NeteaseYanxuan/OSSA/commit/10390343772e0edacdf165f27866323b46dc2241) Thanks [@kiner-tang](https://github.com/kiner-tang)! - feat(noticeBar): 通知栏自定义滚动时长支持
+
+* [#84](https://github.com/NeteaseYanxuan/OSSA/pull/84) [`bb56338`](https://github.com/NeteaseYanxuan/OSSA/commit/bb563383ecfb510f45da26de3729ba32f2741295) Thanks [@CaedmonW](https://github.com/CaedmonW)! - 文件命名格式更改
+
+## 0.4.1
+
+### Patch Changes
+
+- [#79](https://github.com/NeteaseYanxuan/OSSA/pull/79) [`713303e`](https://github.com/NeteaseYanxuan/OSSA/commit/713303e1a73b07911f7fd45f4b7e9d40167fa5bd) Thanks [@kiner-tang](https://github.com/kiner-tang)! - feat: api 命名规范化 & 增加安全使用过期属性方法
+
+* [#57](https://github.com/NeteaseYanxuan/OSSA/pull/57) [`f21ea59`](https://github.com/NeteaseYanxuan/OSSA/commit/f21ea5972aae821ae849843eeab7d35ca96e126f) Thanks [@jianzhouf](https://github.com/jianzhouf)! - 支付宝端/字节端轮播组件和图片预览组件问题修复
+
+- [#67](https://github.com/NeteaseYanxuan/OSSA/pull/67) [`d9d5770`](https://github.com/NeteaseYanxuan/OSSA/commit/d9d57707f6439c98cf1f3d08c51b44b397cf0856) Thanks [@kiner-tang](https://github.com/kiner-tang)! - docs: 删除冗余输入框类型
+
+* [#72](https://github.com/NeteaseYanxuan/OSSA/pull/72) [`05093be`](https://github.com/NeteaseYanxuan/OSSA/commit/05093be98e4ad5171740303c81c147e95e23310c) Thanks [@kiner-tang](https://github.com/kiner-tang)! - feat: input 组件是否显示字符计数器属性名使用 showCount 属性替代
+
+- [#77](https://github.com/NeteaseYanxuan/OSSA/pull/77) [`946b66d`](https://github.com/NeteaseYanxuan/OSSA/commit/946b66df24cbe0bfde5a396369042eaf72e9e3b2) Thanks [@kiner-tang](https://github.com/kiner-tang)! - refactor: refactor call expression
+
+* [#68](https://github.com/NeteaseYanxuan/OSSA/pull/68) [`3742667`](https://github.com/NeteaseYanxuan/OSSA/commit/37426679f9e953dad2baca286142d22aac67ba45) Thanks [@kiner-tang](https://github.com/kiner-tang)! - fix: 删除图片预览冗余代码
+
 ## 0.4.0
 
 ### Minor Changes

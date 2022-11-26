@@ -1,7 +1,7 @@
 import React from "react";
 import { View } from "@tarojs/components";
 import classNames from "classnames";
-import RadioOption from "./option/index";
+import RadioOption from "../radio-option/index";
 import { OsRadioProps, OsRadioOptionProps } from "../../../types/index";
 
 function getStyleObj(props: OsRadioProps) {
@@ -17,10 +17,10 @@ function getClassObject(props: OsRadioProps) {
 }
 
 function getCommonChildProps(props: OsRadioProps) {
-  const childProps: Pick<OsRadioProps, "value" | "isDisabled" | "isReadonly"> =
+  const childProps: Pick<OsRadioProps, "value" | "disabled" | "readonly"| "isDisabled" | "isReadonly"> =
     {};
 
-  ["value", "isDisabled", "isReadonly"].forEach((key) => {
+  ["value", "disabled", "readonly", "isDisabled", "isReadonly"].forEach((key) => {
     if (props[key] !== undefined) {
       childProps[key] = props[key];
     }

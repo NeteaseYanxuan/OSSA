@@ -44,19 +44,27 @@ interface InputProps extends OsComponent {
    */
   maxLength?: number;
   /**
-   * 是否只读
-   * @default false
-   */
-  isReadonly?: boolean;
-  /**
    * 是否禁用
+   * @deprecated `isDisabled`属性在未来版本中将被删除，请使用`disabled`代替
    * @default false
    */
   isDisabled?: boolean;
   /**
-   * 是否隐藏一键删除按钮
+   * 是否禁用
    * @default false
    */
+  disabled?: boolean;
+  /**
+   * 是否只读
+   * @deprecated `isReadonly`属性在未来版本中将被删除，请使用`readonly`代替
+   * @default false
+   */
+  isReadonly?: boolean;
+  /**
+   * 是否失效
+   * @default false
+   */
+  readonly?: boolean;
   disabledClear?: boolean;
   /**
    * 是否展示输入框底部的分割线

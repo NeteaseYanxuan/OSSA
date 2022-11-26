@@ -1,8 +1,9 @@
 import React, { CSSProperties } from "react";
 import { View } from "@tarojs/components";
 import classNames from "classnames";
-import OsIcon from "../../icon";
-import { OsCheckboxOptionProps } from "../../../../types/index";
+import OsIcon from "../icon";
+import { OsCheckboxOptionProps } from "../../../types/index";
+import { deprecatedProp } from "../../utils";
 import { IconProps } from "../../../../types/icon";
 
 function getStyleObj(props: OsCheckboxOptionProps): CSSProperties {
@@ -10,9 +11,22 @@ function getStyleObj(props: OsCheckboxOptionProps): CSSProperties {
   return _styleObj;
 }
 
-function getClassObject(props: OsCheckboxOptionProps): Record<string, string | boolean | number | undefined> {
+
+const mergeDisabled = (optionProps: OsCheckboxOptionProps) => {
+  return deprecatedProp(
+    optionProps.disabled,
+    optionProps.isDisabled,
+    {
+      newPropName: "disabled",
+      oldPropName: "isDisabled",
+      moduleName: "Checkbox"
+    }
+  );
+}
+
+function getClassObject(props: OsCheckboxOptionProps) {
   const classObject = {
-    ["ossa-checkbox__option--disabled"]: props.isDisabled,
+    ["ossa-checkbox__option--disabled"]: mergeDisabled(props),
     ["ossa-checkbox__option--custom-label"]: typeof props.children !== "string",
   };
   return classObject;
@@ -26,8 +40,10 @@ export default function CheckboxOption(props: OsCheckboxOptionProps) {
 
   const { value = [] } = props;
 
+  const mergedDisabled = mergeDisabled(props);
+
   const onClickOption = (optionProps: OsCheckboxOptionProps) => {
-    if (optionProps.isDisabled) return;
+    if (mergeDisabled(optionProps)) return;
     let newValues = value.slice(0);
     if (value.includes(optionProps.optionValue)) {
       newValues = value.filter((v) => {
@@ -41,7 +57,7 @@ export default function CheckboxOption(props: OsCheckboxOptionProps) {
 
   let iconType: IconProps["type"] = "choose";
   let color;
-  if (props.isDisabled) {
+  if (mergedDisabled) {
     iconType = "choose-disable";
   } else if (value.includes(props.optionValue)) {
     iconType = "choose-selected";

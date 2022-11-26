@@ -2,17 +2,43 @@ import React from "react";
 import { View } from "@tarojs/components";
 import classNames from "classnames";
 import { SwitchProps } from "../../../types/switch";
+import { deprecatedProp } from "../../utils";
 
 const colorDisabled = "#f4f4f4";
 
+const mergeDisabled = (props: SwitchProps) => {
+  return deprecatedProp(
+    props.disabled,
+    props.isDisabled,
+    {
+      newPropName: "disabled",
+      oldPropName: "isDisabled",
+      moduleName: "Switch"
+    }
+  );
+}
+const mergeChecked = (props: SwitchProps) => {
+  return deprecatedProp(
+    props.checked,
+    props.isChecked,
+    {
+      newPropName: "checked",
+      oldPropName: "isChecked",
+      moduleName: "Switch"
+    }
+  );
+}
+
 function getStyleObj(props: SwitchProps) {
   const _styleObj = {};
-  if (!props.isDisabled && props.isChecked && props.onColor) {
+  const mergedDisabled = mergeDisabled(props);
+  const mergedChecked = mergeChecked(props);
+  if (!mergedDisabled && mergedChecked && props.onColor) {
     _styleObj["backgroundColor"] = props.onColor;
     _styleObj["borderColor"] = props.onColor;
   }
 
-  if (props.isDisabled) {
+  if (mergedDisabled) {
     _styleObj["backgroundColor"] = colorDisabled;
     _styleObj["borderColor"] = colorDisabled;
   }
@@ -20,13 +46,14 @@ function getStyleObj(props: SwitchProps) {
 }
 
 function getBgOffStyleObj(props: SwitchProps) {
+  const mergedDisabled = mergeDisabled(props);
   const _styleObj = {};
   if (props.offColor) {
     _styleObj["backgroundColor"] = props.offColor;
     _styleObj["borderColor"] = props.offColor;
   }
 
-  if (props.isDisabled) {
+  if (mergedDisabled) {
     _styleObj["backgroundColor"] = colorDisabled;
     _styleObj["borderColor"] = colorDisabled;
   }
@@ -43,9 +70,11 @@ function getNodeObj(props: SwitchProps) {
 }
 
 function getClassObject(props: SwitchProps) {
+  const mergedDisabled = mergeDisabled(props);
+  const mergedChecked = mergeChecked(props);
   const classObject = {
-    ["ossa-switch--checked"]: props.isChecked,
-    ["ossa-switch--disabled"]: props.isDisabled,
+    ["ossa-switch--checked"]: mergedChecked,
+    ["ossa-switch--disabled"]: mergedDisabled,
   };
   return classObject;
 }
@@ -57,12 +86,13 @@ export default function Index(props: SwitchProps) {
   const styleObject = Object.assign(getStyleObj(props), customStyle);
   const styleBgOff = getBgOffStyleObj(props);
   const styleNode = getNodeObj(props);
-
+  const mergedDisabled = mergeDisabled(props);
+  const mergedChecked = mergeChecked(props);
   const onClick = (e) => {
-    if (props.isDisabled) {
+    if (mergedDisabled) {
       return;
     }
-    props.onChange(!props.isChecked);
+    props.onChange(!mergedChecked);
   };
 
   return (

@@ -1,5 +1,41 @@
 # ossa-demo
 
+## 1.5.2
+
+### Patch Changes
+
+- [#88](https://github.com/NeteaseYanxuan/OSSA/pull/88) [`a553577`](https://github.com/NeteaseYanxuan/OSSA/commit/a553577eb98d69e0314c5cbe886bfdc638da2cc6) Thanks [@CaedmonW](https://github.com/CaedmonW)! - 修复测试在 CI 执行中的误差
+
+* [#86](https://github.com/NeteaseYanxuan/OSSA/pull/86) [`ed93bc1`](https://github.com/NeteaseYanxuan/OSSA/commit/ed93bc1d901f0c032b3ec6f599a8a11c809127bb) Thanks [@kiner-tang](https://github.com/kiner-tang)! - fix: 临时将 noticeBar 自定义滚动示例中的内容改为英文,解决 ci 运行测试任务中文乱码导致不通过问题
+
+- [#78](https://github.com/NeteaseYanxuan/OSSA/pull/78) [`1039034`](https://github.com/NeteaseYanxuan/OSSA/commit/10390343772e0edacdf165f27866323b46dc2241) Thanks [@kiner-tang](https://github.com/kiner-tang)! - feat(noticeBar): 通知栏自定义滚动时长支持
+
+* [#84](https://github.com/NeteaseYanxuan/OSSA/pull/84) [`bb56338`](https://github.com/NeteaseYanxuan/OSSA/commit/bb563383ecfb510f45da26de3729ba32f2741295) Thanks [@CaedmonW](https://github.com/CaedmonW)! - 文件命名格式更改
+
+* Updated dependencies [[`1039034`](https://github.com/NeteaseYanxuan/OSSA/commit/10390343772e0edacdf165f27866323b46dc2241), [`bb56338`](https://github.com/NeteaseYanxuan/OSSA/commit/bb563383ecfb510f45da26de3729ba32f2741295)]:
+  - ossaui@0.4.2
+
+## 1.5.1
+
+### Patch Changes
+
+- [#79](https://github.com/NeteaseYanxuan/OSSA/pull/79) [`713303e`](https://github.com/NeteaseYanxuan/OSSA/commit/713303e1a73b07911f7fd45f4b7e9d40167fa5bd) Thanks [@kiner-tang](https://github.com/kiner-tang)! - feat: api 命名规范化 & 增加安全使用过期属性方法
+
+* [#67](https://github.com/NeteaseYanxuan/OSSA/pull/67) [`d9d5770`](https://github.com/NeteaseYanxuan/OSSA/commit/d9d57707f6439c98cf1f3d08c51b44b397cf0856) Thanks [@kiner-tang](https://github.com/kiner-tang)! - docs: 删除冗余输入框类型
+
+- [#75](https://github.com/NeteaseYanxuan/OSSA/pull/75) [`f7ac441`](https://github.com/NeteaseYanxuan/OSSA/commit/f7ac44193912383a94a2464fb08abf8543b89b35) Thanks [@kiner-tang](https://github.com/kiner-tang)! - docs: navBar 组件中 rightSlot 属性描述有误
+
+* [#72](https://github.com/NeteaseYanxuan/OSSA/pull/72) [`05093be`](https://github.com/NeteaseYanxuan/OSSA/commit/05093be98e4ad5171740303c81c147e95e23310c) Thanks [@kiner-tang](https://github.com/kiner-tang)! - feat: input 组件是否显示字符计数器属性名使用 showCount 属性替代
+
+- [#71](https://github.com/NeteaseYanxuan/OSSA/pull/71) [`b2a12cd`](https://github.com/NeteaseYanxuan/OSSA/commit/b2a12cded17a089fbb4e68b7a32ae8c1104b3931) Thanks [@kiner-tang](https://github.com/kiner-tang)! - docs: 补充 showSplitLine 属性文档说明
+
+* [#70](https://github.com/NeteaseYanxuan/OSSA/pull/70) [`c590e34`](https://github.com/NeteaseYanxuan/OSSA/commit/c590e34784ed2e9dacbfcec76a0f6dc9c53a651d) Thanks [@kiner-tang](https://github.com/kiner-tang)! - docs: 修改文档中 input 组件错误属性类型描述
+
+- [#74](https://github.com/NeteaseYanxuan/OSSA/pull/74) [`543602e`](https://github.com/NeteaseYanxuan/OSSA/commit/543602e11378405f6dda050e579197b7f96708a6) Thanks [@kiner-tang](https://github.com/kiner-tang)! - docs: 补充列表组件缺少的`leftIconSize`属性文档描述
+
+- Updated dependencies [[`713303e`](https://github.com/NeteaseYanxuan/OSSA/commit/713303e1a73b07911f7fd45f4b7e9d40167fa5bd), [`f21ea59`](https://github.com/NeteaseYanxuan/OSSA/commit/f21ea5972aae821ae849843eeab7d35ca96e126f), [`d9d5770`](https://github.com/NeteaseYanxuan/OSSA/commit/d9d57707f6439c98cf1f3d08c51b44b397cf0856), [`05093be`](https://github.com/NeteaseYanxuan/OSSA/commit/05093be98e4ad5171740303c81c147e95e23310c), [`946b66d`](https://github.com/NeteaseYanxuan/OSSA/commit/946b66df24cbe0bfde5a396369042eaf72e9e3b2), [`3742667`](https://github.com/NeteaseYanxuan/OSSA/commit/37426679f9e953dad2baca286142d22aac67ba45)]:
+  - ossaui@0.4.1
+
 ## 1.5.0
 
 ### Minor Changes

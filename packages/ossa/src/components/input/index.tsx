@@ -14,6 +14,7 @@ import classNames from "classnames";
 import OsIcon from "../icon";
 import { OsInputProps } from "../../../types/index";
 import { isAndroid } from "../common/util";
+import { deprecatedProp } from "../../utils";
 
 function getClassObject(props: OsInputProps) {
   const classObject = {
@@ -50,6 +51,17 @@ export default function OsInput(props: OsInputProps) {
   if (props.type === "number" || props.type === "bankcard") {
     iptType = "digit";
   }
+  
+  const mergedDisabled = deprecatedProp(props.disabled, props.isDisabled, {
+    newPropName: "disabled",
+    oldPropName: "isDisabled",
+    moduleName: "Input"
+  });
+  const mergedReadonly = deprecatedProp(props.readonly, props.isReadonly, {
+    newPropName: "disabled",
+    oldPropName: "isDisabled",
+    moduleName: "Input"
+  });
 
   useEffect(() => {
     if (
@@ -87,12 +99,16 @@ export default function OsInput(props: OsInputProps) {
     props.onBlur?.(e);
   };
   const showDelIcon =
-    !props.isDisabled &&
-    !props.isReadonly &&
+    !mergedDisabled &&
+    !mergedReadonly &&
     props.value &&
     props.type !== "textarea";
-  const editable = !props.isReadonly && !props.isDisabled;
-  const mergedShowCount = props.showCount ?? props.countDown;
+  const editable = !mergedReadonly && !mergedDisabled;
+  const mergedShowCount = deprecatedProp(props.showCount, props.countDown, {
+    newPropName: "showCount",
+    oldPropName: "countDown",
+    moduleName: "Input"
+  });
   return (
     <View
       className={classNames(rootClassName, classObject, props.className)}
@@ -189,6 +205,8 @@ OsInput.defaultProps = {
   maxLength: 500,
   isDisabled: false,
   isReadonly: false,
+  disabled: false,
+  readonly: false,
   disabledClear: false,
   showSplitLine: true,
   value: "",
