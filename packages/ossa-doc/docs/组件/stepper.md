@@ -48,6 +48,7 @@ demo_url: 'https://neteaseyanxuan.github.io/OSSA/#/components/stepper/demo/index
 |value|当前值，开发者需要通过 onChange 事件来更新 value 值，必选|number|1|
 |max|最大值，可选|number|99|
 |min|最小值，可选|number|1|
+|step|单步增加/减少的值，可选|number|1|
 |isReadonly|数量不可编辑，可选，`isReadonly`属性在未来版本中将被删除，请使用`readonly`代替|boolean|false|
 |readonly|数量不可编辑，可选|boolean|false|
 |isDisabled|不可点击，可选，`isDisabled`属性在未来版本中将被删除，请使用`disabled`代替|boolean|false|
