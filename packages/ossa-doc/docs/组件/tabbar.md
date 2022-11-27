@@ -15,7 +15,7 @@ demo_url: 'https://neteaseyanxuan.github.io/OSSA/#/components/tabbar/demo/index'
 ```jsx
 // 普通
 <OsTabBar
-  value={value}
+  activeTabIdx={value}
   tabsArr={tabsArr}
   onClick={(item) => onClick(item)}
 ></OsTabBar>
@@ -23,7 +23,7 @@ demo_url: 'https://neteaseyanxuan.github.io/OSSA/#/components/tabbar/demo/index'
 
 // 固定底部
 <OsTabBar
-  value={value}
+  activeTabIdx={value}
   tabsArr={tabsArr}
   isfixedBt
   onClick={(item) => onClick(item)}
@@ -66,7 +66,7 @@ export default () => {
     <View className={styles.container}>
       <OsTabBar
         tabsArr={tabsArr}
-        value={current}
+        activeTabIdx={current}
         onClick={onChange}
       />
     </View>
@@ -85,7 +85,8 @@ export default () => {
 ### 属性
 |参数|说明|类型|默认值|
 |------|------|------|------|
-|value|当前选中的标签索引值，从0开始，可选|number|0|
+|value|当前选中的标签索引值，从0开始，可选，`value`属性在未来版本中将被删除，请使用`activeTabIdx`代替|number|0|
+|activeTabIdx|当前选中的标签索引值，从0开始，可选|number|0|
 |tabsArr|数据渲染，必选|TabsArr[]|-|
 |defaultColor|默认填充色，可选|string|#7F7F7F|
 |activeColor|高亮填充色，可选|string|#DD1A21|
