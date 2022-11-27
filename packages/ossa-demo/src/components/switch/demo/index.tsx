@@ -27,13 +27,13 @@ const initialListApi = {
       list: ["checked", "是否打开", "boolean", "false"],
     },
     {
-      list: ["onColor", "打开时的背景色，可选", "string", "-"],
+      list: ["onColor", "打开时的背景色，可选", "string", "#44DB5E"],
     },
     {
-      list: ["offColor", "关闭时的背景色，可选", "string", "-"],
+      list: ["offColor", "关闭时的背景色，可选", "string", "#FFFFFF"],
     },
     {
-      list: ["nodeColor", "滑块颜色，可选", "string", "-"],
+      list: ["nodeColor", "滑块颜色，可选", "string", "#FFFFFF"],
     },
     {
       list: ["isDisabled", "禁用，可选，`isDisabled`属性在未来版本中将被删除，请使用`disabled`代替", "boolean", "false"],
