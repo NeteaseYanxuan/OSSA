@@ -1,0 +1,38 @@
+@function p($px, $base: 100) {
+  @return calc($px / $base) * 1rem;
+}
+.loki-flipcard {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  .x-card {
+    transition: all .8s cubic-bezier(0.68,-.55,.265,1.55);
+    background-size: 100% auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    &--bg {
+      width: 100%;
+      height: auto;
+      position: absolute;
+    }
+    .x-prize--wrapper {
+      width: 80%;
+      position: relative;
+    }
+    .x-prize {
+      position: relative;
+      width: 100%;
+      height: auto;
+      z-index: 2;
+    }
+    &__choosed {
+      overflow: hidden;
+      transform: rotateY(180deg);
+      transition: all .8s cubic-bezier(0.68,-.55,.265,1.55);
+    }
+  }
+}

@@ -9,11 +9,12 @@
   },
   "scripts": {
     "start": "pnpm install --shamefully-hoist",
-    "dev": "concurrently \"pnpm --filter=ossaui dev:rollup\" \"pnpm dev:demo\"",
+    "dev": "concurrently \"pnpm --filter=ossaui dev:rollup\" \"pnpm --filter=@ossa/loki dev:rollup\" \"pnpm dev:demo\"",
     "dev:demo": "pnpm --filter=ossa-demo dev:h5",
     "doc:start": "pnpm --filter=ossa-doc start",
     "build:demo": "pnpm --filter=ossa-demo build:h5 --public_path=$npm_config_path",
     "build": "pnpm --filter=ossaui build",
+    "build:loki": "pnpm --filter=@ossa/loki build",
     "clear": "rimraf 'packages/*/{lib,node_modules}' && rimraf node_modules",
     "changeset": "changeset",
     "version-packages": "changeset version && pnpm start",

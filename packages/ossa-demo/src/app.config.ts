@@ -37,6 +37,10 @@ export default {
     "components/datePicker/demo/index",
     "components/noticeBar/demo/index",
     "components/animate/demo/index",
+
+    "pages/loki/index",
+    "pages/loki/turntable/index",
+    "pages/loki/ninegrid/index",
   ],
   window: {
     backgroundTextStyle: "light",
