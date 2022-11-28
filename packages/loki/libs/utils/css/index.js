@@ -10,6 +10,17 @@ export const px2rem = function ($px) {
   }
   try {
     if (typeof process.env.TARO_ENV !== "undefined" && process.env.TARO_ENV) {
+      if (
+        process.env.TARO_ENV === "h5" &&
+        window.getComputedStyle(document.getElementsByTagName("html")[0])
+      ) {
+        baseSize = (
+          window.getComputedStyle(document.getElementsByTagName("html")[0])[
+            "font-size"
+          ] || window.getComputedStyle(document.body)["font-size"]
+        ).replace(/[a-zA-Z]+$/, "");
+        return `${$px / baseSize}rem`;
+      }
       return $px + "rpx";
     }
   } catch (error) {
