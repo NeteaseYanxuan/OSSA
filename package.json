@@ -20,7 +20,7 @@
     "version-packages": "changeset version && pnpm start",
     "version-packages:ci": "changeset version && pnpm install --shamefully-hoist --no-frozen-lockfile",
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0",
-    "release": "pnpm build && pnpm release:only",
+    "release": "pnpm build && pnpm build:loki && pnpm release:only",
     "release:only": "changeset publish --registry=https://registry.npmjs.com/",
     "test": "pnpm --filter=ossa-demo test",
     "checkUIChange": "node ./scripts/checkModifyListAndTest.js",
