@@ -1,6 +1,6 @@
 {
 	"name": "ossa-demo",
-	"version": "1.5.2",
+	"version": "1.6.0",
 	"private": true,
 	"description": "OSSA Demo",
 	"privite": true,
@@ -58,7 +58,7 @@
 		"@tarojs/taro": "3.5.4",
 		"@tarojs/taro-h5": "3.5.4",
 		"ossaui": "workspace:^0.4.2",
-		"@ossa/loki": "workspace:^0.0.1",
+		"@ossa/loki": "workspace:^1.0.0",
 		"react": "^17.0.0",
 		"react-dom": "^17.0.0"
 	},
