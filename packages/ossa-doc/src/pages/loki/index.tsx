@@ -18,7 +18,7 @@ export default function Home(): JSX.Element {
             <span>功能强大</span>且<span>专业可靠</span>的营销组件
           </p>
           <p className={styles.desc}>
-            <span>多端编译</span>
+            <span>多端</span>
             <span>配置简单</span>
             <span>定制自由</span>
           </p>
