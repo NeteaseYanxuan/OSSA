@@ -1,6 +1,6 @@
 {
   "name": "@ossa/loki",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "loki interat component",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
