@@ -5,6 +5,10 @@ import OsComponent from "./base";
 interface NoticeBarProps extends OsComponent {
   closeable?: boolean;
   scrollable?: boolean;
+  /**
+   * 文字滚动一屏的总时长，单位秒
+   * @default 16
+   */
   speed?: number;
   leftIcon?: string;
   more?: boolean;

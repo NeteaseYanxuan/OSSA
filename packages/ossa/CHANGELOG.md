@@ -1,5 +1,13 @@
 # ossaui
 
+## 0.4.2
+
+### Patch Changes
+
+- [#78](https://github.com/NeteaseYanxuan/OSSA/pull/78) [`1039034`](https://github.com/NeteaseYanxuan/OSSA/commit/10390343772e0edacdf165f27866323b46dc2241) Thanks [@kiner-tang](https://github.com/kiner-tang)! - feat(noticeBar): 通知栏自定义滚动时长支持
+
+* [#84](https://github.com/NeteaseYanxuan/OSSA/pull/84) [`bb56338`](https://github.com/NeteaseYanxuan/OSSA/commit/bb563383ecfb510f45da26de3729ba32f2741295) Thanks [@CaedmonW](https://github.com/CaedmonW)! - 文件命名格式更改
+
 ## 0.4.1
 
 ### Patch Changes

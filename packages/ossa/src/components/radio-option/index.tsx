@@ -1,9 +1,9 @@
 import React from "react";
 import { View } from "@tarojs/components";
 import classNames from "classnames";
-import OsIcon from "../../icon";
-import { OsRadioOptionProps } from "../../../../types/index";
-import { deprecatedProp } from "../../../utils";
+import OsIcon from "../icon";
+import { OsRadioOptionProps } from "../../../types/index";
+import { deprecatedProp } from "../../utils";
 
 // function getStyleObj(props: Props) {
 //   let _styleObj = {}

@@ -2,7 +2,7 @@ import React from "react";
 import Taro from "@tarojs/taro";
 import { View } from "@tarojs/components";
 import classNames from "classnames";
-import { OsTabsHeaderProps } from "../../../../types";
+import { OsTabsHeaderProps } from "../../../types";
 
 function getStyleObject(props: OsTabsHeaderProps) {
   const { space, type } = props;

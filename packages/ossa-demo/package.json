@@ -1,6 +1,6 @@
 {
 	"name": "ossa-demo",
-	"version": "1.5.1",
+	"version": "1.5.2",
 	"private": true,
 	"description": "OSSA Demo",
 	"privite": true,
@@ -57,7 +57,7 @@
 		"@tarojs/shared": "3.5.4",
 		"@tarojs/taro": "3.5.4",
 		"@tarojs/taro-h5": "3.5.4",
-		"ossaui": "workspace:^0.4.1",
+		"ossaui": "workspace:^0.4.2",
 		"@ossa/loki": "workspace:^0.0.1",
 		"react": "^17.0.0",
 		"react-dom": "^17.0.0"
@@ -72,6 +72,7 @@
 		"@typescript-eslint/eslint-plugin": "^5.20.0",
 		"@typescript-eslint/parser": "^5.20.0",
 		"allure-commandline": "^2.9.0",
+		"babel-plugin-import": "^1.13.5",
 		"babel-preset-taro": "3.5.4",
 		"cypress": "^3.4.1",
 		"cypress-file-upload": "^3.3.3",

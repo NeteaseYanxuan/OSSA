@@ -1,7 +1,7 @@
 import React from "react";
 import { View } from "@tarojs/components";
 import classNames from "classnames";
-import RadioOption from "./option/index";
+import RadioOption from "../radio-option/index";
 import { OsRadioProps, OsRadioOptionProps } from "../../../types/index";
 
 function getStyleObj(props: OsRadioProps) {
