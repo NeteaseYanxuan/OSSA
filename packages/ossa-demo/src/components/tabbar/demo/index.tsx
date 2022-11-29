@@ -22,7 +22,10 @@ const initialListApi = {
   head: ["参数", "说明", "类型", "默认值"],
   data: [
     {
-      list: ["value", "当前选中的标签索引值，从0开始，必选", "number", "-"],
+      list: ["value", "当前选中的标签索引值，从0开始，可选，`value`属性在未来版本中将被删除，请使用`activeTabIdx`代替", "number", "0"],
+    },
+    {
+      list: ["activeTabIdx", "当前选中的标签索引值，从0开始，可选", "number", "0"],
     },
     {
       list: ["tabsArr", "数据渲染，必选", "<Array><API-TabsArr>", "-"],
@@ -152,7 +155,7 @@ export default function Index() {
       <DemoHeader title={demoTitle}></DemoHeader>
       <DemoBlock fullScreen title='基础'>
         <OsTabBar
-          value={tab1Index}
+          activeTabIdx={tab1Index}
           tabsArr={tabsArr}
           onClick={(item, index) => handleTab1Click(item, index)}
         ></OsTabBar>
@@ -160,7 +163,7 @@ export default function Index() {
 
       <DemoBlock fullScreen title='固定底部'>
         <OsTabBar
-          value={tab2Index}
+          activeTabIdx={tab2Index}
           tabsArr={tabsArr}
           isfixedBt
           onClick={(item, index) => handleTab2Click(item, index)}
