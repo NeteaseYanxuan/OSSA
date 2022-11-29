@@ -11,6 +11,7 @@ export default {
     "components/badge/demo/index",
     "components/button/demo/index",
     "components/color/demo/index",
+    "components/countdown/demo/index",
     "components/tag/demo/index",
     "components/icon/demo/index",
     "components/radio/demo/index",
