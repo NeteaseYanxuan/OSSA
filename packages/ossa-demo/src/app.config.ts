@@ -8,7 +8,6 @@ export default {
     "pages/dataDisplay/index",
     "pages/navigation/index",
     "pages/animate/index",
-    "pages/business/index",
     "components/badge/demo/index",
     "components/button/demo/index",
     "components/color/demo/index",
