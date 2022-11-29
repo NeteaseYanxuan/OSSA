@@ -56,7 +56,7 @@ const SwipeCell: FC<OsSwipeCellProps> = ({ children, disabled = false,right, ...
   }
 
   useEffect(() => {
-    setTimeout(() => {
+    const timeoutId = setTimeout(() => {
       const query = Taro.createSelectorQuery()
       query.select('#' + idRef.current).boundingClientRect()
       query.selectViewport().scrollOffset()
@@ -64,14 +64,27 @@ const SwipeCell: FC<OsSwipeCellProps> = ({ children, disabled = false,right, ...
         rightWidth.current = res[0].width;
       })
     }, 200)
+    return () => {
+      clearTimeout(timeoutId);
+    }
   }, [])
 
   return <View {...viewProps} className={classNames('ossa-swipecell', viewProps.className)}>
-    <View style={{ transform: `translate3d(${x}px,0,0)` }} className='ossa-swipecell__wrapper'>
+    <View 
+      style={{ transform: `translate3d(${x}px,0,0)` }} 
+      className='ossa-swipecell__wrapper'
+    >
       <View id={idRef.current} className='ossa-swipecell__right'>
         {right}
       </View>
-      <View catchMove onTouchStart={handleTouchStart} onTouchMove={handleTouchMove} onTouchEnd={handleTouchEnd} onTouchCancel={handleTouchEnd} className='ossa-swipecell__content'>
+      <View 
+        catchMove 
+        onTouchStart={handleTouchStart} 
+        onTouchMove={handleTouchMove} 
+        onTouchEnd={handleTouchEnd} 
+        onTouchCancel={handleTouchEnd} 
+        className='ossa-swipecell__content'
+      >
         {children}
       </View>
     </View>
