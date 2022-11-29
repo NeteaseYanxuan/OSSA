@@ -50,9 +50,34 @@ describe("noticebar Testing", function () {
         });
     });
 
-    it("case #3: 可关闭的通知栏框", function () {
+    it("case #3: 自定义滚动速度通知栏框", function () {
       cy.get(".block")
         .eq(2)
+        .within(() => {
+          cy.get(
+            ".ossa-notice-bar.ossa-notice-bar--play-infinite.ossa-notice-bar--with-icon"
+          ).within(() => {
+            cy.get(
+              ".ossa-icon.ossa-icon--inform.ossa-notice-bar__left-icon"
+            ).should(($icon) => {
+              expect($icon).to.have.css("color").eq("rgb(244, 143, 24)");
+            });
+            cy.get(".ossa-notice-bar__content-wrapper").within(() => {
+              cy.get("#marqueeContainer_3").should(($content) => {
+                expect(
+                  Number(
+                    $content.eq(0).css("animation-duration").replace("s", "")
+                  )
+                ).to.be.closeTo(16, 1);
+              });
+            });
+          });
+        });
+    });
+
+    it("case #4: 可关闭的通知栏框", function () {
+      cy.get(".block")
+        .eq(3)
         .within(() => {
           cy.get(".ossa-notice-bar").within(() => {
             cy.get(".ossa-notice-bar__content-wrapper").within(() => {
@@ -70,9 +95,9 @@ describe("noticebar Testing", function () {
         });
     });
 
-    it("case #4: 可跳转的通知栏框", function () {
+    it("case #5: 可跳转的通知栏框", function () {
       cy.get(".block")
-        .eq(3)
+        .eq(4)
         .within(() => {
           cy.get(".ossa-notice-bar").within(() => {
             cy.get(".ossa-notice-bar__content-wrapper").within(() => {

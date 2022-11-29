@@ -1,0 +1,193 @@
+/**
+ * CSS files with the .module.css suffix will be treated as CSS modules
+ * and scoped locally.
+ */
+
+ @keyframes sacleName {
+  0% {
+    transform: scale(5);
+    transform-origin: left;
+  }
+  100% {
+    transform: scale(1);
+    transform-origin: right;
+  }
+}
+
+@keyframes sacleIcon {
+  0% {
+    transform: scale(2);
+    transform-origin: right;
+  }
+  100% {
+    transform: scale(1);
+    transform-origin: left;
+  }
+}
+
+ .container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1800px;
+  position: relative;
+  margin: auto;
+}
+
+.left {
+  align-self: flex-start;
+  z-index: 1;
+  margin-left: 140px;
+  margin-top: 200px;
+}
+
+.bg {
+  position: absolute;
+  right: 0;
+  width: 100vw;
+  overflow: hidden;
+  top: var(--ifm-navbar-height);
+  display: flex;
+  justify-content: end;
+  align-items: flex-start;
+}
+
+.title {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 92px;
+  line-height: 92px;
+
+  color: #333333;
+}
+
+.slogon {
+  color: #999;
+  font-size: 48px;
+}
+
+.slogon span {
+  background: rgba(0, 0, 0, .1);
+  padding: 4px 10px;
+  margin: 0 10px;
+  display: inline-block;
+  border-radius: 8px;
+  line-height: 1;
+}
+.slogon span:first-child {
+  margin-left: 0;
+}
+
+.desc {
+  font-size: 24px;
+  color: #fafafa;
+}
+
+.desc span {
+  background: #ea3d3d;
+  display: inline-block;
+  margin-right: 10px;
+  line-height: 1;
+  padding: 4px 10px;
+  border-radius: 4px;
+}
+
+.logo {
+  width: 120px;
+  height: 120px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #FFFFFF;
+  box-shadow: 0px 10px 40px rgba(44, 54, 69, 0.1);
+  border-radius: 16px;
+}
+
+.icon {
+  width: 406px;
+  height: 357px;
+  position: absolute;
+  right: 500px;
+  top: 100px;
+  animation: sacleIcon 1s ease-in-out forwards;
+}
+
+.namePic {
+  width: auto;
+  height: auto;
+  max-width: 900px;
+  min-height: 900px;
+  animation: sacleName 1s ease-in-out forwards;
+}
+
+.btn {
+  width: 300px;
+  height: 50px;
+  border-radius: 4px;
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.btn:hover {
+  cursor: pointer;
+  text-decoration: none;
+  color: #FFFFFF;
+}
+
+.github {
+  background-color: #333333;
+}
+
+.start {
+  background-color: var(--ifm-color-primary);
+}
+
+.btnGrounp {
+  margin-top: 100px;;
+} 
+
+@media screen and (max-width: 996px) {
+  .left {
+    margin-left: 40px;
+    margin-top: 100px;
+  }
+  .bg {
+    
+  }
+  .title {
+    font-size: 48px;
+    line-height: 50px;
+  }
+
+  .slogon {
+    font-size: 28px;
+  }
+
+  .logo {
+    width: 80px;
+    height: 80px;
+  }
+
+  .namePic {
+    max-width: 600px;
+    margin-right: -150px;
+  }
+
+  .icon {
+    display: none;
+  }
+
+  .btn {
+    width: 100px;
+    margin-right: 20px;
+  }
+
+  .btnGrounp {
+    margin-top: 60px;
+    display: flex;
+    justify-content: space-between;
+  }
+}

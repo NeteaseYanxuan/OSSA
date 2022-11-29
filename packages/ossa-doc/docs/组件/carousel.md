@@ -114,8 +114,8 @@ const initTxt = [
 |interval|自动轮播间隔时间,毫秒，可选|number|4000|
 |circular|是否采用衔接滑动，可选|boolean|true|
 |indicatorDots|展示指示器，可选|boolean|false|
-|indicatorColor|指示点颜色，可选|boolean|true|
-|indicatorActiveColor|当前选中指示点颜色，可选|boolean|false|
+|indicatorColor|指示点颜色，可选|string|rgba(0, 0, 0, .3)|
+|indicatorActiveColor|当前选中指示点颜色，可选|string|#000000|
 |current|当前选中项序号，可选|number|0|
 |gap|是否有分隔（图片式下生效），可选|boolean|false|
 |gapWidth|分隔式间距大小，可选|number|20|

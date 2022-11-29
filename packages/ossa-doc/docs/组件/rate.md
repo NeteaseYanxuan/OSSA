@@ -18,7 +18,7 @@ demo_url: 'https://neteaseyanxuan.github.io/OSSA/#/components/rate/demo/index'
 ```
 ### 最小尺寸
 ```jsx
-<OsRate type='small' value={2} isShowResult={false}></OsRate>
+<OsRate size='small' value={2} isShowResult={false}></OsRate>
 ```
 ### 自定义图标
 ```jsx
@@ -37,6 +37,8 @@ demo_url: 'https://neteaseyanxuan.github.io/OSSA/#/components/rate/demo/index'
 ### 属性
 |参数|说明|类型|默认值|
 |------|------|------|------|
+|type|尺寸，可选，`type`属性在未来版本中将被删除，请使用`size`代替|'default' \| 'small'|'small'|
+|size|尺寸，可选|'default' \| 'small'|'small'|
 |title|标题，可选|string|-|
 |selectedIcon|选中时icon，取值参考OsIcon，可选|string|grade-selected|
 |icon|未选中时icon，取值参考OsIcon，可选|string|grade|

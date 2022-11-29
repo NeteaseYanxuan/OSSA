@@ -25,7 +25,7 @@ const initialListApi = {
       list: [
         "type",
         "输入框类型，可选",
-        "text | number | password | bankcard | textarea | border",
+        "text | number | password | bankcard | textarea",
         "text",
       ],
     },
@@ -50,20 +50,37 @@ const initialListApi = {
       list: ["label", "表单说明，可选", "string", "-"],
     },
     {
-      list: ["maxLength", "最大字符数，可选", "mumber", "500"],
+      list: ["maxLength", "最大字符数，可选", "number", "500"],
     },
     {
-      list: ["isReadonly", "是否可编辑，可选", "boolean", "false"],
+      list: ["isReadonly", "是否可编辑，可选，`isReadonly`属性在未来版本中将被删除，请使用`readonly`代替", "boolean", "false"],
     },
     {
-      list: ["isDisabled", "表单是否失效，可选", "boolean", "false"],
+      list: ["readonly", "是否可编辑，可选", "boolean", "false"],
+    },
+    {
+      list: ["isDisabled", "表单是否失效，可选，`isDisabled`属性在未来版本中将被删除，请使用`disabled`代替", "boolean", "false"],
+    },
+    {
+      list: ["disabled", "表单是否失效，可选", "boolean", "false"],
     },
     {
       list: ["disabledClear", "是否隐藏一键删除按钮，可选", "boolean", "false"],
     },
     {
+      list: ["showSplitLine", "是否展示底部分割线，当`type`为`bankcard`时无效，可选", "boolean", "true"],
+    },
+    {
       list: [
         "countDown",
+        "是否显示字符计数器，textarea有效，可选。`countDown`字段将在未来版本中被移除,请使用`showCount`代替",
+        "boolean",
+        "false",
+      ],
+    },
+    {
+      list: [
+        "showCount",
         "是否显示字符计数器，textarea有效，可选",
         "boolean",
         "false",
@@ -182,7 +199,7 @@ export default function Index(props: any) {
             onChange={(v) => {
               setV3(v);
             }}
-            countDown
+            showCount
             maxLength={200}
           ></OsInput>
         </View>
@@ -196,7 +213,7 @@ export default function Index(props: any) {
             onChange={(v) => {
               setV5(v);
             }}
-            isReadonly
+            readonly
           ></OsInput>
           <OsInput
             label='标题'
@@ -205,7 +222,7 @@ export default function Index(props: any) {
             onChange={(v) => {
               setV5(v);
             }}
-            isDisabled
+            disabled
           ></OsInput>
           <OsInput
             type='textarea'
@@ -215,8 +232,8 @@ export default function Index(props: any) {
             onChange={(v) => {
               setV6(v);
             }}
-            countDown
-            isDisabled
+            showCount
+            disabled
           ></OsInput>
         </View>
       </DemoBlock>

@@ -5,6 +5,7 @@ import classNames from "classnames";
 import OsIcon from "../icon";
 import { OsInputProps } from "../../../types/index";
 import { isAndroid } from "../common/util";
+import { deprecatedProp } from "../../utils";
 
 function getClassObject(props: OsInputProps) {
   const classObject = {
@@ -20,15 +21,11 @@ const onInput = (props, e) => {
   if (props.type === "bankcard") {
     value = value.replace(/(\s)/g, "");
   }
-  if (props.onChange) {
-    props.onChange(value);
-  }
+  props.onChange?.(value);
 };
 
 const onClickDeleteIcon = (props) => {
-  if (props.onChange) {
-    props.onChange("");
-  }
+  props.onChange?.("");
 };
 
 export default function OsInput(props: OsInputProps) {
@@ -39,6 +36,17 @@ export default function OsInput(props: OsInputProps) {
   if (props.type === "number" || props.type === "bankcard") {
     iptType = "digit";
   }
+  
+  const mergedDisabled = deprecatedProp(props.disabled, props.isDisabled, {
+    newPropName: "disabled",
+    oldPropName: "isDisabled",
+    moduleName: "Input"
+  });
+  const mergedReadonly = deprecatedProp(props.readonly, props.isReadonly, {
+    newPropName: "disabled",
+    oldPropName: "isDisabled",
+    moduleName: "Input"
+  });
 
   useEffect(() => {
     if (
@@ -50,10 +58,7 @@ export default function OsInput(props: OsInputProps) {
       return;
     }
 
-    if (!props.onChange) {
-      return;
-    }
-    props.onChange(value.slice(0, props.maxLength));
+    props.onChange?.(value.slice(0, props.maxLength));
   }, [props.value, props.type, props.maxLength]);
 
   const onClickVisibleIcon = () => {
@@ -72,19 +77,24 @@ export default function OsInput(props: OsInputProps) {
           e.currentTarget.scrollIntoView(true);
       }, 1);
     }
-    props.onFocus && props.onFocus(e);
+    props.onFocus?.(e);
   };
 
   const onBlur = (e) => {
-    props.onBlur && props.onBlur(e);
+    props.onBlur?.(e);
   };
   const value = props.value || "";
   const showDelIcon =
-    !props.isDisabled &&
-    !props.isReadonly &&
+    !mergedDisabled &&
+    !mergedReadonly &&
     props.value &&
     props.type !== "textarea";
-  const editable = !props.isReadonly && !props.isDisabled;
+  const editable = !mergedReadonly && !mergedDisabled;
+  const mergedShowCount = deprecatedProp(props.showCount, props.countDown, {
+    newPropName: "showCount",
+    oldPropName: "countDown",
+    moduleName: "Input"
+  });
   return (
     <View
       className={classNames(rootClassName, classObject, props.className)}
@@ -153,7 +163,7 @@ export default function OsInput(props: OsInputProps) {
           </View>
         )}
       </View>
-      {props.type === "textarea" && props.countDown && (
+      {props.type === "textarea" && mergedShowCount && (
         <View className='ossa-input__count-down'>
           {Number(props.maxLength) - value.length}
         </View>
@@ -181,6 +191,8 @@ OsInput.defaultProps = {
   maxLength: 500,
   isDisabled: false,
   isReadonly: false,
+  disabled: false,
+  readonly: false,
   disabledClear: false,
   showSplitLine: true,
   value: "",
