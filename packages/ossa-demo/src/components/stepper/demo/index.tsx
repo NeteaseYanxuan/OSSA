@@ -36,6 +36,9 @@ const initialListApi = {
       list: ["min", "最小值，可选", "number", "1"],
     },
     {
+      list: ["step", "单步增加/减少的值，可选", "number", "1"]
+    },
+    {
       list: ["isReadonly", "数量不可编辑，可选，`isReadonly`属性在未来版本中将被删除，请使用`readonly`代替", "boolean", "false"],
     },
     {
