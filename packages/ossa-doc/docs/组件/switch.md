@@ -44,9 +44,9 @@ demo_url: 'https://neteaseyanxuan.github.io/OSSA/#/components/switch/demo/index'
 |------|------|------|------|
 |isChecked|是否打开，`isChecked`属性在未来版本中将被删除，请使用`checked`代替|boolean|false|
 |checked|是否打开|boolean|false|
-|onColor|打开时的背景色，可选|string|-|
-|offColor|关闭时的背景色，可选|string|-|
-|nodeColor|滑块颜色，可选|string|-|
+|onColor|打开时的背景色，可选|string|#44DB5E|
+|offColor|关闭时的背景色，可选|string|#FFFFFF|
+|nodeColor|滑块颜色，可选|string|#FFFFFF|
 |isDisabled|禁用，可选，`isDisabled`属性在未来版本中将被删除，请使用`disabled`代替|boolean|false|
 |disabled|禁用，可选|boolean|false|
 
