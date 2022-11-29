@@ -22,6 +22,12 @@ const initialListApi = {
   head: ["参数", "说明", "类型", "默认值"],
   data: [
     {
+      list: ["type", "尺寸，`type`属性在未来版本中将被删除，请使用`size`代替", "'default' | 'small'", "'default'"],
+    },
+    {
+      list: ["size", "尺寸", "'default' | 'small'", "'default'"],
+    },
+    {
       list: ["title", "标题，可选", "string", "-"],
     },
     {
@@ -105,7 +111,7 @@ export default function Index(props: Props) {
       </DemoBlock>
 
       <DemoBlock title='最小尺寸'>
-        <OsRate type='small' value={2} isShowResult={false}></OsRate>
+        <OsRate size='small' value={2} isShowResult={false}></OsRate>
       </DemoBlock>
 
       <DemoBlock title='自定义图标'>

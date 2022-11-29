@@ -4,6 +4,8 @@ import { View, Text } from "@tarojs/components";
 import classNames from "classnames";
 import OsIcon from "../icon";
 import { OsRateProps } from "../../../types/index";
+import { RateItem } from "../../../types/rate";
+import { deprecatedProp } from "../../utils";
 
 function getStyleObj(props: OsRateProps) {
   const _styleObj = {};
@@ -12,10 +14,16 @@ function getStyleObj(props: OsRateProps) {
 
 function getClassObject(props: OsRateProps) {
   let _classObject = {};
-  const { type } = props;
+  const { type, size } = props;
+
+  const mergedSize = deprecatedProp(size, type, {
+    moduleName: "Rate",
+    oldPropName: "type",
+    newPropName: "size"
+  });
 
   _classObject = {
-    [`ossa-rate--is-${type}`]: type,
+    [`ossa-rate--is-${mergedSize}`]: mergedSize,
   };
 
   return _classObject;
@@ -24,7 +32,7 @@ function getClassObject(props: OsRateProps) {
 function getCounts(props: OsRateProps, current: number) {
   const { options = [] } = props;
 
-  const _counts: any = [];
+  const _counts: RateItem[] = [];
   for (let i = 0; i < options.length; i++) {
     _counts.push({
       value: i,
@@ -43,7 +51,7 @@ function getResult(props: OsRateProps, current: number) {
 
 function onClick(
   props: OsRateProps,
-  item: object,
+  item: RateItem,
   index: number,
   setCurrent: Function
 ) {
@@ -62,6 +70,7 @@ export default function Rate(props: OsRateProps) {
   const result = getResult(props, current || 0);
   const {
     type,
+    size,
     title,
     icon,
     selectedIcon,
@@ -70,7 +79,12 @@ export default function Rate(props: OsRateProps) {
     className,
     isShowResult,
   } = props;
-  const _size = type === "small" ? 24 : 48;
+  const mergedSize = deprecatedProp(size, type, {
+    moduleName: "Rate",
+    oldPropName: "type",
+    newPropName: "size"
+  });
+  const _size = mergedSize === "small" ? 24 : 48;
 
   return (
     <View
