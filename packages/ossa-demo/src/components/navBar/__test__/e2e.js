@@ -58,14 +58,8 @@ describe("Navbar Testing", function () {
               cy.get(".ossa-navbar--middle")
                 .eq(0)
                 .within(($bar) => {
-                  const partWidth = $bar.width();
-                  const width = $bar.parent().width();
-                  // expect(partWidth).to.be.closeTo(width/3, 1)
-                  cy.get(".ossa-navbar__title").should("be.exist");
+                  expect($bar).to.contain.text("首页");
                   cy.get(".ossa-icon--home").should("be.exist");
-                  cy.get(".ossa-navbar__title").then((title) => {
-                    expect(title).to.contain.text("首页");
-                  });
                 });
             });
         });

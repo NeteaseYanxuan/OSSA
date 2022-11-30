@@ -42,9 +42,23 @@ interface StepperProps extends OsComponent {
    * @default 1
    */
   step?: number;
+  /**
+   * 当前步进器的值
+   */
   value: number;
+  /**
+   * 点击增加按钮回调
+   * @param value 最新值
+   */
   onAdd?: (value: number) => void;
+  /**
+   * 点击减少按钮回调
+   * @param value 最新值
+   */
   onSubtract?: (value: number) => void;
+  /**
+   * 当步进器改变时回调
+   */
   onChange: (value: number) => void;
   onErrorInput?: (value: number) => void;
   onBlur?: (event: any) => void;
