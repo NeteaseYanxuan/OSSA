@@ -36,6 +36,9 @@ jobs:
     - name: Build OSSA
       run: pnpm build
       
+    - name: Build Loki
+      run: pnpm build:loki --if-present
+      
     - name: Build Demo
       run: pnpm build:demo --if-present
     

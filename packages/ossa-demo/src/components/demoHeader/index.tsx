@@ -1,3 +1,4 @@
+/* eslint-disable jsx-quotes */
 /**
  * 组件demo的布局-头
  * @param {string} title 标题
@@ -14,6 +15,10 @@ import "./index.scss";
 
 export default class DemoHeader extends Component<IProps> {
   onClick() {
+    if (this.props.onClick) {
+      this.props.onClick();
+      return;
+    }
     Taro.navigateTo({
       url: "/pages/index/index",
     });
@@ -28,7 +33,7 @@ export default class DemoHeader extends Component<IProps> {
     return (
       <View className={classNames(rootClassName[0], classObejct)}>
         {Taro.getEnv() === Taro.ENV_TYPE.WEB && (
-          <OsIcon type='detail-home' onClick={this.onClick.bind(this)}></OsIcon>
+          <OsIcon type="detail-home" onClick={this.onClick.bind(this)}></OsIcon>
         )}
         {Taro.getEnv() !== Taro.ENV_TYPE.WEB && icon && (
           <OsIcon

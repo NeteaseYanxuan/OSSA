@@ -46,6 +46,11 @@ const config = {
           editUrl:
             "https://github.com/NeteaseYanxuan/OSSA/tree/main/packages/ossa-doc/",
         },
+        // pages: {
+        //   path: 'src/pages',
+        //   routeBasePath: '.',
+        //   include: ['**/*.{js,jsx,ts,tsx,md,mdx}'],
+        // },
         theme: {
           customCss: require.resolve("./src/css/custom.css"),
         },
@@ -67,7 +72,12 @@ const config = {
             type: "doc",
             docId: "intro",
             position: "right",
-            label: "教程",
+            label: "基础组件",
+          },
+          {
+            to: "/loki",
+            position: "right",
+            label: "营销组件",
           },
           {
             to: "/blog",

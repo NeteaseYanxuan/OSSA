@@ -1,8 +1,19 @@
 import { ComponentClass, ReactChild } from "react";
 import OsComponent from "./base";
 
+/**
+ * @name 步进器
+ */
 interface StepperProps extends OsComponent {
+  /**
+   * 最大值，可选
+   * @default 99
+   */
   max?: number;
+  /**
+   * 最小值，可选
+   * @default 0
+   */
   min?: number;
   /**
    * 是否禁用
@@ -26,6 +37,10 @@ interface StepperProps extends OsComponent {
    * @default false
    */
   readonly?: boolean;
+  /**
+   * 单步增加/减少的值
+   * @default 1
+   */
   step?: number;
   value: number;
   onAdd?: (value: number) => void;

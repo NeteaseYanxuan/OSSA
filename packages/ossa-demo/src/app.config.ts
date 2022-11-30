@@ -11,6 +11,7 @@ export default {
     "components/badge/demo/index",
     "components/button/demo/index",
     "components/color/demo/index",
+    "components/countdown/demo/index",
     "components/tag/demo/index",
     "components/icon/demo/index",
     "components/radio/demo/index",
@@ -37,6 +38,10 @@ export default {
     "components/datePicker/demo/index",
     "components/noticeBar/demo/index",
     "components/animate/demo/index",
+
+    "pages/loki/index",
+    "pages/loki/turntable/index",
+    "pages/loki/ninegrid/index",
   ],
   window: {
     backgroundTextStyle: "light",

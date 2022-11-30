@@ -1,0 +1,32 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./",
+    "target": "ES5",
+    "module": "es6",
+    "allowJs": true,
+    "checkJs": false,
+    "noImplicitAny": false,
+    "preserveConstEnums": true,
+    "jsx": "react",
+    "jsxFactory": "React.createElement",
+    "moduleResolution": "Node",
+    "noEmit": true,
+    "experimentalDecorators": true,
+    "removeComments": true,
+    "outDir": "./components",
+    "sourceMap": false,
+    "esModuleInterop": true,
+    "declaration": true,
+    "skipLibCheck": true,
+    "allowSyntheticDefaultImports": true,
+    "typeRoots": ["node_modules/@types", "types"],
+    "paths": {
+      "utils/*": ["src/utils/*"],
+      "components/*": ["src/components/*"],
+      "types/*": ["types/*"]
+    },
+    "types": ["node"]
+  },
+  "include": ["src/**/*", "types"],
+  "exclude": ["node_modules"]
+}

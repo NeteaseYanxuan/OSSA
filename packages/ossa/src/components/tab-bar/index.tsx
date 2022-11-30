@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 import Taro from "@tarojs/taro";
 import { View, Text } from "@tarojs/components";
 import classNames from "classnames";
 import OsIcon from "../icon";
 import { OsTabBarProps, OsTabBarItemProps, OsIconProps } from "../../../types/index";
+import { deprecatedProp } from "../../utils";
 
 function getItemStyleObj(props: OsTabBarProps, index: number, current: number) {
   const _styleObj = {};
@@ -50,7 +51,17 @@ export default function TabBar(props: OsTabBarProps) {
   const rootClassName = "ossa-tabbar"; //组件
   const classObject = getClassObject(props); //组件修饰
   const textStyle = getTextStyleObj(props);
-  const { customStyle: styleObject, tabsArr, value: current } = props;
+  const { customStyle: styleObject, tabsArr, value: current, activeTabIdx } = props;
+
+  const mergedActiveTabIdx = deprecatedProp(
+    activeTabIdx,
+    current,
+    {
+      newPropName: "activeTabIdx",
+      oldPropName: "value",
+      moduleName: "TabBar"
+    }
+  ) || 0;
 
   return (
     <View
@@ -61,11 +72,11 @@ export default function TabBar(props: OsTabBarProps) {
         <View
           className='ossa-tabbar__item'
           key={index}
-          style={getItemStyleObj(props, index, current)}
+          style={getItemStyleObj(props, index, mergedActiveTabIdx)}
           onClick={() => onClick(props, item, index)}
         >
           {item.useCustomIcon ? (
-            index === current ? (
+            index === mergedActiveTabIdx ? (
               item.selectedIcon
             ) : (
               item.icon
@@ -74,7 +85,7 @@ export default function TabBar(props: OsTabBarProps) {
             <OsIcon
               size={40}
               type={
-                index === current
+                index === mergedActiveTabIdx
                   ? (item.selectedIcon as OsIconProps["type"])
                   : (item.icon as OsIconProps["type"])
               }
@@ -97,6 +108,7 @@ TabBar.defaultProps = {
   defaultColor: "#7f7f7f",
   space: 0,
   value: 0,
+  activeTabIdx: 0
 };
 
 TabBar.options = {
