@@ -11,7 +11,7 @@ export default function Index() {
     head: ["参数", "说明", "类型", "默认值"],
     data: [
       {
-        list: ["right", "右侧滑动区域的内容，可选", "React.ReactNode", "-"],
+        list: ["right", "右侧滑动区域的内容，可选", "React.ReactNode | string", "-"],
       },
       {
         list: ["disabled", "禁止滑动，可选", "boolean", "false"],
@@ -24,7 +24,7 @@ export default function Index() {
       <DemoHeader title='滑动单元格'></DemoHeader>
       <DemoBlock title='基础用法'>
         <OsSwipeCell
-          right={<View className='right'>删除</View>}
+          right='删除'
         >
           <OsList title='我是标题'></OsList>
         </OsSwipeCell>

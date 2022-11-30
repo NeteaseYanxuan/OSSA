@@ -5,7 +5,7 @@ interface SwipeCellProps extends TaroViewProps {
   /**
    * 右侧滑动区域的内容，可选
    */
-  right?: React.ReactNode;
+  right?: React.ReactNode | string;
   /**
    * 禁止滑动，可选
    * @default false

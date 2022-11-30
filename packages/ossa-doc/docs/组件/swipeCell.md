@@ -12,7 +12,7 @@ demo_url: 'https://neteaseyanxuan.github.io/OSSA/#/components/swipeCell/demo/ind
 ### 基础用法
 ```jsx 
 <OsSwipeCell
-  right={<View className='right'>删除</View>}
+  right='删除'
 >
   <OsList title='我是标题'></OsList>
 </OsSwipeCell>
@@ -31,5 +31,5 @@ demo_url: 'https://neteaseyanxuan.github.io/OSSA/#/components/swipeCell/demo/ind
 ### 属性
 |参数|说明|类型|默认值|
 |------|------|------|------|
-|right|右侧滑动区域的内容，可选|React.ReactNode|-|
+|right|右侧滑动区域的内容，可选|React.ReactNode\|string|-|
 |disabled|禁止滑动，可选|boolean|false|

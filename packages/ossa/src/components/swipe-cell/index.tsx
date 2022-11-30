@@ -74,7 +74,14 @@ const SwipeCell: FC<OsSwipeCellProps> = ({ children, disabled = false,right, ...
       style={{ transform: `translate3d(${x}px,0,0)` }} 
       className='ossa-swipecell__wrapper'
     >
-      <View id={idRef.current} className='ossa-swipecell__right'>
+      <View 
+        id={idRef.current} 
+        className={
+          classNames('ossa-swipecell__right', {
+            'ossa-swipecell__default': typeof right === 'string'
+          })
+        }
+      >
         {right}
       </View>
       <View 

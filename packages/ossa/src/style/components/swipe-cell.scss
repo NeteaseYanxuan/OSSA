@@ -1,3 +1,5 @@
+@import '../base.scss';
+
 .ossa-swipecell__right {
   height: 100%;
   position: absolute;
@@ -12,4 +14,15 @@
 
 .ossa-swipecell {
   overflow: hidden;
+}
+
+.ossa-swipecell__default {
+  background: $--color-red;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  padding: 5px 15px;
+  box-sizing: border-box;
 }
