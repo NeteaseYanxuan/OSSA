@@ -1,14 +1,28 @@
 import { ComponentClass, ReactChild, ReactNode } from "react";
 import { CommonEventFunction } from "@tarojs/components/types/common";
-import { number } from "prop-types";
 import OsComponent from "./base";
 
+/**
+ * @name 标签页
+ */
 interface TabsProps extends OsComponent {
-  type?: string;
+  /**
+   * 类型
+   * @desc 
+   * - "horizontal": 横向
+   * - "vertical": 纵向
+   * @default "horizontal"
+   */
+  type?: "horizontal" | "vertical";
+  /**
+   * 一个OsTabsHeader组件
+   */
   renderHeader: any;
   // onClick?: () => {}
 }
-
+/**
+ * 
+ */
 interface TabsHeaderProps extends OsComponent {
   type?: string;
   size?: string;
