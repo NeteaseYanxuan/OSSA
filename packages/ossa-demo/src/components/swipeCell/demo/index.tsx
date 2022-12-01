@@ -24,6 +24,7 @@ export default function Index() {
       <DemoHeader title='滑动单元格'></DemoHeader>
       <DemoBlock title='基础用法'>
         <OsSwipeCell
+          id='swipecell-1'
           right='删除'
         >
           <OsList title='我是标题'></OsList>
@@ -31,6 +32,7 @@ export default function Index() {
       </DemoBlock>
       <DemoBlock title='禁用'>
         <OsSwipeCell
+          id='swipecell-2'
           right={<View className='right'>删除</View>}
           disabled
         >
