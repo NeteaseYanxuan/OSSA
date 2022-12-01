@@ -87,6 +87,12 @@ $modal-duration: 200ms;
         border: 0;
       }
 
+      &.taro-button-core::after {
+        width: auto;
+        height: auto;
+        border-radius: 0;
+      }
+
       &:active {
         background-color: $--fill-model-btns-active;
       }
@@ -107,6 +113,12 @@ $modal-duration: 200ms;
       &:not(:first-child) {
         @include hairline-left();
       }
+    }
+
+    & > button.ossa-action-btn::after {
+      width: auto;
+      height: auto;
+      border-radius: 0;
     }
   }
 

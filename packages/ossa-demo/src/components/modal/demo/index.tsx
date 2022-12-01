@@ -52,6 +52,22 @@ const initialListApi = {
     },
     {
       list: [
+        "closeOnConfirm",
+        "执行onCofirm时，是否执行onClose，可选",
+        "boolean",
+        "false",
+      ],
+    },
+    {
+      list: [
+        "confirmOpenType",
+        "确认按钮点击时，触发的开放能力",
+        "string",
+        "-",
+      ],
+    },
+    {
+      list: [
         "custom",
         "是否仅保留遮罩，完全自定义弹窗内容，可选",
         "boolean",
@@ -69,6 +85,14 @@ const initialListApi = {
         "top-right",
       ],
     },
+    {
+      list: [
+        "其他openType相关属性",
+        "confirmOpenType对应值有效，具体参考文档",
+        "-",
+        "-",
+      ],
+    },
   ],
 };
 const initialListEvent = {
@@ -83,6 +107,9 @@ const initialListEvent = {
     },
     {
       list: ["onConfirm", "弹窗确认按钮时的回调，可选", "-"],
+    },
+    {
+      list: ["其他openType相关方法", "confirmOpenType对应值有效，具体参考文档", "-"],
     },
   ],
 };
