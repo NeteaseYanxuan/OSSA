@@ -26,7 +26,7 @@ const curBranch = exec(`git rev-parse --abbrev-ref HEAD`, {
   silent: true,
 }).stdout.replace("\n", "");
 const modifyFiles = exec(
-  `git fetch origin main && git diff --stat main...${curBranch} --name-only`,
+  `git fetch origin main && git diff --stat ${curBranch}...main --name-only`,
   { encoding: "utf-8", silent: true }
 ).stdout;
 
