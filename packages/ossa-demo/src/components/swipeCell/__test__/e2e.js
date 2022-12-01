@@ -38,6 +38,7 @@ describe("SwipeCell Testing", function () {
             .trigger("touchstart", getTouchEvent(startPageX, pageY))
             .trigger("touchmove", getTouchEvent(startPageX - 100, pageY))
             .trigger("touchend", getTouchEvent(startPageX - 100, pageY))
+            .wait(300)
             .get(selector + " .ossa-swipecell__right")
             .then(($el) => {
               const { width } = $el[0].getBoundingClientRect();
@@ -53,6 +54,7 @@ describe("SwipeCell Testing", function () {
             .trigger("touchstart", getTouchEvent(startPageX, pageY))
             .trigger("touchmove", getTouchEvent(startPageX + 100, pageY))
             .trigger("touchend", getTouchEvent(startPageX + 100, pageY))
+            .wait(300)
             .get(selector + " .ossa-swipecell__right")
             .then(($el) => {
               const { width } = $el[0].getBoundingClientRect();
