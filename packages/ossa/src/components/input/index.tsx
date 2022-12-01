@@ -85,6 +85,7 @@ export default function OsInput(props: OsInputProps) {
   };
   const value = props.value || "";
   const showDelIcon =
+    !props.disabledClear &&
     !mergedDisabled &&
     !mergedReadonly &&
     props.value &&
