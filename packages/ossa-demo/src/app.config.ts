@@ -31,6 +31,7 @@ export default {
     "components/carousel/demo/index",
     "components/modal/demo/index",
     "components/actionsheet/demo/index",
+    "components/swipeCell/demo/index",
     "components/layout/demo/index",
     "components/upload/demo/index",
     "components/imagePreview/demo/index",
