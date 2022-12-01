@@ -170,14 +170,13 @@ const [showDisabled, setShowDisabled] = useState(false);
 |closeOnClickMask|点击遮罩是否隐藏弹窗，可选|boolean|false|
 |closeOnConfirm|执行onCofirm时，是否执行onClose，可选|boolean|false|
 |confirmOpenType|确认按钮的开放能力，具体参考小程序[文档](https://developers.weixin.qq.com/miniprogram/dev/component/button.html)，可选|ButtonProps.openType|-|
-|lang|confirmOpenType对应值生效，详见[文档](https://developers.weixin.qq.com/miniprogram/dev/component/button.html)，可选|string|-|
-|sessionFrom|confirmOpenType对应值生效，详见[文档](https://developers.weixin.qq.com/miniprogram/dev/component/button.html)，可选|string|-|
-|sendMessageTitle|confirmOpenType对应值生效，详见[文档](https://developers.weixin.qq.com/miniprogram/dev/component/button.html)，可选|string|-|
-|sendMessagePath|confirmOpenType对应值生效，详见[文档](https://developers.weixin.qq.com/miniprogram/dev/component/button.html)，可选|string|-|
-|sendMessageImg|confirmOpenType对应值生效，详见[文档](https://developers.weixin.qq.com/miniprogram/dev/component/button.html)，可选|string|-|
-|showMessageCard|confirmOpenType对应值生效，详见[文档](https://developers.weixin.qq.com/miniprogram/dev/component/button.html)，可选|string|-|
-|appParameter|confirmOpenType对应值生效，详见[文档](https://developers.weixin.qq.com/miniprogram/dev/component/button.html)，可选|string|-|
-|scope|confirmOpenType对应值生效，详见[文档](https://developers.weixin.qq.com/miniprogram/dev/component/button.html)，可选|string|-|
+|sessionFrom|c`confirmOpenType`为`confirmOpenType="contact"`时有效，详见[文档](https://developers.weixin.qq.com/miniprogram/dev/component/button.html)，可选|boolean|false|
+|sendMessageTitle|`confirmOpenType`为`confirmOpenType="contact"`时有效，详见[文档](https://developers.weixin.qq.com/miniprogram/dev/component/button.html)，可选|boolean|false|
+|sendMessagePath|`confirmOpenType`为`confirmOpenType="contact"`时有效，详见[文档](https://developers.weixin.qq.com/miniprogram/dev/component/button.html)，可选|boolean|false|
+|sendMessageImg|`confirmOpenType`为`confirmOpenType="contact"`时有效，详见[文档](https://developers.weixin.qq.com/miniprogram/dev/component/button.html)，可选|boolean|false|
+|showMessageCard|`confirmOpenType`为`confirmOpenType="contact"`时有效，详见[文档](https://developers.weixin.qq.com/miniprogram/dev/component/button.html)，可选|boolean|false|
+|appParameter|`confirmOpenType`为`confirmOpenType=launchApp`时有效，详见[文档](https://developers.weixin.qq.com/miniprogram/dev/component/button.html)，可选|string|-|
+|scope|仅支持支付宝小程序且`confirmOpenType="getAuthorize"`生效，详见[文档](https://opendocs.alipay.com/mini/component/button)，可选|string|-|
 |custom|是否仅保留遮罩，完全自定义弹窗内容，可选|boolean|false|
 |showCloseIcon|是否显示关闭icon，可选|boolean|true|
 |closeIconPosition|关闭icon位置，可选|top-left \| top-right \| bottom-left \| bottom-right \| top \| bottom|top-right|
@@ -189,13 +188,12 @@ const [showDisabled, setShowDisabled] = useState(false);
 |onClose|弹窗关闭时的回调，可选|-|
 |onCancel|点击取消按钮时的回调，可选|-|
 |onConfirm|弹窗确认按钮时的回调，可选|-|
-|onGetAuthorize|confirmOpenType对应值生效，详见[文档](https://developers.weixin.qq.com/miniprogram/dev/component/button.html)，可选|-|
-|onGetRealNameAuthInfo|confirmOpenType对应值生效，详见[文档](https://developers.weixin.qq.com/miniprogram/dev/component/button.html)，可选|-|
-|onError|confirmOpenType对应值生效，详见[文档](https://developers.weixin.qq.com/miniprogram/dev/component/button.html)，可选|-|
-|onLaunchApp|confirmOpenType对应值生效，详见[文档](https://developers.weixin.qq.com/miniprogram/dev/component/button.html)，可选|-|
-|onChooseAvatar|confirmOpenType对应值生效，详见[文档](https://developers.weixin.qq.com/miniprogram/dev/component/button.html)，可选|-|
-|onContact|confirmOpenType对应值生效，详见[文档](https://developers.weixin.qq.com/miniprogram/dev/component/button.html)，可选|-|
-|onGetUserInfo|confirmOpenType对应值生效，详见[文档](https://developers.weixin.qq.com/miniprogram/dev/component/button.html)，可选|-|
-|onGetPhoneNumber|confirmOpenType对应值生效，详见[文档](https://developers.weixin.qq.com/miniprogram/dev/component/button.html)，可选|-|
-|onOpenSetting|confirmOpenType对应值生效，详见[文档](https://developers.weixin.qq.com/miniprogram/dev/component/button.html)，可选|-|
+|onGetAuthorize|仅支持支付宝小程序，且`confirmOpenType="getAuthorize"`时生效，详见[文档](https://opendocs.alipay.com/mini/component/button#%E5%B1%9E%E6%80%A7%E8%AF%B4%E6%98%8E)，可选|-|
+|onError|`confirmOpenType="launchApp"`时生效，详见[文档](https://developers.weixin.qq.com/miniprogram/dev/component/button.html)，可选|-|
+|onLaunchApp|`confirmOpenType="launchApp""`时生效，详见[文档](https://developers.weixin.qq.com/miniprogram/dev/component/button.html)，可选|-|
+|onChooseAvatar|`confirmOpenType="chooseAvatar"`时生效，详见[文档](https://developers.weixin.qq.com/miniprogram/dev/component/button.html)，可选|-|
+|onContact|`confirmOpenType="contact"`时有效，详见[文档](https://developers.weixin.qq.com/miniprogram/dev/component/button.html)，可选|-|
+|onGetUserInfo|`confirmOpenType="getUserInfo"`时有效，详见[文档](https://developers.weixin.qq.com/miniprogram/dev/component/button.html)，可选|-|
+|onGetPhoneNumber|`confirmOpenType="getphonenumber"`时有效，详见[文档](https://developers.weixin.qq.com/miniprogram/dev/component/button.html)，可选|-|
+|onOpenSetting|`confirmOpenType="openSetting"`时有效，详见[文档](https://developers.weixin.qq.com/miniprogram/dev/component/button.html)，可选|-|
 

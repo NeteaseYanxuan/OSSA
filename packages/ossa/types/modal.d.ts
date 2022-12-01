@@ -21,7 +21,7 @@ interface ModalProps extends OsComponent, ButtonOpenTypeRelatedProps {
   /**
    * 执行onCofirm时，是否执行onClose
    *
-   * @type {Boolean}
+   * @type {boolean}
    * @memberof ModalProps
    * @default false
    */
