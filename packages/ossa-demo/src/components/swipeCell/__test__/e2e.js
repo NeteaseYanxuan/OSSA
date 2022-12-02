@@ -55,6 +55,8 @@ describe("SwipeCell Testing", function () {
             .then(($el) => {
               const { width } = $el[0].getBoundingClientRect();
               cy.get(selector + " .ossa-swipecell__wrapper").then(($wrap) => {
+                cy.log($wrap[0].style.transform);
+                cy.log(width);
                 // 比较移动位置
                 expect(
                   approximatelyEqual(
