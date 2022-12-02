@@ -79,7 +79,7 @@ const initialListEvent = {
       list: ["onBlur", "输入框失去焦点时触发", "event对象"],
     },
     {
-      list: ["onErrorInput", "错误输入时触发", "错误数值"],
+      list: ["onErrorInput", "错误输入时触发", "错误数值 {type: 'DISABLED' | 'LOW' | 'OVER', errorValue: number}"],
     },
     {
       list: ["onDisabledAdd", "到达最大值之后点击增加触发", "当前数值"],
@@ -154,7 +154,7 @@ export default function Index(props: Props) {
 
       <DemoBlock title='数量不可编辑'>
         <OsStepper
-          isReadonly
+          readonly
           value={current1}
           onChange={(value) => {
             onChange1(value, setCurrent1);
@@ -164,7 +164,7 @@ export default function Index(props: Props) {
 
       <DemoBlock title='不可点击'>
         <OsStepper
-          isDisabled
+          disabled
           value={current2}
           onChange={(value) => {
             onChange2(value, setCurrent2);

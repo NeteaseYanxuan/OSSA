@@ -64,7 +64,7 @@ demo_url: 'https://neteaseyanxuan.github.io/OSSA/#/components/stepper/demo/index
 |onSubtract|点击减时触发|当前数值|
 |onChange|输入框值改变时触发的事件，开发者需要通过 onChange 事件来更新 current 值变化，onChange 函数必选|当前数值|
 |onBlur|输入框失去焦点时触发|event对象|
-|onErrorInput|错误输入时触发|错误数值|
+|onErrorInput|错误输入时触发|错误数值 {type: "DISABLED" \| "LOW" \| "OVER", errorValue: number}|
 |onDisabledAdd|到达最大值之后点击增加触发|当前数值|
 |onDisabledSubtract|到达最小值之后点击增加触发|当前数值|
 
