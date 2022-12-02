@@ -1,8 +1,7 @@
 describe("SwipeCell Testing", function () {
-  context("Stepper Normal Testing", function () {
+  context("SwipeCell Normal Testing", function () {
     before(function () {
-      cy.viewport("iphone-xr");
-      // 进入Stepper页
+      // 进入SwipeCell页
       cy.visit("#/components/swipeCell/demo/index");
     });
 
@@ -47,7 +46,7 @@ describe("SwipeCell Testing", function () {
                 expect($wrap[0].style.transform).equal(
                   isDisabled
                     ? `translate3d(0px, 0px, 0px)`
-                    : `translate3d(-${width.toFixed(4)}px, 0px, 0px)`
+                    : `translate3d(-${+width.toFixed(4)}px, 0px, 0px)`
                 );
               });
             })
