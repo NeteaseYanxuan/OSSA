@@ -48,20 +48,24 @@ describe("SwipeCell Testing", function () {
                     ? `translate3d(0px, 0px, 0px)`
                     : `translate3d(-${+width.toFixed(4)}px, 0px, 0px)`
                 );
-              });
-            })
-            .trigger("touchstart", getTouchEvent(startPageX, pageY))
-            .trigger("touchmove", getTouchEvent(startPageX + 100, pageY))
-            .trigger("touchend", getTouchEvent(startPageX + 100, pageY))
-            .wait(300)
-            .get(selector + " .ossa-swipecell__right")
-            .then(($el) => {
-              const { width } = $el[0].getBoundingClientRect();
-              cy.get(selector + " .ossa-swipecell__wrapper").then(($wrap) => {
-                // 比较移动位置
-                expect($wrap[0].style.transform).equal(
-                  `translate3d(0px, 0px, 0px)`
-                );
+
+                cy.get(selector)
+                  .trigger("touchstart", getTouchEvent(startPageX, pageY))
+                  .trigger("touchmove", getTouchEvent(startPageX + 100, pageY))
+                  .trigger("touchend", getTouchEvent(startPageX + 100, pageY))
+                  .wait(300)
+                  .get(selector + " .ossa-swipecell__right")
+                  .then(($el) => {
+                    const { width } = $el[0].getBoundingClientRect();
+                    cy.get(selector + " .ossa-swipecell__wrapper").then(
+                      ($wrap) => {
+                        // 比较移动位置
+                        expect($wrap[0].style.transform).equal(
+                          `translate3d(0px, 0px, 0px)`
+                        );
+                      }
+                    );
+                  });
               });
             });
         });
