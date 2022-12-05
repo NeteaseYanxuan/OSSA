@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import Taro from "@tarojs/taro";
 import { View, Image } from "@tarojs/components";
 import classNames from "classnames";
-import { ImageFile } from "types/upload";
 import OsIcon from "../icon";
 //引入组件对应的 类型文件 .d.ts
 import { OsUploadProps } from "../../../types/index";
+import { ImageFile } from "../../../types/upload";
 
 function getStyleObj(props: OsUploadProps) {
   const _styleObj = {};
