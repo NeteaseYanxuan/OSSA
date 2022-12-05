@@ -43,7 +43,14 @@ const initialListEvent = {
       list: [
         "onChange",
         "上传成功回调(此时可自行将图片上传至服务器)",
-        "(files: Array, operationType: string, index: number) => void(注：1.index在operationType为remove时有效；2.严选安卓APP此处生成的图片链接为base64）",
+        "(files: Array, operationType: string, index: number) => void(注：1.index在operationType为remove时有效；)",
+      ],
+    },
+    {
+      list: [
+        "onImageClick",
+        "图片列表点击回调",
+        "(index: number, file: ImageFile) => void",
       ],
     },
     {
@@ -62,6 +69,13 @@ function onChange(file, operationType, index) {
 function onFail(data) {
   console.log("上传失败，失败信息：" + JSON.stringify(data));
 }
+
+function onClick(index, file) {
+  console.log("图片文件:");
+  console.log(file);
+  console.log("图片索引:" + index);
+}
+
 const demoTitle = "Upload 图片上传";
 export default function Index(props: Props) {
   const [listApi] = useState(initialListApi);
@@ -83,6 +97,7 @@ export default function Index(props: Props) {
             onChange={(file, operationType, index) =>
               onChange(file, operationType, index)
             }
+            onImageClick={(index, file) => onClick(index, file)}
             onFail={(data) => onFail(data)}
           ></OsUpload>
         </View>

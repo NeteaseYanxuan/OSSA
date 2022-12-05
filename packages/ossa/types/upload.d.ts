@@ -2,6 +2,21 @@ import { ComponentClass, ReactChild } from "react";
 import { CommonEventFunction } from "@tarojs/components/types/common";
 import OsComponent from "./base";
 
+interface ImageFile {
+  /** 本地临时文件路径 */
+  path: string
+  /** 本地临时文件大小，单位 B */
+  size: number
+  /** 文件的 MIME 类型
+   * @supported h5
+   */
+  type?: string
+  /** 原始的浏览器 File 对象
+   * @supported h5
+   */
+  originalFileObj?: File
+}
+
 interface UploadProps extends OsComponent {
   max?: number;
   multiple?: boolean;
@@ -9,14 +24,14 @@ interface UploadProps extends OsComponent {
   customStyle?: object;
   classNames?: string;
   onChange?: (
-    files: Array<Object>,
+    files: Array<ImageFile>,
     operationType: string,
     index: number
   ) => void;
-  onImageClick?: (index: number, file: Object) => void;
+  onImageClick?: (index: number, file: ImageFile) => void;
   onFail?: (message: string) => void;
 }
 
 declare const Upload: ComponentClass<UploadProps>;
 
-export { Upload, UploadProps };
+export { Upload, UploadProps, ImageFile };
