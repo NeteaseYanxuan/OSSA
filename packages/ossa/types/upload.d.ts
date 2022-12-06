@@ -21,7 +21,7 @@ interface UploadProps extends OsComponent {
   max?: number;
   multiple?: boolean;
   files?: any;
-  customStyle?: object;
+  customStyle?: CSSProperties;
   classNames?: string;
   onChange?: (
     files: Array<ImageFile>,
@@ -29,7 +29,7 @@ interface UploadProps extends OsComponent {
     index: number
   ) => void;
   onImageClick?: (index: number, file: ImageFile) => void;
-  onFail?: (message: string) => void;
+  onFail?: (err: TaroGeneral.CallbackResult) => void;
 }
 
 declare const Upload: ComponentClass<UploadProps>;

@@ -30,7 +30,7 @@ demo_url: "https://neteaseyanxuan.github.io/OSSA/#/components/upload/demo/index"
 | ----------- | ------------------ | ------- | -------- |
 | max         | 最大数量，可选     | number  | infinity |
 | multiple    | 开始多张传输，可选 | boolean | true     |
-| customStyle | 自定义样式，可选   | object  | -        |
+| customStyle | 自定义样式，可选   | CSSProperties  | -        |
 | className   | 自定义类名，可选   | string  | -        |
 
 ### 方法
@@ -39,7 +39,7 @@ demo_url: "https://neteaseyanxuan.github.io/OSSA/#/components/upload/demo/index"
 | ------------ | -------------------------------------------- | ------------------------------------------------------------------------------------------------------------------ |
 | onChange     | 上传成功回调\(此时可自行将图片上传至服务器\) | \(files: ImageFile[], operationType: string, index: number\) =\> void\(注：index 在 operationType 为 remove 时有效 |
 | onImageClick | 图片列表点击回调                             | (index: number, file: ImageFile) => void                                                                           |
-| onFail       | 上传失败触发                                 | \(data: object\) =\> void                                                                                          |
+| onFail       | 上传失败触发                                 | \(err: TaroGeneral.CallbackResult\) =\> void                                                                                          |
 
 #### ImageFile
 

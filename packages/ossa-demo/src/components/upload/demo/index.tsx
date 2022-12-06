@@ -54,7 +54,7 @@ const initialListEvent = {
       ],
     },
     {
-      list: ["onFail", "上传失败触发", "(data: object) => void"],
+      list: ["onFail", "上传失败触发", "(err: TaroGeneral.CallbackResult) => void"],
     },
   ],
 };
