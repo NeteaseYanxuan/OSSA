@@ -1,5 +1,14 @@
 # ossa-demo
 
+## 1.7.1
+
+### Patch Changes
+
+- [#105](https://github.com/NeteaseYanxuan/OSSA/pull/105) [`56c33bd`](https://github.com/NeteaseYanxuan/OSSA/commit/56c33bde4035e4f263cc8949d29712fa3956c8b9) Thanks [@CaedmonW](https://github.com/CaedmonW)! - add onImageClick for upload
+
+- Updated dependencies [[`56c33bd`](https://github.com/NeteaseYanxuan/OSSA/commit/56c33bde4035e4f263cc8949d29712fa3956c8b9)]:
+  - ossaui@0.5.1
+
 ## 1.7.0
 
 ### Minor Changes

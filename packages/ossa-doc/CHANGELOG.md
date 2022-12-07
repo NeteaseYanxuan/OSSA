@@ -1,5 +1,11 @@
 # ossa-doc
 
+## 0.2.1
+
+### Patch Changes
+
+- [#105](https://github.com/NeteaseYanxuan/OSSA/pull/105) [`56c33bd`](https://github.com/NeteaseYanxuan/OSSA/commit/56c33bde4035e4f263cc8949d29712fa3956c8b9) Thanks [@CaedmonW](https://github.com/CaedmonW)! - add onImageClick for upload
+
 ## 0.2.0
 
 ### Minor Changes
