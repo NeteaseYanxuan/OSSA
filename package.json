@@ -67,8 +67,7 @@
   "pnpm": {
     "overrides": {
       "@types/react": "^17.0.0",
-      "@types/react-dom": "^17.0.0",
-      "typescript": "^3.9.5"
+      "@types/react-dom": "^17.0.0"
     }
   }
 }
