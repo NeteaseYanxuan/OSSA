@@ -1,0 +1,1 @@
+"use strict";(self.webpackJsonp=self.webpackJsonp||[]).push([[4511],{"4511":function(n,r,o){o.r(r),o.d(r,{"taro_live_player_core":function(){return c}});var t=o(2758),c=function(){function e(n){(0,t.r)(this,n)}return e.prototype.componentDidLoad=function(){console.error("H5 暂不支持 LivePlayer 组件！")},e.prototype.render=function(){return(0,t.h)(t.H,null)},e}()}}]);
