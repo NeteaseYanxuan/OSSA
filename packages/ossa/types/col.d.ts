@@ -3,7 +3,7 @@ import { CommonEventFunction } from "@tarojs/components/types/common";
 import OsComponent from "./base";
 
 /**
- * @name 栅格属性
+ * 栅格属性
  * @desc 与`OsRow`配合使用的页面栅格布局组件，代表一行中的每一个单元格
  */
 interface ColProps extends OsComponent {

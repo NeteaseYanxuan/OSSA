@@ -3,7 +3,7 @@ import { CommonEventFunction } from "@tarojs/components/types/common";
 import OsComponent from "./base";
 
 /**
- * @name 加载
+ * 加载
  * @desc 用于页面或模块的加载中状态。
  */
 interface LoadingProps extends OsComponent {

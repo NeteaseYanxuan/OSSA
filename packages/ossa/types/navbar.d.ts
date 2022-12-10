@@ -8,7 +8,7 @@ export interface NavBarItemProps extends OsComponent {
 }
 
 /**
- * @name 导航栏
+ * 导航栏
  */
 export interface NavBarProps extends OsComponent {
   /**

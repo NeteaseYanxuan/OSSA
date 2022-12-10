@@ -154,7 +154,7 @@ export default function Index(props: Props) {
 
       <DemoBlock title='数量不可编辑'>
         <OsStepper
-          isReadonly
+          readonly
           value={current1}
           onChange={(value) => {
             onChange1(value, setCurrent1);
@@ -164,7 +164,7 @@ export default function Index(props: Props) {
 
       <DemoBlock title='不可点击'>
         <OsStepper
-          isDisabled
+          disabled
           value={current2}
           onChange={(value) => {
             onChange2(value, setCurrent2);

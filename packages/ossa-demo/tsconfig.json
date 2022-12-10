@@ -15,7 +15,7 @@
     "sourceMap": true,
     "baseUrl": ".",
     "rootDir": ".",
-    "jsx": "react-jsx",
+    "jsx": "react",
     "allowJs": true,
     "resolveJsonModule": true,
     "typeRoots": [

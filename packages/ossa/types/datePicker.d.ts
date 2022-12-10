@@ -7,7 +7,7 @@ import {
 } from "./common";
 
 /**
- * @name 时间/日期选择器
+ * 时间/日期选择器
  */
 interface DatePickerProps extends OsComponent {
   /**
@@ -32,7 +32,7 @@ interface DatePickerProps extends OsComponent {
    * - year: 仅选择年
    * - month: 仅选择年和月
    * - day: 选择年月日
-   * 
+   *
    */
   fields?: "year" | "month" | "day";
   /**

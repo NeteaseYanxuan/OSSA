@@ -2,7 +2,7 @@ import { ComponentClass } from "react";
 import OsComponent from "./base";
 
 /**
- * @name 复选框
+ * 复选框
  */
 interface CheckboxProps extends OsComponent {}
 

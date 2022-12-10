@@ -3,7 +3,7 @@ import { CommonEventFunction } from "@tarojs/components/types/common";
 import OsComponent from "./base";
 
 /**
- * @name 文本输入框
+ * 文本输入框
  */
 interface InputProps extends OsComponent {
   /**

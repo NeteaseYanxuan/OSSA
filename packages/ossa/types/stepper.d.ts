@@ -2,7 +2,7 @@ import { ComponentClass, ReactChild } from "react";
 import OsComponent from "./base";
 
 /**
- * @name 步进器
+ * 步进器
  */
 interface StepperProps extends OsComponent {
   /**

@@ -2,7 +2,7 @@ import { ComponentClass, ReactNode, CSSProperties } from "react";
 import OsComponent from "./base";
 
 /**
- * @name 对话框
+ * 对话框
  * @desc 用于一些信息告知、操作确认的交互式弹窗。
  */
 interface ModalProps extends OsComponent {

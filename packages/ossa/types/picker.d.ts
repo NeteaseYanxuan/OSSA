@@ -2,7 +2,7 @@ import { ComponentClass, ReactChild } from "react";
 import OsComponent from "./base";
 import { OsCommonValueChangeCallback, OsCommonFunction } from "./common";
 /**
- * @name 选择器
+ * 选择器
  */
 interface PickerProps extends OsComponent {
   /**

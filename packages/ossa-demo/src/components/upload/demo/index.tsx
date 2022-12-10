@@ -22,7 +22,7 @@ const initialListApi = {
   head: ["参数", "说明", "类型", "默认值"],
   data: [
     {
-      list: ["max", "最大数量，可选", "number", "infinity"],
+      list: ["max", "最大数量，可选", "number", "99"],
     },
     {
       list: ["multiple", "开始多张传输，可选", "boolean", "true"],
@@ -43,7 +43,7 @@ const initialListEvent = {
       list: [
         "onChange",
         "上传成功回调(此时可自行将图片上传至服务器)",
-        "(files: Array, operationType: string, index: number) => void(注：1.index在operationType为remove时有效；2.严选安卓APP此处生成的图片链接为base64）",
+        "(files: FileItem[], operationType: 'add' | 'remove', index: number) => void(注：1.index在operationType为remove时有效；2.严选安卓APP此处生成的图片链接为base64）",
       ],
     },
     {

@@ -6,7 +6,7 @@ import {
 import OsComponent from "./base";
 
 /**
- * @name 搜索框
+ * 搜索框
  */
 interface SearchProps extends OsComponent {
   /**

@@ -5,9 +5,10 @@ import classNames from "classnames";
 import OsIcon from "../icon";
 //引入组件对应的 类型文件 .d.ts
 import { OsUploadProps } from "../../../types/index";
+import { FileItem } from "../../../types/upload";
 
-function getStyleObj(props: OsUploadProps) {
-  const _styleObj = {};
+function getStyleObj(props: OsUploadProps): CSSProperties {
+  const _styleObj: CSSProperties = {};
   return _styleObj;
 }
 
@@ -21,7 +22,7 @@ const ENV = Taro.getEnv();
 function onRemoveImg(
   props: OsUploadProps,
   index: number,
-  files: any,
+  files: FileItem[],
   setFiles: Function,
   setUpload: Function
 ) {
@@ -43,7 +44,7 @@ const initialUploads = true;
 
 function onClick(
   props: OsUploadProps,
-  files: any,
+  files: FileItem[],
   setFiles: Function,
   setUpload: Function
 ) {
@@ -71,10 +72,10 @@ function onClick(
 }
 
 function setNewFiles(
-  props,
-  files,
-  max,
-  targetFiles,
+  props: OsUploadProps,
+  files: FileItem[],
+  max: number,
+  targetFiles: FileItem[],
   setFiles: Function,
   setUpload: Function
 ) {

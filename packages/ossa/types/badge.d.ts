@@ -3,7 +3,7 @@ import { CommonEventFunction } from "@tarojs/components/types/common";
 import OsComponent from "./base";
 
 /**
- * @name 徽标
+ * 徽标
  * @desc 在右上角展示红点、文字、数字。
  * @see https://ossa.miaode.com/docs/%E7%BB%84%E4%BB%B6/badge
  */

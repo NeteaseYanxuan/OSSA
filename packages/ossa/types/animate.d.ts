@@ -3,7 +3,7 @@ import { CommonEventFunction } from "@tarojs/components/types/common";
 import OsComponent from "./base";
 
 /**
- * @name 动画
+ * 动画
  * @desc 常见的过场动画
  * @see https://ossa.miaode.com/docs/%E7%BB%84%E4%BB%B6/animate
  */

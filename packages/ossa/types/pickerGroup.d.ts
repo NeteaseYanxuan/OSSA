@@ -4,7 +4,7 @@ import OsComponent from "./base";
 import { OsCommonValueChangeCallback } from "./common";
 
 /**
- * @name 选择器组
+ * 选择器组
  * @desc 用于辅助渲染选择器的主要内容区域
  */
 interface PickerGroupProps extends OsComponent {

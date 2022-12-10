@@ -3,8 +3,8 @@ import OsComponent from "./base";
 import { OsCommonFunction } from "./common";
 
 /**
- * @name 动作面板 
- * @desc 从底部弹出的动作菜单面板。 
+ * 动作面板
+ * @desc 从底部弹出的动作菜单面板。
  * @see https://ossa.miaode.com/docs/%E7%BB%84%E4%BB%B6/actionsheet
  */
 interface ActionsheetProps extends OsComponent {
@@ -27,7 +27,7 @@ interface ActionsheetProps extends OsComponent {
 }
 
 /**
- * @name 操作面板数据项
+ * 操作面板数据项
  * @desc 在操作面板的每一个数据项的结构
  */
 interface ActionsheetItemProps extends OsComponent {

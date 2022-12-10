@@ -5,7 +5,7 @@ import OsComponent from "./base";
 import { IconProps } from "./icon";
 
 /**
- * @name 按钮组件
+ * 按钮组件
  * @desc 可快速配置成多种样式。
  * @see https://ossa.miaode.com/docs/%E7%BB%84%E4%BB%B6/button
  */
@@ -34,7 +34,7 @@ interface ButtonProps extends OsComponent,TaroButtonProps {
   /**
    * 按钮展示的形状
    * @default "round"
-   * @desc 
+   * @desc
    * - round: 大圆角按钮
    * - square: 小圆角按钮
    */

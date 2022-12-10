@@ -4,7 +4,7 @@ import OsComponent from "./base";
 import { IconProps } from "./icon";
 
 /**
- * @name 通用列表展示。
+ * 通用列表展示。
  */
 interface ListProps extends OsComponent {
   /**

@@ -4,7 +4,7 @@ import OsComponent from "./base";
 import { IconProps } from "./icon";
 
 /**
- * @name 通知栏
+ * 通知栏
  */
 interface NoticeBarProps extends OsComponent {
   /**

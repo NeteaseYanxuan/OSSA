@@ -3,7 +3,7 @@ import { ComponentClass, CSSProperties } from "react";
 import OsComponent from "./base";
 
 /**
- * @name 走马灯子项属性
+ * 走马灯子项属性
  */
 interface CarouselItemProps extends OsComponent {
   /**
@@ -18,7 +18,7 @@ interface CarouselItemProps extends OsComponent {
 }
 
 /**
- * @name 走马灯
+ * 走马灯
  * @desc 用于图片轮播
  * @see https://ossa.miaode.com/docs/%E7%BB%84%E4%BB%B6/carousel
  */
