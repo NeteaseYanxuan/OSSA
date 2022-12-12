@@ -33,7 +33,7 @@
       "prettier --write"
     ],
     "*.ts?(x)": [
-      "eslint"
+      "eslint --fix"
     ]
   },
   "author": "",

@@ -1,4 +1,3 @@
-/* eslint-disable import/newline-after-import */
 /**
  * @name 翻卡
  * @description
@@ -11,5 +10,6 @@
  **/
 import React from "react";
 import { IFlipCard } from "./../../types/loki";
+
 declare const FlipCard: React.FC<IFlipCard>;
 export default FlipCard;

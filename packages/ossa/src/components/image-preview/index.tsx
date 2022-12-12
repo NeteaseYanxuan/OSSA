@@ -1,4 +1,4 @@
-import React, { useState, useEffect, CSSProperties } from "react";
+import React, { useState, CSSProperties } from "react";
 import Taro from "@tarojs/taro";
 import { View, Image, ITouchEvent } from "@tarojs/components";
 import classNames from "classnames";
@@ -254,13 +254,13 @@ export default function Index(props: OsImagePreviewProps) {
           className='ossa-image-preview__swipe__track'
           style={swipeStyle}
           onTouchStart={(e) => {
-            onImgTouchStart(e);
+            onImgTouchStart(e as ITouchEvent);
           }}
           onTouchMove={(e) => {
-            onImgTouchMove(e);
+            onImgTouchMove(e as ITouchEvent);
           }}
           onTouchEnd={(e) => {
-            onImgTouchEnd(e);
+            onImgTouchEnd(e as ITouchEvent);
           }}
         >
           {imagesArr.map((item: OsImagesItemProps, i: number) => (
