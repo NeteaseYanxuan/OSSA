@@ -33,4 +33,4 @@ export { default as OsNoticeBar } from "./components/notice-bar/index";
 export { default as OsRow } from "./components/row/index";
 export { default as OsCol } from "./components/col/index";
 export { default as OsCountdown } from "./components/countdown/index";
-
+export { default as OsSwipeCell } from "./components/swipe-cell/index";

@@ -5,7 +5,7 @@ import classNames from "classnames";
 import OsIcon from "../icon";
 //引入组件对应的 类型文件 .d.ts
 import { OsUploadProps } from "../../../types/index";
-import { FileItem } from "../../../types/upload";
+import { ImageFile } from "../../../types/upload";
 
 function getStyleObj(props: OsUploadProps): CSSProperties {
   const _styleObj: CSSProperties = {};
@@ -22,13 +22,13 @@ const ENV = Taro.getEnv();
 function onRemoveImg(
   props: OsUploadProps,
   index: number,
-  files: FileItem[],
+  files: ImageFile[],
   setFiles: Function,
   setUpload: Function
 ) {
   const { max = 99 } = props;
   if (ENV === Taro.ENV_TYPE.WEB) {
-    window.URL.revokeObjectURL(files[index].url);
+    window.URL.revokeObjectURL(files[index].path);
   }
   const newFiles = files.filter((file, i) => i !== index);
   setFiles(newFiles);
@@ -44,12 +44,11 @@ const initialUploads = true;
 
 function onClick(
   props: OsUploadProps,
-  files: FileItem[],
+  files: ImageFile[],
   setFiles: Function,
   setUpload: Function
 ) {
   const { multiple, max = 99 } = props;
-  const filePathName = "tempFiles";
   const params = {};
 
   if (multiple) {
@@ -61,10 +60,7 @@ function onClick(
 
   Taro.chooseImage(params)
     .then((res) => {
-      const targetFiles = res.tempFilePaths.map((path, i) => ({
-        url: path,
-        file: res[filePathName][i],
-      }));
+      const targetFiles = res.tempFiles
 
       setNewFiles(props, files, max, targetFiles, setFiles, setUpload);
     })
@@ -73,18 +69,22 @@ function onClick(
 
 function setNewFiles(
   props: OsUploadProps,
-  files: FileItem[],
+  files: ImageFile[],
   max: number,
-  targetFiles: FileItem[],
+  targetFiles: ImageFile[],
   setFiles: Function,
   setUpload: Function
 ) {
-  const newFiles = files.concat(targetFiles);
+  const newFiles = [...files, ...targetFiles];
   setFiles(newFiles);
   if (newFiles.length >= max) {
     setUpload(false);
   }
   props.onChange?.(newFiles, "add", 0);
+}
+
+function onImageClick(props: OsUploadProps, index: number, file: ImageFile) {
+  props.onImageClick?.(index, file)
 }
 
 export default function Upload(props: OsUploadProps) {
@@ -108,9 +108,9 @@ export default function Upload(props: OsUploadProps) {
       <View className='ossa-upload__list'>
         {files &&
           files.length > 0 &&
-          files.map((item: any, index: number) => (
-            <View className='ossa-upload__item' key={item.url}>
-              <Image className='ossa-upload__item__img' src={item.url}></Image>
+          files.map((item: ImageFile, index: number) => (
+            <View className='ossa-upload__item' key={item.path}>
+              <Image className='ossa-upload__item__img' src={item.path} onClick={() => onImageClick(props, index, item)}></Image>
               <OsIcon
                 size={36}
                 type='upload-delete'

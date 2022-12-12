@@ -1,11 +1,19 @@
 import { ComponentClass, ReactNode, CSSProperties } from "react";
+import { ButtonProps } from '@tarojs/components/types/Button';
 import OsComponent from "./base";
+
+type ButtonOpenTypeRelatedProps = Pick<ButtonProps, 'lang' | 'sessionFrom' |
+  'sendMessageTitle' | 'sendMessagePath' | 'sendMessageImg' |
+  'showMessageCard' | 'appParameter' | 'onContact' |'onGetUserInfo' |
+  'onGetPhoneNumber' | 'onOpenSetting' | 'scope' | 'onGetAuthorize' |
+  'onGetRealNameAuthInfo' | 'onError' | 'onLaunchApp' | 'onChooseAvatar'>
+
 
 /**
  * 对话框
  * @desc 用于一些信息告知、操作确认的交互式弹窗。
  */
-interface ModalProps extends OsComponent {
+interface ModalProps extends OsComponent, ButtonOpenTypeRelatedProps {
   /**
    * 是否显示弹窗
    */
@@ -41,6 +49,22 @@ interface ModalProps extends OsComponent {
    * @default false
    */
   closeOnClickMask?: boolean;
+  /**
+   * 执行onCofirm时，是否执行onClose
+   *
+   * @type {boolean}
+   * @memberof ModalProps
+   * @default false
+   */
+  closeOnConfirm?: boolean;
+
+  /**
+   * 确认按钮的开放能力，具体支持可参考 官方文档
+   *
+   * @type {string}
+   * @memberof ModalProps
+   */
+  confirmOpenType?: ButtonProps.OpenType;
   /**
    * 是否仅保留遮罩，完全自定义弹窗内容
    * @default false

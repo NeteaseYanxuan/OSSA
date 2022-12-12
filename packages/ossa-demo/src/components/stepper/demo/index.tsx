@@ -79,7 +79,7 @@ const initialListEvent = {
       list: ["onBlur", "输入框失去焦点时触发", "event对象"],
     },
     {
-      list: ["onErrorInput", "错误输入时触发", "错误数值"],
+      list: ["onErrorInput", "错误输入时触发", "错误数值 {type: 'DISABLED' | 'LOW' | 'OVER', errorValue: number}"],
     },
     {
       list: ["onDisabledAdd", "到达最大值之后点击增加触发", "当前数值"],

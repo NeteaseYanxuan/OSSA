@@ -1,6 +1,23 @@
 import { ComponentClass, ReactChild } from "react";
 import OsComponent from "./base";
 
+
+export type InputErrorParam = {
+  /**
+   * 错误类型
+   * @desc
+   * - DISABLED: 步进器处于禁用状态时触发
+   * - LOW: 操作后小于最小值时触发
+   * - OVER: 操作后大于最小值时触发
+   */
+  type: "DISABLED" | "LOW" | "OVER",
+  /**
+   * 矫正后的值
+   * @desc 如果输入值小于最小值则为最小值，大于最大值则为最大值
+   */
+  errorValue: number;
+};
+
 /**
  * 步进器
  */
@@ -60,9 +77,22 @@ interface StepperProps extends OsComponent {
    * 当步进器改变时回调
    */
   onChange: (value: number) => void;
-  onErrorInput?: (value: number) => void;
-  onBlur?: (event: any) => void;
+  /**
+   * 异常输入时回调
+   * @param info 异常输入的回调信息
+   */
+  onErrorInput?: (info: InputErrorParam) => void;
+  /**
+   * 失去焦点时回调
+   */
+  onBlur?: (event: BaseEventOrig<InputProps.inputValueEventDetail>) => void;
+  /**
+   * 禁止增加回调
+   */
   onDisabledAdd?: (value: number) => void;
+  /**
+   * 禁止减小回调
+   */
   onDisabledSubtract?: (value: number) => void;
 }
 

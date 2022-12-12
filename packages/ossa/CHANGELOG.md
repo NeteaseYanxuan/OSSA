@@ -1,5 +1,35 @@
 # ossaui
 
+## 0.5.1
+
+### Patch Changes
+
+- [#105](https://github.com/NeteaseYanxuan/OSSA/pull/105) [`56c33bd`](https://github.com/NeteaseYanxuan/OSSA/commit/56c33bde4035e4f263cc8949d29712fa3956c8b9) Thanks [@CaedmonW](https://github.com/CaedmonW)! - add onImageClick for upload
+
+## 0.5.0
+
+### Minor Changes
+
+- [#65](https://github.com/NeteaseYanxuan/OSSA/pull/65) [`3ca5bc3`](https://github.com/NeteaseYanxuan/OSSA/commit/3ca5bc3137e937cd8fe39bbb7b8feaaf1f7759c5) Thanks [@jianzhouf](https://github.com/jianzhouf)! - 增加倒计时组件
+
+* [#76](https://github.com/NeteaseYanxuan/OSSA/pull/76) [`d62a7a1`](https://github.com/NeteaseYanxuan/OSSA/commit/d62a7a1a0edabf2434f6498f54dd6b0197765f07) Thanks [@CaedmonW](https://github.com/CaedmonW)! - Modal 组件 confirm 按钮支持 Button 的 openType 属性
+
+- [#98](https://github.com/NeteaseYanxuan/OSSA/pull/98) [`6ec94e7`](https://github.com/NeteaseYanxuan/OSSA/commit/6ec94e766a26f327e6601fab0526c6387fdc6a8c) Thanks [@jianzhouf](https://github.com/jianzhouf)! - 增加滑动单元格组件
+
+### Patch Changes
+
+- [#89](https://github.com/NeteaseYanxuan/OSSA/pull/89) [`10d5f60`](https://github.com/NeteaseYanxuan/OSSA/commit/10d5f603b3c9f4b169b2a1a8d285fed68202456c) Thanks [@kiner-tang](https://github.com/kiner-tang)! - feat: 完善评分组件文档 & 优化属性命名
+
+* [#100](https://github.com/NeteaseYanxuan/OSSA/pull/100) [`bb7bfe2`](https://github.com/NeteaseYanxuan/OSSA/commit/bb7bfe23ce53e7a931ae805c4bb695660cfed14b) Thanks [@jianzhouf](https://github.com/jianzhouf)! - fix: fix input disabledClear
+
+- [#94](https://github.com/NeteaseYanxuan/OSSA/pull/94) [`ed2c5fa`](https://github.com/NeteaseYanxuan/OSSA/commit/ed2c5fa30bd47696719ee4870cebb2a8063c7986) Thanks [@kiner-tang](https://github.com/kiner-tang)! - feat: 完善 tab-bar 组件文档与类型描述
+
+* [#99](https://github.com/NeteaseYanxuan/OSSA/pull/99) [`3c060a2`](https://github.com/NeteaseYanxuan/OSSA/commit/3c060a227b022c2a5f6130bccfd3e163ddbf8d45) Thanks [@kiner-tang](https://github.com/kiner-tang)! - fix: 修改部分 stepper 组件错误 与完善类型描述
+
+- [#90](https://github.com/NeteaseYanxuan/OSSA/pull/90) [`664ccaa`](https://github.com/NeteaseYanxuan/OSSA/commit/664ccaaf534534e16258043f281e5414147e18a3) Thanks [@kiner-tang](https://github.com/kiner-tang)! - feat: 补充步进器相关文档与类型描述
+
+* [#93](https://github.com/NeteaseYanxuan/OSSA/pull/93) [`f0e0853`](https://github.com/NeteaseYanxuan/OSSA/commit/f0e08537a505e9bb422f8426c5cffd5b88a78ff5) Thanks [@kiner-tang](https://github.com/kiner-tang)! - feat: 完善 switch 组件相关文档 & 类型描述优化
+
 ## 0.4.2
 
 ### Patch Changes

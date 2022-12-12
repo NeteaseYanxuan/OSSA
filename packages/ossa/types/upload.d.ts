@@ -1,17 +1,21 @@
-import { ComponentClass, ReactChild } from "react";
+import { ComponentClass } from "react";
 import OsComponent from "./base";
 
-/**
- * 单个文件结构
- */
-export type FileItem = {
-  url: string;
-  file: Taro.chooseImage.ImageFile;
-};
+interface ImageFile {
+  /** 本地临时文件路径 */
+  path: string
+  /** 本地临时文件大小，单位 B */
+  size: number
+  /** 文件的 MIME 类型
+   * @supported h5
+   */
+  type?: string
+  /** 原始的浏览器 File 对象
+   * @supported h5
+   */
+  originalFileObj?: File
+}
 
-/**
- * 图片上传组件
- */
 interface UploadProps extends OsComponent {
   /**
    * 最大上传图片数量
@@ -26,7 +30,7 @@ interface UploadProps extends OsComponent {
   /**
    * 初始文件数组
    */
-  files?: FileItem[];
+  files?: ImageFile[];
   /**
    * 发生变化时回调
    * @param files 文件列表
@@ -34,7 +38,7 @@ interface UploadProps extends OsComponent {
    * @param index 当前操作索引
    */
   onChange?: (
-    files: FileItem[],
+    files: ImageFile[],
     operationType: "add" | "remove",
     index: number
   ) => void;
@@ -43,14 +47,14 @@ interface UploadProps extends OsComponent {
    * @param index 点击项的索引
    * @param file 点击项的文件信息
    */
-  onImageClick?: (index: number, file: FileItem) => void;
+  onImageClick?: (index: number, file: ImageFile) => void;
   /**
    * 失败回调
    * @param message
    */
-  onFail?: (message: string) => void;
+  onFail?: (message: TaroGeneral.CallbackResult) => void;
 }
 
 declare const Upload: ComponentClass<UploadProps>;
 
-export { Upload, UploadProps };
+export { Upload, UploadProps, ImageFile };

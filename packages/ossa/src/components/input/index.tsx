@@ -99,6 +99,7 @@ export default function OsInput(props: OsInputProps) {
     props.onBlur?.(e);
   };
   const showDelIcon =
+    !props.disabledClear &&
     !mergedDisabled &&
     !mergedReadonly &&
     props.value &&

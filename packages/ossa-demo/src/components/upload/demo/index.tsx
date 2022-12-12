@@ -47,7 +47,14 @@ const initialListEvent = {
       ],
     },
     {
-      list: ["onFail", "上传失败触发", "(data: object) => void"],
+      list: [
+        "onImageClick",
+        "图片列表点击回调",
+        "(index: number, file: ImageFile) => void",
+      ],
+    },
+    {
+      list: ["onFail", "上传失败触发", "(err: TaroGeneral.CallbackResult) => void"],
     },
   ],
 };
@@ -62,8 +69,15 @@ function onChange(file, operationType, index) {
 function onFail(data) {
   console.log("上传失败，失败信息：" + JSON.stringify(data));
 }
+
+function onClick(index, file) {
+  console.log("图片文件:");
+  console.log(file);
+  console.log("图片索引:" + index);
+}
+
 const demoTitle = "Upload 图片上传";
-export default function Index(props: Props) {
+export default function Index(_props: Props) {
   const [listApi] = useState(initialListApi);
 
   const [listEvent] = useState(initialListEvent);
@@ -83,6 +97,7 @@ export default function Index(props: Props) {
             onChange={(file, operationType, index) =>
               onChange(file, operationType, index)
             }
+            onImageClick={(index, file) => onClick(index, file)}
             onFail={(data) => onFail(data)}
           ></OsUpload>
         </View>

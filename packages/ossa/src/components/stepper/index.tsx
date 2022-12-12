@@ -1,34 +1,27 @@
 import React from "react";
-import { View, Input } from "@tarojs/components";
+import { View, Input, BaseEventOrig, InputProps } from "@tarojs/components";
 import classNames from "classnames";
 import _toString from "lodash/toString";
 // //引入组件对应的 类型文件 .d.ts
 import { OsStepperProps } from "../../../types/index";
 import OsIcon from "../icon";
-import { deprecatedProp } from "../../utils"
+import { deprecatedProp } from "../../utils";
+import { InputErrorParam } from "../../../types/stepper";
 
 const mergeReadonly = (optionProps: OsStepperProps) => {
-  return deprecatedProp(
-    optionProps.readonly,
-    optionProps.isReadonly,
-    {
-      newPropName: "readonly",
-      oldPropName: "isReadonly",
-      moduleName: "Stepper"
-    }
-  );
-}
+  return deprecatedProp(optionProps.readonly, optionProps.isReadonly, {
+    newPropName: "readonly",
+    oldPropName: "isReadonly",
+    moduleName: "Stepper",
+  });
+};
 const mergeDisabled = (optionProps: OsStepperProps) => {
-  return deprecatedProp(
-    optionProps.disabled,
-    optionProps.isDisabled,
-    {
-      newPropName: "disabled",
-      oldPropName: "isDisabled",
-      moduleName: "Stepper"
-    }
-  );
-}
+  return deprecatedProp(optionProps.disabled, optionProps.isDisabled, {
+    newPropName: "disabled",
+    oldPropName: "isDisabled",
+    moduleName: "Stepper",
+  });
+};
 
 // 实现两数相加并保留小数点后最短尾数
 function addNum(num1, num2) {
@@ -63,12 +56,7 @@ export default function Stepper(props: OsStepperProps) {
   const mergedDisabled = mergeDisabled(props);
   const mergedReadonly = mergeReadonly(props);
   function onClick(clickType: string) {
-    const {
-      value,
-      min = 1,
-      max = 99,
-      step = 1,
-    } = props;
+    const { value, min = 1, max = 99, step = 1 } = props;
     const lowThanMin = clickType === "minus" && value <= min;
     const overThanMax = clickType === "plus" && value >= max;
 
@@ -124,9 +112,9 @@ export default function Stepper(props: OsStepperProps) {
     return resultValue;
   }
 
-  function onInput(e) {
-    const { value } = e.target;
-    if(mergedDisabled || mergedReadonly) return;
+  function onInput(e: BaseEventOrig<InputProps.inputValueEventDetail>) {
+    const { value } = e.detail;
+    if (mergedDisabled || mergedReadonly) return;
 
     // input时只做数字转换，且允许删空，改在blur时处理值
     let newValue: any = value === "" ? "" : parseValue(value);
@@ -139,15 +127,15 @@ export default function Stepper(props: OsStepperProps) {
     return newValue;
   }
 
-  function onBlur(event) {
-    const value = event.target.value;
+  function onBlur(event: BaseEventOrig<InputProps.inputValueEventDetail>) {
+    const value = event.detail.value;
     const newValue = handleValue(value);
     value !== newValue && props.onChange(newValue);
 
     props.onBlur?.(event);
   }
 
-  function handleError(errorValue) {
+  function handleError(errorValue: InputErrorParam) {
     if (!props.onErrorInput) {
       return;
     }
@@ -163,12 +151,7 @@ export default function Stepper(props: OsStepperProps) {
     return _classObject;
   }
 
-  const {
-    customStyle,
-    value,
-    min = 1,
-    max = 99,
-  } = props;
+  const { customStyle, value, min = 1, max = 99 } = props;
 
   const inputValue = handleValue(value);
   const rootClassName = [
@@ -237,8 +220,8 @@ Stepper.defaultProps = {
   step: 1,
   value: 1,
   customStyle: {},
-  isReadonly: false,
-  isDisabled: false,
+  readonly: false,
+  disabled: false,
 };
 
 Stepper.options = {
