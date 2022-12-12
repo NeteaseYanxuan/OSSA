@@ -1,6 +1,6 @@
 {
   "name": "ossaui",
-  "version": "0.3.4",
+  "version": "0.5.1",
   "description": "",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
@@ -15,6 +15,7 @@
   "scripts": {
     "dev": "npm run dev:lib",
     "dev:lib": "tsc --project ./tsconfig.build.json --watch --incremental",
+    "dev:rollup": "rollup --config ./rollup.config.js -w",
     "build": "npm run build:rollup && npm run build:lib",
     "build:lib": "tsc --project ./tsconfig.build.json",
     "build:rollup": "rollup --config ./rollup.config.js",
@@ -62,7 +63,7 @@
     "stylelint-scss": "3.17.2",
     "ts-jest": "26",
     "tslib": "^2.4.0",
-    "typescript": "^3.9.5"
+    "typescript": "^4.9.3"
   },
   "peerDependencies": {
     "@tarojs/components": "^3.4.12",

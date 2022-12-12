@@ -26,6 +26,10 @@ export default class Index extends Component<null, IState> {
           title: "Actionsheet 动作面板",
           id: "actionsheet",
         },
+        {
+          title: "SwipeCell 滑动单元格",
+          id: "swipeCell",
+        },
       ],
     };
   }

@@ -28,16 +28,16 @@ export default function Index(props: OsPickerPopupProps) {
   const styleObject = getStyleObj(props);
 
   const onClose = () => {
-    props.onClose && props.onClose();
+    props.onClose?.();
   };
 
   const onCancel = (e: ITouchEvent) => {
-    props.onCancel && props.onCancel(e);
+    props.onCancel?.(e);
     onClose();
   };
 
   const onConfirm = (e: ITouchEvent) => {
-    props.onConfirm && props.onConfirm(e);
+    props.onConfirm?.(e);
     onClose();
   };
 

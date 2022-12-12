@@ -41,20 +41,20 @@ function onCancel(setCurrent: Function, setFocus: Function) {
 function onChange(e: any, props: OsSearchProps, setCurrent: Function) {
   //alert(1);
   setCurrent(e.target.value);
-  props.onChange && props.onChange(e, e.target.value);
+  props.onChange?.(e, e.target.value);
 }
 
 function onConfirm(e: any, props: OsSearchProps, current) {
-  props.onConfirm && props.onConfirm(e, current);
+  props.onConfirm?.(e, current);
 }
 
 function onBlur(e: any, props: OsSearchProps) {
-  props.onBlur && props.onBlur(e);
+  props.onBlur?.(e);
 }
 
 function onFocus(e: any, props: OsSearchProps, setFocus: Function) {
   setFocus(true);
-  props.onFocus && props.onFocus(e);
+  props.onFocus?.(e);
 }
 
 export default function Index(props: OsSearchProps) {

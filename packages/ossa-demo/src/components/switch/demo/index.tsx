@@ -21,19 +21,25 @@ const initialListApi = {
   head: ["参数", "说明", "类型", "默认值"],
   data: [
     {
-      list: ["isChecked", "是否打开，必选", "boolean", "false"],
+      list: ["isChecked", "是否打开，`isChecked`属性在未来版本中将被删除，请使用`checked`代替", "boolean", "false"],
     },
     {
-      list: ["onColor", "打开时的背景色，可选", "string", "-"],
+      list: ["checked", "是否打开", "boolean", "false"],
     },
     {
-      list: ["offColor", "关闭时的背景色，可选", "string", "-"],
+      list: ["onColor", "打开时的背景色，可选", "string", "#44DB5E"],
     },
     {
-      list: ["nodeColor", "滑块颜色，可选", "string", "-"],
+      list: ["offColor", "关闭时的背景色，可选", "string", "#FFFFFF"],
     },
     {
-      list: ["isDisabled", "禁用，可选", "boolean", "false"],
+      list: ["nodeColor", "滑块颜色，可选", "string", "#FFFFFF"],
+    },
+    {
+      list: ["isDisabled", "禁用，可选，`isDisabled`属性在未来版本中将被删除，请使用`disabled`代替", "boolean", "false"],
+    },
+    {
+      list: ["disabled", "禁用，可选", "boolean", "false"],
     },
   ],
 };
@@ -70,20 +76,20 @@ export default function Index(props: Props) {
       <DemoHeader title='Switch 开关'></DemoHeader>
       <DemoBlock title='基础' subTitle='on'>
         <View className='block-section'>
-          <OsSwitch isChecked={v1} onChange={setV1}></OsSwitch>
+          <OsSwitch checked={v1} onChange={setV1}></OsSwitch>
         </View>
       </DemoBlock>
 
       <DemoBlock subTitle='off'>
         <View className='block-section'>
-          <OsSwitch isChecked={v2} onChange={setV2}></OsSwitch>
+          <OsSwitch checked={v2} onChange={setV2}></OsSwitch>
         </View>
       </DemoBlock>
 
       <DemoBlock title='自定义颜色' subTitle='自定义on背景色'>
         <View className='block-section'>
           <OsSwitch
-            isChecked={v3}
+            checked={v3}
             onChange={setV3}
             onColor='rgb(221, 26, 33)'
           ></OsSwitch>
@@ -93,7 +99,7 @@ export default function Index(props: Props) {
       <DemoBlock subTitle='自定义off背景色'>
         <View className='block-section'>
           <OsSwitch
-            isChecked={v4}
+            checked={v4}
             onChange={setV4}
             offColor='#dfdfdf'
           ></OsSwitch>
@@ -102,13 +108,13 @@ export default function Index(props: Props) {
 
       <DemoBlock title='禁用' subTitle='on'>
         <View className='block-section'>
-          <OsSwitch isChecked={v6} onChange={setV6} isDisabled></OsSwitch>
+          <OsSwitch checked={v6} onChange={setV6} disabled></OsSwitch>
         </View>
       </DemoBlock>
 
       <DemoBlock subTitle='off'>
         <View className='block-section'>
-          <OsSwitch isChecked={v7} onChange={setV7} isDisabled></OsSwitch>
+          <OsSwitch checked={v7} onChange={setV7} disabled></OsSwitch>
         </View>
       </DemoBlock>
 

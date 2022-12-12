@@ -33,7 +33,7 @@ jobs:
     - run: pnpm start
 #     - run: pnpm test
 
-    - name: Build OSSA
+    - name: Build OSSA && loki
       run: pnpm build
       
     - name: Build Demo

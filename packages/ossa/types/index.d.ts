@@ -92,4 +92,5 @@ export {
 export { SwitchProps as OsSwitchProps, Switch as OsSwitch } from "./switch";
 export { RowProps as OsRowProps, Row as OsRow } from "./row";
 export { ColProps as OsColProps, Col as OsCol } from "./col";
-
+export { CountdownProps as OsCountdownProps, Countdown as OsCountdown, FormattedResType as OsFormattedResType } from "./countdown";
+export { SwipeCell as OsSwipeCell, SwipeCellProps as OsSwipeCellProps } from "./swipeCell";

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Taro from "@tarojs/taro";
-import { View, Swiper, SwiperItem, Image } from "@tarojs/components";
+import { View, Swiper, SwiperItem, Image, ITouchEvent } from "@tarojs/components";
 import classNames from "classnames";
 //引入组件对应的 类型文件 .d.ts
 import { OsCarouselProps } from "../../../types/index";
@@ -67,13 +67,11 @@ function onChangeCarousel(
 ) {
   const { onChange } = props;
   setActiveIndex(e.detail.current);
-  onChange && onChange(e.detail.current);
+  onChange?.(e.detail.current);
 }
 
-function onClickCarousel(e: any, props: OsCarouselProps) {
-  // console.log(e.detail.current);
-  const { onClick } = props;
-  onClick && onClick();
+function onClickCarousel(e: ITouchEvent, props: OsCarouselProps, currentIndex = 0) {
+  props.onClick?.(currentIndex, e);
 }
 
 export default function Carousel(props: OsCarouselProps) {
@@ -124,41 +122,42 @@ export default function Carousel(props: OsCarouselProps) {
         }
         duration={500}
         onChange={(e) => onChangeCarousel(e, props, setActiveIndex)}
-        onClick={(e) => onClickCarousel(e, props)}
+        onClick={(e) => onClickCarousel(e, props, activeIndex)}
         className='ossa-carousel-swiper'
       >
         {data.map((item: any, index: number) => (
-          <SwiperItem
-            className={`ossa-carousel-swiper-item ${
-              vertical
-                ? "ossa-carousel-swiper__item--vertical"
-                : "ossa-carousel-swiper__item"
-            }`}
-            style={
-              (gap &&
-                type === "image" && {
-                  padding: vertical
-                    ? `${Taro.pxTransform(gapWidth / 2)} 0`
-                    : `0 ${Taro.pxTransform(gapWidth / 2)}`,
-                }) ||
-              {}
-            }
-            key={item.content}
-          >
-            {type === "image" ? (
-              <Image
-                src={item.content}
-                className={`ossa-carousel-swiper__item__image ${item.className}`}
-                style={item.style}
-              ></Image>
-            ) : (
-              <View
-                className={`ossa-carousel-swiper__item__text ${item.className}`}
-                style={item.style}
-              >
-                {item.content}
-              </View>
-            )}
+          <SwiperItem key={item.content}>
+            <View
+              className={`ossa-carousel-swiper-item ${
+                vertical
+                  ? "ossa-carousel-swiper__item--vertical"
+                  : "ossa-carousel-swiper__item"
+              }`}
+              style={
+                (gap &&
+                  type === "image" && {
+                    padding: vertical
+                      ? `${Taro.pxTransform(gapWidth / 2)} 0`
+                      : `0 ${Taro.pxTransform(gapWidth / 2)}`,
+                  }) ||
+                {}
+              }
+            >
+              {type === "image" ? (
+                <Image
+                  src={item.content}
+                  className={`ossa-carousel-swiper__item__image ${item.className}`}
+                  style={item.style}
+                ></Image>
+              ) : (
+                <View
+                  className={`ossa-carousel-swiper__item__text ${item.className}`}
+                  style={item.style}
+                >
+                  {item.content}
+                </View>
+              )}
+            </View>
           </SwiperItem>
         ))}
       </Swiper>
@@ -190,7 +189,7 @@ Carousel.defaultProps = {
   interval: 4000,
   circular: true,
   indicatorDots: false,
-  indicatorColor: "#ffffff",
+  indicatorColor: "rgba(0, 0, 0, 0.3)",
   indicatorActiveColor: "#000000",
   current: 0,
   gap: false,

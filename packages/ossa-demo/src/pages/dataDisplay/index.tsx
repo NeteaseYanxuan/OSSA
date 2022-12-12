@@ -34,6 +34,10 @@ export default class Index extends Component<null, IState> {
           title: "NoticeBar 通告栏",
           id: "noticeBar",
         },
+        {
+          title: "倒计时",
+          id: "countdown",
+        },
       ],
     };
   }

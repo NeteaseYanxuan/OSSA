@@ -11,6 +11,7 @@ export default {
     "components/badge/demo/index",
     "components/button/demo/index",
     "components/color/demo/index",
+    "components/countdown/demo/index",
     "components/tag/demo/index",
     "components/icon/demo/index",
     "components/radio/demo/index",
@@ -30,6 +31,7 @@ export default {
     "components/carousel/demo/index",
     "components/modal/demo/index",
     "components/actionsheet/demo/index",
+    "components/swipeCell/demo/index",
     "components/layout/demo/index",
     "components/upload/demo/index",
     "components/imagePreview/demo/index",
@@ -37,6 +39,10 @@ export default {
     "components/datePicker/demo/index",
     "components/noticeBar/demo/index",
     "components/animate/demo/index",
+
+    "pages/loki/index",
+    "pages/loki/turntable/index",
+    "pages/loki/ninegrid/index",
   ],
   window: {
     backgroundTextStyle: "light",

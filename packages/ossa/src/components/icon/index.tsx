@@ -49,7 +49,7 @@ function getClassObject(props: OsIconProps) {
 }
 
 function onClick(e: any, props: OsIconProps) {
-  props.onClick && props.onClick(e);
+  props.onClick?.(e);
 }
 
 export default function Icon(props: OsIconProps) {

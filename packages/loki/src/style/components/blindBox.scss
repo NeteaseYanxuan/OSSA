@@ -1,0 +1,21 @@
+@function p($px, $base: 100) {
+  @return calc($px / $base) * 1rem;
+}
+.loki-blindbox {
+  position: relative;
+  background-repeat: no-repeat;
+  background-position: center;
+  &--bg {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  &--btn {
+    position: absolute;
+    z-index: 2;
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+}

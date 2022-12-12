@@ -36,10 +36,19 @@ const initialListApi = {
       list: ["min", "最小值，可选", "number", "1"],
     },
     {
-      list: ["isReadonly", "数量不可编辑，可选", "boolean", "false"],
+      list: ["step", "单步增加/减少的值，可选", "number", "1"]
     },
     {
-      list: ["isDisabled", "不可点击，可选", "boolean", "false"],
+      list: ["isReadonly", "数量不可编辑，可选，`isReadonly`属性在未来版本中将被删除，请使用`readonly`代替", "boolean", "false"],
+    },
+    {
+      list: ["readonly", "数量不可编辑，可选", "boolean", "false"],
+    },
+    {
+      list: ["isDisabled", "不可点击，可选，`isDisabled`属性在未来版本中将被删除，请使用`disabled`代替", "boolean", "false"],
+    },
+    {
+      list: ["disabled", "不可点击，可选", "boolean", "false"],
     },
     {
       list: ["customStyle", "自定义样式，可选", "object", "-"],
@@ -70,7 +79,7 @@ const initialListEvent = {
       list: ["onBlur", "输入框失去焦点时触发", "event对象"],
     },
     {
-      list: ["onErrorInput", "错误输入时触发", "错误数值"],
+      list: ["onErrorInput", "错误输入时触发", "错误数值 {type: 'DISABLED' | 'LOW' | 'OVER', errorValue: number}"],
     },
     {
       list: ["onDisabledAdd", "到达最大值之后点击增加触发", "当前数值"],
@@ -145,7 +154,7 @@ export default function Index(props: Props) {
 
       <DemoBlock title='数量不可编辑'>
         <OsStepper
-          isReadonly
+          readonly
           value={current1}
           onChange={(value) => {
             onChange1(value, setCurrent1);
@@ -155,7 +164,7 @@ export default function Index(props: Props) {
 
       <DemoBlock title='不可点击'>
         <OsStepper
-          isDisabled
+          disabled
           value={current2}
           onChange={(value) => {
             onChange2(value, setCurrent2);

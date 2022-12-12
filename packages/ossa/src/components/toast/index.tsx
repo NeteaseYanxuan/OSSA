@@ -23,14 +23,14 @@ function getClassObject(props: OsToastProps, show: boolean) {
 //export default
 export default function Toast(props: OsToastProps) {
   const rootClassName = "ossa-toast"; //组件
-  const styleObject = getStyleObj(Object.assign(props, props.customStyle));
+  const styleObject = Object.assign(getStyleObj(props), props.customStyle);
   const { duration = 2000 } = props;
   const [, setDuration] = useState(duration);
   const [show = false, setShow] = useState(props.isShow);
   const classObject = getClassObject(props, show); //组件修饰
 
   function onClose() {
-    props.onClose && props.onClose();
+    props.onClose?.();
   }
 
   useEffect(() => {

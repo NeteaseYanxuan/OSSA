@@ -24,6 +24,31 @@ const initialRadioListApi = {
     {
       list: ["type", "布局类型", "column | row", "column"],
     },
+    {
+      list: ["value", "选中值，可选", "number | string", "-"],
+    },
+    {
+      list: ["isDisabled", "失效状态，可选，`isDisabled`属性在未来版本中将被删除，请使用`disabled`代替", "boolean", "false"],
+    },
+    {
+      list: ["disabled", "失效状态，可选", "boolean", "false"],
+    },
+    {
+      list: ["isReadonly", "不可执行，可选，`isReadonly`属性在未来版本中将被删除，请使用`readonly`代替", "boolean", "false"],
+    },
+    {
+      list: ["readonly", "失效状态，可选", "boolean", "false"],
+    },
+  ],
+};
+
+const initialRadioListEvent = {
+  title: "Event-OsRadio",
+  head: ["函数名", "说明", "参数"],
+  data: [
+    {
+      list: ["onChange", "value改变时触发，可选", "value"],
+    },
   ],
 };
 
@@ -38,13 +63,19 @@ const initialListApi = {
       list: ["optionValue", "选项值，必选", "number | string", "-"],
     },
     {
-      list: ["isDisabled", "失效状态，可选", "boolean", "false"],
+      list: ["isDisabled", "失效状态，可选，`isDisabled`属性在未来版本中将被删除，请使用`disabled`代替", "boolean", "false"],
+    },
+    {
+      list: ["disabled", "失效状态，可选", "boolean", "false"],
     },
     {
       list: ["isCustom", "是否自定义，可选", "boolean", "false"],
     },
     {
-      list: ["isReadonly", "不可执行，可选", "boolean", "false"],
+      list: ["isReadonly", "不可执行，可选，`isReadonly`属性在未来版本中将被删除，请使用`readonly`代替", "boolean", "false"],
+    },
+    {
+      list: ["readonly", "失效状态，可选", "boolean", "false"],
     },
   ],
 };
@@ -68,6 +99,7 @@ export default function Index(props: Props) {
   const [v5, setV5] = useState(0);
   const [v6, setV6] = useState(0);
   const [v7, setV7] = useState(0);
+  const [v8, setV8] = useState(0);
 
   useEffect(() => {
     Taro.setNavigationBarTitle({
@@ -129,10 +161,10 @@ export default function Index(props: Props) {
 
       <DemoBlock title='禁用' subTitle='普通' fullScreen>
         <OsRadio>
-          <OsRadioOption value={v3} optionValue={0} onClick={setV3} isDisabled>
+          <OsRadioOption value={v3} optionValue={0} onClick={setV3} disabled>
             选项A
           </OsRadioOption>
-          <OsRadioOption value={v3} optionValue={1} onClick={setV3} isDisabled>
+          <OsRadioOption value={v3} optionValue={1} onClick={setV3} disabled>
             选项B
           </OsRadioOption>
         </OsRadio>
@@ -144,7 +176,7 @@ export default function Index(props: Props) {
             value={v4}
             optionValue={0}
             onClick={setV4}
-            isDisabled
+            disabled
             isCustom
           >
             <View className='custom-option'>
@@ -165,7 +197,7 @@ export default function Index(props: Props) {
             value={v4}
             optionValue={1}
             onClick={setV4}
-            isDisabled
+            disabled
             isCustom
           >
             <View className='custom-option'>
@@ -189,10 +221,10 @@ export default function Index(props: Props) {
 
       <DemoBlock title='不可执行' subTitle='普通' fullScreen>
         <OsRadio>
-          <OsRadioOption value={v5} optionValue={0} onClick={setV5} isReadonly>
+          <OsRadioOption value={v5} optionValue={0} onClick={setV5} readonly>
             选项A
           </OsRadioOption>
-          <OsRadioOption value={v5} optionValue={1} onClick={setV5} isReadonly>
+          <OsRadioOption value={v5} optionValue={1} onClick={setV5} readonly>
             选项B
           </OsRadioOption>
         </OsRadio>
@@ -204,7 +236,7 @@ export default function Index(props: Props) {
             value={v6}
             optionValue={0}
             onClick={setV6}
-            isReadonly
+            readonly
             isCustom
           >
             <View className='custom-option'>
@@ -225,7 +257,7 @@ export default function Index(props: Props) {
             value={v6}
             optionValue={1}
             onClick={setV6}
-            isReadonly
+            readonly
             isCustom
           >
             <View className='custom-option'>
@@ -258,8 +290,23 @@ export default function Index(props: Props) {
         </OsRadio>
       </DemoBlock>
 
+      <DemoBlock title='RadioGroup控制value' fullScreen>
+        <OsRadio type='row' value={v8} onChange={setV8}>
+          <OsRadioOption optionValue={0} type='row'>
+            选项A
+          </OsRadioOption>
+          <OsRadioOption optionValue={1} type='row'>
+            选项B
+          </OsRadioOption>
+        </OsRadio>
+      </DemoBlock>
+
       <DemoBlock>
         <DemoTable list={initialRadioListApi}></DemoTable>
+      </DemoBlock>
+
+      <DemoBlock>
+        <DemoTable list={initialRadioListEvent}></DemoTable>
       </DemoBlock>
 
       <DemoBlock>

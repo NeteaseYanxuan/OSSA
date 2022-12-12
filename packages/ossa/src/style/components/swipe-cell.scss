@@ -1,0 +1,28 @@
+@import '../base.scss';
+
+.ossa-swipecell__right {
+  height: 100%;
+  position: absolute;
+  right: 0;
+  transform: translate3d(100%, 0, 0);
+}
+
+.ossa-swipecell__wrapper {
+  transition: transform 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+  position: relative;
+}
+
+.ossa-swipecell {
+  overflow: hidden;
+}
+
+.ossa-swipecell__default {
+  background: $--color-red;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  padding: 5px 15px;
+  box-sizing: border-box;
+}
