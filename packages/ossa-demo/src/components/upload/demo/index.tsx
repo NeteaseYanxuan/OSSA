@@ -102,6 +102,30 @@ export default function Index(props: Props) {
           ></OsUpload>
         </View>
       </DemoBlock>
+      <DemoBlock title='限制上传数量(2张)' fullScreen>
+        <View style={{ paddingLeft: Taro.pxTransform(20) }}>
+          <OsUpload
+            max={2}
+            onChange={(file, operationType, index) =>
+              onChange(file, operationType, index)
+            }
+            onImageClick={(index, file) => onClick(index, file)}
+            onFail={(data) => onFail(data)}
+          ></OsUpload>
+        </View>
+      </DemoBlock>
+      <DemoBlock title='限制上传数量(1张)' fullScreen>
+        <View style={{ paddingLeft: Taro.pxTransform(20) }}>
+          <OsUpload
+            max={1}
+            onChange={(file, operationType, index) =>
+              onChange(file, operationType, index)
+            }
+            onImageClick={(index, file) => onClick(index, file)}
+            onFail={(data) => onFail(data)}
+          ></OsUpload>
+        </View>
+      </DemoBlock>
       <DemoBlock>
         <DemoTable list={listApi}></DemoTable>
       </DemoBlock>

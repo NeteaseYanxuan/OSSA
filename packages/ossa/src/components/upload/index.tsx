@@ -52,10 +52,10 @@ function onClick(
   const params = {};
 
   if (multiple) {
-    params["max"] = 99;
+    params["count"] = 99;
   }
   if (max) {
-    params["max"] = max;
+    params["count"] = max;
   }
 
   Taro.chooseImage(params)
@@ -80,7 +80,7 @@ function setNewFiles(
   if (newFiles.length >= max) {
     setUpload(false);
   }
-  props.onChange?.(newFiles, "add", 0);
+  props.onChange?.(newFiles.slice(0, max), "add", 0);
 }
 
 function onImageClick(props: OsUploadProps, index: number, file: ImageFile) {
