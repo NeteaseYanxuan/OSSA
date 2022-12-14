@@ -17,6 +17,24 @@ interface SearchProps extends OsComponent {
   onBlur?: (event: CommonEvent) => void;
   onFocus?: (event: CommonEvent) => void;
   onConfirm?: (event: CommonEvent, current: string) => void;
+  /**
+   * taro原生input的属性
+   */
+  taroProps?: Omit<
+    TaroInputProps,
+    | "className"
+    | "type"
+    | "focus"
+    | "confirmType"
+    | "value"
+    | "placeholder"
+    | "onInput"
+    | "onConfirm"
+    | "onBlur"
+    | "onFocus"
+    | "style"
+    | "placeholderClass"
+  >;
 }
 
 declare const Search: ComponentClass<SearchProps>;
