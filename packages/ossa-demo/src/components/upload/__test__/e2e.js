@@ -14,6 +14,7 @@ describe("Upload Testing", function () {
 
     it("solution #1: 上传-normal样式", function () {
       cy.get(".ossa-upload__btn")
+        .eq(0)
         .should(($uploadBtn) => {
           //上传按钮border样式
           expect($uploadBtn.css("border-style")).to.be.eq("dashed");

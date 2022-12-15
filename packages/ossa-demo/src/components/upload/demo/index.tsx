@@ -22,10 +22,10 @@ const initialListApi = {
   head: ["参数", "说明", "类型", "默认值"],
   data: [
     {
-      list: ["max", "最大数量，可选", "number", "infinity"],
+      list: ["max", "最大数量，可选", "number", "99"],
     },
     {
-      list: ["multiple", "开始多张传输，可选", "boolean", "true"],
+      list: ["multiple", "开始多张传输，可选，`multiple`属性在未来版本中将被删除，请使用`max`代替", "boolean", "true"],
     },
     {
       list: ["customStyle", "自定义样式，可选", "object", "-"],
@@ -94,6 +94,30 @@ export default function Index(props: Props) {
       <DemoBlock title='普通' fullScreen>
         <View style={{ paddingLeft: Taro.pxTransform(20) }}>
           <OsUpload
+            onChange={(file, operationType, index) =>
+              onChange(file, operationType, index)
+            }
+            onImageClick={(index, file) => onClick(index, file)}
+            onFail={(data) => onFail(data)}
+          ></OsUpload>
+        </View>
+      </DemoBlock>
+      <DemoBlock title='限制上传数量(2张)' fullScreen>
+        <View style={{ paddingLeft: Taro.pxTransform(20) }}>
+          <OsUpload
+            max={2}
+            onChange={(file, operationType, index) =>
+              onChange(file, operationType, index)
+            }
+            onImageClick={(index, file) => onClick(index, file)}
+            onFail={(data) => onFail(data)}
+          ></OsUpload>
+        </View>
+      </DemoBlock>
+      <DemoBlock title='限制上传数量(1张)' fullScreen>
+        <View style={{ paddingLeft: Taro.pxTransform(20) }}>
+          <OsUpload
+            max={1}
             onChange={(file, operationType, index) =>
               onChange(file, operationType, index)
             }
