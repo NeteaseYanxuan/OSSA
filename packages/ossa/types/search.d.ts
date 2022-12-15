@@ -3,7 +3,9 @@ import {
   CommonEventFunction,
   CommonEvent,
 } from "@tarojs/components/types/common";
+import { InputProps as TaroInputProps } from "@tarojs/components/types/Input";
 import OsComponent from "./base";
+
 
 interface SearchProps extends OsComponent {
   showSplitLine?: boolean;
