@@ -28,8 +28,8 @@ demo_url: "https://neteaseyanxuan.github.io/OSSA/#/components/upload/demo/index"
 
 | 参数        | 说明               | 类型    | 默认值   |
 | ----------- | ------------------ | ------- | -------- |
-| max         | 最大数量，可选     | number  | infinity |
-| multiple    | 开始多张传输，可选 | boolean | true     |
+| max         | 最大数量，可选     | number  | 99 |
+| multiple    | 开始多张传输，可选，`multiple`属性在未来版本中将被删除，请使用`max`代替 | boolean | true     |
 | customStyle | 自定义样式，可选   | CSSProperties  | -        |
 | className   | 自定义类名，可选   | string  | -        |
 

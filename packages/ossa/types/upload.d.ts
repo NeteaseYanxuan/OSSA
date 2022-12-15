@@ -19,6 +19,11 @@ interface ImageFile {
 
 interface UploadProps extends OsComponent {
   max?: number;
+  /**
+   * 是否允许多选
+   * @deprecated `multiple`属性在未来版本中将被删除，请使用`max`属性代替
+   * @default true
+   */
   multiple?: boolean;
   files?: any;
   customStyle?: CSSProperties;

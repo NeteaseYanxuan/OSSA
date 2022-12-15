@@ -6,6 +6,7 @@ import OsIcon from "../icon";
 //引入组件对应的 类型文件 .d.ts
 import { OsUploadProps } from "../../../types/index";
 import { ImageFile } from "../../../types/upload";
+import { warnDeprecatedProp } from "../../../src/utils";
 
 function getStyleObj(props: OsUploadProps) {
   const _styleObj = {};
@@ -49,9 +50,11 @@ function onClick(
   setUpload: Function
 ) {
   const { multiple, max = 99 } = props;
+
   const params = {};
 
   if (multiple) {
+    warnDeprecatedProp('Upload', 'max', 'multiple');
     params["count"] = 99;
   }
   if (max) {
