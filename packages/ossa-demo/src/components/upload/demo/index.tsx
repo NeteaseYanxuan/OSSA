@@ -43,7 +43,7 @@ const initialListEvent = {
       list: [
         "onChange",
         "上传成功回调(此时可自行将图片上传至服务器)",
-        "(files: FileItem[], operationType: 'add' | 'remove', index: number) => void(注：1.index在operationType为remove时有效；2.严选安卓APP此处生成的图片链接为base64）",
+        "(files: FileItem[], operationType: 'add' | 'remove', index: number) => void(注：1.index在operationType为remove时有效；）",
       ],
     },
     {
