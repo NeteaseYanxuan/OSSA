@@ -49,7 +49,7 @@ interface InputProps extends OsComponent {
   onFocus?: CommonEventFunction;
   onBlur?: CommonEventFunction;
   /**
-   * 原生 taro Input组件或 Textarea 组件属性
+   * 原生 taro Input 组件或 Textarea 组件属性
    */
   taroProps?: {
     /**

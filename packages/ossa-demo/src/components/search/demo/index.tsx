@@ -42,6 +42,9 @@ const initialListApi = {
     {
       list: ["customStyle", "自定义样式，可选", "object", "-"],
     },
+    {
+      list: ["taroProps", "除了上述属性之外 taro 支持的 Input 属性", "object", "-"],
+    },
   ],
 };
 const initialListEvent = {
