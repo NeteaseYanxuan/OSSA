@@ -87,7 +87,7 @@ interface CarouselProps extends OsComponent {
   current?: number;
   /**
    * 是否有分隔（仅图片式下生效）
-   * @default flase
+   * @default false
    */
   gap?: boolean;
   /**

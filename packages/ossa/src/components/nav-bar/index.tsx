@@ -4,6 +4,7 @@ import classNames from "classnames";
 import OsIcon from "../icon";
 import { OsNavBarProps, OsNavBarItemProps } from "../../../types/index";
 import { IconProps } from "../../../types/icon";
+import { deprecatedProp } from "../../../src/utils";
 
 function getStyleObj(props: OsNavBarProps) {
   const _styleObj = {};
@@ -139,7 +140,11 @@ export default class NavBar extends Component<OsNavBarProps> {
     const styleObject = Object.assign(getStyleObj(props), props.customStyle);
     const { type, title, middleSlot } = props;
 
-    const mergedTitle = title ?? middleSlot;
+    const mergedTitle = deprecatedProp(title, middleSlot, {
+      newPropName: "title",
+      oldPropName: "middleSlot",
+      moduleName: "NavBar"
+    });
     const isSimpleTitle = typeof mergedTitle === "string";
 
     return (
