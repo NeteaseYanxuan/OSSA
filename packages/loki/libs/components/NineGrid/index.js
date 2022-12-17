@@ -19,7 +19,7 @@ const lottery = {
   timer: 0,
   speed: 75,
   times: 0,
-  win: 0,
+  win: 0, //中奖位置 0 默认不中奖
 };
 const NineGrid = function ({
   appEnv,

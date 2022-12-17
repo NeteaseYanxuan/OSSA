@@ -1,11 +1,11 @@
-import React from "react";
-import { ITouchEvent, View } from "@tarojs/components";
+import React, { PropsWithChildren } from "react";
+import { View, ITouchEvent } from "@tarojs/components";
 import classNames from "classnames";
 
 import { OsBadgeProps } from "../../../types/index";
 
-//组件属性
-const TYPE_CLASS = {
+// 组件属性
+const TYPE_CLASS: Record<Required<OsBadgeProps>["type"], string> = {
   dot: "dot",
   info: "info",
   text: "text",
@@ -17,7 +17,7 @@ const TYPE_CLASS = {
  *
  */
 
-function getClassObjectRoot(props: OsBadgeProps) {
+function getClassObjectRoot(props: PropsWithChildren<OsBadgeProps>) {
   const { type = "dot" } = props;
 
   const classObject = {
@@ -49,15 +49,15 @@ function isEmptyType(type: OsBadgeProps["type"]) {
  * @returns 
  */
 function getInfo(props: OsBadgeProps): string {
-  let _info = "0";
-  const { type, max = 99, info } = props;
+  let _info: string = "0";
+  const { type, max = 99, info = 0 } = props;
 
   if (isEmptyType(type)) {
     return "";
   } else if (max) {
-    _info = info > max ? max + "+" : info;
+    _info = String(info > max ? max + "+" : info);
   } else {
-    _info = info;
+    _info = String(info);
   }
   return _info;
 }

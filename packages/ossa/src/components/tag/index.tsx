@@ -1,10 +1,10 @@
-import React from "react";
+import React, { CSSProperties } from "react";
 import { View } from "@tarojs/components";
 import classNames from "classnames";
 import OsIcon from "../icon";
 import { OsTagProps } from "../../../types/index";
 
-function getStyleObj(props: OsTagProps) {
+function getStyleObj(props: OsTagProps): CSSProperties {
   const {
     type = "",
     color = "normal",
@@ -13,7 +13,7 @@ function getStyleObj(props: OsTagProps) {
     endBgColor,
   } = props;
 
-  let _styleObj = {};
+  let _styleObj: CSSProperties = {};
 
   if (TagColor[color] === undefined) {
     if (type === "primary") {
@@ -41,12 +41,13 @@ function getStyleObj(props: OsTagProps) {
 
 function getClassObject(props: OsTagProps) {
   const {
-    type = "",
+    type = "radius",
     color = "normal",
     bgColor,
     startBgColor,
     endBgColor,
   } = props;
+
 
   const classObject = {
     [`ossa-tag--type-${type}`]: TagType[type],

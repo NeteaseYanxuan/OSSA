@@ -3,7 +3,7 @@ import OsComponent from "./base";
 import { IconProps } from "./icon";
 
 /**
- * @name 评分项
+ * 评分项
  */
 export type RateItem = {
   /**
@@ -21,7 +21,7 @@ export type RateItem = {
 };
 
 /**
- * @name 评分组件
+ * 评分组件
  */
 interface RateProps extends OsComponent {
   /**

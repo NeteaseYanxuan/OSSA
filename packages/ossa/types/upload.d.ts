@@ -1,5 +1,4 @@
-import { ComponentClass, ReactChild } from "react";
-import { CommonEventFunction } from "@tarojs/components/types/common";
+import { ComponentClass } from "react";
 import OsComponent from "./base";
 
 interface ImageFile {
@@ -18,18 +17,42 @@ interface ImageFile {
 }
 
 interface UploadProps extends OsComponent {
+  /**
+   * 最大上传图片数量
+   * @default 99
+   */
   max?: number;
+  /**
+   * 开始多张传输
+   * @default true
+   */
   multiple?: boolean;
-  files?: any;
-  customStyle?: CSSProperties;
-  classNames?: string;
+  /**
+   * 初始文件数组
+   */
+  files?: ImageFile[];
+  /**
+   * 发生变化时回调
+   * @param files 文件列表
+   * @param operationType 操作类型，add表示新增，remove表示移除
+   * @param index 当前操作索引
+   */
   onChange?: (
-    files: Array<ImageFile>,
-    operationType: string,
+    files: ImageFile[],
+    operationType: "add" | "remove",
     index: number
   ) => void;
+  /**
+   * 点击图片回调
+   * @param index 点击项的索引
+   * @param file 点击项的文件信息
+   */
   onImageClick?: (index: number, file: ImageFile) => void;
-  onFail?: (err: TaroGeneral.CallbackResult) => void;
+  /**
+   * 失败回调
+   * @param message
+   */
+  onFail?: (message: TaroGeneral.CallbackResult) => void;
 }
 
 declare const Upload: ComponentClass<UploadProps>;

@@ -1,10 +1,19 @@
 import { ComponentClass } from "react";
 import OsComponent from "./base";
 
+/**
+ * 复选框
+ */
 interface CheckboxProps extends OsComponent {}
 
 interface CheckboxOptionProps extends OsComponent {
+  /**
+   * 当前选项的值
+   */
   optionValue: number | string;
+  /**
+   * 当前选中的值的集合
+   */
   value: Array<number | string>;
   /**
    * 是否禁用
@@ -17,7 +26,10 @@ interface CheckboxOptionProps extends OsComponent {
    * @default false
    */
   disabled?: boolean;
-  onClick: (v) => void;
+  /**
+   * 点击选项
+   */
+  onClick: (values: (number | string)[], optionValue: number | string) => void;
 }
 
 declare const Checkbox: ComponentClass<CheckboxProps>;

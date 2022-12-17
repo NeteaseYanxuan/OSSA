@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { CSSProperties, useState } from "react";
 import Taro from "@tarojs/taro";
 import { View, Image } from "@tarojs/components";
 import classNames from "classnames";
@@ -7,8 +7,8 @@ import OsIcon from "../icon";
 import { OsUploadProps } from "../../../types/index";
 import { ImageFile } from "../../../types/upload";
 
-function getStyleObj(props: OsUploadProps) {
-  const _styleObj = {};
+function getStyleObj(props: OsUploadProps): CSSProperties {
+  const _styleObj: CSSProperties = {};
   return _styleObj;
 }
 
@@ -44,7 +44,7 @@ const initialUploads = true;
 
 function onClick(
   props: OsUploadProps,
-  files: any,
+  files: ImageFile[],
   setFiles: Function,
   setUpload: Function
 ) {
@@ -68,10 +68,10 @@ function onClick(
 }
 
 function setNewFiles(
-  props,
-  files,
-  max,
-  targetFiles,
+  props: OsUploadProps,
+  files: ImageFile[],
+  max: number,
+  targetFiles: ImageFile[],
   setFiles: Function,
   setUpload: Function
 ) {
@@ -93,7 +93,7 @@ export default function Upload(props: OsUploadProps) {
   const styleObject = Object.assign(getStyleObj(props), props.customStyle);
   const [upload, setUpload] = useState(initialUploads);
   const [files = [], setFiles] = useState(props.files);
-  const _deleteIconStyle = {
+  const _deleteIconStyle: CSSProperties = {
     position: "absolute",
     right: Taro.pxTransform(-18),
     top: Taro.pxTransform(-18),

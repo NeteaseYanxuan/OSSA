@@ -1,13 +1,13 @@
-import React, { useState } from "react";
-import { View } from "@tarojs/components";
+import React, { CSSProperties, useState } from "react";
+import { ITouchEvent, View } from "@tarojs/components";
 import classNames from "classnames";
 import OsIcon from "../icon";
 import { OsListProps } from "../../../types/index";
 
 const initialActive = false;
 
-function getStyleObj(props: OsListProps, active: boolean) {
-  const _styleObj = {};
+function getStyleObj(props: OsListProps, active: boolean): CSSProperties {
+  const _styleObj: CSSProperties = {};
   const { color, activeBgColor, bgColor } = props;
 
   if (color) {
@@ -23,9 +23,9 @@ function getStyleObj(props: OsListProps, active: boolean) {
   return _styleObj;
 }
 
-function getColorStyleObject(props: OsListProps) {
+function getColorStyleObject(props: OsListProps): CSSProperties {
   const { descColor } = props;
-  const _styleObj = {};
+  const _styleObj: CSSProperties = {};
 
   if (descColor) {
     _styleObj["color"] = descColor;
@@ -49,7 +49,7 @@ function getClassObject(props: OsListProps, active: boolean) {
   return _classObject;
 }
 
-function onClick(e: any, props: OsListProps) {
+function onClick(e: ITouchEvent, props: OsListProps) {
   props.onClick?.(e);
 }
 

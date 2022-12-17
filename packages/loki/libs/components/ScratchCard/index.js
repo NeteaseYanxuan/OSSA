@@ -19,7 +19,7 @@ const ScratchCard = ({
     isDraw: false,
     isDown: false,
     ctx: null,
-    canvas: null,
+    canvas: null, //canvas对象
   };
   const configData = {
     coverImage: null,

@@ -3,6 +3,7 @@ import { View, Image, Text, Button } from "@tarojs/components";
 import classNames from "classnames";
 import { OsModalProps } from "../../../types/index";
 import getOpenTypeRelatedProps from "../../utils/getOpenTypeRelatedProps";
+import { deprecatedProp } from "../../../src/utils";
 
 const closeIconImg =
   "https://yanxuan-static.nosdn.127.net/hxm/yanxuan-wap/p/20161201/style/img/icon-normal/modalClose-9d2d6d39f7.png?imageView";
@@ -58,15 +59,21 @@ export default function Index(props: OsModalProps) {
     confirmText,
     cancelText,
     custom,
-    showCloseIcon,
+    showCloseIcon = true,
+    closable = true,
     closeIconPosition,
     confirmOpenType
   } = props;
 
   const isRenderAction = confirmText || cancelText;
+  const mergedClosable = deprecatedProp(closable, showCloseIcon, {
+    newPropName: "closable",
+    oldPropName: "showCloseIcon",
+    moduleName: "Modal"
+  });
   const _isAbsoluteCloseIcon =
     closeIconPosition !== "top" && closeIconPosition !== "bottom";
-  const _closeIcon = showCloseIcon && (
+  const _closeIcon = mergedClosable && (
     <Image
       className={`ossa-modal-closer ossa-modal-closer--${closeIconPosition}`}
       src={closeIconImg}

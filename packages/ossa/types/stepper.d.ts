@@ -19,7 +19,7 @@ export type InputErrorParam = {
 };
 
 /**
- * @name 步进器
+ * 步进器
  */
 interface StepperProps extends OsComponent {
   /**

@@ -3,6 +3,8 @@ import { View, Text } from "@tarojs/components";
 import classNames from "classnames";
 import OsIcon from "../icon";
 import { OsNavBarProps, OsNavBarItemProps } from "../../../types/index";
+import { IconProps } from "../../../types/icon";
+import { deprecatedProp } from "../../../src/utils";
 
 function getStyleObj(props: OsNavBarProps) {
   const _styleObj = {};
@@ -21,7 +23,7 @@ function getClassObject(props: OsNavBarProps) {
   return classObject;
 }
 
-function onLeftIconClick(props: OsNavBarProps, item: string) {
+function onLeftIconClick(props: OsNavBarProps, item: IconProps["type"]) {
   props.onLeftIconClick?.(item);
 }
 
@@ -29,7 +31,7 @@ function onLeftTextClick(props: OsNavBarProps, id: number) {
   props.onLeftTextClick?.(id);
 }
 
-function onRightIconClick(props: OsNavBarProps, item: string) {
+function onRightIconClick(props: OsNavBarProps, item: IconProps["type"]) {
   props.onRightIconClick?.(item);
 }
 
@@ -101,7 +103,7 @@ export default class NavBar extends Component<OsNavBarProps> {
         <View className={`ossa-navbar--${whichSide}`}>
           {icon[whichSide] && (
             <View className={`ossa-navbar__${whichSide}Icons`}>
-              {icon[whichSide].map((item: string) => (
+              {icon[whichSide].map((item: IconProps["type"]) => (
                 <OsIcon
                   type={item}
                   color={iconColor}
@@ -138,6 +140,13 @@ export default class NavBar extends Component<OsNavBarProps> {
     const styleObject = Object.assign(getStyleObj(props), props.customStyle);
     const { type, title, middleSlot } = props;
 
+    const mergedTitle = deprecatedProp(title, middleSlot, {
+      newPropName: "title",
+      oldPropName: "middleSlot",
+      moduleName: "NavBar"
+    });
+    const isSimpleTitle = typeof mergedTitle === "string";
+
     return (
       <View
         className={classNames(rootClassName, classObject, props.className)}
@@ -146,9 +155,11 @@ export default class NavBar extends Component<OsNavBarProps> {
         {this.renderSideContent(props, "left")}
         {type !== "2column" && type !== "custom" && (
           <View className='ossa-navbar--middle'>
-            {middleSlot
-              ? middleSlot
-              : title && <View className='ossa-navbar__title'>{title}</View>}
+            {isSimpleTitle ? (
+              title && <View className='ossa-navbar__title'>{title}</View>
+            ) : (
+              title
+            )}
           </View>
         )}
         {this.renderSideContent(props, "right")}

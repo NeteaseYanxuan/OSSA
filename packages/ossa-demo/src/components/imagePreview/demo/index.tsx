@@ -5,7 +5,7 @@ import classNames from "classnames";
 import DemoBlock from "../../demoBlock";
 import DemoHeader from "../../demoHeader";
 import DemoTable from "../../demoTable";
-import { OsImagePreview } from "ossaui";
+import { OsImagePreview, PreviewItem } from "ossaui";
 // import './index.scss'
 import "./index.scss";
 
@@ -144,7 +144,7 @@ function onClick(setShow: Function) {
   // )
 }
 
-function onClose(item: object, setShow: Function) {
+function onClose(item: PreviewItem, setShow: Function) {
   console.log(item);
   setShow(false);
 }
