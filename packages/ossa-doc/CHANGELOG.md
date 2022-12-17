@@ -1,5 +1,11 @@
 # ossa-doc
 
+## 0.2.2
+
+### Patch Changes
+
+- [#109](https://github.com/NeteaseYanxuan/OSSA/pull/109) [`15d9d71`](https://github.com/NeteaseYanxuan/OSSA/commit/15d9d719f0446fc56c26aae0dfeaeea322ca6450) Thanks [@kiner-tang](https://github.com/kiner-tang)! - fix: 修复 upload 组件 max 和 multiple 属性不生效问题
+
 ## 0.2.1
 
 ### Patch Changes
