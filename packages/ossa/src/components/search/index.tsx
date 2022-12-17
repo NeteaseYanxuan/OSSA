@@ -92,6 +92,7 @@ export default function Index(props: OsSearchProps) {
           }}
         >
           <Input
+            {...(props.taroProps || {})}
             className={classNames("ossa-search__input")}
             type='text'
             focus={focus}

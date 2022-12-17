@@ -1,5 +1,7 @@
 import { ComponentClass, ReactChild } from "react";
 import { CommonEventFunction } from "@tarojs/components/types/common";
+import { InputProps as TaroInputProps } from "@tarojs/components/types/Input";
+import { TextareaProps as TaroTextareaProps } from "@tarojs/components/types/Textarea";
 import OsComponent from "./base";
 
 interface InputProps extends OsComponent {
@@ -46,6 +48,46 @@ interface InputProps extends OsComponent {
   onChange?: (v: string) => void;
   onFocus?: CommonEventFunction;
   onBlur?: CommonEventFunction;
+  /**
+   * 原生 taro Input 组件或 Textarea 组件属性
+   */
+  taroProps?: {
+    /**
+     * 文本输入框属性
+     */
+    inputProps?: Omit<
+      TaroInputProps,
+      | "value"
+      | "type"
+      | "password"
+      | "className"
+      | "disabled"
+      | "placeholder"
+      | "placeholderStyle"
+      | "placeholderClass"
+      | "onInput"
+      | "onBlur"
+      | "onFocus"
+    >;
+    /**
+     * 多行文本域属性
+     */
+    textareaProps?: Omit<
+      TaroTextareaProps,
+      | "value"
+      | "className"
+      | "maxlength"
+      | "autoHeight"
+      | "showConfirmBar"
+      | "disabled"
+      | "placeholder"
+      | "placeholderStyle"
+      | "placeholderClass"
+      | "onInput"
+      | "onFocus"
+      | "onBlur"
+    >;
+  };
 }
 
 declare const Input: ComponentClass<InputProps>;

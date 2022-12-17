@@ -159,6 +159,7 @@ const [v6, setV6] = useState("不可编辑的textarea");
 |countDown|是否显示字符计数器，textarea有效，可选，`countDown`字段将在未来版本中被移除,请使用`showCount`代替|boolean|false|
 |showCount|是否显示字符计数器，textarea有效，可选|boolean|false|
 |showSplitLine|是否展示底部分割线，当`type`为`bankcard`时无效，可选|boolean|true|
+|taroProps|除了上述属性之外 taro 支持的 属性，可选|`{inputProps, textareaProps}`|-|
 
 
 ### 方法

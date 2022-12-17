@@ -27,6 +27,7 @@ demo_url: 'https://neteaseyanxuan.github.io/OSSA/#/components/search/demo/index'
 |color|输入文字颜色，可选|string|#333333|
 |className|自定义类名，可选|string|-|
 |customStyle|自定义样式，可选|object|-|
+|taroProps|除了上述属性之外 taro 支持的 Input 属性，可选|object|-|
 
 
 ### 方法
