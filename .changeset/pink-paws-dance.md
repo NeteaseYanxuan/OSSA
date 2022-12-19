@@ -1,5 +1,4 @@
 ---
-"@ossa/loki": minor
 "ossaui": minor
 "ossa-demo": minor
 "ossa-doc": minor
