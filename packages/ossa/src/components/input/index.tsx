@@ -51,16 +51,16 @@ export default function OsInput(props: OsInputProps) {
   if (props.type === "number" || props.type === "bankcard") {
     iptType = "digit";
   }
-  
+
   const mergedDisabled = deprecatedProp(props.disabled, props.isDisabled, {
     newPropName: "disabled",
     oldPropName: "isDisabled",
-    moduleName: "Input"
+    moduleName: "Input",
   });
   const mergedReadonly = deprecatedProp(props.readonly, props.isReadonly, {
     newPropName: "disabled",
     oldPropName: "isDisabled",
-    moduleName: "Input"
+    moduleName: "Input",
   });
 
   useEffect(() => {
@@ -108,7 +108,7 @@ export default function OsInput(props: OsInputProps) {
   const mergedShowCount = deprecatedProp(props.showCount, props.countDown, {
     newPropName: "showCount",
     oldPropName: "countDown",
-    moduleName: "Input"
+    moduleName: "Input",
   });
   return (
     <View
@@ -127,6 +127,7 @@ export default function OsInput(props: OsInputProps) {
       <View className='ossa-input__input-wrapper'>
         {props.type === "textarea" ? (
           <Textarea
+            {...(props?.taroProps?.textareaProps || {})}
             value={value}
             className={classNames({
               ["ossa-input__input--textarea"]: true,
@@ -146,6 +147,7 @@ export default function OsInput(props: OsInputProps) {
           ></Textarea>
         ) : (
           <Input
+            {...(props?.taroProps?.inputProps || {})}
             value={value}
             type={iptType}
             password={!showPassword && props.type === "password"}

@@ -86,6 +86,14 @@ const initialListApi = {
         "false",
       ],
     },
+    {
+      list: [
+        "taroProps",
+        "除了上述属性之外 taro 支持的 属性",
+        "{inputProps, textareaProps}",
+        "-",
+      ],
+    }
   ],
 };
 const initialListEvent = {

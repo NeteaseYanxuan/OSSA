@@ -1,5 +1,15 @@
 # ossaui
 
+## 0.5.2
+
+### Patch Changes
+
+- [#111](https://github.com/NeteaseYanxuan/OSSA/pull/111) [`bf267ef`](https://github.com/NeteaseYanxuan/OSSA/commit/bf267ef83ae5565734837f33c4b8b1f646657f2c) Thanks [@kiner-tang](https://github.com/kiner-tang)! - feat: input & search 组件支持原生组件属性配置
+
+- [#113](https://github.com/NeteaseYanxuan/OSSA/pull/113) [`a435c79`](https://github.com/NeteaseYanxuan/OSSA/commit/a435c7911c10ce41a04054efdebea8e01e8702f0) Thanks [@CaedmonW](https://github.com/CaedmonW)! - modal onGetRealNameAuthInfo property eslint error
+
+- [#109](https://github.com/NeteaseYanxuan/OSSA/pull/109) [`15d9d71`](https://github.com/NeteaseYanxuan/OSSA/commit/15d9d719f0446fc56c26aae0dfeaeea322ca6450) Thanks [@kiner-tang](https://github.com/kiner-tang)! - fix: 修复 upload 组件 max 和 multiple 属性不生效问题
+
 ## 0.5.1
 
 ### Patch Changes
