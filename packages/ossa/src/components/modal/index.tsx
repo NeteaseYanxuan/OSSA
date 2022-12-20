@@ -90,46 +90,48 @@ export default function Index(props: OsModalProps) {
         />
         <View className='ossa-modal__container'>
           {!_isAbsoluteCloseIcon && _closeIcon}
-          {title && (
-            <View className='ossa-modal__header'>
-              <Text className='ossa-modal__title'>{title}</Text>
-            </View>
-          )}
-          {content && (
-            <View className='ossa-modal__content'>
-              <Text>{content}</Text>
-            </View>
-          )}
-          {isRenderAction && (
-            <View className='ossa-modal__footer'>
-              {cancelText && (
-                <Button
-                  className={classNames({
-                    ["ossa-action-btn"]: true,
-                    ["ossa-action-btn--cancel"]: true,
-                    ["ossa-action-btn--disabled"]: props.disableCancelBtn,
-                  })}
-                  onClick={(e) => onClickCancelBtn(props)}
-                >
-                  {cancelText}
-                </Button>
-              )}
-              {confirmText && (
-                <Button
-                  className={classNames({
-                    ["ossa-action-btn"]: true,
-                    ["ossa-action-btn--confirm"]: true,
-                    ["ossa-action-btn--disabled"]: props.disableConfirmBtn,
-                  })}
-                  openType={confirmOpenType}
-                  {...openTypeRelatedProps}
-                  onClick={(e) => onClickConfirmBtn(props)}
-                >
-                  {confirmText}
-                </Button>
-              )}
-            </View>
-          )}
+          <View className='ossa-modal__container-inner'>
+            {title && (
+              <View className='ossa-modal__header'>
+                <Text className='ossa-modal__title'>{title}</Text>
+              </View>
+            )}
+            {content && (
+              <View className='ossa-modal__content'>
+                <Text>{content}</Text>
+              </View>
+            )}
+            {isRenderAction && (
+              <View className='ossa-modal__footer'>
+                {cancelText && (
+                  <Button
+                    className={classNames({
+                      ["ossa-action-btn"]: true,
+                      ["ossa-action-btn--cancel"]: true,
+                      ["ossa-action-btn--disabled"]: props.disableCancelBtn,
+                    })}
+                    onClick={(e) => onClickCancelBtn(props)}
+                  >
+                    {cancelText}
+                  </Button>
+                )}
+                {confirmText && (
+                  <Button
+                    className={classNames({
+                      ["ossa-action-btn"]: true,
+                      ["ossa-action-btn--confirm"]: true,
+                      ["ossa-action-btn--disabled"]: props.disableConfirmBtn,
+                    })}
+                    openType={confirmOpenType}
+                    {...openTypeRelatedProps}
+                    onClick={(e) => onClickConfirmBtn(props)}
+                  >
+                    {confirmText}
+                  </Button>
+                )}
+              </View>
+            )}
+          </View>
         </View>
       </View>
     );
