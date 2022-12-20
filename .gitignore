@@ -5,6 +5,7 @@ node_modules/
 .idea
 packages/ossa/lib/
 packages/**/dist/
+packages/**/libs/
 dist/
 coverage
 allure-report
