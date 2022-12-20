@@ -75,7 +75,10 @@ const initialListApi = {
       ],
     },
     {
-      list: ["showCloseIcon", "是否显示关闭icon，可选", "boolean", "true"],
+      list: ["showCloseIcon", "是否显示关闭icon，可选，`showCloseIcon`属性在未来版本中将被删除，请使用`closable`代替", "boolean", "true"],
+    },
+    {
+      list: ["closable", "是否显示关闭关闭，可选", "boolean", "true"],
     },
     {
       list: [

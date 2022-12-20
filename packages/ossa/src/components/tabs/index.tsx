@@ -3,6 +3,7 @@ import { View } from "@tarojs/components";
 import classNames from "classnames";
 //引入组件对应的 类型文件 .d.ts
 import { OsTabsProps } from "../../../types/index";
+import { TabsConfigProvider } from "./context";
 
 function getClassObject(props: OsTabsProps) {
   const { type } = props;
@@ -22,17 +23,19 @@ export default function Tabs(props: OsTabsProps) {
   const { className, type } = props;
 
   return (
-    <View
-      className={classNames(rootClassName, classObject, className)}
-      style={styleObject}
-    >
-      {props.renderHeader}
+    <TabsConfigProvider value={{type: props.type, size: props.size}}>
       <View
-        className={classNames("ossa-tabs__body", `ossa-tabs--${type}__body`)}
+        className={classNames(rootClassName, classObject, className)}
+        style={styleObject}
       >
-        {props.children}
+        {props.renderHeader}
+        <View
+          className={classNames("ossa-tabs__body", `ossa-tabs--${type}__body`)}
+        >
+          {props.children}
+        </View>
       </View>
-    </View>
+    </TabsConfigProvider>
   );
 }
 

@@ -1,19 +1,21 @@
-import React, { useState } from "react";
+import React, { CSSProperties, useState } from "react";
 import Taro from "@tarojs/taro";
-import { View, Button as TaroButton } from "@tarojs/components";
+import { View, Button as TaroButton, ITouchEvent } from "@tarojs/components";
 import classNames from "classnames";
 import OsIcon from "../icon";
 import { OsButtonProps } from "../../../types/index";
 
+type RequiredOsButtonProps = Required<OsButtonProps>;
+
 //组件属性
-const TYPE_CLASS = {
+const TYPE_CLASS: Record<RequiredOsButtonProps["type"], string> = {
   default: "default",
   primary: "primary",
   special1: "special1",
   special2: "special2",
 };
 
-const SIZE_CLASS = {
+const SIZE_CLASS: Record<RequiredOsButtonProps["size"], string> = {
   min: "min",
   small: "small",
   normal: "normal",
@@ -47,9 +49,9 @@ function getClassObject(props: OsButtonProps, active: boolean) {
   return _classObject;
 }
 
-function getStyleObj(props: OsButtonProps) {
+function getStyleObj(props: OsButtonProps): CSSProperties {
   const { type, color, bdColor, bgColor, startBgColor, endBgColor } = props;
-  const _styleObj = {};
+  const _styleObj: CSSProperties = {};
 
   if (color) {
     _styleObj["color"] = color;
@@ -72,7 +74,7 @@ function getStyleObj(props: OsButtonProps) {
   return _styleObj;
 }
 
-function getSize(props: OsButtonProps, size: string) {
+function getSize(props: OsButtonProps, size: string): string {
   const { type } = props;
   if (type === "special1" || type === "special2") {
     return "";
@@ -80,7 +82,7 @@ function getSize(props: OsButtonProps, size: string) {
   return size;
 }
 
-function onClick(e: any, props: OsButtonProps) {
+function onClick(e: ITouchEvent, props: OsButtonProps): void {
   if (!props.disabled) {
     props.onClick?.(e);
   }

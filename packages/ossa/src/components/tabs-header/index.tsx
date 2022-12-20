@@ -1,22 +1,22 @@
-import React from "react";
+import React, { useContext } from "react";
 import Taro from "@tarojs/taro";
 import { View } from "@tarojs/components";
 import classNames from "classnames";
 import { OsTabsHeaderProps } from "../../../types";
+import { TabsConfig, tabsConfigContext } from "../tabs/context";
 
-function getStyleObject(props: OsTabsHeaderProps) {
+function getStyleObject(props: OsTabsHeaderProps & TabsConfig) {
   const { space, type } = props;
   const _styleObject = {};
 
-  if (type === "horizontal" && space) {
-    _styleObject["padding-left"] = Taro.pxTransform(space);
-    _styleObject["padding-right"] = Taro.pxTransform(space);
+  if (space) {
+    _styleObject["padding"] = `${type ===  "vertical" ? Taro.pxTransform(space) : 0} ${type ===  "horizontal" ? Taro.pxTransform(space) : 0}`;
   }
   return _styleObject;
 }
 
-function getClassObject(props: OsTabsHeaderProps) {
-  const { type, size, showSplitLine, scroll } = props;
+function getClassObject(props: OsTabsHeaderProps & TabsConfig) {
+  const { showSplitLine, scroll, type, size } = props;
   const _classObject = {
     [`ossa-tabs-header--${type}`]: size,
     [`ossa-tabs-header--${type}--${size}`]: size,
@@ -28,8 +28,9 @@ function getClassObject(props: OsTabsHeaderProps) {
 
 export default function Index(props: OsTabsHeaderProps) {
   const { className, customStyle, bgColor } = props;
-  const classObject = getClassObject(props);
-  const styleObject = getStyleObject(props);
+  const tabsConfig = useContext(tabsConfigContext);
+  const classObject = getClassObject({...props, ...tabsConfig});
+  const styleObject = getStyleObject({...props, ...tabsConfig});
 
   return (
     <View

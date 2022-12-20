@@ -1,4 +1,3 @@
-/* eslint-disable import/newline-after-import */
 /**
  * @name 大转盘
  * @description
@@ -13,5 +12,6 @@
  **/
 import React from "react";
 import { IBigWheel } from "./../../types/loki";
+
 declare const BigWheel: React.FC<IBigWheel>;
 export default BigWheel;

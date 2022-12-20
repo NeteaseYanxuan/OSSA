@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 import Taro from "@tarojs/taro";
 import { View, Text, Block } from "@tarojs/components";
 import classNames from "classnames";
 import OsIcon from "../icon";
-import { OsTabsHeaderItemProps } from "../../../types/index";
+import { OsIconProps, OsTabsHeaderItemProps } from "../../../types/index";
+import { TabsConfig, tabsConfigContext } from "../tabs/context";
 
 function getStyleObject(props: OsTabsHeaderItemProps) {
   const { index, current, selectedColor, color } = props;
@@ -18,7 +19,7 @@ function getStyleObject(props: OsTabsHeaderItemProps) {
   return _styleObject;
 }
 
-function getClassObject(props: OsTabsHeaderItemProps, active: boolean) {
+function getClassObject(props: OsTabsHeaderItemProps & TabsConfig, active: boolean) {
   const { type, size } = props;
   const _classObject = {
     [`ossa-tabs-item--${type}`]: type,
@@ -55,13 +56,14 @@ export default function Index(props: OsTabsHeaderItemProps) {
     selectedIcon,
   } = props;
   const rootClassName = "ossa-tabs-item";
+  const tabConfig = useContext(tabsConfigContext);
   const styleObject = Object.assign(getStyleObject(props), customStyle);
 
   return (
     <View
       className={classNames(
         rootClassName,
-        getClassObject(props, index === current),
+        getClassObject({...props, ...tabConfig}, index === current),
         className
       )}
       style={styleObject}
@@ -91,7 +93,7 @@ export default function Index(props: OsTabsHeaderItemProps) {
                   }}
                   size={26}
                   color='inherit'
-                  type={index !== current ? icon : selectedIcon}
+                  type={(index !== current ? icon : selectedIcon) as OsIconProps["type"]}
                 ></OsIcon>
               )}
             </Block>

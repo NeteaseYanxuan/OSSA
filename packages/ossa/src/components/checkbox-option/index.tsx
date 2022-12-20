@@ -1,11 +1,12 @@
-import React from "react";
+import React, { CSSProperties } from "react";
 import { View } from "@tarojs/components";
 import classNames from "classnames";
 import OsIcon from "../icon";
 import { OsCheckboxOptionProps } from "../../../types/index";
 import { deprecatedProp } from "../../utils";
+import { IconProps } from "../../../types/icon";
 
-function getStyleObj(props: OsCheckboxOptionProps) {
+function getStyleObj(props: OsCheckboxOptionProps): CSSProperties {
   const _styleObj = {};
   return _styleObj;
 }
@@ -51,10 +52,10 @@ export default function CheckboxOption(props: OsCheckboxOptionProps) {
     } else {
       newValues.push(optionProps.optionValue);
     }
-    optionProps.onClick(newValues);
+    optionProps.onClick(newValues, optionProps.optionValue);
   };
 
-  let iconType = "choose";
+  let iconType: IconProps["type"] = "choose";
   let color;
   if (mergedDisabled) {
     iconType = "choose-disable";

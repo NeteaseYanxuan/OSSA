@@ -1,4 +1,3 @@
-/* eslint-disable import/newline-after-import */
 /**
  * @name 九宫格
  * @description
@@ -10,5 +9,6 @@
  **/
 import React from "react";
 import { INineGrid } from "./../../types/loki";
+
 declare const NineGrid: React.FC<INineGrid>;
 export default NineGrid;

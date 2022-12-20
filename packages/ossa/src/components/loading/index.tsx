@@ -1,13 +1,13 @@
-import React from "react";
+import React, { CSSProperties } from "react";
 import Taro from "@tarojs/taro";
 import { View } from "@tarojs/components";
 import classNames from "classnames";
 //引入组件对应的 类型文件 .d.ts
 import { OsLoadingProps } from "../../../types/index";
 
-function getStyleObj(props: OsLoadingProps) {
+function getStyleObj(props: OsLoadingProps): CSSProperties {
   const { size } = props;
-  const _styleObj = {};
+  const _styleObj: CSSProperties = {};
 
   if (size) {
     _styleObj["width"] = Taro.pxTransform(size);
@@ -22,16 +22,16 @@ function getClassObject(props: OsLoadingProps) {
   return classObject;
 }
 
-function getRingStyle(props: OsLoadingProps) {
+function getRingStyle(props: OsLoadingProps): CSSProperties {
   const { color, size } = props;
-  const _classObject = {
+  const _styleObject: CSSProperties = {
     border: color ? `1PX solid ${color}` : "",
     borderColor: color ? `${color} transparent transparent transparent` : "",
     width: size ? `${Taro.pxTransform(size)}` : "",
     height: size ? `${Taro.pxTransform(size)}` : "",
   };
 
-  return _classObject;
+  return _styleObject;
 }
 
 export default function Loading(props: OsLoadingProps) {

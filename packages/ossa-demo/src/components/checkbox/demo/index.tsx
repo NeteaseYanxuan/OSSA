@@ -5,7 +5,7 @@ import classNames from "classnames";
 import DemoBlock from "../../demoBlock";
 import DemoHeader from "../../demoHeader";
 import DemoTable from "../../demoTable";
-import { OsCheckbox, OsCheckboxOption } from "ossaui";
+import { OsCheckbox, OsCheckboxOption, OsCheckboxOptionProps, OsCheckboxProps } from "ossaui";
 // import './index.scss'
 import "./index.scss";
 
@@ -50,8 +50,8 @@ export default function Index() {
 
   const [listEvent] = useState(initialListEvent);
   const classObject = getClassObject(); //组件修饰
-  const [v1, setV1] = useState([0]);
-  const [v2, setV2] = useState([0]);
+  const [v1, setV1] = useState<OsCheckboxOptionProps["value"]>([0]);
+  const [v2, setV2] = useState<OsCheckboxOptionProps["value"]>([0]);
 
   useEffect(() => {
     Taro.setNavigationBarTitle({

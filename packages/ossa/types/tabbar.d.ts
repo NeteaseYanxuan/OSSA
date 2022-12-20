@@ -26,7 +26,7 @@ export interface TabBarItemProps extends OsComponent {
   useCustomIcon?: boolean;
 }
 /**
- * @name 标签栏
+ * 标签栏
  */
 export interface TabBarProps extends OsComponent {
   /**

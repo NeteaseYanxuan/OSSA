@@ -7,6 +7,30 @@ import DemoHeader from "../../demoHeader";
 // import './index.scss'
 import "./index.scss";
 
+
+/**
+ * 色块展示列表项结构
+ */
+ export type ColorListItem = {
+  /**
+   * 色块颜色
+   */
+  color: string;
+  /**
+   * 色块标题，通常是该颜色的色值，如：#FFFFFF
+   */
+  title: string;
+  /**
+   * 色块的中文描述，描述该色块的用途
+   */
+  desc: string;
+  /**
+   * 边框颜色
+   */
+  borderColor?: string;
+};
+
+
 function getClassObject() {
   const classObject = {
     ["page"]: true,
@@ -15,7 +39,7 @@ function getClassObject() {
   return classObject;
 }
 
-const initialColorList = [
+const initialColorList: ColorListItem[] = [
   {
     color: "#DD1A21",
     title: "YXColorRed",

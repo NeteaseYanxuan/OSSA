@@ -1,6 +1,15 @@
 import React, { useState, useEffect } from "react";
 import Taro from "@tarojs/taro";
-import { View, Text, Input, Textarea } from "@tarojs/components";
+import {
+  View,
+  Text,
+  Input,
+  Textarea,
+  ITouchEvent,
+  BaseEventOrig,
+  TextareaProps,
+  InputProps,
+} from "@tarojs/components";
 import classNames from "classnames";
 import OsIcon from "../icon";
 import { OsInputProps } from "../../../types/index";
@@ -16,7 +25,12 @@ function getClassObject(props: OsInputProps) {
   return classObject;
 }
 
-const onInput = (props, e) => {
+const onInput = (
+  props: OsInputProps,
+  e: BaseEventOrig<
+    TextareaProps.onInputEventDetail | InputProps.inputEventDetail
+  >
+) => {
   let value = e.detail.value;
   if (props.type === "bankcard") {
     value = value.replace(/(\s)/g, "");
@@ -24,7 +38,7 @@ const onInput = (props, e) => {
   props.onChange?.(value);
 };
 
-const onClickDeleteIcon = (props) => {
+const onClickDeleteIcon = (props: OsInputProps) => {
   props.onChange?.("");
 };
 
@@ -32,6 +46,7 @@ export default function OsInput(props: OsInputProps) {
   const rootClassName = ["ossa-input"]; //组件
   const classObject = getClassObject(props); //组件修饰
   const [showPassword, setShowPassword] = useState(false);
+  const value = props.value || "";
   let iptType: "text" | "number" | "idcard" | "digit" = "text";
   if (props.type === "number" || props.type === "bankcard") {
     iptType = "digit";
@@ -59,7 +74,7 @@ export default function OsInput(props: OsInputProps) {
     }
 
     props.onChange?.(value.slice(0, props.maxLength));
-  }, [props.value, props.type, props.maxLength]);
+  }, [props.value, props.type, props.maxLength, props, value]);
 
   const onClickVisibleIcon = () => {
     setShowPassword(!showPassword);
@@ -83,7 +98,6 @@ export default function OsInput(props: OsInputProps) {
   const onBlur = (e) => {
     props.onBlur?.(e);
   };
-  const value = props.value || "";
   const showDelIcon =
     !props.disabledClear &&
     !mergedDisabled &&

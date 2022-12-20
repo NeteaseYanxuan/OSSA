@@ -43,7 +43,7 @@ const initialListEvent = {
       list: [
         "onChange",
         "上传成功回调(此时可自行将图片上传至服务器)",
-        "(files: Array, operationType: string, index: number) => void(注：1.index在operationType为remove时有效；)",
+        "(files: FileItem[], operationType: 'add' | 'remove', index: number) => void(注：1.index在operationType为remove时有效；）",
       ],
     },
     {
@@ -77,7 +77,7 @@ function onClick(index, file) {
 }
 
 const demoTitle = "Upload 图片上传";
-export default function Index(props: Props) {
+export default function Index(_props: Props) {
   const [listApi] = useState(initialListApi);
 
   const [listEvent] = useState(initialListEvent);
