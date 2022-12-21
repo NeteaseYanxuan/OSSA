@@ -1,5 +1,11 @@
 # ossaui
 
+## 0.6.1
+
+### Patch Changes
+
+- [#120](https://github.com/NeteaseYanxuan/OSSA/pull/120) [`3c1c030`](https://github.com/NeteaseYanxuan/OSSA/commit/3c1c030035c5c63eb1b45a9637b70dccc242f415) Thanks [@CaedmonW](https://github.com/CaedmonW)! - 按需引入时路径错误
+
 ## 0.6.0
 
 ### Minor Changes
