@@ -4,7 +4,7 @@ import classNames from "classnames";
 import OsIcon from "../icon";
 import { OsNavBarProps, OsNavBarItemProps } from "../../../types/index";
 import { IconProps } from "../../../types/icon";
-import { deprecatedProp } from "../../../src/utils";
+import { deprecatedProp } from "../../utils";
 
 function getStyleObj(props: OsNavBarProps) {
   const _styleObj = {};
