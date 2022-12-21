@@ -1,5 +1,11 @@
 # ossa-doc
 
+## 0.3.0
+
+### Minor Changes
+
+- [#53](https://github.com/NeteaseYanxuan/OSSA/pull/53) [`766ab17`](https://github.com/NeteaseYanxuan/OSSA/commit/766ab178652c34cd837bb78654bd6cda94a9495d) Thanks [@kiner-tang](https://github.com/kiner-tang)! - types: 项目类型描述优化
+
 ## 0.2.2
 
 ### Patch Changes
