@@ -6,7 +6,7 @@ type ButtonOpenTypeRelatedProps = Pick<ButtonProps, 'lang' | 'sessionFrom' |
   'sendMessageTitle' | 'sendMessagePath' | 'sendMessageImg' |
   'showMessageCard' | 'appParameter' | 'onContact' |'onGetUserInfo' |
   'onGetPhoneNumber' | 'onOpenSetting' | 'scope' | 'onGetAuthorize' |
-  'onGetRealNameAuthInfo' | 'onError' | 'onLaunchApp' | 'onChooseAvatar'>
+  'onError' | 'onLaunchApp' | 'onChooseAvatar'>
 
 
 /**

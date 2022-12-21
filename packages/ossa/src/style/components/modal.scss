@@ -33,11 +33,14 @@ $modal-duration: 200ms;
     flex-direction: column;
     align-items: stretch;
     width: 630px;
-    border-radius: 8px;
-    // overflow: hidden;
     padding: 0;
-    background: $--fill-default;
     margin-bottom: 8px;
+
+    &-inner {
+      border-radius: 8px;
+      overflow: hidden;
+      background: $--fill-default;
+    }
   }
 
   &__title {
@@ -140,15 +143,16 @@ $modal-duration: 200ms;
     &--top,
     &--bottom {
       left: 50%;
-      transform: translate(-50%, 50%);
     }
 
     &--top {
       top: -50px;
+      transform: translate(-50%, -50%);
     }
 
     &--bottom {
       bottom: -50px;
+      transform: translate(-50%, 50%);
     }
 
     &--top-left,
