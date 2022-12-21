@@ -3,7 +3,7 @@ import { View, Image, Text, Button } from "@tarojs/components";
 import classNames from "classnames";
 import { OsModalProps } from "../../../types/index";
 import getOpenTypeRelatedProps from "../../utils/getOpenTypeRelatedProps";
-import { deprecatedProp } from "../../../src/utils";
+import { deprecatedProp } from "../../utils";
 
 const closeIconImg =
   "https://yanxuan-static.nosdn.127.net/hxm/yanxuan-wap/p/20161201/style/img/icon-normal/modalClose-9d2d6d39f7.png?imageView";

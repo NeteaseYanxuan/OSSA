@@ -6,7 +6,7 @@ import OsIcon from "../icon";
 //引入组件对应的 类型文件 .d.ts
 import { OsUploadProps } from "../../../types/index";
 import { ImageFile } from "../../../types/upload";
-import { warnDeprecatedProp } from "../../../src/utils";
+import { warnDeprecatedProp } from "../../utils";
 
 function getStyleObj(props: OsUploadProps): CSSProperties {
   const _styleObj: CSSProperties = {};
