@@ -1,5 +1,16 @@
 # ossa-demo
 
+## 1.8.0
+
+### Minor Changes
+
+- [#53](https://github.com/NeteaseYanxuan/OSSA/pull/53) [`766ab17`](https://github.com/NeteaseYanxuan/OSSA/commit/766ab178652c34cd837bb78654bd6cda94a9495d) Thanks [@kiner-tang](https://github.com/kiner-tang)! - types: 项目类型描述优化
+
+### Patch Changes
+
+- Updated dependencies [[`766ab17`](https://github.com/NeteaseYanxuan/OSSA/commit/766ab178652c34cd837bb78654bd6cda94a9495d), [`fef413b`](https://github.com/NeteaseYanxuan/OSSA/commit/fef413ba6be27600aa18e210f5fd7a34d8925a0d)]:
+  - ossaui@0.6.0
+
 ## 1.7.2
 
 ### Patch Changes
