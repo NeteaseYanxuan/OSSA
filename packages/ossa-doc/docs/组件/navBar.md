@@ -101,9 +101,11 @@ const rightTexts = [{ id: 1, text: "按钮" }]
 |title|导航标题，可选|ReactChild|-|
 |middleSlot|自定义左侧内容，存在时覆盖title，但比custom优先级低，可选，`middleSlot`属性将在未来的版本中被删除，请使用`title`替代|any|-|
 |leftIcons|左侧icon,取值参考OsIcon，可选|string[]|-|
+|leftCustomIcons|当且仅当 leftIcons 为 custom 时生效，渲染自定义图标，可选，可选|ReactNode[]|-|
 |leftTexts|左侧文案，可选|Texts[]|-|
 |leftSlot|自定义左侧内容，存在时覆盖leftIcons和leftTexts，但比custom优先级低，可选|ReactChild|-|
 |rightIcons|右侧icon,取值参考OsIcon，可选|string[]|-|
+|rightCustomIcons|当且仅当 rightIcons 为 custom 时生效，渲染自定义图标，可选，可选|ReactNode[]|-|
 |rightTexts|右侧文案，可选|Texts[]|-|
 |rightSlot|自定义右侧内容，存在时覆盖rightIcons和rightTexts，但比custom优先级低，可选|ReactChild|-|
 |showSplitLine|展示分割线，可选|boolean|true|

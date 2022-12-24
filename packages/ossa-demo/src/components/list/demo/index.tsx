@@ -37,7 +37,13 @@ const initialListApi = {
       list: ["rightIcon", "右侧icon，取值参考OsIcon，可选", "string", "-"],
     },
     {
+      list: ["rightCustomIcon", "右侧自定义图标，可选，当且仅当'rightIcon'为'custom'时有效，可选", "ReactNode", "-"],
+    },
+    {
       list: ["leftIcon", "左侧icon，取值参考OsIcon，可选", "string", "-"],
+    },
+    {
+      list: ["leftCustomIcon", "右侧自定义图标，可选，当且仅当'leftIcon'为'custom'时有效，可选", "ReactNode", "-"],
     },
     {
       list: ["showSplitLine", "展示分割线，可选", "boolean", "true"],

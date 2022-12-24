@@ -41,7 +41,9 @@ demo_url: 'https://neteaseyanxuan.github.io/OSSA/#/components/rate/demo/index'
 |size|尺寸，可选|'default' \| 'small'|'small'|
 |title|标题，可选|string|-|
 |selectedIcon|选中时icon，取值参考OsIcon，可选|string|grade-selected|
+|selectedCustomIcon|自定义图标，可选，当且仅当'selectedIcon'为'custom'时有效，可选|ReactNode|-|
 |icon|未选中时icon，取值参考OsIcon，可选|string|grade|
+|customIcon|自定义图标，可选，当且仅当'icon'为'custom'时有效，可选|ReactNode|-|
 |selectedIconColor|选中icon颜色，可选|string|#FAB646|
 |color|未选中icon颜色，可选|string|#CCCCCC|
 |options|分数对应的结果，可选|string[]|\['非常差', '差', '一般', '满意', '非常满意'\]|

@@ -77,6 +77,7 @@ demo_url: 'https://neteaseyanxuan.github.io/OSSA/#/components/button/demo/index'
 | type  | default \| primary \| special1 \| special2，可选 | string | default,特殊按钮用于sku |
 | shape | round \| square，可选                            | string | square(默认有4px圆角)   |
 | icon  | icon名称，参考OsIcon，可选                       | string | -                       |
+| customIcon  | 自定义图标，可选，当且仅当'icon'为'custom'时有效| ReactNode | -                       |
 | size  | min \| small \| normal \| large \| block，可选   | string | normal,特殊按钮不生效   |
 | color  | 文字颜色，可选   | string | -   |
 | bgColor  | 背景色，可选   | string | -   |

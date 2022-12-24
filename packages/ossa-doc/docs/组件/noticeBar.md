@@ -47,6 +47,7 @@ demo_url: 'https://neteaseyanxuan.github.io/OSSA/#/components/noticeBar/demo/ind
 |scrollable|文字是否可滚动，可选|boolean|false|
 |speed|文字滚动速度，单位秒，可选|number|16，单位px/s|
 |leftIcon|左侧Icon，可选|OsIcon|-|
+|customIcon|自定义图标，可选，当且仅当'leftIcon'为'custom'时有效，可选|ReactNode|-|
 |more|是否显示更多按钮，可选|boolean|false|
 |color|文字颜色，可选|string|#f48f18|
 |bgColor|背景颜色，可选|string|#fff8d8|

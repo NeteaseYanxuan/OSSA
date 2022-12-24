@@ -32,6 +32,9 @@ const initialAPI = {
       list: ["icon", "icon名称，参考OsIcon，可选", "string", "-"],
     },
     {
+      list: ["customIcon", "自定义图标，可选，当且仅当'icon'为'custom'时有效", "ReactNode", "-"],
+    },
+    {
       list: [
         "size",
         "min | small | normal | large | block，可选",

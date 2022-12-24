@@ -26,6 +26,9 @@ const initialListApi = {
       list: ["type", "内置icon名称/类型，必选", "string", "-"],
     },
     {
+      list: ["customIcon", "自定义图标，可选，当且仅当'type'为'custom'时有效", "ReactNode", "-"],
+    },
+    {
       list: ["size", "尺寸，可选", "number", "40"],
     },
     {
