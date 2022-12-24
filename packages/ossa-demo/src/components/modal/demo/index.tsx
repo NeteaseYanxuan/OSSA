@@ -240,7 +240,7 @@ export default function Index(props: Props) {
         cancelText='取消'
         content={contentSingleBtn}
         isShow={showSingleBtn}
-        showCloseIcon={false}
+        closable={false}
         onCancel={() => setShowSingleBtn(false)}
         onClose={() => setShowSingleBtn(false)}
         onConfirm={() => setShowSingleBtn(false)}

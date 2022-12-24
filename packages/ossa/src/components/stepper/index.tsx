@@ -13,6 +13,7 @@ const mergeReadonly = (optionProps: OsStepperProps) => {
     newPropName: "readonly",
     oldPropName: "isReadonly",
     moduleName: "Stepper",
+    defaultVal: false,
   });
 };
 const mergeDisabled = (optionProps: OsStepperProps) => {
@@ -20,6 +21,7 @@ const mergeDisabled = (optionProps: OsStepperProps) => {
     newPropName: "disabled",
     oldPropName: "isDisabled",
     moduleName: "Stepper",
+    defaultVal: false,
   });
 };
 
@@ -220,8 +222,6 @@ Stepper.defaultProps = {
   step: 1,
   value: 1,
   customStyle: {},
-  readonly: false,
-  disabled: false,
 };
 
 Stepper.options = {

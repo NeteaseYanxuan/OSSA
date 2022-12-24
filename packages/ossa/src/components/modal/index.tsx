@@ -59,8 +59,8 @@ export default function Index(props: OsModalProps) {
     confirmText,
     cancelText,
     custom,
-    showCloseIcon = true,
-    closable = true,
+    showCloseIcon,
+    closable,
     closeIconPosition,
     confirmOpenType
   } = props;
@@ -69,7 +69,8 @@ export default function Index(props: OsModalProps) {
   const mergedClosable = deprecatedProp(closable, showCloseIcon, {
     newPropName: "closable",
     oldPropName: "showCloseIcon",
-    moduleName: "Modal"
+    moduleName: "Modal",
+    defaultVal: true
   });
   const _isAbsoluteCloseIcon =
     closeIconPosition !== "top" && closeIconPosition !== "bottom";
@@ -195,7 +196,6 @@ Index.defaultProps = {
   confirmText: null,
   closeOnClickMask: true,
   closeOnConfirm: false,
-  showCloseIcon: true,
   closeIconPosition: "top-right",
   onClose: null,
   onCancel: null,

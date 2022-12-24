@@ -56,11 +56,13 @@ export default function OsInput(props: OsInputProps) {
     newPropName: "disabled",
     oldPropName: "isDisabled",
     moduleName: "Input",
+    defaultVal: false
   });
   const mergedReadonly = deprecatedProp(props.readonly, props.isReadonly, {
     newPropName: "disabled",
     oldPropName: "isDisabled",
     moduleName: "Input",
+    defaultVal: false
   });
 
   useEffect(() => {
@@ -206,10 +208,6 @@ OsInput.defaultProps = {
   placeholderStyle: "",
   title: "",
   maxLength: 500,
-  isDisabled: false,
-  isReadonly: false,
-  disabled: false,
-  readonly: false,
   disabledClear: false,
   showSplitLine: true,
   value: "",
