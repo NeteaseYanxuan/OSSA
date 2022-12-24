@@ -28,7 +28,7 @@ export function deprecatedProp<T = unknown, P = T>(newProp: T, oldProp: P, warin
         warnDeprecatedProp(waringInfo.moduleName, waringInfo.newPropName, waringInfo.oldPropName);
     }
     const res = newProp ?? oldProp;
-    if(res === undefined && waringInfo?.defaultVal) {
+    if(res === undefined && waringInfo?.defaultVal !== undefined) {
         return waringInfo?.defaultVal;
     }
     return  res;
