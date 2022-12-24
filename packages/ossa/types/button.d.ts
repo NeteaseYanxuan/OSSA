@@ -61,6 +61,10 @@ interface ButtonProps extends OsComponent,TaroButtonProps {
    */
   icon?: IconProps["type"];
   /**
+   * 当且仅当 icon 为 custom 时生效，渲染自定义图标
+   */
+  customIcon?: IconProps["customIcon"];
+  /**
    * 点击回调
    */
   onClick?: CommonEventFunction;

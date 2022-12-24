@@ -117,6 +117,7 @@ export default function Button(props: OsButtonProps) {
   const iconComponent = icon && (
     <OsIcon
       type={icon}
+      customIcon={props.customIcon}
       customStyle={{
         color: "inherit",
         marginRight:

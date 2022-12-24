@@ -40,6 +40,10 @@ export interface NavBarProps extends OsComponent {
    */
   leftIcons?: IconProps["type"][];
   /**
+   * 当且仅当 leftIcons 为 custom 时生效，渲染自定义图标
+   */
+  leftCustomIcons?: IconProps["customIcon"][];
+  /**
    * 左侧文案
    */
   leftTexts?: Array<NavBarItemProps>;
@@ -56,6 +60,11 @@ export interface NavBarProps extends OsComponent {
    * @see https://ossa.miaode.com/docs/%E7%BB%84%E4%BB%B6/icon
    */
   rightIcons?: IconProps["type"][];
+  /**
+   * 当且仅当 rightIcons 为 custom 时生效，渲染自定义图标
+   */
+  rightCustomIcons?: IconProps["customIcon"][];
+
   /**
    * 自定义右侧内容，存在时覆盖rightIcons和rightTexts，但比custom优先级低，可选
    */

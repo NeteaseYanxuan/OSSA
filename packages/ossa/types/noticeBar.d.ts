@@ -28,6 +28,10 @@ interface NoticeBarProps extends OsComponent {
    */
   leftIcon?: IconProps["type"];
   /**
+   * 当且仅当 leftIcon 为 custom 时生效，渲染自定义图标
+   */
+  customIcon?: IconProps["customIcon"];
+  /**
    * 是否显示更多按钮
    * @default false
    */

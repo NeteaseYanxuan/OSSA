@@ -25,7 +25,7 @@ describe("Upload Testing", function () {
         .find("taro-view-core")
         .should(($upladBtnContent) => {
           //包含图片和文字
-          expect($upladBtnContent).to.have.length(2);
+          expect($upladBtnContent).to.have.length(3);
         });
     });
 

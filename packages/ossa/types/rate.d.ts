@@ -46,11 +46,19 @@ interface RateProps extends OsComponent {
    */
   icon?: IconProps["type"];
   /**
+   * 当且仅当 icon 为 custom 时生效，渲染自定义图标
+   */
+  customIcon?: IconProps["customIcon"];
+  /**
    * 选中时的图标
    * @default "grade-selected"
    * @see https://ossa.miaode.com/docs/%E7%BB%84%E4%BB%B6/icon
    */
   selectedIcon?: IconProps["type"];
+  /**
+   * 当且仅当 selectedIcon 为 custom 时生效，渲染自定义图标
+   */
+  selectedCustomIcon?: IconProps["customIcon"];
   /**
    * 未选中图标的颜色
    * @default "#CCCCCC"
