@@ -61,7 +61,7 @@ export default function TabBar(props: OsTabBarProps) {
       oldPropName: "value",
       moduleName: "TabBar"
     }
-  , 0);
+  , 0) || 0;
 
   return (
     <View
