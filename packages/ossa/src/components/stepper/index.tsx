@@ -13,16 +13,14 @@ const mergeReadonly = (optionProps: OsStepperProps) => {
     newPropName: "readonly",
     oldPropName: "isReadonly",
     moduleName: "Stepper",
-    defaultVal: false,
-  });
+  }, false);
 };
 const mergeDisabled = (optionProps: OsStepperProps) => {
   return deprecatedProp(optionProps.disabled, optionProps.isDisabled, {
     newPropName: "disabled",
     oldPropName: "isDisabled",
     moduleName: "Stepper",
-    defaultVal: false,
-  });
+  }, false);
 };
 
 // 实现两数相加并保留小数点后最短尾数

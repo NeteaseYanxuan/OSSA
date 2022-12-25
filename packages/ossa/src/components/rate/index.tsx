@@ -20,8 +20,7 @@ function getClassObject(props: OsRateProps) {
     moduleName: "Rate",
     oldPropName: "type",
     newPropName: "size",
-    defaultVal: "default"
-  });
+  }, "default");
 
   _classObject = {
     [`ossa-rate--is-${mergedSize}`]: mergedSize,
@@ -84,8 +83,7 @@ export default function Rate(props: OsRateProps) {
     moduleName: "Rate",
     oldPropName: "type",
     newPropName: "size",
-    defaultVal: "default"
-  });
+  }, "default");
   const _size = mergedSize === "small" ? 24 : 48;
 
   return (

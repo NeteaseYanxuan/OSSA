@@ -59,10 +59,9 @@ export default function TabBar(props: OsTabBarProps) {
     {
       newPropName: "activeTabIdx",
       oldPropName: "value",
-      moduleName: "TabBar",
-      defaultVal: 0
+      moduleName: "TabBar"
     }
-  ) || 0;
+  , 0);
 
   return (
     <View

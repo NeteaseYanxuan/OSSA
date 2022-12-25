@@ -70,8 +70,7 @@ export default function Index(props: OsModalProps) {
     newPropName: "closable",
     oldPropName: "showCloseIcon",
     moduleName: "Modal",
-    defaultVal: true
-  });
+  }, true);
   const _isAbsoluteCloseIcon =
     closeIconPosition !== "top" && closeIconPosition !== "bottom";
   const _closeIcon = mergedClosable && (
