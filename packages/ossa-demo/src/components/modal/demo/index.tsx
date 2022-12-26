@@ -75,10 +75,10 @@ const initialListApi = {
       ],
     },
     {
-      list: ["showCloseIcon", "是否显示关闭icon，可选，`showCloseIcon`属性在未来版本中将被删除，请使用`closable`代替", "boolean", "true"],
+      list: ["showCloseIcon", "是否显示关闭icon，可选，`showCloseIcon`属性在未来版本中将被删除，请使用`closeable`代替", "boolean", "true"],
     },
     {
-      list: ["closable", "是否显示关闭关闭，可选", "boolean", "true"],
+      list: ["closeable", "是否显示关闭关闭，可选", "boolean", "true"],
     },
     {
       list: [
@@ -240,7 +240,7 @@ export default function Index(props: Props) {
         cancelText='取消'
         content={contentSingleBtn}
         isShow={showSingleBtn}
-        closable={false}
+        closeable={false}
         onCancel={() => setShowSingleBtn(false)}
         onClose={() => setShowSingleBtn(false)}
         onConfirm={() => setShowSingleBtn(false)}

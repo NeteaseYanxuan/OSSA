@@ -72,7 +72,7 @@ interface ModalProps extends OsComponent, ButtonOpenTypeRelatedProps {
   custom?: boolean;
   /**
    * 是否显示关闭弹窗按钮
-   * @deprecated `showCloseIcon`属性在未来版本中将被删除，请使用`closable`代替
+   * @deprecated `showCloseIcon`属性在未来版本中将被删除，请使用`closeable`代替
    * @default true
    */
   showCloseIcon?: boolean;
@@ -80,7 +80,7 @@ interface ModalProps extends OsComponent, ButtonOpenTypeRelatedProps {
    * 是否展示关闭弹窗按钮
    * @default true
    */
-  closable?: boolean;
+  closeable?: boolean;
   /**
    * 关闭弹窗按钮所在的位置
    * @desc

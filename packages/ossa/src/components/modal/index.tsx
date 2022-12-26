@@ -60,20 +60,20 @@ export default function Index(props: OsModalProps) {
     cancelText,
     custom,
     showCloseIcon,
-    closable,
+    closeable,
     closeIconPosition,
     confirmOpenType
   } = props;
 
   const isRenderAction = confirmText || cancelText;
-  const mergedClosable = deprecatedProp(closable, showCloseIcon, {
-    newPropName: "closable",
+  const mergedcloseable = deprecatedProp(closeable, showCloseIcon, {
+    newPropName: "closeable",
     oldPropName: "showCloseIcon",
     moduleName: "Modal",
   }, true);
   const _isAbsoluteCloseIcon =
     closeIconPosition !== "top" && closeIconPosition !== "bottom";
-  const _closeIcon = mergedClosable && (
+  const _closeIcon = mergedcloseable && (
     <Image
       className={`ossa-modal-closer ossa-modal-closer--${closeIconPosition}`}
       src={closeIconImg}
