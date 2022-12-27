@@ -13,14 +13,14 @@ const mergeReadonly = (optionProps: OsStepperProps) => {
     newPropName: "readonly",
     oldPropName: "isReadonly",
     moduleName: "Stepper",
-  });
+  }, false);
 };
 const mergeDisabled = (optionProps: OsStepperProps) => {
   return deprecatedProp(optionProps.disabled, optionProps.isDisabled, {
     newPropName: "disabled",
     oldPropName: "isDisabled",
     moduleName: "Stepper",
-  });
+  }, false);
 };
 
 // 实现两数相加并保留小数点后最短尾数
@@ -220,8 +220,6 @@ Stepper.defaultProps = {
   step: 1,
   value: 1,
   customStyle: {},
-  readonly: false,
-  disabled: false,
 };
 
 Stepper.options = {
