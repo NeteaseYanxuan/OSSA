@@ -61,7 +61,7 @@ export default function TabBar(props: OsTabBarProps) {
       oldPropName: "value",
       moduleName: "TabBar"
     }
-  ) || 0;
+  , 0) || 0;
 
   return (
     <View
@@ -107,8 +107,6 @@ TabBar.defaultProps = {
   activeColor: "#DD1A21",
   defaultColor: "#7f7f7f",
   space: 0,
-  value: 0,
-  activeTabIdx: 0
 };
 
 TabBar.options = {

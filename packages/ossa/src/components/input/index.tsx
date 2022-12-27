@@ -55,13 +55,13 @@ export default function OsInput(props: OsInputProps) {
   const mergedDisabled = deprecatedProp(props.disabled, props.isDisabled, {
     newPropName: "disabled",
     oldPropName: "isDisabled",
-    moduleName: "Input",
-  });
+    moduleName: "Input"
+  }, false);
   const mergedReadonly = deprecatedProp(props.readonly, props.isReadonly, {
-    newPropName: "disabled",
-    oldPropName: "isDisabled",
+    newPropName: "readonly",
+    oldPropName: "isReadonly",
     moduleName: "Input",
-  });
+  }, false);
 
   useEffect(() => {
     if (
@@ -206,10 +206,6 @@ OsInput.defaultProps = {
   placeholderStyle: "",
   title: "",
   maxLength: 500,
-  isDisabled: false,
-  isReadonly: false,
-  disabled: false,
-  readonly: false,
   disabledClear: false,
   showSplitLine: true,
   value: "",

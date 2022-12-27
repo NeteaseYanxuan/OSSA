@@ -19,8 +19,8 @@ function getClassObject(props: OsRateProps) {
   const mergedSize = deprecatedProp(size, type, {
     moduleName: "Rate",
     oldPropName: "type",
-    newPropName: "size"
-  });
+    newPropName: "size",
+  }, "default");
 
   _classObject = {
     [`ossa-rate--is-${mergedSize}`]: mergedSize,
@@ -82,8 +82,8 @@ export default function Rate(props: OsRateProps) {
   const mergedSize = deprecatedProp(size, type, {
     moduleName: "Rate",
     oldPropName: "type",
-    newPropName: "size"
-  });
+    newPropName: "size",
+  }, "default");
   const _size = mergedSize === "small" ? 24 : 48;
 
   return (
@@ -127,7 +127,6 @@ Rate.defaultProps = {
   selectedIconColor: "#FAB646",
   options: ["非常差", "差", "一般吧", "满意", "非常满意"],
   value: 0,
-  type: "default",
   isShowResult: true,
 };
 
