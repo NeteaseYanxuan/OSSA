@@ -1,5 +1,11 @@
 # ossaui
 
+## 0.6.2
+
+### Patch Changes
+
+- [#124](https://github.com/NeteaseYanxuan/OSSA/pull/124) [`84a6124`](https://github.com/NeteaseYanxuan/OSSA/commit/84a61249db867c141a7ec57595bbe725bdd486d9) Thanks [@kiner-tang](https://github.com/kiner-tang)! - fix: 修复因默认值导致过期属性合并异常问题
+
 ## 0.6.1
 
 ### Patch Changes
