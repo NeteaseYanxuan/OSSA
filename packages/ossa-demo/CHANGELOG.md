@@ -1,5 +1,14 @@
 # ossa-demo
 
+## 1.8.2
+
+### Patch Changes
+
+- [#129](https://github.com/NeteaseYanxuan/OSSA/pull/129) [`9f0b8d5`](https://github.com/NeteaseYanxuan/OSSA/commit/9f0b8d579f0f97dd00853a70d851a27424f06dd7) Thanks [@CaedmonW](https://github.com/CaedmonW)! - fix css file lost when dynamic import
+
+- Updated dependencies [[`9f0b8d5`](https://github.com/NeteaseYanxuan/OSSA/commit/9f0b8d579f0f97dd00853a70d851a27424f06dd7)]:
+  - ossaui@0.6.3
+
 ## 1.8.1
 
 ### Patch Changes
