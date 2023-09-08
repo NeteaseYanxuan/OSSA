@@ -19,13 +19,13 @@ describe("Tabs Testing", function () {
           tabIndex = index - 2; //1 2 3
         else tabIndex = index - 1; //1 0
         cy.get(".ossa-tabs-header__scroll")
-          .eq(0)
+          .eq(1)
           .within(() => {
             cy.get(".ossa-tabs-item").eq(tabIndex).click(); //1 2 1 0 3
           });
         //这样写，可以验证active的tab页下，content是否正确
         cy.get(".ossa-tabs-panel.ossa-tabs-panel--active")
-          .eq(0)
+          .eq(1)
           .within(() => {
             cy.get(".tabs__content").contains(
               "标签" +
@@ -48,13 +48,13 @@ describe("Tabs Testing", function () {
         else tabIndex = index - 1;
 
         cy.get(".ossa-tabs-header__scroll")
-          .eq(2)
+          .eq(3)
           .within(() => {
             cy.get(".ossa-tabs-item").eq(tabIndex).click();
           });
 
         cy.get(".ossa-tabs-panel.ossa-tabs-panel--active")
-          .eq(2)
+          .eq(3)
           .within(() => {
             cy.get(".tabs__content").contains(
               "标签" +
@@ -81,13 +81,13 @@ describe("Tabs Testing", function () {
         else tabIndex = index - 1;
 
         cy.get(".ossa-tabs-header__scroll")
-          .eq(3)
+          .eq(4)
           .within(() => {
             cy.get(".ossa-tabs-item").eq(tabIndex).click();
           });
 
         cy.get(".ossa-tabs-panel.ossa-tabs-panel--active")
-          .eq(3)
+          .eq(4)
           .within(() => {
             cy.get(".tabs__content").contains(
               "标签" +
@@ -118,13 +118,13 @@ describe("Tabs Testing", function () {
         else tabIndex = index - 1;
 
         cy.get(".ossa-tabs-header__scroll")
-          .eq(3)
+          .eq(4)
           .within(() => {
             cy.get(".ossa-tabs-item").eq(tabIndex).click();
           });
 
         cy.get(".ossa-tabs-panel.ossa-tabs-panel--active")
-          .eq(3)
+          .eq(4)
           .within(() => {
             cy.get(".tabs__content").contains(
               "标签" +
@@ -143,7 +143,7 @@ describe("Tabs Testing", function () {
 
     it("case #1: 横向tab的选中下划线", function () {
       cy.get(".ossa-tabs-header__scroll")
-        .eq(0)
+        .eq(1)
         .within(() => {
           cy.get(".ossa-tabs-item__underline").should(($underline) => {
             const width = parseFloat($underline.css("width"));
@@ -157,7 +157,7 @@ describe("Tabs Testing", function () {
 
     it("case #2: 横向超长tab的选中下划线", function () {
       cy.get(".ossa-tabs-header__scroll")
-        .eq(1)
+        .eq(2)
         .within(() => {
           cy.get(".ossa-tabs-item__underline").should(($underline) => {
             const width = parseFloat($underline.css("width"));
@@ -172,7 +172,7 @@ describe("Tabs Testing", function () {
 
     it("case #3: 竖状tab的选中下划线", function () {
       cy.get(".ossa-tabs-header__scroll")
-        .eq(2)
+        .eq(3)
         .within(() => {
           cy.get(".ossa-tabs-item__underline").should(($underline) => {
             expect($underline).to.have.css("color").eq("rgb(221, 26, 33)");
@@ -182,7 +182,7 @@ describe("Tabs Testing", function () {
 
     it("case #4: 带.ossa-icon的tab的选中下划线", function () {
       cy.get(".ossa-tabs-header__scroll")
-        .eq(4)
+        .eq(5)
         .within(() => {
           cy.get(".ossa-tabs-item__underline").should(($underline) => {
             const height = parseFloat($underline.css("border-bottom-width"));
