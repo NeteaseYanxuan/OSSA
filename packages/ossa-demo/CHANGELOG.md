@@ -1,5 +1,14 @@
 # ossa-demo
 
+## 1.8.3
+
+### Patch Changes
+
+- [#133](https://github.com/NeteaseYanxuan/OSSA/pull/133) [`16059ec`](https://github.com/NeteaseYanxuan/OSSA/commit/16059ecfd4cba0a3b4a01b7889989bfa3673113b) Thanks [@CaedmonW](https://github.com/CaedmonW)! - Tab 组件标题过长时没有省略
+
+- Updated dependencies [[`16059ec`](https://github.com/NeteaseYanxuan/OSSA/commit/16059ecfd4cba0a3b4a01b7889989bfa3673113b)]:
+  - ossaui@0.6.4
+
 ## 1.8.2
 
 ### Patch Changes
