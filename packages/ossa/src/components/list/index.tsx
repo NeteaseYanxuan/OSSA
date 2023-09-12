@@ -98,6 +98,7 @@ export default function List(props: OsListProps) {
             type={leftIcon}
             size={leftIconSize}
             customStyle={{ verticalAlign: "top" }}
+            customIcon={props.leftCustomIcon}
           ></OsIcon>
         </View>
       )}
@@ -139,6 +140,7 @@ export default function List(props: OsListProps) {
             size={28}
             type={rightIcon}
             customStyle={{ verticalAlign: "top" }}
+            customIcon={props.rightCustomIcon}
           ></OsIcon>
         </View>
       )}

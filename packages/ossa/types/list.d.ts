@@ -29,10 +29,18 @@ interface ListProps extends OsComponent {
    */
   rightIcon?: IconProps["type"];
   /**
+   * 当且仅当 rightIcon 为 custom 时生效，渲染自定义图标
+   */
+  rightCustomIcon?: IconProps["customIcon"];
+  /**
    * 左侧图标
    * @see https://ossa.miaode.com/docs/%E7%BB%84%E4%BB%B6/icon
    */
   leftIcon?: IconProps["type"];
+  /**
+   * 当且仅当 leftIcon 为 custom 时生效，渲染自定义图标
+   */
+  leftCustomIcon?: IconProps["customIcon"];
   /**
    * 简要描述
    */

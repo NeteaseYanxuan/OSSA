@@ -71,6 +71,7 @@ export default function Index(props: OsNoticeBarProps) {
           type={props.leftIcon}
           size={28}
           color={props.color || "#F48F18"}
+          customIcon={props.customIcon}
         ></OsIcon>
       ) : null}
       <View className='ossa-notice-bar__content-wrapper'>

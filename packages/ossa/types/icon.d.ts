@@ -1,4 +1,4 @@
-import { ComponentClass } from "react";
+import { ComponentClass, ReactNode } from "react";
 import { CommonEventFunction } from "@tarojs/components/types/common";
 import OsComponent from "./base";
 
@@ -21,7 +21,8 @@ interface IconProps extends OsComponent {
         | "delete-pressed" | "like-selected" | "classify-pressed" | "share-circle-pressed" | "detail-home-pressed" 
         | "detail-cart-pressed" | "my-group-buying-select" | "shopping-mall-select" | "delete-input" | "add" | "add-disable"
         | "avatar" | "invisible" | "service" | "visible" | "subtract-disable" | "subtract" | "voice" | "voice-close"
-        | "photo" | "sort" | "sort-high" | "sort-low" | "subject" | "close-h5" | "add-photo";
+        | "photo" | "sort" | "sort-high" | "sort-low" | "subject" | "close-h5" | "add-photo"
+        | "custom";
   /**
    * 图标尺寸
    * @default 40
@@ -36,6 +37,10 @@ interface IconProps extends OsComponent {
    * 点击回调
    */
   onClick?: CommonEventFunction;
+  /**
+   * 当且仅当 type 为 custom 时生效，渲染自定义图标
+   */
+  customIcon?: ReactNode;
 }
 
 declare const Icon: ComponentClass<IconProps>;

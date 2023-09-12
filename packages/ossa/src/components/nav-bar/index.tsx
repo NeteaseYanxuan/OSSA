@@ -60,9 +60,11 @@ export default class NavBar extends Component<OsNavBarProps> {
       type,
       iconColor,
       leftIcons,
+      leftCustomIcons = [],
       leftTexts,
       leftSlot,
       rightIcons,
+      rightCustomIcons = [],
       rightTexts,
       rightSlot,
     } = props;
@@ -71,6 +73,11 @@ export default class NavBar extends Component<OsNavBarProps> {
       left: leftIcons,
       right: rightIcons,
     };
+
+    const customIcon = {
+      left: leftCustomIcons,
+      right: rightCustomIcons
+    }
 
     const text = {
       left: leftTexts,
@@ -103,7 +110,7 @@ export default class NavBar extends Component<OsNavBarProps> {
         <View className={`ossa-navbar--${whichSide}`}>
           {icon[whichSide] && (
             <View className={`ossa-navbar__${whichSide}Icons`}>
-              {icon[whichSide].map((item: IconProps["type"]) => (
+              {icon[whichSide].map((item: IconProps["type"], idx: number) => (
                 <OsIcon
                   type={item}
                   color={iconColor}
@@ -111,6 +118,7 @@ export default class NavBar extends Component<OsNavBarProps> {
                   size={40}
                   customStyle={{ verticalAlign: "top" }}
                   onClick={() => iconHandler[whichSide](props, item)}
+                  customIcon={customIcon[whichSide][idx]}
                 ></OsIcon>
               ))}
             </View>

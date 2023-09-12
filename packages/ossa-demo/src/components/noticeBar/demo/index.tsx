@@ -34,6 +34,9 @@ const initialListApi = {
       list: ["leftIcon", "左侧Icon，可选", "OsIcon", "-"],
     },
     {
+      list: ["customIcon", "自定义图标，可选，当且仅当'type'为'custom'时有效，可选", "ReactNode", "-"],
+    },
+    {
       list: ["more", "是否显示更多按钮，可选", "boolean", "false"],
     },
     {

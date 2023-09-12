@@ -26,6 +26,9 @@ const initialListApi = {
       list: ["type", "内置icon名称/类型，必选", "string", "-"],
     },
     {
+      list: ["customIcon", "自定义图标，可选，当且仅当'type'为'custom'时有效", "ReactNode", "-"],
+    },
+    {
       list: ["size", "尺寸，可选", "number", "40"],
     },
     {
@@ -614,6 +617,17 @@ export default function Index(props: Props) {
             <View className='inline-item--name inline-item--mt10'>
               add-photo
             </View>
+          </View>
+        </View>
+      </DemoBlock>
+
+      <DemoBlock title='自定义图标' fullScreen>
+        <View className='block-section'>
+          <View className='inline-item'>
+            <View className='inline-item--top'>
+              <OsIcon type='custom' customIcon={<View style={{width: 30, height: 30, background: 'red', borderRadius: '10px 0 10px 0'}} />}></OsIcon>
+            </View>
+            <View className='inline-item--name'>custom</View>
           </View>
         </View>
       </DemoBlock>

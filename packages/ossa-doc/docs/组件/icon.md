@@ -111,6 +111,7 @@ demo_url: 'https://neteaseyanxuan.github.io/OSSA/#/components/icon/demo/index'
 |参数|说明|类型|默认值|
 |------|------|------|------|
 |type|内置icon名称/类型，必选|string|-|
+|customIcon|自定义图标，可选，当且仅当'type'为'custom'时有效|ReactNode|-|
 |size|尺寸，可选|number|40|
 |color|图标颜色，可选|string|#7F7F7F|
 |customStyle|自定义样式，可选|object|-|

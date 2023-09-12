@@ -44,6 +44,14 @@ const initialListApi = {
       ],
     },
     {
+      list: [
+        "leftCustomIcons",
+        "当且仅当 leftIcons 为 custom 时生效，渲染自定义图标，可选",
+        "Array<ReactNode>",
+        "-",
+      ],
+    },
+    {
       list: ["leftTexts", "左侧文案，可选", "Array<API-Texts>", "-"],
     },
     {
@@ -59,6 +67,14 @@ const initialListApi = {
         "rightIcons",
         "右侧icon,取值参考OsIcon，可选",
         "Array<string>",
+        "-",
+      ],
+    },
+    {
+      list: [
+        "rightCustomIcons",
+        "当且仅当 rightIcons 为 custom 时生效，渲染自定义图标，可选",
+        "Array<ReactNode>",
         "-",
       ],
     },

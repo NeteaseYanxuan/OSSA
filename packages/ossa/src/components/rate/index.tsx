@@ -110,6 +110,7 @@ export default function Rate(props: OsRateProps) {
               type={(item.selected ? selectedIcon : icon) as OsIconProps["type"]}
               color={item.selected ? selectedIconColor : color}
               customStyle={{ verticalAlign: "top" }}
+              customIcon={item.selected ? props.selectedCustomIcon : props.customIcon}
             ></OsIcon>
           </View>
         ))}

@@ -39,7 +39,23 @@ const initialListApi = {
       ],
     },
     {
+      list: [
+        "selectedCustomIcon",
+        "自定义图标，可选，当且仅当'selectedIcon'为'custom'时有效，可选",
+        "ReactNode",
+        "-",
+      ],
+    },
+    {
       list: ["icon", "未选中时icon，取值参考OsIcon，可选", "string", "grade"],
+    },
+    {
+      list: [
+        "customIcon",
+        "自定义图标，可选，当且仅当'icon'为'custom'时有效，可选",
+        "ReactNode",
+        "-",
+      ],
     },
     {
       list: ["selectedIconColor", "选中icon颜色，可选", "string", "#FAB646"],
