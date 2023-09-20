@@ -1,0 +1,11 @@
+{
+  "mode": "pre",
+  "tag": "beta",
+  "initialVersions": {
+    "@ossa/loki": "1.0.0",
+    "ossaui": "0.6.2",
+    "ossa-demo": "1.8.1",
+    "ossa-doc": "0.3.0"
+  },
+  "changesets": []
+}

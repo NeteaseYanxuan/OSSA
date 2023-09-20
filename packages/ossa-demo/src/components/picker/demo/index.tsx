@@ -22,10 +22,16 @@ const initialListApi = {
   head: ["参数", "说明", "类型", "默认值"],
   data: [
     {
-      list: ["range", "取值范围，必选", "Array<number|string>", "-"],
+      list: ["title", "标题，可选", "string", "-"],
     },
     {
-      list: ["value", "取值索引，必选", "number", "0"],
+      list: ["mode", "类型，mode 为 selector 时为一维数组，mode 为 multiSelector 时为二维数组，可选", "'selector'|'multiSelector'", "'selector'"],
+    },
+    {
+      list: ["range", "取值范围，必选", "Array<number|string> | Array<Array<number|string>", "-"],
+    },
+    {
+      list: ["value", "取值索引，必选", "number|Array<number>", "0"],
     },
   ],
 };
@@ -39,17 +45,26 @@ const initialListEvent = {
     {
       list: ["onCancel", "点击取消按钮时触发，可选", "-"],
     },
+    {
+      list: ["onChange", "值改变时触发，可选", "-"],
+    },
   ],
 };
 
 const range = ["中国", "美国", "日本", "泰国", "印度"];
+
+const multiRange = [
+  ["星期一", "星期二", "星期三", "星期四", "星期五", "星期六", "星期日"],
+  ["上午", "下午", "晚上"],
+]
 
 export default function Index(props: Props) {
   const [listApi] = useState(initialListApi);
 
   const [listEvent] = useState(initialListEvent);
   const classObject = getClassObject(); //组件修饰
-  const [vNormal, setVNormal] = useState(2);
+  const [vNormal, setVNormal] = useState(0);
+  const [vMulti, setVMulti] = useState([0, 0]);
   const onConfirmNormal = (value) => {
     setVNormal(Number(value));
   };
@@ -72,8 +87,30 @@ export default function Index(props: Props) {
               console.log("cancel");
             }}
             onConfirm={onConfirmNormal}
+            onChange={(value) => {
+              console.log(value);
+            }}
           >
             <OsList title='国籍' desc={range[vNormal]}></OsList>
+          </OsPicker>
+        </View>
+      </DemoBlock>
+      <DemoBlock title='多列'>
+        <View className='block-section'>
+          <OsPicker
+            title='时间'
+            mode='multiSelector'
+            range={multiRange}
+            value={vMulti}
+            onCancel={() => {
+              console.log("cancel");
+            }}
+            onConfirm={(value) => setVMulti(value as number[])}
+            onChange={(value) => {
+              console.log(value);
+            }}
+          >
+            <OsList title='时间' desc={multiRange.map((rang, index) => rang[vMulti[index]]).join(',')}></OsList>
           </OsPicker>
         </View>
       </DemoBlock>

@@ -1,10 +1,11 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { View } from "@tarojs/components";
 import classNames from "classnames";
 //引入组件对应的 类型文件 .d.ts
 import { OsPickerProps } from "../../../types/index";
 import OsPickerGroup from "../common/pickerGroup";
 import { PICKER_ITEM_HEIGHT as ITEM_HEIGHT } from "../common/constant";
+import { isSameArray } from "../../utils";
 
 function getStyleObj(props: OsPickerProps) {
   const _styleObj = {};
@@ -16,14 +17,34 @@ function getClassObject(props: OsPickerProps) {
   return _classObject;
 }
 
+const getInitOffsetYList = (list) => {
+  return list.map(item => ITEM_HEIGHT * 2 - ITEM_HEIGHT * item);
+}
+
+const getIndex = (offsetY) => {
+  return Math.round((ITEM_HEIGHT * 2 - offsetY) / ITEM_HEIGHT);
+}
+
+let currentValueList: number[] = [];
+
 export default function Index(props: OsPickerProps) {
   const rootClassName = "ossa-picker"; //组件
   const classObject = getClassObject(props); //组件修饰
   const styleObject = getStyleObj(props);
   const [popupShow, setPopupShow] = useState(false);
-  const [groupOffsetY, setGroupOffsetY] = useState(
-    ITEM_HEIGHT * 2 - ITEM_HEIGHT * props.value
-  );
+  const [rangeList, setRangeList] = useState<string[][]>([[]]);
+  const [valueList, setValueList] = useState<number[]>([0]);
+  const [offsetYList, setOffsetYList] = useState(getInitOffsetYList(valueList));
+  const isMultiSelector = props.mode === "multiSelector";
+
+  useEffect(() => {
+    const newRangeList = isMultiSelector ? props.range as string[][] : [props.range as string[]];
+    const newValueList = isMultiSelector ? props.value as number[] : [props.value as number];    
+    setRangeList(newRangeList);
+    setValueList(newValueList);
+    currentValueList = newValueList;
+  }, [props.range, props.value, isMultiSelector]);
+
   const onClose = () => {
     setPopupShow(false);
   };
@@ -33,20 +54,33 @@ export default function Index(props: OsPickerProps) {
     onClose();
   };
 
+  const getNewIndexs = () => offsetYList.map(item => getIndex(item));
+
   const onConfirm = () => {
-    const newIndex = Math.round((ITEM_HEIGHT * 2 - groupOffsetY) / ITEM_HEIGHT);
-    props.onConfirm?.(newIndex);
+    const indexs = getNewIndexs()
+    props.onConfirm?.(isMultiSelector ? indexs : indexs[0]);
     onClose();
   };
 
   const showPopup = () => {
-    setGroupOffsetY(ITEM_HEIGHT * 2 - ITEM_HEIGHT * props.value);
+    setOffsetYList(getInitOffsetYList(valueList));
     setPopupShow(true);
   };
 
-  const onGroupOffsetChange = (value) => {
-    setGroupOffsetY(value);
+  const onGroupOffsetChange = (value, index) => {
+    const newOffsetYList = offsetYList.slice();
+    newOffsetYList[index] = value;
+    setOffsetYList(newOffsetYList);
   };
+
+  const onTouchEnd = () => {
+    const indexs = getNewIndexs();
+
+    if (!isSameArray(currentValueList, indexs)) {
+      currentValueList = indexs;
+      props.onChange?.(isMultiSelector ? indexs : indexs[0]);
+    }
+  }
 
   return (
     <View
@@ -77,6 +111,9 @@ export default function Index(props: OsPickerProps) {
             >
               取消
             </View>
+            <View className='ossa-picker-popup__title'>
+              {props.title || ""}
+            </View>
             <View
               className={classNames(
                 "ossa-picker-popup__btn",
@@ -88,11 +125,19 @@ export default function Index(props: OsPickerProps) {
             </View>
           </View>
           <View className='ossa-picker-popup__body'>
-            <OsPickerGroup
-              range={props.range}
-              height={groupOffsetY}
-              onUpdateHeight={onGroupOffsetChange}
-            ></OsPickerGroup>
+            {
+              rangeList.map((range, index) => {
+                return (
+                  <OsPickerGroup
+                    key={index}
+                    range={range}
+                    height={offsetYList[index]}
+                    onUpdateHeight={(value) => onGroupOffsetChange(value, index)}
+                    onTouchEnd={onTouchEnd}
+                  ></OsPickerGroup>
+                )
+              })
+            }
           </View>
         </View>
       </View>
@@ -102,4 +147,5 @@ export default function Index(props: OsPickerProps) {
 
 Index.options = {
   addGlobalClass: true,
+  mode: "selector",
 };

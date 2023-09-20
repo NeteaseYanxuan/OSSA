@@ -28,3 +28,14 @@ export function deprecatedProp<T = unknown, P = T>(newProp: T, oldProp: P, warin
     }
     return  newProp ?? oldProp ?? defaultVal;
 }
+
+/**
+ * 判断两个数组是否相等
+ * @param a 数组1
+ * @param b 数组2
+ * @returns 
+ */
+export function isSameArray<T>(a: Array<T>, b: Array<T>): boolean {
+    if(a.length !== b.length) return false;
+    return a.every((item, index) => item === b[index]);
+}

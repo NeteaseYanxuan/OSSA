@@ -6,18 +6,30 @@ import { OsCommonValueChangeCallback, OsCommonFunction } from "./common";
  */
 interface PickerProps extends OsComponent {
   /**
-   * 取值范围
+   * 选择器类型，默认为 selector
    */
-  range: Array<string>;
+  mode?: "selector" | "multiSelector";
   /**
-   * 取值索引
+   * 标题
    */
-  value: number;
+  title?: string;
+  /**
+   * 类型，mode 为 selector 时为一维数组，mode 为 multiSelector 时为二维数组，默认为 selector
+   */
+  range: Array<number|string> | Array<Array<number|string>>;
+  /**
+   * 取值索引，mode 为 selector 时为 number，mode 为 multiSelector 时为数组
+   */
+  value: number | Array<number>;
+  /**
+   * 值变化时触发
+   */
+  onChange?: OsCommonValueChangeCallback<number | string | Array<number|string>>;
   /**
    * 确认选择
    * @param {number | string} v 当前选中的值
    */
-  onConfirm?: OsCommonValueChangeCallback<number | string>;
+  onConfirm?: OsCommonValueChangeCallback<number | string | Array<number|string>>;
   /**
    * 取消选择
    */

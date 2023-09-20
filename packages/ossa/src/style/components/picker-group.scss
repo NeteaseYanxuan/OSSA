@@ -2,6 +2,10 @@
 
 $item-height: 43Px;
 
+.picker-container {
+  width: 100%;
+}
+
 .picker-group {
   position: relative;
   height: $item-height * 5;
