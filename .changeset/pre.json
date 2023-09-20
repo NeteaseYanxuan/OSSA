@@ -7,5 +7,7 @@
     "ossa-demo": "1.8.1",
     "ossa-doc": "0.3.0"
   },
-  "changesets": []
+  "changesets": [
+    "sour-dolls-study"
+  ]
 }
