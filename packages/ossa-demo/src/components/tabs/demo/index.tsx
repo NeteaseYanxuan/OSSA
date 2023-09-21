@@ -9,6 +9,7 @@ import Countdown from "./Countdown";
 import { OsTabsHeader, OsTabsHeaderItem, OsTabsPanel, OsTabs } from "ossaui";
 // import './index.scss'
 import "./index.scss";
+import { IconProps } from "ossaui/types/icon";
 
 function getClassObject() {
   const classObject = {
@@ -139,7 +140,11 @@ const initialTabsHeaderItemApi = {
 //   }
 // ];
 
-const initialTabsArr2 = [
+const initialTabsArr2: {
+  text: string;
+  icon: IconProps["type"];
+  selectedIcon: string;
+}[] = [
   {
     text: "标签1",
     icon: "inform",
@@ -169,7 +174,7 @@ const initialTabsArr2 = [
 
 const initialTabsArr1 = [
   {
-    text: "标签1",
+    text: '标超长超长超长超长签1',
   },
   {
     text: "标签2",
@@ -332,6 +337,7 @@ export default function Index(props: Props) {
   const [current2, setCurrent2] = useState(0);
   const [current3, setCurrent3] = useState(0);
   const [current4, setCurrent4] = useState(0);
+  const [current5, setCurrent5] = useState(0);
   const classObject = getClassObject(); //组件修饰
 
   useEffect(() => {
@@ -344,14 +350,50 @@ export default function Index(props: Props) {
     <View className={classNames(classObject)}>
       <DemoHeader title={demoTitle}></DemoHeader>
 
-      <DemoBlock title='基础（均分）' fullScreen>
+      <DemoBlock title='基础（均分）1' fullScreen>
+        <OsTabs
+          renderHeader={
+            <OsTabsHeader value={current5}>
+              <OsTabsHeaderItem
+                index={0}
+                current={current5}
+                text='超长的超长的标签1'
+                onClick={(value) => onClick(value, setCurrent5)}
+              />
+              <OsTabsHeaderItem
+                index={1}
+                current={current5}
+                text='标签2'
+                onClick={(value) => onClick(value, setCurrent5)}
+              />
+            </OsTabsHeader>
+          }
+        >
+          <OsTabsPanel
+            current={current5}
+            index={0}
+            customStyle={{ height: Taro.pxTransform(400) }}
+          >
+            <View className='tabs__content'>标签1内容区域</View>
+          </OsTabsPanel>
+          <OsTabsPanel
+            current={current5}
+            index={1}
+            customStyle={{ height: Taro.pxTransform(400) }}
+          >
+            <View className='tabs__content'>标签2内容区域</View>
+          </OsTabsPanel>
+        </OsTabs>
+      </DemoBlock>
+
+      <DemoBlock title='基础（均分）2' fullScreen>
         <OsTabs
           renderHeader={
             <OsTabsHeader value={current}>
               <OsTabsHeaderItem
                 index={0}
                 current={current}
-                text='标签1'
+                text='超长的超长的标签1'
                 onClick={(value) => onClick(value, setCurrent)}
               />
               <OsTabsHeaderItem
@@ -424,13 +466,11 @@ export default function Index(props: Props) {
           size='large'
           renderHeader={
             <OsTabsHeader
-              size='large'
               bgColor='#fff'
               space={60}
               value={current4}
             >
               <OsTabsHeaderItem
-                size='large'
                 index={0}
                 current={current4}
                 custom
@@ -439,7 +479,6 @@ export default function Index(props: Props) {
                 onClick={(value) => onClick4(value, setCurrent4)}
               />
               <OsTabsHeaderItem
-                size='large'
                 index={1}
                 current={current4}
                 text='标签2'
@@ -498,10 +537,9 @@ export default function Index(props: Props) {
         <OsTabs
           type='vertical'
           renderHeader={
-            <OsTabsHeader type='vertical' scroll>
+            <OsTabsHeader scroll>
               {tabsArr3.map((item, index) => (
                 <OsTabsHeaderItem
-                  type='vertical'
                   index={index}
                   current={current3}
                   key={item.text}

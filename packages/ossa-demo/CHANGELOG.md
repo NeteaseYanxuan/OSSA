@@ -10,6 +10,23 @@
 
 - Updated dependencies [[`9712e8e`](https://github.com/NeteaseYanxuan/OSSA/commit/9712e8e1de8c62e165d96b8d7e3e1ab42bcd6311)]:
   - ossaui@0.7.0-beta.0
+## 1.8.3
+
+### Patch Changes
+
+- [#133](https://github.com/NeteaseYanxuan/OSSA/pull/133) [`16059ec`](https://github.com/NeteaseYanxuan/OSSA/commit/16059ecfd4cba0a3b4a01b7889989bfa3673113b) Thanks [@CaedmonW](https://github.com/CaedmonW)! - Tab 组件标题过长时没有省略
+
+- Updated dependencies [[`16059ec`](https://github.com/NeteaseYanxuan/OSSA/commit/16059ecfd4cba0a3b4a01b7889989bfa3673113b)]:
+  - ossaui@0.6.4
+
+## 1.8.2
+
+### Patch Changes
+
+- [#129](https://github.com/NeteaseYanxuan/OSSA/pull/129) [`9f0b8d5`](https://github.com/NeteaseYanxuan/OSSA/commit/9f0b8d579f0f97dd00853a70d851a27424f06dd7) Thanks [@CaedmonW](https://github.com/CaedmonW)! - fix css file lost when dynamic import
+
+- Updated dependencies [[`9f0b8d5`](https://github.com/NeteaseYanxuan/OSSA/commit/9f0b8d579f0f97dd00853a70d851a27424f06dd7)]:
+  - ossaui@0.6.3
 
 ## 1.8.1
 

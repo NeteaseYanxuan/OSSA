@@ -5,6 +5,17 @@
 ### Minor Changes
 
 - [`9712e8e`](https://github.com/NeteaseYanxuan/OSSA/commit/9712e8e1de8c62e165d96b8d7e3e1ab42bcd6311) Thanks [@CaedmonW](https://github.com/CaedmonW)! - Picker support multi
+## 0.6.4
+
+### Patch Changes
+
+- [#133](https://github.com/NeteaseYanxuan/OSSA/pull/133) [`16059ec`](https://github.com/NeteaseYanxuan/OSSA/commit/16059ecfd4cba0a3b4a01b7889989bfa3673113b) Thanks [@CaedmonW](https://github.com/CaedmonW)! - Tab 组件标题过长时没有省略
+
+## 0.6.3
+
+### Patch Changes
+
+- [#129](https://github.com/NeteaseYanxuan/OSSA/pull/129) [`9f0b8d5`](https://github.com/NeteaseYanxuan/OSSA/commit/9f0b8d579f0f97dd00853a70d851a27424f06dd7) Thanks [@CaedmonW](https://github.com/CaedmonW)! - fix css file lost when dynamic import
 
 ## 0.6.2
 

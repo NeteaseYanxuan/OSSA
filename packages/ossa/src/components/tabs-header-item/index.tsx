@@ -30,14 +30,6 @@ function getClassObject(props: OsTabsHeaderItemProps & TabsConfig, active: boole
   return _classObject;
 }
 
-function getText(text: string) {
-  if (text.length > 5) {
-    return text.slice(0, 5) + "...";
-  }
-
-  return text;
-}
-
 function onClick(props: OsTabsHeaderItemProps) {
   const { index } = props;
   props.onClick?.(index);
@@ -84,7 +76,7 @@ export default function Index(props: OsTabsHeaderItemProps) {
             )
           ) : (
             <Block>
-              <Text className='ossa-tabs-item__text'>{getText(text)}</Text>
+              <Text className='ossa-tabs-item__text'>{text}</Text>
               {icon && (
                 <OsIcon
                   customStyle={{

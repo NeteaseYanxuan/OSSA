@@ -25,6 +25,7 @@
 
     .ossa-tabs-item__underline {
       height: 100%;
+      width: 100%;
       padding: 0 16px;
       border-bottom: 4px solid transparent;
     }
@@ -32,12 +33,17 @@
     .ossa-tabs-item__texts {
       display: inline-block;
       height: 100%;
+      width: 100%;
       color: inherit;
       position: relative;
     }
 
     .ossa-tabs-item__text {
       display: inline-block;
+      white-space: nowrap;
+      width: 100%;
+      overflow: hidden;
+      text-overflow: ellipsis;
       white-space: nowrap;
     }
   }
