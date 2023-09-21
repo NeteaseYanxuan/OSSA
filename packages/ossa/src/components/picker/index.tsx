@@ -53,7 +53,17 @@ export default function Index(props: OsPickerProps) {
     onClose();
   };
 
-  const getNewIndexs = () => offsetYList.map(item => getIndex(item));
+  const getNewIndexs = () => offsetYList.map((item, index) => {
+    const newIndex = getIndex(item);
+    // 基于touchedEnd触发时的offset计算，会出现超出范围的情况，需要做一下修正
+    if (newIndex < 0) {
+      return 0;
+    }
+    if (newIndex >= rangeList[index].length) {
+      return rangeList[index].length - 1;
+    }
+    return getIndex(item)
+  });
 
   const onConfirm = () => {
     const indexs = getNewIndexs()
