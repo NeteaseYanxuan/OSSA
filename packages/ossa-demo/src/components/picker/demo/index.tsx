@@ -31,7 +31,7 @@ const initialListApi = {
       list: ["range", "取值范围，必选", "Array<number|string> | Array<Array<number|string>", "-"],
     },
     {
-      list: ["value", "取值索引，必选", "number|Array<number>", "0"],
+      list: ["value", "取值索引，必选", "number|number[]", "0"],
     },
   ],
 };
@@ -40,13 +40,13 @@ const initialListEvent = {
   head: ["函数名", "说明", "参数"],
   data: [
     {
-      list: ["onConfirm", "点击确认按钮时触发，可选", "-"],
+      list: ["onConfirm", "点击确认按钮时触发，可选", "(value) => void"],
     },
     {
-      list: ["onCancel", "点击取消按钮时触发，可选", "-"],
+      list: ["onCancel", "点击取消按钮时触发，可选", "() => void"],
     },
     {
-      list: ["onChange", "值改变时触发，可选", "-"],
+      list: ["onChange", "值改变时触发，可选", "(value) => void"],
     },
   ],
 };
