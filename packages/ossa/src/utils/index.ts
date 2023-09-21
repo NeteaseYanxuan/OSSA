@@ -30,6 +30,28 @@ export function deprecatedProp<T = unknown, P = T>(newProp: T, oldProp: P, warin
 }
 
 /**
+ * 判断两个对象是否相等
+ * @param a 对象1
+ * @param b 对象2
+ * @returns 
+ */
+export function isSameObject(a: object, b: object): boolean {
+    if (typeof a !== 'object' || typeof b !== 'object') return false;
+
+    const aKeys = Object.keys(a);
+    const bKeys = Object.keys(b);
+
+    if (aKeys.length !== bKeys.length) return false;
+
+    return aKeys.every(key => {
+        const aVal = a[key];
+        const bVal = b[key];
+        if (typeof aVal !== 'object' || typeof bVal !== 'object') return aVal === bVal;
+        return isSameObject(aVal, bVal);
+    });
+}
+
+/**
  * 判断两个数组是否相等
  * @param a 数组1
  * @param b 数组2
@@ -37,5 +59,8 @@ export function deprecatedProp<T = unknown, P = T>(newProp: T, oldProp: P, warin
  */
 export function isSameArray<T>(a: Array<T>, b: Array<T>): boolean {
     if(a.length !== b.length) return false;
-    return a.every((item, index) => item === b[index]);
+    return a.every((item, index) => {
+        if (typeof item !== 'object' || typeof b[index] !== 'object') return item === b[index];
+        return isSameObject(item as object, b[index] as object);
+    });
 }

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { View } from "@tarojs/components";
 import classNames from "classnames";
 //引入组件对应的 类型文件 .d.ts
@@ -25,8 +25,6 @@ const getIndex = (offsetY) => {
   return Math.round((ITEM_HEIGHT * 2 - offsetY) / ITEM_HEIGHT);
 }
 
-let currentValueList: number[] = [];
-
 export default function Index(props: OsPickerProps) {
   const rootClassName = "ossa-picker"; //组件
   const classObject = getClassObject(props); //组件修饰
@@ -36,13 +34,14 @@ export default function Index(props: OsPickerProps) {
   const [valueList, setValueList] = useState<number[]>([0]);
   const [offsetYList, setOffsetYList] = useState(getInitOffsetYList(valueList));
   const isMultiSelector = props.mode === "multiSelector";
+  const currentValueList = useRef<number[]>([]);
 
   useEffect(() => {
     const newRangeList = isMultiSelector ? props.range as string[][] : [props.range as string[]];
     const newValueList = isMultiSelector ? props.value as number[] : [props.value as number];    
     setRangeList(newRangeList);
     setValueList(newValueList);
-    currentValueList = newValueList;
+    currentValueList.current = newValueList;
   }, [props.range, props.value, isMultiSelector]);
 
   const onClose = () => {
@@ -76,8 +75,8 @@ export default function Index(props: OsPickerProps) {
   const onTouchEnd = () => {
     const indexs = getNewIndexs();
 
-    if (!isSameArray(currentValueList, indexs)) {
-      currentValueList = indexs;
+    if (!isSameArray(currentValueList.current, indexs)) {
+      currentValueList.current = indexs;
       props.onChange?.(isMultiSelector ? indexs : indexs[0]);
     }
   }

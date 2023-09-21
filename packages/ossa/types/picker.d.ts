@@ -20,7 +20,7 @@ interface PickerProps extends OsComponent {
   /**
    * 取值索引，mode 为 selector 时为 number，mode 为 multiSelector 时为数组
    */
-  value: number | Array<number>;
+  value: number | number[];
   /**
    * 值变化时触发
    */
