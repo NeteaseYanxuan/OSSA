@@ -1,10 +1,17 @@
 # ossaui
 
+## 0.7.0-beta.1
+
+### Patch Changes
+
+- 修复滚动过程中 onChange 返回值超出范围
+
 ## 0.7.0-beta.0
 
 ### Minor Changes
 
 - [`9712e8e`](https://github.com/NeteaseYanxuan/OSSA/commit/9712e8e1de8c62e165d96b8d7e3e1ab42bcd6311) Thanks [@CaedmonW](https://github.com/CaedmonW)! - Picker support multi
+
 ## 0.6.4
 
 ### Patch Changes

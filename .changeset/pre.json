@@ -8,6 +8,7 @@
     "ossa-doc": "0.3.0"
   },
   "changesets": [
+    "five-phones-juggle",
     "sour-dolls-study"
   ]
 }
