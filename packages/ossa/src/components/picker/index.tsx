@@ -44,7 +44,21 @@ export default function Index(props: OsPickerProps) {
     currentValueList.current = newValueList;
   }, [props.range, props.value, isMultiSelector]);
 
+  useEffect(() => {
+    if(typeof props.isShow !== 'boolean') {
+      return;
+    }
+    if (props.isShow) {
+      showPopup();
+    } else {
+      setPopupShow(false);
+    }
+  }, [props.isShow])
+
   const onClose = () => {
+    if(typeof props.isShow === 'boolean') {
+      return;
+    }
     setPopupShow(false);
   };
 
@@ -76,6 +90,13 @@ export default function Index(props: OsPickerProps) {
     setPopupShow(true);
   };
 
+  const handleClick = () => {
+    if(typeof props.isShow === 'boolean') {
+      return;
+    }
+    showPopup();
+  }
+
   const onGroupOffsetChange = (value, index) => {
     const newOffsetYList = offsetYList.slice();
     newOffsetYList[index] = value;
@@ -96,7 +117,7 @@ export default function Index(props: OsPickerProps) {
       className={classNames(rootClassName, classObject, props.className)}
       style={styleObject}
     >
-      <View className='ossa-picker__trigger' onClick={showPopup}>
+      <View className='ossa-picker__trigger' onClick={handleClick}>
         {props.children}
       </View>
       <View

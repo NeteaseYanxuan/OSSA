@@ -10,6 +10,10 @@ interface PickerProps extends OsComponent {
    */
   mode?: "selector" | "multiSelector";
   /**
+   * 是否显示，传入false｜true控制显示，不传点击自动显示
+   */
+  isShow?: boolean;
+  /**
    * 标题
    */
   title?: string;
