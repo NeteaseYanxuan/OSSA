@@ -56,6 +56,7 @@ const [vMulti, setVMulti] = useState([0, 0]);
 |参数|说明|类型|默认值|
 |------|------|------|------|
 |title|标题，可选|string|-|
+|isShow|是否显示，传入布尔值可手动控制，可选|boolean|-|
 |mode|类型，mode 为 selector 时为一维数组，mode 为 multiSelector 时为二维数组，可选|'selector'\|'multiSelector'|'selector'|
 |range|取值范围，必选|(number\|string)[]|-|
 |value|取值索引，必选|number|0|
