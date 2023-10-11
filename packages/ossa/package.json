@@ -1,6 +1,6 @@
 {
   "name": "ossaui",
-  "version": "0.7.0-beta.2",
+  "version": "0.7.0-beta.3",
   "description": "",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",

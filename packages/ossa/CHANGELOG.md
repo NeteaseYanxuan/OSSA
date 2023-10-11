@@ -1,5 +1,11 @@
 # ossaui
 
+## 0.7.0-beta.3
+
+### Patch Changes
+
+- [#135](https://github.com/NeteaseYanxuan/OSSA/pull/135) [`eb97023`](https://github.com/NeteaseYanxuan/OSSA/commit/eb97023b053ab8a01d85fe5b07ddaa731d28be2c) Thanks [@CaedmonW](https://github.com/CaedmonW)! - rang 与 vale 的更新处理分离
+
 ## 0.7.0-beta.2
 
 ### Patch Changes
