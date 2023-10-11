@@ -1,5 +1,11 @@
 # ossaui
 
+## 0.7.0-beta.2
+
+### Patch Changes
+
+- [#135](https://github.com/NeteaseYanxuan/OSSA/pull/135) [`98799d0`](https://github.com/NeteaseYanxuan/OSSA/commit/98799d01fe59409ed37f57e6e9f0fdc2c579f21e) Thanks [@CaedmonW](https://github.com/CaedmonW)! - picker 支持 isShow
+
 ## 0.7.0-beta.1
 
 ### Patch Changes
