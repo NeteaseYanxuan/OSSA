@@ -37,12 +37,15 @@ export default function Index(props: OsPickerProps) {
   const currentValueList = useRef<number[]>([]);
 
   useEffect(() => {
-    const newRangeList = isMultiSelector ? props.range as string[][] : [props.range as string[]];
     const newValueList = isMultiSelector ? props.value as number[] : [props.value as number];    
-    setRangeList(newRangeList);
     setValueList(newValueList);
     currentValueList.current = newValueList;
-  }, [props.range, props.value, isMultiSelector]);
+  }, [props.value, isMultiSelector]);
+
+  useEffect(() => {
+    const newRangeList = isMultiSelector ? props.range as string[][] : [props.range as string[]];
+    setRangeList(newRangeList);
+  }, [props.range, isMultiSelector])
 
   useEffect(() => {
     if(typeof props.isShow !== 'boolean') {
