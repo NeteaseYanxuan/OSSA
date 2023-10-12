@@ -1,5 +1,11 @@
 # ossaui
 
+## 0.7.0-beta.4
+
+### Patch Changes
+
+- 弹出面板时，视图随着值更新
+
 ## 0.7.0-beta.3
 
 ### Patch Changes
