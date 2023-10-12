@@ -108,9 +108,16 @@ export default function Index(props: Props) {
             onCancel={() => {
               console.log("cancel");
             }}
-            onConfirm={(value) => setVMulti(value as number[])}
+            onConfirm={(value) => {
+              console.log(value);
+              setVMulti(value as number[])
+            }}
             onChange={(value) => {
               console.log(value);
+              if (value[0] !== vMulti[0]) {
+                value[1] = 0;
+              }
+              setVMulti(value as number[]);
             }}
           >
             <OsList title='时间' desc={multiRange.map((rang, index) => rang[vMulti[index]]).join(',')}></OsList>

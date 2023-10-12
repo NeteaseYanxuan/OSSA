@@ -26,7 +26,7 @@ interface PickerProps extends OsComponent {
    */
   value: number | number[];
   /**
-   * 值变化时触发
+   * 所选项变化时触发
    */
   onChange?: OsCommonValueChangeCallback<number | string | Array<number|string>>;
   /**

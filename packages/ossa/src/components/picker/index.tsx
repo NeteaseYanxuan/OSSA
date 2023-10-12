@@ -40,6 +40,7 @@ export default function Index(props: OsPickerProps) {
     const newValueList = isMultiSelector ? props.value as number[] : [props.value as number];    
     setValueList(newValueList);
     currentValueList.current = newValueList;
+    setOffsetYList(getInitOffsetYList(newValueList));
   }, [props.value, isMultiSelector]);
 
   useEffect(() => {
@@ -89,7 +90,6 @@ export default function Index(props: OsPickerProps) {
   };
 
   const showPopup = () => {
-    setOffsetYList(getInitOffsetYList(valueList));
     setPopupShow(true);
   };
 
