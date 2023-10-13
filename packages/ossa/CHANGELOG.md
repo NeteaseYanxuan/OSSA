@@ -1,5 +1,35 @@
 # ossaui
 
+## 0.7.0-beta.4
+
+### Patch Changes
+
+- 弹出面板时，视图随着值更新
+
+## 0.7.0-beta.3
+
+### Patch Changes
+
+- [#135](https://github.com/NeteaseYanxuan/OSSA/pull/135) [`eb97023`](https://github.com/NeteaseYanxuan/OSSA/commit/eb97023b053ab8a01d85fe5b07ddaa731d28be2c) Thanks [@CaedmonW](https://github.com/CaedmonW)! - rang 与 vale 的更新处理分离
+
+## 0.7.0-beta.2
+
+### Patch Changes
+
+- [#135](https://github.com/NeteaseYanxuan/OSSA/pull/135) [`98799d0`](https://github.com/NeteaseYanxuan/OSSA/commit/98799d01fe59409ed37f57e6e9f0fdc2c579f21e) Thanks [@CaedmonW](https://github.com/CaedmonW)! - picker 支持 isShow
+
+## 0.7.0-beta.1
+
+### Patch Changes
+
+- 修复滚动过程中 onChange 返回值超出范围
+
+## 0.7.0-beta.0
+
+### Minor Changes
+
+- [`9712e8e`](https://github.com/NeteaseYanxuan/OSSA/commit/9712e8e1de8c62e165d96b8d7e3e1ab42bcd6311) Thanks [@CaedmonW](https://github.com/CaedmonW)! - Picker support multi
+
 ## 0.6.4
 
 ### Patch Changes

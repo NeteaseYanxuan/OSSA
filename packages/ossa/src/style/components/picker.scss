@@ -51,6 +51,17 @@ $animation-duration: 200ms;
     background: $--fill-picker;
   }
 
+  &__title {
+    max-width: 75%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    text-align: center;
+    font-size: $--font-size-8;
+    font-weight: $--font-weight-default;
+    color: $--text-color-base;
+  }
+
   &__btn {
     color: $--text-color-base;
     font-size: $--font-size-5;
@@ -64,5 +75,6 @@ $animation-duration: 200ms;
 
   &__body {
     height: 430px;
+    display: flex;
   }
 }
