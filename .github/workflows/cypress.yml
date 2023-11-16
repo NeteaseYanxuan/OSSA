@@ -35,7 +35,7 @@ jobs:
         run: sudo apt-get install language-pack-zh-han*
 
       - name: e2e test
-        run: pnpm test -- -- --config baseUrl=${{ github.event.deployment_status.target_url }}
+        run: pnpm test -- -- --config baseUrl=https://neteaseyanxuan.github.io/OSSA
 
       - uses: actions/upload-artifact@v2
         if: failure()
