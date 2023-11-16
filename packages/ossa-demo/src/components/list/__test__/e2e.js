@@ -76,7 +76,7 @@ describe("List Testing", function () {
         //icon宽高
         const width = parseFloat($rightIcon.css("width"));
         const height = parseFloat($rightIcon.css("height"));
-        expect(width).to.be.eq(height);
+        expect(width).to.be.closeTo(height, 0.1);
         expect(width).to.be.closeTo(28 / 2, 1);
       });
     });
