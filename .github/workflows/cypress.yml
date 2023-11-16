@@ -37,7 +37,7 @@ jobs:
       - run: sudo apt-get install -y ttf-wqy-zenhei
 
       - name: e2e test
-        run: pnpm test -- -- --config baseUrl=https://neteaseyanxuan.github.io/OSSA
+        run: pnpm test -- -- --config baseUrl=${{ github.event.deployment_status.target_url }}
 
       - uses: actions/upload-artifact@v2
         if: failure()
