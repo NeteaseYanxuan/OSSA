@@ -29,16 +29,16 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'pnpm'
-        
+
     - run: pnpm start
 #     - run: pnpm test
 
     - name: Build OSSA && loki
       run: pnpm build
-      
+
     - name: Build Demo
       run: pnpm build:demo --if-present
-    
+
     - name: Deploy
       uses: JamesIves/github-pages-deploy-action@4.1.1
       with:
@@ -49,6 +49,9 @@ jobs:
     - name: Sleep to make sure page gets updated
       run: sleep 1m
       shell: bash
+
+    - name: Install font support
+      run: sudo apt-get install language-pack-zh-han*
 
     - name: e2e test
       run: pnpm test -- -- --config baseUrl=https://neteaseyanxuan.github.io/OSSA --record --key cdc63db7-73cb-463b-9b7c-4360235ece96
