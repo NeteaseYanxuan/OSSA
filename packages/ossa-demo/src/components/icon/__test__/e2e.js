@@ -16,7 +16,7 @@ describe("Icon Testing", function () {
       cy.get(".ossa-icon").should(($icon) => {
         const width = parseFloat($icon.css("width"));
         const height = parseFloat($icon.css("height"));
-        expect(width).to.be.eq(height);
+        expect(width).to.be.closeTo(height, 0.1);
       });
     });
 

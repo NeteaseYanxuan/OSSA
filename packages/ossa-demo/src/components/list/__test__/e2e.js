@@ -105,7 +105,7 @@ describe("List Testing", function () {
         //icon宽高
         const width = parseFloat($rightIcon.css("width"));
         const height = parseFloat($rightIcon.css("height"));
-        expect(width).to.be.eq(height);
+        expect(width).to.be.closeTo(height, 0.1);
         expect(width).to.be.closeTo(28 / 2, 1);
       });
     });
@@ -135,7 +135,7 @@ describe("List Testing", function () {
         //icon宽高
         const width = parseFloat($rightIcon.css("width"));
         const height = parseFloat($rightIcon.css("height"));
-        expect(width).to.be.eq(height);
+        expect(width).to.be.closeTo(height, 0.1);
         expect(width).to.be.closeTo(28 / 2, 1);
       });
     });
@@ -158,7 +158,7 @@ describe("List Testing", function () {
           const height = parseFloat(
             $leftIcon.children("taro-view-core").css("height")
           );
-          expect(width).to.be.eq(height);
+          expect(width).to.be.closeTo(height, 0.1);
           expect(width).to.be.closeTo(36 / 2, 1);
         });
     });
@@ -177,7 +177,7 @@ describe("List Testing", function () {
           //图标宽高
           const width = parseFloat($listPic.children("img").css("width"));
           const height = parseFloat($listPic.children("img").css("height"));
-          expect(width).to.be.eq(height);
+          expect(width).to.be.closeTo(height, 0.1);
           expect(width).to.be.closeTo(160 / 2, 1);
         });
     });

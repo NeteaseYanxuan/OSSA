@@ -26,13 +26,15 @@ describe("Picker Testing", function () {
           expect($mask).have.css("opacity").eq("1");
         });
       cy.get(".ossa-picker-popup__header")
+        .eq(0)
         .find("taro-view-core")
         .should(($header) => {
-          //包含2个按钮
-          expect($header).to.have.length(2);
+          expect($header).to.have.length(3);
           const cancelBtn = $header[0].className;
-          const confirmBtn = $header[1].className;
+          const title = $header[1].className;
+          const confirmBtn = $header[2].className;
           expect(cancelBtn).to.be.match(/__btn-cancel/);
+          expect(title).to.be.match(/__title/);
           expect(confirmBtn).to.be.match(/__btn-confirm/);
         });
       cy.get(".ossa-picker-popup__body")

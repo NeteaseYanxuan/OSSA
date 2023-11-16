@@ -3,7 +3,7 @@ on: [deployment_status]
 jobs:
   env:
     runs-on: ubuntu-latest
-    
+
     steps:
       - run: echo ${{github.event.deployment_status.target_url}}
 
@@ -28,8 +28,13 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
           cache: 'pnpm'
-          
+
       - run: pnpm start
+
+      - name: Install font support
+        run: sudo apt-get install language-pack-zh-han*
+
+      - run: sudo apt-get install -y ttf-wqy-zenhei
 
       - name: e2e test
         run: pnpm test -- -- --config baseUrl=${{ github.event.deployment_status.target_url }}
