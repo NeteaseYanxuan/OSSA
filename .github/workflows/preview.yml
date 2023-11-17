@@ -41,7 +41,7 @@ jobs:
       - run: sudo apt-get install -y ttf-wqy-zenhei
 
       - name: e2e test
-        run: pnpm test -- -- --config baseUrl=${{ steps.preview_step.outputs.preview_url }}
+        run: pnpm test -- -- --config baseUrl=https://${{ steps.preview_step.outputs.preview_url }}
 
       - uses: actions/upload-artifact@v2
         if: failure()
