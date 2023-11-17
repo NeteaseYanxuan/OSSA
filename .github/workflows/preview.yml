@@ -1,4 +1,4 @@
-name: 🔂 Surge PR Preview
+name: Surge PR Preview
 
 on:
   pull_request:
@@ -8,10 +8,12 @@ on:
 jobs:
   preview:
     runs-on: ubuntu-latest
+    outputs:
+      preview_url: https://${{ steps.preview_step.outputs.preview_url }}
     permissions:
       pull-requests: write # allow surge-preview to create/update PR comments
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - name: Install pnpm
         uses: pnpm/action-setup@v2.2.2
         with:
@@ -39,10 +41,26 @@ jobs:
       - name: Get the preview_url
         run: echo "url => ${{ steps.preview_step.outputs.preview_url }}"
 
-      - run: sudo apt-get install -y ttf-wqy-zenhei
+  e2e:
+    needs: preview
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Install pnpm
+        uses: pnpm/action-setup@v2.2.2
+        with:
+            version: 6
+
+      - name: Setup Node.js 16.x
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16.x
+          cache: 'pnpm'
+
+      - run: pnpm start
 
       - name: e2e test
-        run: pnpm test -- -- --config baseUrl=https://${{ steps.preview_step.outputs.preview_url }}
+        run: pnpm test -- -- --config baseUrl=${{ needs.preview.outputs.preview_url }}
 
       - uses: actions/upload-artifact@v2
         if: failure()
