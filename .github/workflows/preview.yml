@@ -29,6 +29,7 @@ jobs:
         id: preview_step
         with:
           surge_token: ${{ secrets.SURGE_TOKEN }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
           dist: packages/ossa-demo/dist
           teardown: 'true'
           build: |
