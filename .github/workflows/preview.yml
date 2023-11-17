@@ -3,7 +3,6 @@ name: 🔂 Surge PR Preview
 on:
   pull_request:
     types: [opened, synchronize, reopened, closed]
-  push:
 
 jobs:
   preview:
@@ -34,7 +33,7 @@ jobs:
           teardown: 'true'
           build: |
             pnpm build
-            pnpm build:demo
+            pnpm build:demo:vercel
 
       - name: Get the preview_url
         run: echo "url => ${{ steps.preview_step.outputs.preview_url }}"
