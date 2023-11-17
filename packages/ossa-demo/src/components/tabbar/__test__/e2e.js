@@ -19,23 +19,26 @@ describe("Tabbar Testing", function () {
       for (let i = 0; i < indexData.length; i++) {
         let index = indexData[i];
         let tabIndex = index - 1;
-        cy.get(".ossa-tabbar")
-          .eq(0)
-          .within(() => {
-            cy.get(".ossa-tabbar__item")
-              .eq(tabIndex)
-              .within(($tab) => {
-                expect($tab).to.have.css("color").eq("rgb(127, 127, 127)");
-                $tab.click();
-                cy.get(
-                  ".ossa-icon.ossa-icon--" + pressName[index - 1] + "-pressed"
-                ).should("is.exist");
-                cy.get(".ossa-tabbar__txt").contains(iconText[index - 1]);
-              })
-              .should(($tab) => {
-                expect($tab).to.have.css("color").eq("rgb(221, 26, 33)");
-              });
-          });
+        ((index, tabIndex) =>
+          cy
+            .get(".ossa-tabbar")
+            .eq(0)
+            .within(() => {
+              cy.get(".ossa-tabbar__item")
+                .eq(tabIndex)
+                .within(($tab) => {
+                  console.log(tabIndex);
+                  expect($tab).to.have.css("color").eq("rgb(127, 127, 127)");
+                  $tab.click();
+                  cy.get(
+                    ".ossa-icon.ossa-icon--" + pressName[index - 1] + "-pressed"
+                  ).should("is.exist");
+                  cy.get(".ossa-tabbar__txt").contains(iconText[index - 1]);
+                })
+                .should(($tab) => {
+                  expect($tab).to.have.css("color").eq("rgb(221, 26, 33)");
+                });
+            }))(index, tabIndex);
       }
     });
   });
