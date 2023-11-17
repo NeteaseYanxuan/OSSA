@@ -18,21 +18,23 @@ describe("Tabs Testing", function () {
         if (i == 0 || (i > 0 && indexData[i] >= indexData[i - 1]))
           tabIndex = index - 2; //1 2 3
         else tabIndex = index - 1; //1 0
-        cy.get(".ossa-tabs-header__scroll")
-          .eq(1)
-          .within(() => {
-            cy.get(".ossa-tabs-item").eq(tabIndex).click(); //1 2 1 0 3
-          });
-        //这样写，可以验证active的tab页下，content是否正确
-        cy.get(".ossa-tabs-panel.ossa-tabs-panel--active")
-          .eq(1)
-          .within(() => {
-            cy.get(".tabs__content").contains(
-              "标签" +
-                (index == 2 || index == 1 ? index : index - 1) +
-                "内容区域"
-            ); //
-          });
+        ((index, tabIndex) => {
+          cy.get(".ossa-tabs-header__scroll")
+            .eq(1)
+            .within(() => {
+              cy.get(".ossa-tabs-item").eq(tabIndex).click(); //1 2 1 0 3
+            });
+          //这样写，可以验证active的tab页下，content是否正确
+          cy.get(".ossa-tabs-panel.ossa-tabs-panel--active")
+            .eq(1)
+            .within(() => {
+              cy.get(".tabs__content").contains(
+                "标签" +
+                  (index == 2 || index == 1 ? index : index - 1) +
+                  "内容区域"
+              ); //
+            });
+        })(index, tabIndex);
       }
     });
 
@@ -46,24 +48,25 @@ describe("Tabs Testing", function () {
         if (i == 0 || (i > 0 && indexData[i] >= indexData[i - 1]))
           tabIndex = index - 2;
         else tabIndex = index - 1;
+        ((index, tabIndex) => {
+          cy.get(".ossa-tabs-header__scroll")
+            .eq(3)
+            .within(() => {
+              cy.get(".ossa-tabs-item").eq(tabIndex).click();
+            });
 
-        cy.get(".ossa-tabs-header__scroll")
-          .eq(3)
-          .within(() => {
-            cy.get(".ossa-tabs-item").eq(tabIndex).click();
-          });
-
-        cy.get(".ossa-tabs-panel.ossa-tabs-panel--active")
-          .eq(3)
-          .within(() => {
-            cy.get(".tabs__content").contains(
-              "标签" +
-                (index == 9 || index == 1 || index == 5 || index == 2
-                  ? index
-                  : index - 1) +
-                "内容区域"
-            );
-          });
+          cy.get(".ossa-tabs-panel.ossa-tabs-panel--active")
+            .eq(3)
+            .within(() => {
+              cy.get(".tabs__content").contains(
+                "标签" +
+                  (index == 9 || index == 1 || index == 5 || index == 2
+                    ? index
+                    : index - 1) +
+                  "内容区域"
+              );
+            });
+        })(index, tabIndex);
       }
     });
 
@@ -80,29 +83,31 @@ describe("Tabs Testing", function () {
           tabIndex = index - 2;
         else tabIndex = index - 1;
 
-        cy.get(".ossa-tabs-header__scroll")
-          .eq(4)
-          .within(() => {
-            cy.get(".ossa-tabs-item").eq(tabIndex).click();
-          });
+        ((index, tabIndex) => {
+          cy.get(".ossa-tabs-header__scroll")
+            .eq(4)
+            .within(() => {
+              cy.get(".ossa-tabs-item").eq(tabIndex).click();
+            });
 
-        cy.get(".ossa-tabs-panel.ossa-tabs-panel--active")
-          .eq(4)
-          .within(() => {
-            cy.get(".tabs__content").contains(
-              "标签" +
-                (index == 9 ||
-                index == 1 ||
-                index == 5 ||
-                index == 6 ||
-                index == 2 ||
-                index == 18 ||
-                index == 16
-                  ? index
-                  : index - 1) +
-                "内容区域"
-            );
-          });
+          cy.get(".ossa-tabs-panel.ossa-tabs-panel--active")
+            .eq(4)
+            .within(() => {
+              cy.get(".tabs__content").contains(
+                "标签" +
+                  (index == 9 ||
+                  index == 1 ||
+                  index == 5 ||
+                  index == 6 ||
+                  index == 2 ||
+                  index == 18 ||
+                  index == 16
+                    ? index
+                    : index - 1) +
+                  "内容区域"
+              );
+            });
+        })(index, tabIndex);
       }
     });
 
@@ -117,21 +122,23 @@ describe("Tabs Testing", function () {
           tabIndex = index - 2;
         else tabIndex = index - 1;
 
-        cy.get(".ossa-tabs-header__scroll")
-          .eq(4)
-          .within(() => {
-            cy.get(".ossa-tabs-item").eq(tabIndex).click();
-          });
+        ((index, tabIndex) => {
+          cy.get(".ossa-tabs-header__scroll")
+            .eq(4)
+            .within(() => {
+              cy.get(".ossa-tabs-item").eq(tabIndex).click();
+            });
 
-        cy.get(".ossa-tabs-panel.ossa-tabs-panel--active")
-          .eq(4)
-          .within(() => {
-            cy.get(".tabs__content").contains(
-              "标签" +
-                (index == 1 || index == 3 ? index : index - 1) +
-                "内容区域"
-            );
-          });
+          cy.get(".ossa-tabs-panel.ossa-tabs-panel--active")
+            .eq(4)
+            .within(() => {
+              cy.get(".tabs__content").contains(
+                "标签" +
+                  (index == 1 || index == 3 ? index : index - 1) +
+                  "内容区域"
+              );
+            });
+        })(index, tabIndex);
       }
     });
   });
