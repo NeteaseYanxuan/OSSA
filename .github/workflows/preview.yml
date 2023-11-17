@@ -1,0 +1,35 @@
+name: 🔂 Surge PR Preview
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, closed]
+  push:
+
+jobs:
+  preview:
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write # allow surge-preview to create/update PR comments
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install pnpm
+        uses: pnpm/action-setup@v2.2.2
+        with:
+            version: 6
+
+      - name: Setup Node.js 16.x
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16.x
+          cache: 'pnpm'
+
+      - run: pnpm start
+
+      - uses: afc163/surge-preview@v1
+        with:
+          surge_token: ${{ secrets.SURGE_TOKEN }}
+          dist: packages/ossa-demo/dist
+          teardown: 'true'
+          build: |
+            pnpm build
+            pnpm build:demo

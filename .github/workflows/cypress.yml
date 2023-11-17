@@ -8,7 +8,7 @@ jobs:
       - run: echo ${{github.event.deployment_status.target_url}}
 
   e2e:
-    if: github.event.deployment_status.state == 'success' && contains(github.event.deployment_status.target_url, 'ossa-demo')
+    if: github.event.deployment_status.state == 'success' && contains(github.event.deployment_status.target_url, 'preview-job')
     runs-on: ubuntu-latest
 
     strategy:
