@@ -26,6 +26,7 @@ jobs:
       - run: pnpm start
 
       - uses: afc163/surge-preview@v1
+        id: preview_step
         with:
           surge_token: ${{ secrets.SURGE_TOKEN }}
           dist: packages/ossa-demo/dist
@@ -33,3 +34,18 @@ jobs:
           build: |
             pnpm build
             pnpm build:demo
+
+      - name: Get the preview_url
+        run: echo "url => ${{ steps.preview_step.outputs.preview_url }}"
+
+      - run: sudo apt-get install -y ttf-wqy-zenhei
+
+      - name: e2e test
+        run: pnpm test -- -- --config baseUrl=${{ steps.preview_step.outputs.preview_url }}
+
+      - uses: actions/upload-artifact@v2
+        if: failure()
+        with:
+          retention-days: 1
+          path: |
+            packages/ossa-demo/test/e2e/screenshots
