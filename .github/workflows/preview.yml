@@ -2,7 +2,7 @@ name: Surge PR Preview
 
 on:
   pull_request:
-    types: [opened, synchronize, reopened, closed]
+    types: [opened, synchronize, reopened]
   push:
 
 jobs:
@@ -33,7 +33,6 @@ jobs:
           surge_token: ${{ secrets.SURGE_TOKEN }}
           github_token: ${{ secrets.GITHUB_TOKEN }}
           dist: packages/ossa-demo/dist
-          teardown: 'true'
           build: |
             pnpm build
             pnpm build:demo:vercel
