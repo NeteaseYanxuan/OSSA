@@ -1,5 +1,11 @@
 # ossaui
 
+## 0.7.1
+
+### Patch Changes
+
+- [#141](https://github.com/NeteaseYanxuan/OSSA/pull/141) [`5ac954f`](https://github.com/NeteaseYanxuan/OSSA/commit/5ac954f509cf0ce1c53183f4e4d0c9823274a373) Thanks [@CaedmonW](https://github.com/CaedmonW)! - 更新 Input 组件 type 属性取值范围
+
 ## 0.7.0
 
 ### Minor Changes
