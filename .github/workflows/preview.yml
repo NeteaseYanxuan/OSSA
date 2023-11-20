@@ -42,6 +42,7 @@ jobs:
         run: echo "url => ${{ steps.preview_step.outputs.preview_url }}"
 
   e2e:
+    if: contains(needs.preview.outputs.preview_url, 'surge')
     needs: preview
     runs-on: ubuntu-latest
     steps:
