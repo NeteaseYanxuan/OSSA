@@ -144,7 +144,7 @@ const [v6, setV6] = useState("不可编辑的textarea");
 ### 属性
 |参数|说明|类型|默认值|
 |------|------|------|------|
-|type|输入框类型，可选|text \| number \| password \| bankcard \| textarea |text|
+|type|输入框类型，可选| InputType | text |
 |value|表单值，可选|string|-|
 |placeholder|placeholder，可选|string|-|
 |placeholderStyle|placeholder样式，只支持小程序，可选|string|-|
@@ -169,3 +169,20 @@ const [v6, setV6] = useState("不可编辑的textarea");
 |onFocus|表单聚焦时调用，可选|事件对象|
 |onBlur|表单值失焦时调用，可选|事件对象|
 
+### InputType
+type 的合法值
+
+| 参数 | 说明 |
+| --- | --- |
+| text | 文本输入键盘 |
+| number | 数字输入键盘 |
+| idcard | 身份证输入键盘 |
+| digit | 带小数点的数字键盘 |
+| safe-password | 密码安全输入键盘[指引](https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/safe-password.html) |
+| nickname | 昵称输入键盘 |
+| numberpad | 数字输入键盘 |
+| digitpad | 带小数点的数字键盘 |
+| idcardpad | 身份证输入键盘 |
+| password | 密码输入框 |
+| bankcard | 银行卡号码输入框 |
+| textarea | 文本域 |

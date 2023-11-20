@@ -25,7 +25,7 @@ const initialListApi = {
       list: [
         "type",
         "输入框类型，可选",
-        "text | number | password | bankcard | textarea",
+        "text | number | idcard	| digit	| safe-password	| nickname | numberpad | digitpad | idcardpad | password | bankcard | textarea",
         "text",
       ],
     },
