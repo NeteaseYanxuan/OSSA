@@ -11,14 +11,22 @@ interface InputProps extends OsComponent {
   /**
    * 输入框类型
    * @desc
-   * - text: 普通文本输入框
-   * - number: 数字输入框
+   * - text	文本输入键盘
+   * - number	数字输入键盘
+   * - idcard	身份证输入键盘
+   * - digit	带小数点的数字键盘
+   * - safe-password	密码安全输入键盘[指引](https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/safe-password.html)
+   * - nickname	昵称输入键盘
+   * - numberpad	数字输入键盘
+   * - digitpad	带小数点的数字键盘
+   * - idcardpad	身份证输入键盘
    * - password: 密码输入框
    * - bankcard: 银行卡号码输入框
    * - textarea: 文本域
+   *
    * @default "text"
    */
-  type?: "text" | "number" | "password" | "bankcard" | "textarea";
+  type?: keyof TaroInputProps.Type | "password" | "bankcard" | "textarea";
   /**
    * 当前输入框的值
    */
