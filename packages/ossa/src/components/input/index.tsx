@@ -18,7 +18,7 @@ import { deprecatedProp } from "../../utils";
 
 function getClassObject(props: OsInputProps) {
   const classObject = {
-    [`ossa-input--type-${props.type}`]: true,
+    [`ossa-input--type-${String(props.type)}`]: true,
     ["ossa-input--underline"]: props.showSplitLine && props.type !== "bankcard",
     ["ossa-input--disabled"]: props.isDisabled,
   };
