@@ -26,7 +26,7 @@ interface InputProps extends OsComponent {
    *
    * @default "text"
    */
-  type?: keyof TaroInputProps.Type | "password" | "bankcard" | "textarea";
+  type?: TaroInputProps['type'] | "password" | "bankcard" | "textarea";
   /**
    * 当前输入框的值
    */
