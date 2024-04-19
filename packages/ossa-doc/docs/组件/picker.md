@@ -18,7 +18,7 @@ const [vNormal, setVNormal] = useState(0);
   range={range}
   value={vNormal}
   onCancel={() => console.log("cancel")}
-  onConfirm={() => setVNormal(value as number)}
+  onConfirm={(value) => setVNormal(value as number)}
 >
   <OsList title='国籍' desc={range[vNormal]}></OsList>
 </OsPicker>
