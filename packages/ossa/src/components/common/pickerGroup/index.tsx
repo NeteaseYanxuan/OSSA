@@ -264,7 +264,7 @@ class PickerGroup extends Component<OsPickerGroupProps> {
 
 const OsPickerGroup: FC<OsPickerGroupProps> = (props) => {
   return (
-    <CustomWrapper className='picker-container'>{React.createElement(PickerGroup, props)}</CustomWrapper>
+    <View className='picker-container'>{React.createElement(PickerGroup, props)}</View>
   );
 };
 
