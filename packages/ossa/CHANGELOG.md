@@ -1,5 +1,11 @@
 # ossaui
 
+## 0.7.2
+
+### Patch Changes
+
+- [#144](https://github.com/NeteaseYanxuan/OSSA/pull/144) [`ea55c88`](https://github.com/NeteaseYanxuan/OSSA/commit/ea55c8846e64642f1b2dc1dd67b71702623d8eb2) Thanks [@CaedmonW](https://github.com/CaedmonW)! - fix: picker style error in weapp
+
 ## 0.7.1
 
 ### Patch Changes
