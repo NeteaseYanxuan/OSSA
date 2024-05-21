@@ -22,6 +22,9 @@ const initialListApi = {
   head: ["参数", "说明", "类型", "默认值"],
   data: [
     {
+      list: ["files", "初始图片列表，可选", "ImageFile[]", ""],
+    },
+    {
       list: ["max", "最大数量，可选", "number", "99"],
     },
     {
@@ -58,6 +61,21 @@ const initialListEvent = {
     },
   ],
 };
+
+const listFile = {
+  title: "API-ImageFile",
+  head: ["参数", "说明", "类型", "默认值"],
+  data: [
+    {
+      list: [
+        "path",
+        "资源路径，可选",
+        "string",
+        ""
+      ],
+    }
+  ],
+}
 
 function onChange(file, operationType, index) {
   console.log("图片文件:");
@@ -128,6 +146,10 @@ export default function Index(_props: Props) {
       </DemoBlock>
       <DemoBlock>
         <DemoTable list={listApi}></DemoTable>
+      </DemoBlock>
+
+      <DemoBlock>
+        <DemoTable list={listFile}></DemoTable>
       </DemoBlock>
 
       <DemoBlock>

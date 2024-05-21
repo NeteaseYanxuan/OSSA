@@ -1,4 +1,4 @@
-import React, { CSSProperties, useState } from "react";
+import React, { CSSProperties, useEffect, useState } from "react";
 import Taro from "@tarojs/taro";
 import { View, Image } from "@tarojs/components";
 import classNames from "classnames";
@@ -25,19 +25,12 @@ function onRemoveImg(
   index: number,
   files: ImageFile[],
   setFiles: Function,
-  setUpload: Function
 ) {
-  const { max = 99 } = props;
   if (ENV === Taro.ENV_TYPE.WEB) {
     window.URL.revokeObjectURL(files[index].path);
   }
   const newFiles = files.filter((file, i) => i !== index);
   setFiles(newFiles);
-  if (newFiles.length >= max) {
-    setUpload(false);
-  } else {
-    setUpload(true);
-  }
   props.onChange?.(newFiles, "remove", index);
 }
 
@@ -47,7 +40,6 @@ function onClick(
   props: OsUploadProps,
   files: ImageFile[],
   setFiles: Function,
-  setUpload: Function
 ) {
   const { multiple, max = 99 } = props;
 
@@ -65,7 +57,7 @@ function onClick(
     .then((res) => {
       const targetFiles = res.tempFiles
 
-      setNewFiles(props, files, max, targetFiles, setFiles, setUpload);
+      setNewFiles(props, files, max, targetFiles, setFiles);
     })
     .catch(props.onFail);
 }
@@ -76,13 +68,9 @@ function setNewFiles(
   max: number,
   targetFiles: ImageFile[],
   setFiles: Function,
-  setUpload: Function
 ) {
   const newFiles = [...files, ...targetFiles];
   setFiles(newFiles);
-  if (newFiles.length >= max) {
-    setUpload(false);
-  }
   props.onChange?.(newFiles.slice(0, max), "add", 0);
 }
 
@@ -91,11 +79,17 @@ function onImageClick(props: OsUploadProps, index: number, file: ImageFile) {
 }
 
 export default function Upload(props: OsUploadProps) {
+  const { max = 99 } = props;
   const rootClassName = "ossa-upload"; //组件
   const classObject = getClassObject(props); //组件修饰
   const styleObject = Object.assign(getStyleObj(props), props.customStyle);
   const [upload, setUpload] = useState(initialUploads);
   const [files = [], setFiles] = useState(props.files);
+
+  useEffect(() => {
+    setUpload(files.length < max);
+  }, [files, max])
+
   const _deleteIconStyle: CSSProperties = {
     position: "absolute",
     right: Taro.pxTransform(-18),
@@ -119,7 +113,7 @@ export default function Upload(props: OsUploadProps) {
                 type='upload-delete'
                 customStyle={_deleteIconStyle}
                 onClick={() =>
-                  onRemoveImg(props, index, files, setFiles, setUpload)
+                  onRemoveImg(props, index, files, setFiles)
                 }
               ></OsIcon>
             </View>
@@ -128,7 +122,7 @@ export default function Upload(props: OsUploadProps) {
           <View
             className='ossa-upload__btn'
             onClick={() => {
-              onClick(props, files, setFiles, setUpload);
+              onClick(props, files, setFiles);
             }}
           >
             <OsIcon
