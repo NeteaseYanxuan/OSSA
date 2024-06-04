@@ -1,5 +1,11 @@
 # ossaui
 
+## 0.7.3
+
+### Patch Changes
+
+- [#150](https://github.com/NeteaseYanxuan/OSSA/pull/150) [`5017317`](https://github.com/NeteaseYanxuan/OSSA/commit/50173172f98f91376dad6f044cf5856d9f0976c5) Thanks [@CaedmonW](https://github.com/CaedmonW)! - upload component max prop not work when init
+
 ## 0.7.2
 
 ### Patch Changes

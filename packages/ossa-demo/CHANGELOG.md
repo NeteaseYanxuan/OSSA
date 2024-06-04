@@ -1,5 +1,14 @@
 # ossa-demo
 
+## 1.9.1
+
+### Patch Changes
+
+- [#150](https://github.com/NeteaseYanxuan/OSSA/pull/150) [`5017317`](https://github.com/NeteaseYanxuan/OSSA/commit/50173172f98f91376dad6f044cf5856d9f0976c5) Thanks [@CaedmonW](https://github.com/CaedmonW)! - upload component max prop not work when init
+
+- Updated dependencies [[`5017317`](https://github.com/NeteaseYanxuan/OSSA/commit/50173172f98f91376dad6f044cf5856d9f0976c5)]:
+  - ossaui@0.7.3
+
 ## 1.9.0
 
 ### Minor Changes

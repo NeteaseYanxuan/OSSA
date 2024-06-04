@@ -200,7 +200,7 @@ importers:
       eslint-plugin-react-hooks: ^4.2.0
       mocha: ^6.1.4
       mocha-allure-reporter: ^1.4.0
-      ossaui: workspace:^0.7.0
+      ossaui: workspace:^0.7.3
       react: ^17.0.0
       react-dom: ^17.0.0
       react-refresh: ^0.11.0
@@ -15370,8 +15370,8 @@ packages:
     resolution: {integrity: sha512-ewXOEqLGIgqQSy4wbaCHq47sfDsC/hQhO9QVzTQTCKNf9x691AwADHorfCTfVLXDVkOjbbLmJ086M3Dv7hKcXw==}
     dev: true
 
-  /miniprogram-compiler/0.2.2:
-    resolution: {integrity: sha512-fiJXv/15jCcRAU8YKcO7S7fkPKLa5ZBgpLN+d6B3r3KMktM5tAkDEQ+zm6aTfNoHurYOHcRyPyGf26gqQXlFXg==}
+  /miniprogram-compiler/0.2.3:
+    resolution: {integrity: sha512-/MfFiXTBUwYxnrTbj1hgwk1+qGkMCTL1zi8IReOq/0SPVkUxpx19E89w+ohYCELFXkMfVbD+6ejrHh3Y1u5sVg==}
     dependencies:
       glob: 7.2.3
       unescape-js: 1.1.4
@@ -15387,7 +15387,7 @@ packages:
       csso: 3.5.1
       j-component: 1.4.9
       less: 3.13.1
-      miniprogram-compiler: 0.2.2
+      miniprogram-compiler: 0.2.3
       postcss: 7.0.39
       pretty-format: 26.6.2
     dev: true
