@@ -40,6 +40,22 @@ interface SearchProps extends OsComponent {
    */
   value?: string;
   /**
+   * 是否展示右侧操作按钮
+   * @default true
+   */
+  showAction?: boolean;
+  /**
+   * 操作按钮类型
+   * @default 'cancel'
+   * @description 'cancel' | 'confirm'
+   */
+  action?: "cancel" | "confirm";
+  /**
+   * 操作按钮文案
+   * @default action === 'cancel' ? '取消' : '搜索'
+   */
+  actionText?: string;
+  /**
    * 内容改变事件
    * @param event 通用事件对象
    * @param value 当前输入的值
@@ -49,6 +65,10 @@ interface SearchProps extends OsComponent {
    * 点击清空时回调
    */
   onClear?: () => void;
+  /**
+   * 点击取消时回调
+   */
+  onCancel?: () => void;
   /**
    * 失去焦点时回调
    * @param event 通用事件对象

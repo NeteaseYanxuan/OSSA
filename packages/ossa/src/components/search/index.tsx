@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Taro from "@tarojs/taro";
 import { View, Input, Text } from "@tarojs/components";
 import classNames from "classnames";
@@ -28,18 +28,18 @@ function getClassObject(props: OsSearchProps) {
   return _classObject;
 }
 
-function onClear(setCurrent: Function, setFocus: Function) {
-  setFocus(false);
+function onClear(props: OsSearchProps, setCurrent: Function) {
   setCurrent("");
+  props.onClear?.();
 }
 
-function onCancel(setCurrent: Function, setFocus: Function) {
-  setCurrent("");
+function onCancel(props: OsSearchProps, setCurrent: Function, setFocus: Function) {
   setFocus(false);
+  setCurrent("");
+  props.onCancel?.();
 }
 
 function onChange(e: any, props: OsSearchProps, setCurrent: Function) {
-  //alert(1);
   setCurrent(e.target.value);
   props.onChange?.(e, e.target.value);
 }
@@ -57,13 +57,37 @@ function onFocus(e: any, props: OsSearchProps, setFocus: Function) {
   props.onFocus?.(e);
 }
 
+const DEAFULT_ACTION_CANCEL_TEXT = "取消";
+const DEAFULT_ACTION_CONFIRM_TEXT = "搜索";
+
 export default function Index(props: OsSearchProps) {
   const rootClassName = "ossa-search"; //组件
   const classObject = getClassObject(props); //组件修饰
   const styleObject = Object.assign(getStyleObj(props), props.customStyle);
-  const [current = "", setCurrent] = useState(props.value);
-  const [focus, setFocus] = useState(false);
-  const { color, placeholder, className } = props;
+  const { value, color, placeholder, className, showAction, action, actionText } = props;
+  const [focus, setFocus] = useState(!!value || false);
+  const [current, setCurrent] = useState(value);
+  const [innerActionText, setInnerActionText] = useState(actionText);
+
+  useEffect(() => {
+    setCurrent(value);
+  }, [value])
+
+  useEffect(() => {
+    if (actionText) {
+      setInnerActionText(actionText);
+    } else {
+      setInnerActionText(action === "cancel" ? DEAFULT_ACTION_CANCEL_TEXT : DEAFULT_ACTION_CONFIRM_TEXT);
+    }
+  }, [action, actionText])
+
+  const handleActionClick = (e) => {
+    if (action === "cancel") {
+      onCancel(props, setCurrent, setFocus);
+    } else {
+      onConfirm(e, props, current);
+    }
+  }
 
   return (
     <View
@@ -99,7 +123,6 @@ export default function Index(props: OsSearchProps) {
             confirmType='search'
             value={current}
             placeholder={focus ? placeholder : ""}
-            // onKeyup={(e)=>onChange(e, props, setCurrent)}
             onInput={(e) => onChange(e, props, setCurrent)}
             onConfirm={(e) => onConfirm(e, props, current)}
             onBlur={(e) => onBlur(e, props)}
@@ -107,7 +130,7 @@ export default function Index(props: OsSearchProps) {
             style={{ color: color }}
             placeholderClass='ossa-search__input--placehoder-style'
           ></Input>
-          {!current && (
+          {!focus && (
             <View
               className='ossa-search__placeholder'
               style={{ textAlign: focus ? "left" : "center" }}
@@ -127,7 +150,7 @@ export default function Index(props: OsSearchProps) {
             </View>
           )}
         </View>
-        {current.length > 0 && focus && (
+        {current && focus && (
           <OsIcon
             type='delete-input'
             customStyle={{
@@ -136,17 +159,17 @@ export default function Index(props: OsSearchProps) {
             }}
             size={28}
             color='#cccccc'
-            onClick={() => onClear(setCurrent, setFocus)}
+            onClick={() => onClear(props, setCurrent)}
           ></OsIcon>
         )}
       </View>
-      {focus && (
+      {showAction && focus && (
         <Text
           className='ossa-search--cancel'
           style={{ color: color }}
-          onClick={() => onCancel(setCurrent, setFocus)}
+          onClick={handleActionClick}
         >
-          取消
+          {innerActionText}
         </Text>
       )}
     </View>
@@ -160,6 +183,8 @@ Index.defaultProps = {
   color: "#333333",
   placeholder: "搜索商品，共X款好物",
   bgColor: "#FAFAFA",
+  showAction: true,
+  action: "cancel"
 };
 
 Index.options = {
