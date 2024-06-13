@@ -1,5 +1,11 @@
 # ossa-doc
 
+## 0.3.2
+
+### Patch Changes
+
+- [#153](https://github.com/NeteaseYanxuan/OSSA/pull/153) [`ac3055c`](https://github.com/NeteaseYanxuan/OSSA/commit/ac3055cff5a00a16526609ee5ea7d29a7840e6f7) Thanks [@CaedmonW](https://github.com/CaedmonW)! - optimize Search
+
 ## 0.3.1
 
 ### Patch Changes
