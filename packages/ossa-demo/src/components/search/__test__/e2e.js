@@ -84,9 +84,9 @@ describe("Search Testing", function () {
         .find("input")
         .type("test123456test123456test123456test123456");
       cy.get(".ossa-icon--delete-input").click();
-      cy.get(".ossa-search--show-split-line")
-        .find("taro-text-core")
-        .contains("搜索商品，共X款好物");
+      cy.get(".ossa-search.ossa-search--show-split-line")
+        .find("input")
+        .should("have.value", "");
     });
 
     it("solution #5: 搜索栏-取消操作", function () {
