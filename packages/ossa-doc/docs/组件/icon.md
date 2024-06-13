@@ -8,6 +8,14 @@ demo_url: 'https://neteaseyanxuan.github.io/OSSA/#/components/icon/demo/index'
 ## 介绍
 常用图表的集合。
 
+:::tip
+按需引入时，如果使用其他包含`Icon`的组件，需要手动引入`Icon`的样式文件
+
+eg：当使用带icon的`Button`时，需要手动引入`Icon`的样式文件
+
+import 'ossaui/dist/style/components/icon.scss'
+:::
+
 ## 用法
 ### 基础
 ```jsx
