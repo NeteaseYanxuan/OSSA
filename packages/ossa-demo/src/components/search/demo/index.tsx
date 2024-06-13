@@ -37,6 +37,18 @@ const initialListApi = {
       list: ["color", "输入文字颜色，可选", "string", "#333333"],
     },
     {
+      list: ["value", "输入框的值，可选", "string", "-"],
+    },
+    {
+      list: ["showAction", "是否展示右侧操作按钮，可选", "boolean", "true"],
+    },
+    {
+      list: ["action", "操作按钮类型，可选", "string", "cancel"],
+    },
+    {
+      list: ["actionText", "操作按钮文案，可选", "string", "取消"],
+    },
+    {
       list: ["className", "自定义类名，可选", "string", "-"],
     },
     {
@@ -67,10 +79,12 @@ const initialListEvent = {
     {
       list: ["onBlur", "失去焦点时触发", "event"],
     },
-    // ,
-    // {
-    //   list:['onConfirm','默认提交回调','evane']
-    // }
+    {
+      list: ["onConfirm","提交回调","evane"]
+    },
+    {
+      list: ["onCancel","取消回调","evane"]
+    }
   ],
 };
 

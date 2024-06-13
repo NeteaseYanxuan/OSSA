@@ -25,6 +25,10 @@ demo_url: 'https://neteaseyanxuan.github.io/OSSA/#/components/search/demo/index'
 |padding|容器左右内边距，可选|number|30|
 |bgColor|容器背景色，可选|string|#FAFAFA|
 |color|输入文字颜色，可选|string|#333333|
+|value|默认值，可选|string|-|
+|showAction|是否展示右侧操作按钮，可选|boolean|true|
+|action|操作按钮类型，可选|string|"cancel"|
+|actionText|操作按钮文案，可选|string|"取消"|
 |className|自定义类名，可选|string|-|
 |customStyle|自定义样式，可选|object|-|
 |taroProps|除了上述属性之外 taro 支持的 Input 属性，可选|object|-|
@@ -37,4 +41,6 @@ demo_url: 'https://neteaseyanxuan.github.io/OSSA/#/components/search/demo/index'
 |onClear|点击清除icon时触发|-|
 |onFocus|聚焦时触发|event|
 |onBlur|失去焦点时触发|event|
+|onCancel|点击取消按钮时触发|-|
+|onConfirm|点击确定按钮时触发|-|
 
