@@ -65,6 +65,8 @@ demo_url: 'https://neteaseyanxuan.github.io/OSSA/#/components/tag/demo/index'
 |endBgColor|填充渐变结束色，可选|string|-（只支持radius腰圆标签，且与startBgColor配合使用）|
 |showArrow|显示向右箭头，可选|boolean|-（只支持radius腰圆标签）|
 |customStyle|自定义Style，可选|Object|-|
+|size|tag尺寸|,可选|middle|large|-|
+|border|边框,可选｜string|-
 
 
 ### 方法

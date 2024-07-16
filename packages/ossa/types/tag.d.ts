@@ -42,6 +42,17 @@ interface TagProps extends OsComponent {
    * @support type="normal"
    */
   showArrow?: boolean;
+  /**
+   * tag尺寸大小
+   * @default "normal"
+   * @support type="normal"
+   */
+  size?: "middle" | "large";
+  /**
+ * 边框颜色
+ */
+  border?: string;
+  
 }
 
 declare const Tag: ComponentClass<TagProps>;

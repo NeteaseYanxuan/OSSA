@@ -1,9 +1,10 @@
 import React from "react";
-import { View, Image, Text, Button } from "@tarojs/components";
+import { View, Image, Text } from "@tarojs/components";
 import classNames from "classnames";
 import { OsModalProps } from "../../../types/index";
 import getOpenTypeRelatedProps from "../../utils/getOpenTypeRelatedProps";
 import { deprecatedProp } from "../../utils";
+import Button from "../button";
 
 const closeIconImg =
   "https://yanxuan-static.nosdn.127.net/hxm/yanxuan-wap/p/20161201/style/img/icon-normal/modalClose-9d2d6d39f7.png?imageView";
@@ -108,8 +109,10 @@ export default function Index(props: OsModalProps) {
                     className={classNames({
                       ["ossa-action-btn"]: true,
                       ["ossa-action-btn--cancel"]: true,
-                      ["ossa-action-btn--disabled"]: props.disableCancelBtn,
                     })}
+                    shape='round'
+                    size={confirmText ? 'normal' : 'block'}
+                    disabled={props.disableConfirmBtn}
                     onClick={(e) => onClickCancelBtn(props)}
                   >
                     {cancelText}
@@ -120,9 +123,12 @@ export default function Index(props: OsModalProps) {
                     className={classNames({
                       ["ossa-action-btn"]: true,
                       ["ossa-action-btn--confirm"]: true,
-                      ["ossa-action-btn--disabled"]: props.disableConfirmBtn,
                     })}
                     openType={confirmOpenType}
+                    type='primary'
+                    shape='round'
+                    size={cancelText ? 'normal' : 'block'}
+                    disabled={props.disableConfirmBtn}
                     {...openTypeRelatedProps}
                     onClick={(e) => onClickConfirmBtn(props)}
                   >
@@ -158,8 +164,10 @@ export default function Index(props: OsModalProps) {
                   className={classNames({
                     ["ossa-action-btn"]: true,
                     ["ossa-action-btn--cancel"]: true,
-                    ["ossa-action-btn--disabled"]: props.disableCancelBtn,
                   })}
+                  shape='round'
+                  size={confirmText ? 'normal' : 'block'}
+                  disabled={props.disableCancelBtn}
                   onClick={(e) => onClickCancelBtn(props)}
                 >
                   {cancelText}
@@ -170,9 +178,12 @@ export default function Index(props: OsModalProps) {
                   className={classNames({
                     ["ossa-action-btn"]: true,
                     ["ossa-action-btn--confirm"]: true,
-                    ["ossa-action-btn--disabled"]: props.disableConfirmBtn,
                   })}
                   openType={confirmOpenType}
+                  type='primary'
+                  shape='round'
+                  size={cancelText ? 'normal' : 'block'}
+                  disabled={props.disableConfirmBtn}
                   {...openTypeRelatedProps}
                   onClick={(e) => onClickConfirmBtn(props)}
                 >

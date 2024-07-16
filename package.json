@@ -23,7 +23,7 @@
     "version-packages:ci": "changeset version && pnpm install --shamefully-hoist --no-frozen-lockfile",
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0",
     "release": "pnpm build && pnpm release:only",
-    "release:only": "changeset publish --registry=https://registry.npmjs.com/",
+    "release:only": "changeset publish --registry=https://npm.infra.inner.casamiel.cn/",
     "test": "pnpm --filter=ossa-demo test",
     "checkUIChange": "node ./scripts/checkModifyListAndTest.js",
     "prepare": "husky install"

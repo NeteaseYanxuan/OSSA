@@ -161,6 +161,26 @@ export default function Index() {
           </View>
         </View>
       </DemoBlock>
+      <DemoBlock title='中尺寸'>
+        <View className='block-section'>
+          <View className='inline-item'>
+            <OsTag bgColor='#F7F8F8' color='#3D3D3D' size='middle'>女性蛋糕</OsTag>
+          </View>
+          <View className='inline-item'>
+            <OsTag bgColor='#F7F8F8' border=' 1px solid #AF7357' color='#AF7357' size='middle'>女性蛋糕</OsTag>
+          </View>
+        </View>
+      </DemoBlock>
+      <DemoBlock title='大尺寸'>
+        <View className='block-section'>
+          <View className='inline-item'>
+            <OsTag color='#3D3D3D' size='large'>整条（12片装）</OsTag>
+          </View>
+          <View className='inline-item'>
+            <OsTag bgColor='#FFF7F1' type='primary' border='1px solid #893F23' color='#893F23' size='large'>整条（12片装）</OsTag>
+          </View>
+        </View>
+      </DemoBlock>
       <DemoBlock>
         <DemoTable list={listApi}></DemoTable>
       </DemoBlock>

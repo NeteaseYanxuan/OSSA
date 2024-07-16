@@ -44,40 +44,38 @@ $modal-duration: 200ms;
   }
 
   &__title {
-    font-size: 32px;
+    font-size: 36px;
+    font-weight: 500;
     line-height: 48px;
     display: block;
     text-align: center;
   }
 
   &__header {
-    padding-top: 48px;
-    padding-bottom: 8px;
+    padding-top: 40px;
+    padding-left: 32px;
+    padding-right: 32px;
   }
 
   &__content {
-    padding: 0 60px 48px;
+    padding: 32px;
     color: $--text-color-secondary;
     font-size: 28px;
     font-weight: $--font-weight-default;
   }
 
   &__footer {
-    @include hairline-top();
-
+    margin-bottom: 40px;
+    padding: 0 32px;
     display: flex;
     flex-direction: row;
     align-items: center;
+    gap: 26px;
 
     & > .ossa-action-btn {
       @include line(1);
-
-      color: $--text-color-base;
-      background-color: $--fill-default;
       border: none;
       font-size: 28px;
-      height: 104px;
-      line-height: 104px;
       text-align: center;
       box-sizing: border-box;
       flex: 1;
@@ -96,16 +94,12 @@ $modal-duration: 200ms;
         border-radius: 0;
       }
 
-      &:active {
-        background-color: $--fill-model-btns-active;
-      }
-
       &.ossa-action-btn--cancel {
         color: $--text-color-base;
-      }
-
-      &.ossa-action-btn--confirm {
-        color: $--color-red;
+        background: $--fill-body;
+        &::after {
+          border: none;
+        }
       }
 
       &.ossa-action-btn--disabled {

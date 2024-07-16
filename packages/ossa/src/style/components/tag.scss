@@ -3,12 +3,15 @@
 .ossa-tag {
   color: $--color-red;
   background-color: $--fill-tag-default;
-  font-size: 24px;
-  line-height: 30px;
-  height: 30px;
+  font-size: 20px;
+  height: 32px;
+  line-height: 1;
   text-align: center;
-  padding: 0 16px 0 16px;
-  display: inline-block;
+  padding: 7px 10px;
+  border-radius: 4px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
   box-sizing: border-box;
   font-weight: $--font-weight-light;
 
@@ -43,9 +46,7 @@
 
   &--type-radius {
     position: relative;
-    padding: 0 12px 0 12px;
-    font-size: 20px;
-    border-radius: 16px;
+    border-radius: 32px;
 
     .ossa-border {
       position: absolute;
@@ -55,7 +56,7 @@
       height: 200%;
       transform: scale(0.5);
       border: 1px solid $--border-color-tag-default;
-      border-radius: 30px;
+      border-radius: 12px;
       transform-origin: 0 0;
     }
 
@@ -75,11 +76,8 @@
   &--type-primary {
     background-color: $--fill-tag-primary;
     color: $--text-color-base-inverse;
-    border-radius: 0 0 4px 4px;
-    font-size: 24px;
-    line-height: 36px;
-    height: 36px;
-
+    padding: 6px 10px;
+    font-size: 18px;
     .ossa-tag__title {
       transform: scale(1);
       display: inline-block;
@@ -102,5 +100,17 @@
       color: $--text-color-base-inverse;
       opacity: 0.8;
     }
+  }
+
+  &--size-middle {
+    padding: 12px 24px;
+    font-size: 24px;
+    height: 58px;
+  }
+  
+  &--size-large {
+    padding: 16px 48px;
+    font-size: 24px;
+    height: 66px;
   }
 }

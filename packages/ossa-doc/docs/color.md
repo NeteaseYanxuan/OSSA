@@ -7,6 +7,9 @@ demo_url: 'https://neteaseyanxuan.github.io/OSSA/#/components/color/demo/index'
 
 ### scss变量
 ```scss
+/* Theme Color */
+$--color-primay: #AF7357 !default;           // 主题色
+
 /* Color */
 $--color-red:#DD1A21 !default;              // 品牌红
 $--color-yellow:#F48F18 !default;           // 营销色

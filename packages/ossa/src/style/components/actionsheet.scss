@@ -21,6 +21,7 @@ $animation-duration: 200ms;
 
     .ossa-actionsheet__container {
       transform: translate(-50%, 0%);
+      background-color: #F4F4F4
     }
   }
 
@@ -34,9 +35,9 @@ $animation-duration: 200ms;
   &__container {
     @include absolute-center-bottom();
     @include safe-area-inset-bottom();
-
     width: 100%;
     background: $--fill-default;
+    border-radius: 32px 32px 0px 0px;
     transform: translate(-50%, 100%);
     transition: transform 200ms ease-in;
   }
@@ -47,7 +48,6 @@ $animation-duration: 200ms;
     justify-content: flex-end;
     align-items: center;
     padding: 40px 24px;
-    @include hairline-bottom();
   }
 
   &__title {

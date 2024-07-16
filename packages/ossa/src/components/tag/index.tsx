@@ -11,6 +11,7 @@ function getStyleObj(props: OsTagProps): CSSProperties {
     bgColor,
     startBgColor,
     endBgColor,
+    border,
   } = props;
 
   let _styleObj: CSSProperties = {};
@@ -27,6 +28,14 @@ function getStyleObj(props: OsTagProps): CSSProperties {
 
   if (bgColor) {
     _styleObj["background"] = bgColor;
+  }
+
+  if (border) {
+    _styleObj["border"] = border;
+  }
+
+  if (color) {
+    _styleObj["color"] = color;
   }
 
   if (startBgColor && endBgColor) {
@@ -46,6 +55,7 @@ function getClassObject(props: OsTagProps) {
     bgColor,
     startBgColor,
     endBgColor,
+    size,
   } = props;
 
 
@@ -53,6 +63,7 @@ function getClassObject(props: OsTagProps) {
     [`ossa-tag--type-${type}`]: TagType[type],
     [`ossa-tag--color-${color}`]: TagColor[color],
     ["ossa-tag--border-none"]: bgColor || startBgColor || endBgColor,
+    [`ossa-tag--size-${size}`]: size,
   };
   return classObject;
 }

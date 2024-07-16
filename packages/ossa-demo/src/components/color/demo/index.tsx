@@ -41,6 +41,11 @@ function getClassObject() {
 
 const initialColorList: ColorListItem[] = [
   {
+    color: "#AF7357",
+    title: "YXColorPrimary",
+    desc: "主题色",
+  },
+  {
     color: "#DD1A21",
     title: "YXColorRed",
     desc: "品牌红色",

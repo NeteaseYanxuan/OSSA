@@ -1,6 +1,6 @@
 {
-  "name": "ossaui",
-  "version": "0.7.4",
+  "name": "@casamiel/ossaui",
+  "version": "0.7.4-beta.4",
   "description": "",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",

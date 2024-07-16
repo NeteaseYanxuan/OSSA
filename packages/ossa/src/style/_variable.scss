@@ -6,6 +6,9 @@
 $--font-color:#666;
 $--font-size:14px;
 
+/* Theme Color */
+$--color-primay:#AF7357 !default;           // 主题色
+
 /* Color */
 $--color-red:#DD1A21 !default;              // 品牌红
 // $--color-logo:#FF142F !default;             // 桌面图标亮红色
@@ -139,9 +142,9 @@ $--fill-color-button-default: transparent !default;
 $--fill-color-button-default-active: $--fill-body !default;
 $--fill-color-button-default-disabled: $--text-color-disabled !default;
 
-$--fill-color-button-primary: $--color-red !default;
+$--fill-color-button-primary: $--color-primay !default;
 $--fill-color-button-primary-active: #C6171D !default;
-$--fill-color-button-primary-disabled: $--color-red !default;
+$--fill-color-button-primary-disabled: $--color-primay !default;
 
 $--fill-color-button-special1: transparent !default;
 
@@ -155,15 +158,15 @@ $--border-color-default: $--text-color-secondary !default;
 $--border-color-default-active: $--text-color-secondary !default;
 $--border-color-default-disabled: transparent !default;
 
-$--border-color-primary: $--color-red !default;
+$--border-color-primary: $--color-primay !default;
 $--border-color-primary-active: #A22929 !default;
-$--border-color-primary-disabled: $--color-red !default;
+$--border-color-primary-disabled: $--color-primay !default;
 
 $--border-color-special1: $--color-border-base-1 !default;
-$--border-color-special1-active: $--color-red !default;
+$--border-color-special1-active: $--color-primay !default;
 
 $--border-color-special2: $--text-color-disabled !default;
-$--border-color-special2-active: $--color-red !default;
+$--border-color-special2-active: $--color-primay !default;
 
 $--border-color-icon: #979797 !default;
 $--border-color-icon-active: #979797 !default;
