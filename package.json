@@ -9,13 +9,14 @@
   },
   "scripts": {
     "start": "pnpm install --shamefully-hoist",
-    "dev": "concurrently \"pnpm --filter=ossaui dev:rollup\" \"pnpm --filter=@ossa/loki dev:rollup\" \"pnpm dev:demo\"",
+    "dev": "concurrently \"pnpm --filter=ossaui dev:rollup\" \"pnpm dev:demo\"",
     "dev:demo": "pnpm --filter=ossa-demo dev:h5",
     "doc:start": "pnpm --filter=ossa-doc start",
     "build:demo": "pnpm --filter=ossa-demo build:h5 --public_path=$npm_config_path",
     "build:demo:vercel": "pnpm --filter=ossa-demo build:h5:vercel",
     "build": "pnpm build:ossa && pnpm build:loki",
     "build:ossa": "pnpm --filter=ossaui build",
+    "dev:ossa": "pnpm --filter=ossaui dev",
     "build:loki": "pnpm --filter=@ossa/loki build",
     "clear": "rimraf 'packages/*/{lib,node_modules}' && rimraf node_modules",
     "changeset": "changeset",
@@ -58,17 +59,16 @@
     "husky": "^8.0.0",
     "lint-staged": "^10.1.2",
     "prettier": "^2.7.1",
-    "react": "^17.0.0",
-    "react-dom": "^17.0.0",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
     "serve-static": "^1.15.0",
     "shelljs": "^0.8.5",
     "typescript": "^3.9.5"
   },
   "pnpm": {
     "overrides": {
-      "@types/react": "^17.0.0",
-      "@types/react-dom": "^17.0.0",
-      "@swc/core": "1.3.6"
+      "@types/react": "^18.0.0",
+      "@types/react-dom": "^18.0.0"
     }
   }
 }

@@ -13,3 +13,4 @@ packages/ossa-demo/test/results
 packages/ossa-demo/test/e2e/videos
 packages/ossa-demo/test/e2e/screenshots
 .swc/
+packages/MyApplication/

@@ -1,7 +1,7 @@
-// eslint-disable-next-line
-const argv = require("yargs").argv;
+import type { UserConfigExport } from "@tarojs/cli";
+import { argv } from "yargs";
 
-module.exports = {
+export default {
   env: {
     NODE_ENV: '"production"',
   },
@@ -18,4 +18,4 @@ module.exports = {
      * }
      */
   },
-};
+} satisfies UserConfigExport<'vite'>
