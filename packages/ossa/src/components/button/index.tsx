@@ -4,6 +4,7 @@ import { View, Button as TaroButton, ITouchEvent } from "@tarojs/components";
 import classNames from "classnames";
 import OsIcon from "../icon";
 import { OsButtonProps } from "../../../types/index";
+import '../../style/components/button.scss'
 
 type RequiredOsButtonProps = Required<OsButtonProps>;
 
@@ -143,7 +144,7 @@ export default function Button(props: OsButtonProps) {
       onTouchEnd={() => onTouchEnd(props, setActive, active)}
     >
       {iconComponent}
-      <View className='ossa-button__text'>{props.children}</View>
+      {props.children}
       {/* { active && (props.type === 'default') && <View className='button--is-active' style={{background: props.bdColor}}></View>}
       { active && (props.type === 'primary') && <View className='button--is-active'></View>} */}
     </TaroButton>

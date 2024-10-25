@@ -7,20 +7,20 @@
   -webkit-tap-highlight-color: transparent;
   box-sizing: border-box;
   max-width: 100%;
-  margin: 0;
+  margin: auto;
+  padding-left: 14px;
+  padding-right: 14px;
   cursor: pointer;
+  background-color: #f8f8f8;
+  overflow: hidden;
+  font-weight: $--font-weight-default;
+  font-size: 28px;
+  max-width: 100%;
+  line-height: 1.1;
+  @include utils-ellipsis();
 
   .icon {
     color: inherit;
-  }
-
-  .ossa-button__text {
-    display: inline-block;
-    font-weight: $--font-weight-default;
-    font-size: 28px;
-    max-width: 100%;
-    line-height: 1.1;
-    @include utils-ellipsis();
   }
 
   &::-moz-focus-inner {
@@ -191,8 +191,6 @@
   &--large {
     @include button-size(0,80px,510px);
 
-    display: flex;
-    // width: 510px;
 
     &.ossa-button--circle {
       border-radius: 40px;
