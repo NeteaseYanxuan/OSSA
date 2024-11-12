@@ -34,3 +34,4 @@ export { default as OsRow } from "./components/row/index";
 export { default as OsCol } from "./components/col/index";
 export { default as OsCountdown } from "./components/countdown/index";
 export { default as OsSwipeCell } from "./components/swipe-cell/index";
+export { default as OsTimeline } from "./components/timeline/index";

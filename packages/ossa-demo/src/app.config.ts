@@ -12,6 +12,7 @@ export default {
     "components/button/demo/index",
     "components/color/demo/index",
     "components/countdown/demo/index",
+    "components/timeline/demo/index",
     "components/tag/demo/index",
     "components/icon/demo/index",
     "components/radio/demo/index",

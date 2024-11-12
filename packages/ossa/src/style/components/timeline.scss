@@ -1,0 +1,130 @@
+@import '../base.scss';
+
+.ossa-timeline-item {
+  position: relative;
+  padding: 0 0 16px;
+
+  /* elements */
+  &__content {
+    margin-left: 18px;
+    min-height: 56px;
+    color: $--title-timeline-color;
+    font-size: $--font-size-2;
+    line-height: 1.1;
+    text-align: left;
+
+    &--sub {
+      color: $--desc-timeline-color;
+      font-size: $--font-size-1;
+      margin-top: 5px;
+    }
+  }
+
+  &__dot,
+  &__icon {
+    position: absolute;
+    left: 0;
+    top: 1px;
+    width: $--dot-timeline-size;
+    height: $--dot-timeline-size;
+    font-size: 0;
+    text-align: center;
+    vertical-align: middle;
+    border-radius: 10px;
+    background: $--timeline-dot-bg-color;
+    box-sizing: border-box;
+    z-index: 1;
+
+    .ossa-icon {
+      font-size: $--font-size-2;
+    }
+  }
+
+  &__dot {
+    &::after {
+      content: '';
+      display: inline-block;
+      box-sizing: border-box;
+      width: $--dot-timeline-size;
+      height: $--dot-timeline-size;
+      border: 1PX solid transparent;
+      border-radius: 10px;
+      border-color: $--timeline-dot-border-color;
+    }
+
+    &.ossa-timeline-item__icon {
+      &::after {
+        border-color: transparent;
+      }
+    }
+  }
+
+  &__icon {
+    color: $--timeline-dot-border-color;
+  }
+
+  &__tail {
+    position: absolute;
+    top: calc($--dot-timeline-size / 2);
+    bottom: calc($--dot-timeline-size / -2);
+    left: calc($--dot-timeline-size / 2) - 2px;
+    border-left: 1PX solid $--line-timeline-color;
+  }
+
+  /* modifiers */
+  &--green {
+    .ossa-timeline-item__icon {
+      color: $--color-green;
+    }
+
+    .ossa-timeline-item__dot {
+      &::after {
+        border-color: $--color-green;
+      }
+    }
+  }
+
+  &--red {
+    .ossa-timeline-item__icon {
+      color: $--color-red;
+    }
+
+    .ossa-timeline-item__dot {
+      &::after {
+        border-color: $--color-red;
+      }
+    }
+  }
+
+  &--yellow {
+    .ossa-timeline-item__icon {
+      color: $--color-yellow;
+    }
+
+    .ossa-timeline-item__dot {
+      &::after {
+        border-color: $--color-yellow;
+      }
+    }
+  }
+}
+
+.ossa-timeline {
+  .ossa-timeline-item:last-child {
+    .ossa-timeline-item__tail {
+      display: none;
+    }
+  }
+
+  &--pending {
+    .ossa-timeline-item:nth-last-child(2) {
+      .ossa-timeline-item__content {
+        min-height: 80px;
+      }
+
+      .ossa-timeline-item__tail {
+        border-left-style: dotted;
+      }
+    }
+  }
+}

@@ -45,14 +45,11 @@ $--color-border-base-1:#7F7F7F !default;
 $--font-size-1:18px !default;                  // 数量角标
 $--font-size-line-height-1:24px !default;
 
-
 $--font-size-2:20px !default;                  // 标签文字
 $--font-size-line-height-2:30px !default;
 
-
 $--font-size-3:22px !default;                  // 标签文字
 $--font-size-line-height-3:32px !default;
-
 
 $--font-size-4:24px !default;                  // 次要描述
 $--font-size-line-height-4:36px !default;
@@ -304,5 +301,10 @@ $--fill-image-preview: $-fill-model-default !default;       //蒙层
 $--color-index-number: rgba(255, 255, 255, 0.8) !default; //指示器文字颜色
 $--fill-index-number:  rgba(255, 255, 255, 0.2) !default; //指示器背景色
 
-
-
+/* timeline */
+$--title-timeline-color: $--text-color-base !default;
+$--desc-timeline-color: $--text-color-secondary !default;
+$--dot-timeline-size: 15px !default;
+$--timeline-dot-bg-color: $--fill-default !default;
+$--timeline-dot-border-color: #78a4f4 !default;
+$--line-timeline-color: $--color-line !default;

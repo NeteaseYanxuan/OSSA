@@ -38,6 +38,10 @@ export default class Index extends Component<null, IState> {
           title: "倒计时",
           id: "countdown",
         },
+        {
+          title: "时间轴",
+          id: "timeline",
+        },
       ],
     };
   }
